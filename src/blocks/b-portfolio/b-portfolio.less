@@ -1,0 +1,136 @@
+@import "variables.less";
+@import "mixins";
+
+.b-portfolio {
+	font-weight: 300;
+}
+
+.b-portfolio__header {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.b-portfolio__filter {
+}
+
+.b-portfolio__list {
+	.clearfix();
+	width: (150px + 3px)*6;
+	margin: 0 auto;
+}
+
+.b-portfolio__item {
+	float: left;
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: 0 3px 3px 0;
+	position: relative;
+
+	&:hover, &:active, &:focus {
+		.b-portfolio__content {
+			background: rgba(44, 62, 80, .7);
+		}
+		.b-portfolio__title, .b-portfolio__category {
+			display: block;
+		}
+		.b-portfolio__type_html5 {
+			background-color: #834b9a;
+		}
+		.b-portfolio__type_gif {
+			background-color: #007db2;
+		}
+		.b-portfolio__type_jpg {
+			background-color: #29b866;
+		}
+	}
+}
+
+.b-portfolio__image {
+}
+
+.b-portfolio__content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	background: linear-gradient(to top, rgba(44, 62, 80, .7) 0%, rgba(44, 62, 80, 0) 47%);
+
+	color: #fff;
+}
+
+.b-portfolio__type {
+	font-size: 14px;
+	line-height: 25px;
+	display: inline-block;
+
+	margin-top: 7px;
+	margin-bottom: 7px;
+	padding: 0 9px;
+}
+
+.b-portfolio__type_html5 {
+	@type-color: #9b59b6;
+	background: @type-color;
+}
+
+.b-portfolio__type_gif {
+	@type-color: #008fcb;
+	background: @type-color;
+}
+
+.b-portfolio__type_jpg {
+	@type-color: #2ecc71;
+	background: @type-color;
+}
+
+.b-portfolio__title {
+	font-weight: bold;
+	margin-bottom: 4px;
+	margin-left: 7px;
+	display: none;
+}
+
+.b-portfolio__category {
+	font-size: 14px;
+	margin-left: 7px;
+	display: none;
+}
+
+.b-portfolio__date {
+	font-size: 14px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 7px;
+	margin-left: 7px;
+}
+
+.b-portfolio__button {
+	border: 2px solid #e9e9e9;
+	font-size: 30px;
+	font-weight: bold;
+	color: @text-color;
+	display: block;
+	width: 624px;
+	margin: 320px auto 80px;
+	text-align: center;
+	padding: 17px 0;
+
+	&:hover, &:active, &:focus {
+		color: #2ecc71;
+		border-color: #2ecc71;
+		text-decoration: none;
+
+		.b-portfolio__button-text {
+			border-color: #2ecc71;
+		}
+	}
+}
+
+.b-portfolio__button-text {
+	border-bottom: 2px dashed @text-muted;
+}

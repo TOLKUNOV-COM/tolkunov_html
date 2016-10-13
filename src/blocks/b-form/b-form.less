@@ -1,0 +1,105 @@
+@import "variables";
+@import "mixins";
+
+.b-form {
+	label {
+		font-weight: normal;
+		font-style: italic;
+		color: #b7b5b1;
+	}
+	.form-control {
+		box-shadow: none !important;
+		//font-size: 16px;
+	}
+
+	.has-error .form-control {
+		border-color: #ffcdd2;
+		background-color: #ffebee;
+	}
+}
+
+@screen-tablet-vertical: 414px;
+
+.b-form__column {
+	position: relative;
+	float: left;
+	width: 100%;
+	min-height: 1px;
+	padding-left: @grid-gutter-width/2;
+	padding-right: @grid-gutter-width/2;
+
+	@media (min-width: @screen-tablet-vertical) {
+		float: none;
+
+		&.b-form__column_1 {
+			float: left;
+			width: 160px;
+		}
+
+		&.b-form__column_2 {
+			margin-left: 160px;
+			width: auto;
+		}
+	}
+}
+
+.b-form__upload {
+	width: 120px;
+	height: 120px;
+	background: #e0e0e0;
+	line-height: 120px;
+	color: #b7b5b1;
+	text-align: center;
+	position: relative;
+
+	input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: block !important;
+		opacity: 0 !important;
+		overflow: hidden !important;
+		cursor: pointer;
+	}
+}
+
+.b-form__preview-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: center center;
+	background-image: none;
+}
+
+.b-form__preview-delete {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 19px;
+	height: 19px;
+	background: left top no-repeat url("../../assets/img/form-preview-delete.png");
+	cursor: pointer;
+	opacity: .33;
+
+	&:hover {
+		opacity: .5;
+	}
+}
+
+.b-form__button {
+	margin-top: 5px;
+	text-transform: uppercase;
+	border-radius: 3px;
+	padding: 9px 16px;
+
+	&, &:active, &:hover, &:focus {
+		background: #394053;
+		border-color: #394053;
+		color: #ffffff;
+	}
+}

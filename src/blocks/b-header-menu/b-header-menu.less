@@ -1,0 +1,27 @@
+@import "variables.less";
+@import "mixins";
+
+.b-header-menu {
+}
+
+.b-header-menu__item {
+	display: inline-block;
+	margin-bottom: 8px;
+	//margin-right: 40px;
+	margin-left: 40px;
+}
+
+.b-header-menu__link {
+	font-weight: bold;
+	font-size: 24px;
+	color: @text-color;
+	text-decoration: none;
+	border-bottom: 2px solid rgba(38, 50, 57, .05);
+
+	&:hover, &:active, &:focus {
+		color: #2980b9;
+		border-bottom-color: #2980b9;
+
+		text-decoration: none;
+	}
+}

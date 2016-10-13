@@ -1,0 +1,131 @@
+@import "variables.less";
+@import "mixins";
+
+.b-portfolio-filter {
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.b-portfolio-filter__item {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 300;
+	color: @text-color;
+	margin: 0 25px;
+	display: inline-block;
+	position: relative;
+
+	&:not(.b-portfolio-filter__item_active) .b-portfolio-filter__title {
+		border-bottom: 2px dashed rgba(37, 37, 37, .05);
+	}
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+
+		.b-portfolio-filter__title {
+			border-bottom: 2px dashed;
+		}
+	}
+}
+
+.b-portfolio-filter__item_type_all {
+	@filter-type-color: #acc000;
+
+	&:hover, &:active, &:focus {
+		color: @filter-type-color;
+
+		.b-portfolio-filter__title {
+			border-bottom-color: @filter-type-color;
+		}
+	}
+
+	&.b-portfolio-filter__item_active {
+		color: @filter-type-color;
+
+		&:before {
+			background: @filter-type-color center center no-repeat url("../../assets/img/portfolio-filter-active.png");
+		}
+	}
+}
+
+.b-portfolio-filter__item_type_html5 {
+	@filter-type-color: #9b59b6;
+
+	&:hover, &:active, &:focus {
+		color: @filter-type-color;
+
+		.b-portfolio-filter__title {
+			border-bottom-color: @filter-type-color;
+		}
+	}
+
+	&.b-portfolio-filter__item_active {
+		color: @filter-type-color;
+
+		&:before {
+			background: @filter-type-color center center no-repeat url("../../assets/img/portfolio-filter-active.png");
+		}
+	}
+}
+
+.b-portfolio-filter__item_type_gif {
+	@filter-type-color: #008fcb;
+
+	&:hover, &:active, &:focus {
+		color: @filter-type-color;
+
+		.b-portfolio-filter__title {
+			border-bottom-color: @filter-type-color;
+		}
+	}
+
+	&.b-portfolio-filter__item_active {
+		color: @filter-type-color;
+
+		&:before {
+			background: @filter-type-color center center no-repeat url("../../assets/img/portfolio-filter-active.png");
+		}
+	}
+}
+
+.b-portfolio-filter__item_type_jpg {
+	@filter-type-color: #2ecc71;
+
+	&:hover, &:active, &:focus {
+		color: @filter-type-color;
+
+		.b-portfolio-filter__title {
+			border-bottom-color: @filter-type-color;
+		}
+	}
+
+	&.b-portfolio-filter__item_active {
+		color: @filter-type-color;
+
+		&:before {
+			background: @filter-type-color center center no-repeat url("../../assets/img/portfolio-filter-active.png");
+		}
+	}
+}
+
+.b-portfolio-filter__item_active {
+	&:before {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: -20px;
+		width: 17px;
+		height: 17px;
+
+		content: '';
+	}
+}
+
+.b-portfolio-filter__title {
+	margin-right: 7px;
+}
+
+.b-portfolio-filter__count {
+	color: @text-muted;
+}
