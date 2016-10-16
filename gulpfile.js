@@ -15,11 +15,11 @@ var sourcemaps = require('gulp-sourcemaps');
 var less = require('gulp-less');
 var path = require('path');
 var rename = require("gulp-rename");  // переименовывает
-var minimist = require('minimist');
 
 var autoprefixer = require('gulp-autoprefixer');
 
 var jade = require('gulp-jade');
+const collector = require('gulp-collector');
 
 var paths = {
     scripts: ['src/assets/js/*.js', 'src/blocks/*', 'src/blocks/**/*.js'],
@@ -142,7 +142,7 @@ gulp.task('js', ['clean:js'], function () {
         //    sourceRoot: '/app/scss'
         //})
         .pipe(gulp.dest('./build/assets/js'))
-        .pipe(reload({stream: true}));
+        .pipe(reload());
 });
 
 gulp.task('img', [], function () {
@@ -203,7 +203,7 @@ gulp.task('watch', ['build'], function () {
     //gulp.watch(['*.html']).on('change', reload);
     gulp.watch(['src/less/bootstrap/*.less'], {cwd: '.'}, ['bootstrap']).on('error', log);
     gulp.watch(paths.less, {cwd: '.'}, ['less']).on('error', log);
-    gulp.watch(paths.scripts, {cwd: '.'}, ['js']);
+    gulp.watch(paths.scripts, {cwd: '.'}, ['js']).on('error', log);
     gulp.watch(paths.images, {cwd: '.'}, ['img', reload]);
 });
 
@@ -215,12 +215,16 @@ gulp.task('default', ['build'], function () {
     // place code for your default task here
 });
 
+/**
+ * Usage:
+ * gulp block -b my-block-name
+ * gulp block -b my-block-name --js
+ */
 gulp.task('block', function () {
     var argv = require('minimist')(process.argv.slice(2));
-    var mkdirp = require('mkdirp');
-    //var open = require("open");
 
     var blockName = (typeof(argv.b) == 'undefined') ? argv._[1] : argv.b;
+    var needCreateJsFile = argv.js;
 
     if (typeof blockName == 'undefined') {
         return console.log('get me a block name!');
@@ -229,25 +233,86 @@ gulp.task('block', function () {
     blockName = 'b-' + blockName;
     var blockPath = 'src/blocks/' + blockName + '/';
     var lessFilename = blockPath + blockName + '.less';
+    var jsFilePath = blockPath + blockName + '.js';
 
-    fs.exists(blockPath, function (exists) {
-        if (exists) {
-            // Do something
-            console.log('This block already exists!');
+    if (!fs.existsSync(blockPath)) {
+        fs.mkdirSync(blockPath);
+
+        var content = "" +
+            "@import \"variables.less\";\n" +
+            "@import \"mixins\";\n\n" +
+            '.' + blockName + ' {\n\n}';
+        fs.writeFile(lessFilename, content);
+
+        open(lessFilename, "PhpStorm.exe");
+    } else {
+        console.log('Block path already exists! File not created.');
+    }
+
+    /* Create js file */
+    if (needCreateJsFile) {
+        if (!fs.existsSync(jsFilePath)) {
+            var content = "$(function () {\n\n});";
+            fs.writeFile(jsFilePath, content);
+
+            console.log('JavaScript file created!');
         } else {
-            mkdirp(blockPath, function (err) {
-                if (err) console.error(err)
-                else {
-                    var content = "" +
-                        "@import \"variables.less\";\n" +
-                        "@import \"mixins\";\n\n" +
-                        '.' + blockName + ' {\n\n}';
-                    fs.writeFile(lessFilename, content);
-
-                    open(lessFilename, "PhpStorm.exe");
-                }
-            });
-
+            console.log('JavaScript file already exists! File not created.');
         }
-    });
+    }
+
+    /* Collect css classes and paste it to less file */
+    var sourceClassNames = [];
+    var existingClassNames = [];
+    var r = new RegExp('\.' + blockName + '[a-z\-_]+', 'gi');
+
+    gulp.src(['src/templates/*.jade', 'src/templates/**/*.jade'])
+        .pipe(collector(function (files, dirname) {
+            for (i in files) {
+                var content = files[i];
+
+                var result = content.match(r);
+
+                if (Array.isArray(result)) {
+                    for (className in result) {
+                        sourceClassNames.push(result[className]);
+                    }
+                }
+            }
+        }, {}, function () {
+            gulp.src(paths.less)
+                .pipe(collector(function (files, dirname) {
+                    for (i in files) {
+                        var content = files[i];
+
+                        var result = content.match(r);
+
+                        if (Array.isArray(result)) {
+                            for (className in result) {
+                                existingClassNames.push(result[className]);
+                            }
+                        }
+                    }
+                }, {}, function (some) {
+                    //console.log(sourceClassNames);
+                    //console.log(existingClassNames);
+
+                    var newClassNames = sourceClassNames.filter(function (className) {
+                        return existingClassNames.indexOf(className) === -1;
+                    }).filter(function (element, index, array) {
+                        return array.indexOf(element) === index;
+                    });
+
+                    console.log('Added classes', newClassNames);
+
+                    var content = '\n';
+
+                    newClassNames.forEach(function (className) {
+                        content += className + ' {\n\n}\n';
+                    });
+
+                    fs.appendFileSync(lessFilename, content);
+                }));
+
+        }));
 });

@@ -1,0 +1,107 @@
+extends ./layouts/layout.jade
+
+block content
+    .b-page
+        .container
+            h1.b-page__title.text-center В портфолио 985 баннеров
+
+            .b-filter
+                a.b-filter__item(href='portfolio_type_1.html'): span.b-filter__title Последние
+                a.b-filter__item(href='portfolio_type_2.html'): span.b-filter__title Любимые
+                a.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_3.html'): span.b-filter__title По темам
+                a.b-filter__item.b-filter__item_with-arrow.b-filter__item_active(href='portfolio_type_4.html'): span.b-filter__title По размерам
+                a.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_5.html'): span.b-filter__title По стилям
+            .b-size-filter
+                .b-size-filter__list
+                    a.b-size-filter__item.b-size-filter__item_active(href='#') 240#[span.b-size-filter__divider x]400
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                a.b-size-filter__toggle.hidden(href='#')
+                    span.b-size-filter__toggle-text Показать все размеры
+                    span.b-size-filter__toggle-text.hidden Свернуть
+
+            .b-portfolio
+                h5.b-portfolio__header Баннеры размером 240x400 пикселей
+
+                .b-portfolio-filter.b-portfolio__filter
+                    a.b-portfolio-filter__item.b-portfolio-filter__item_type_all.b-portfolio-filter__item_active(href='#')
+                        span.b-portfolio-filter__title Все
+                        span.b-portfolio-filter__count 985
+                    a.b-portfolio-filter__item.b-portfolio-filter__item_type_html5(href='#')
+                        span.b-portfolio-filter__title HTML5
+                        span.b-portfolio-filter__count 128
+                    a.b-portfolio-filter__item.b-portfolio-filter__item_type_gif(href='#')
+                        span.b-portfolio-filter__title GIF
+                        span.b-portfolio-filter__count 191
+                    a.b-portfolio-filter__item.b-portfolio-filter__item_type_jpg(href='#')
+                        span.b-portfolio-filter__title JPG
+                        span.b-portfolio-filter__count 266
+
+                .b-portfolio__list
+                    - for (var i=0; i<12;++i)
+                        a.b-portfolio__item(href='#')
+                            img.b-portfolio__image(src='assets/img/tmp/pr-200x300-bosch-rotak.jpg')
+                            .b-portfolio__content
+                                span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
+
+                                p.b-portfolio__title QIVI
+                                p.b-portfolio__category Строительство
+
+                                p.b-portfolio__date 20 апреля 2016
+                        a.b-portfolio__item(href='#')
+                            img.b-portfolio__image(src='assets/img/tmp/pr-200x300-electrovenik.jpg')
+                            .b-portfolio__content
+                                span.b-portfolio__type.b-portfolio__type_gif Gif-баннеры
+
+                                p.b-portfolio__title Длинное название работы
+                                p.b-portfolio__category Строительство
+
+                                p.b-portfolio__date 5 марта 2016
+                        a.b-portfolio__item(href='#')
+                            img.b-portfolio__image(src='assets/img/tmp/pr-200x300-mirta-n-0.jpg')
+                            .b-portfolio__content
+                                span.b-portfolio__type.b-portfolio__type_jpg Jpeg-баннеры
+
+                                p.b-portfolio__title QIVI
+                                p.b-portfolio__category Динное название категории
+
+                                p.b-portfolio__date 10 марта 2016
+                        a.b-portfolio__item(href='#')
+                            img.b-portfolio__image(src='assets/img/tmp/pr-200x600-adreals.jpg')
+                            .b-portfolio__content
+                                span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
+                                p.b-portfolio__title QIVI
+                                p.b-portfolio__category Строительство
+                                p.b-portfolio__date 20 апреля 2016
+
+                a.b-portfolio__button(href='#'): span.b-portfolio__button-text Загрузить ещё
+

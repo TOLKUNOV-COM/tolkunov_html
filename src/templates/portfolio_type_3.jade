@@ -5,8 +5,27 @@ block content
         .container
             h1.b-page__title.text-center В портфолио 985 баннеров
 
+            .b-filter
+                a.b-filter__item(href='portfolio_type_1.html'): span.b-filter__title Последние
+                a.b-filter__item(href='portfolio_type_2.html'): span.b-filter__title Любимые
+                a.b-filter__item.b-filter__item_with-arrow.b-filter__item_active(href='portfolio_type_3.html'): span.b-filter__title По темам
+                a.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_4.html'): span.b-filter__title По размерам
+                a.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_5.html'): span.b-filter__title По стилям
+            .b-theme-filter
+                a.b-theme-filter__item.b-theme-filter__item_active(href='#') Интернет-магазины
+                a.b-theme-filter__item(href='#') Казино и лотереи
+                a.b-theme-filter__item(href='#') Банки и финансы
+                a.b-theme-filter__item(href='#') Мода и красота
+                a.b-theme-filter__item(href='#') Продукты питания
+                a.b-theme-filter__item(href='#') Музыка
+                a.b-theme-filter__item(href='#') Строительство и ремонт
+                a.b-theme-filter__item(href='#') Логистика
+                a.b-theme-filter__item(href='#') Образование
+                a.b-theme-filter__item(href='#') Путешествия
+                a.b-theme-filter__item(href='#') Страхование
+
             .b-portfolio
-                h5.b-portfolio__header Последние созданные баннеры
+                h5.b-portfolio__header Баннеры для интернет-магазинов
 
                 .b-portfolio-filter.b-portfolio__filter
                     a.b-portfolio-filter__item.b-portfolio-filter__item_type_all.b-portfolio-filter__item_active(href='#')

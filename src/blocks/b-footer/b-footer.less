@@ -3,4 +3,22 @@
 
 .b-footer {
 	background: #2b2b2b;
+	color: #fff;
+	padding-top: 72px;
+	padding-bottom: 50px;
+}
+
+.b-footer__logo {
+	display: inline-block;
+	background: 0 0 no-repeat url("../../assets/img/footer-logo.png");
+	width: image-width("../../assets/img/footer-logo.png");
+	height: image-height("../../assets/img/footer-logo.png")/2;
+
+	&:hover, &:active, &:focus {
+		background-position: left bottom;
+	}
+}
+
+.b-footer__copyright {
+	margin-top: 30px;
 }

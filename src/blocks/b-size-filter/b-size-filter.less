@@ -1,0 +1,66 @@
+@import "variables.less";
+@import "mixins";
+
+.b-size-filter {
+	background: #fbfbfc;
+	text-align: center;
+	padding: 21px 0;
+	margin-top: -29px;
+	margin-bottom: 40px;
+}
+
+.b-size-filter__item {
+	font-size: 24px;
+	color: @text-color;
+	display: inline-block;
+	border: 2px solid rgba(0, 0, 0, .05);
+	border-radius: 2px;
+	padding: 3px 10px;
+	margin: 5px;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		color: @text-color;
+		border-color: #9b59b6;
+	}
+
+}
+
+.b-size-filter__divider {
+	position: relative;
+	top: -2px;
+	left: 1px;
+}
+
+.b-size-filter__item_active {
+	color: #fff;
+	border-color: #9b59b6;
+	background: #9b59b6;
+
+	&:hover, &:active, &:focus {
+		color: #fff;
+	}
+}
+
+.b-size-filter__list {
+	overflow: hidden;
+}
+
+.b-size-filter__list_collapsed {
+	max-height: 92px;
+}
+
+.b-size-filter__toggle {
+	color: @text-color;
+	font-size: 24px;
+	text-decoration: none;
+	border-bottom: 2px dotted rgba(37, 37, 37, .05);
+	display: inline-block;
+	margin-top: 5px;
+
+	&:hover, &:active, &:focus {
+		color: #9b59b6;
+		border-bottom-color: #9b59b6;
+		text-decoration: none;
+	}
+}

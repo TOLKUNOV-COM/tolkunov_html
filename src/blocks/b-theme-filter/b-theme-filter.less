@@ -1,0 +1,29 @@
+@import "variables.less";
+@import "mixins";
+
+.b-theme-filter {
+	background: #fbfbfc;
+	text-align: center;
+	padding: 14px 0;
+	margin-top: -29px;
+	margin-bottom: 50px;
+}
+
+.b-theme-filter__item {
+	font-size: 24px;
+	color: @text-color;
+	display: inline-block;
+	border-bottom: 2px solid rgba(37, 37, 37, .05);
+	margin: 6px 14px;
+
+	&:hover, &:active, &:focus {
+		color: #e74c3c;
+		border-bottom-color: #e74c3c;
+		text-decoration: none;
+	}
+}
+
+.b-theme-filter__item_active {
+	color: #e74c3c;
+	border-bottom-color: transparent;
+}
