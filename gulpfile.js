@@ -294,8 +294,8 @@ gulp.task('block', function () {
                         }
                     }
                 }, {}, function (some) {
-                    console.log('Source classes', sourceClassNames);
-                    console.log('Existing classes', existingClassNames);
+                    //console.log('Source classes', sourceClassNames);
+                    //console.log('Existing classes', existingClassNames);
 
                     var newClassNames = sourceClassNames.filter(function (className) {
                         return existingClassNames.indexOf(className) === -1;
