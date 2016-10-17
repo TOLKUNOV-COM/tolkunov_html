@@ -264,7 +264,7 @@ gulp.task('block', function () {
     /* Collect css classes and paste it to less file */
     var sourceClassNames = [];
     var existingClassNames = [];
-    var r = new RegExp('\.' + blockName + '[a-z\-_]+', 'gi');
+    var r = new RegExp('\.' + blockName + '[_]{1,2}[a-z\-_]+', 'gi');
 
     gulp.src(['src/templates/*.jade', 'src/templates/**/*.jade'])
         .pipe(collector(function (files, dirname) {
@@ -294,8 +294,8 @@ gulp.task('block', function () {
                         }
                     }
                 }, {}, function (some) {
-                    //console.log(sourceClassNames);
-                    //console.log(existingClassNames);
+                    console.log('Source classes', sourceClassNames);
+                    console.log('Existing classes', existingClassNames);
 
                     var newClassNames = sourceClassNames.filter(function (className) {
                         return existingClassNames.indexOf(className) === -1;
