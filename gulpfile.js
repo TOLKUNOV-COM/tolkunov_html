@@ -142,7 +142,7 @@ gulp.task('js', ['clean:js'], function () {
         //    sourceRoot: '/app/scss'
         //})
         .pipe(gulp.dest('./build/assets/js'))
-        .pipe(reload());
+        .pipe(reload({stream: true}));
 });
 
 gulp.task('img', [], function () {
