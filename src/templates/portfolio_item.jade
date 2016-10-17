@@ -3,22 +3,33 @@ extends ./layouts/layout.jade
 block content
     .b-page
         .container
-            h1.b-page__title В портфолио 985 баннеров
+            h1.b-page__title #[a.b-page__link(href="#") Флеш-баннер] для #[a.b-page__link(href="#") Exante] “Лучший брокер”
 
-            .b-filter
-                a.b-filter__item(href='portfolio_type_1.html'): span.b-filter__title Последние
-                a.b-filter__item(href='portfolio_type_2.html'): span.b-filter__title Любимые
-                a.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_3.html'): span.b-filter__title По темам
-                a.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_4.html'): span.b-filter__title По размерам
-                a.b-filter__item.b-filter__item_with-arrow.b-filter__item_active(href='portfolio_type_5.html'): span.b-filter__title По стилям
-            .b-style-filter
-                a.b-style-filter__item.b-style-filter__item_active(href='#') Мультипликация
-                a.b-style-filter__item(href='#') Фото-реалистичный
-                a.b-style-filter__item(href='#') Текстовый
-                a.b-style-filter__item(href='#') Смешанный
+            .b-language-tabs
+                ul.b-language-tabs__list(role="tablist")
+                    li.b-language-tabs__item.active(role="presentation"): a.b-language-tabs__link(href='#banner_language_ru', aria-controls="banner_language_ru", role="tab", data-toggle="tab"): span.b-language-tabs__title Русский
+                    li.b-language-tabs__item(role="presentation"): a.b-language-tabs__link(href='#banner_language_en', aria-controls="banner_language_en", role="tab", data-toggle="tab"): span.b-language-tabs__title Английский
+
+            .tab-content
+                #banner_language_ru.tab-pane.active(role="tabpanel")
+                    ul.b-size-tabs.list-unstyled
+                        li.b-size-tabs__item.active(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_240_400', aria-controls="banner_language_ru_size_240_400", role="tab", data-toggle="tab") 240#[span.b-size-tabs__divider x]400
+                        li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_100_100', aria-controls="banner_language_ru_size_100_100", role="tab", data-toggle="tab") 100#[span.b-size-tabs__divider x]100
+                        li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_200_300', aria-controls="banner_language_ru_size_200_300", role="tab", data-toggle="tab") 200#[span.b-size-tabs__divider x]300
+                        li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_160_600', aria-controls="banner_language_ru_size_160_600", role="tab", data-toggle="tab") 160#[span.b-size-tabs__divider x]600
+                    .tab-content
+                        #banner_language_ru_size_240_400.tab-pane.active(role="tabpanel")
+                            .b-portfolio-item
+                                .b-portfolio-item__view
+                                    img.b-portfolio-item__image.img-responsive(src='http://placehold.it/970x90', alt='')
+                        #banner_language_ru_size_100_100.tab-pane(role="tabpanel")
+
+
+                #banner_language_en.tab-pane(role="tabpanel") en
+
 
             .b-portfolio
-                h5.b-portfolio__header Мультяшные баннеры
+                h5.b-portfolio__header Последние созданные баннеры
 
                 .b-portfolio-filter.b-portfolio__filter
                     a.b-portfolio-filter__item.b-portfolio-filter__item_type_all.b-portfolio-filter__item_active(href='#')

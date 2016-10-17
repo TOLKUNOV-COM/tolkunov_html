@@ -1,0 +1,41 @@
+@import "variables.less";
+@import "mixins";
+
+.b-size-tabs {
+	text-align: center;
+	margin-top: -4px;
+	margin-bottom: 6px;
+}
+
+.b-size-tabs__item {
+	display: inline-block;
+}
+
+.b-size-tabs__link {
+	font-size: 24px;
+	color: @text-color;
+	display: inline-block;
+	border: 2px dashed rgba(0, 0, 0, .05);
+	border-radius: 2px;
+	padding: 3px 10px;
+	margin: 4px 2px;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		color: @text-color;
+		border-color: #9b5ab6;
+	}
+}
+
+.b-size-tabs__item.active .b-size-tabs__link {
+	border-color: #9b59b6;
+	border-style: solid;
+	background: #9b59b6;
+	color: #fff;
+}
+
+.b-size-tabs__divider {
+	position: relative;
+	top: -1px;
+	left: 1px;
+}
