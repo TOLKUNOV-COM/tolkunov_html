@@ -2,15 +2,68 @@
 @import "mixins";
 
 .b-portfolio-item {
-
+	margin-bottom: 80px;
 }
 
 .b-portfolio-item__view {
 	background: left top repeat url("../../assets/img/banner-background.jpg");
 	padding: 105px 40px+15px;
 	margin: 0 -40px;
+	border-radius: 10px;
+	text-align: center;
 }
 
 .b-portfolio-item__image {
+	display: inline-block;
+}
 
+.b-portfolio-item__lead {
+	margin: 45px 0;
+}
+
+.b-portfolio-item__info {
+	color: @text-muted;
+	font-size: 24px;
+	line-height: 28px;
+	display: inline-block;
+	margin-right: 35px;
+}
+
+.b-portfolio-item__link {
+	color: @text-color;
+	border-bottom: 2px solid rgba(0, 0, 0, .05);
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		border-bottom-color: @link-hover-color;
+	}
+}
+
+.b-portfolio-item__date {
+	color: @text-muted;
+	font-size: 24px;
+	line-height: 28px;
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.b-portfolio-item__share {
+	position: relative;
+	top: 1px;
+}
+
+.b-portfolio-item__text {
+	margin-bottom: 50px;
+}
+
+.b-portfolio-item__button {
+	font-weight: bold;
+	padding-left: 19px;
+	padding-right: 19px;
+	margin-bottom: 63px;
+
+	&:hover, &:active, &:focus {
+		background-color: #9eb000;
+		border-color: #9eb000;
+	}
 }
