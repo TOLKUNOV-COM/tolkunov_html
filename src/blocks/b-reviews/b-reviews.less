@@ -1,0 +1,218 @@
+@import "variables.less";
+@import "mixins";
+
+.b-reviews {
+
+}
+
+.b-reviews__filter {
+	margin: 33px 30px 47px;
+}
+
+.b-reviews__container {
+	background: #f5f9fc;
+	padding: 73px 0;
+}
+
+.b-reviews__list {
+	margin-right: -20px;
+}
+
+.b-reviews__item {
+	width: 320px;
+	margin-bottom: 20px;
+	float: left;
+	//display: none;
+
+	background: #ffffff;
+	box-shadow: 2px 2px 0px rgba(0, 0, 0, .05);
+}
+
+.b-reviews__header {
+	text-align: center;
+}
+
+.b-reviews__type {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 25px;
+	color: #ffffff;
+	padding: 0 12px;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+
+.b-reviews__title {
+	display: inline-block;
+	font-size: 24px;
+	font-weight: bold;
+	color: @text-color;
+	border-bottom: 2px solid rgba(37, 37, 37, .05);
+	margin: 10px 10px 15px;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+	}
+}
+
+/* Modifiers */
+.b-reviews__item_type_video {
+	.b-reviews__type {
+		background: #e74c3c;
+
+		&:hover, &:active, &:focus {
+			background: #ce4436;
+		}
+	}
+	.b-reviews__title {
+		&:hover, &:active, &:focus {
+			color: #e74c3c;
+			border-bottom-color: #e74c3c;
+		}
+	}
+}
+
+.b-reviews__item_type_mail {
+	.b-reviews__type {
+		background: #008fcb;
+
+		&:hover, &:active, &:focus {
+			background: #007db2;
+		}
+	}
+	.b-reviews__title {
+		&:hover, &:active, &:focus {
+			color: #008fcb;
+			border-bottom-color: #008fcb;
+		}
+	}
+}
+
+.b-reviews__item_type_social {
+	.b-reviews__type {
+		background: #9c1cae;
+
+		&:hover, &:active, &:focus {
+			background: #841893;
+		}
+	}
+	.b-reviews__title {
+		&:hover, &:active, &:focus {
+			color: #9c1cae;
+			border-bottom-color: #9c1cae;
+		}
+	}
+}
+
+.b-reviews__item_type_fl {
+	.b-reviews__type {
+		background: #2ecc71;
+
+		&:hover, &:active, &:focus {
+			background: #29b866;
+		}
+	}
+	.b-reviews__title {
+		&:hover, &:active, &:focus {
+			color: #2ecc71;
+			border-bottom-color: #2ecc71;
+		}
+	}
+}
+
+.b-reviews__item_type_forums {
+	.b-reviews__type {
+		background: #1abc9c;
+
+		&:hover, &:active, &:focus {
+			background: #18ad90;
+		}
+	}
+	.b-reviews__title {
+		&:hover, &:active, &:focus {
+			color: #1abc9c;
+			border-bottom-color: #1abc9c;
+		}
+	}
+}
+
+/* Modifiers end */
+
+.b-reviews__content {
+
+}
+
+.b-reviews__footer {
+	.clearfix();
+	padding: 15px 17px 13px;
+}
+
+.b-reviews__date {
+	float: left;
+	color: @text-muted;
+}
+
+.b-reviews__link {
+	float: right;
+	color: @text-muted;
+	border-bottom: 2px solid rgba(37, 37, 37, .05);
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		color: #e74c3c;
+		border-bottom-color: #e74c3c;
+	}
+}
+
+.b-reviews__icon {
+	background: #f4f4f4;
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Social icons */
+.b-reviews__social-icon {
+	width: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-image: url("../../assets/img/social-icons.png");
+}
+
+.b-reviews__social-icon_fb {
+	background-position: -75px 0;
+}
+
+.b-reviews__social-icon_vk {
+	background-position: -100px 0;
+}
+
+.b-reviews__social-icon_tw {
+	background-position: -50px 0;
+}
+
+.b-reviews__social-icon_instagram {
+	background-position: -25px 0;
+}
+
+.b-reviews__social-icon_ok {
+	background-position: 0 0;
+}
+
+/* Forum icons */
+.b-reviews__forum-icon {
+	width: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-image: url("../../assets/img/forum-icons.png");
+}
+
+.b-reviews__forum-icon_prcy {
+	background-position: 0 0;
+}
+
+.b-reviews__forum-icon_cypr {
+	background-position: -25px 0;
+}

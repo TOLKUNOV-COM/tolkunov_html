@@ -4,28 +4,23 @@
 .b-portfolio-filter {
 	text-align: center;
 	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-bottom: 22px;
 }
 
 .b-portfolio-filter__item {
 	font-size: 24px;
 	line-height: 28px;
-	font-weight: 300;
 	color: @text-color;
 	margin: 0 25px;
 	display: inline-block;
 	position: relative;
 
 	&:not(.b-portfolio-filter__item_active) .b-portfolio-filter__title {
-		border-bottom: 2px dotted rgba(37, 37, 37, .05);
+		border-bottom-color: rgba(37, 37, 37, .05);
 	}
 
 	&:hover, &:active, &:focus {
 		text-decoration: none;
-
-		.b-portfolio-filter__title {
-			border-bottom: 2px dotted;
-		}
 	}
 }
 
@@ -113,7 +108,7 @@
 	&:before {
 		position: absolute;
 		top: 50%;
-		transform: translateY(-50%);
+		transform: translateY(-10px);
 		left: -20px;
 		width: 17px;
 		height: 17px;
@@ -123,7 +118,9 @@
 }
 
 .b-portfolio-filter__title {
-	margin-right: 7px;
+	margin-right: 6px;
+	display: inline-block;
+	border-bottom: 2px dotted transparent;
 }
 
 .b-portfolio-filter__count {

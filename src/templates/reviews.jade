@@ -1,0 +1,128 @@
+extends ./layouts/layout.jade
+
+block content
+    .b-page
+        .container
+            h1.b-page__title Отзывы клиентов
+
+            .b-reviews
+                .b-reviews-filter.b-reviews__filter
+                    a.b-reviews-filter__item.b-reviews-filter__item_type_all.b-reviews-filter__item_active(href='#')
+                        span.b-reviews-filter__title Все
+                        span.b-reviews-filter__count 985
+                    a.b-reviews-filter__item.b-reviews-filter__item_type_video(href='#')
+                        span.b-reviews-filter__title Видеоотзывы
+                        span.b-reviews-filter__count 422
+                    a.b-reviews-filter__item.b-reviews-filter__item_type_mail(href='#')
+                        span.b-reviews-filter__title Рекомендательные письма
+                        span.b-reviews-filter__count 191
+                    a.b-reviews-filter__item.b-reviews-filter__item_type_social(href='#')
+                        span.b-reviews-filter__title Социальные сети
+                        span.b-reviews-filter__count 128
+                    a.b-reviews-filter__item.b-reviews-filter__item_type_fl(href='#')
+                        span.b-reviews-filter__title Fl.ru
+                        span.b-reviews-filter__count 266
+                    a.b-reviews-filter__item.b-reviews-filter__item_type_forums(href='#')
+                        span.b-reviews-filter__title Форумы
+                        span.b-reviews-filter__count 422
+
+        .b-reviews__container
+            .container
+                .b-reviews__list
+                    .b-reviews__item.b-reviews__item_type_video
+                        .b-reviews__header
+                            a.b-reviews__type(href='#') Видеоотзывы
+                        .text-center: a.b-reviews__title(href='#') 1ДСКиКО
+                        .b-reviews__content
+                            img.img-responsive(src='http://placehold.it/320x180')
+                        .b-reviews__footer
+                            span.b-reviews__date 22 июня 2016
+                            a.b-reviews__link(href='#') Оригинал отзыва
+                    .b-reviews__item.b-reviews__item_type_mail
+                        .b-reviews__header
+                            a.b-reviews__type(href='#') Рекомендательные письма
+                        .text-center: a.b-reviews__title(href='#') Газелькин
+                        .b-reviews__content
+                            img.img-responsive(src='http://placehold.it/320x330')
+                        .b-reviews__footer
+                            span.b-reviews__date 5 февраля 2015
+                            a.b-reviews__link(href='#') Оригинал отзыва
+                    .b-reviews__item.b-reviews__item_type_social
+                        .b-reviews__header
+                            a.b-reviews__type(href='#') Социальные сети
+                            .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_fb
+                        .text-center: a.b-reviews__title(href='#') Exante
+                        .b-reviews__content
+                            p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                        .b-reviews__footer
+                            span.b-reviews__date 11 января 2015
+                            a.b-reviews__link(href='#') Оригинал отзыва
+                    .b-reviews__item.b-reviews__item_type_social
+                        .b-reviews__header
+                            a.b-reviews__type(href='#') Социальные сети
+                            .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_vk
+                        .text-center: a.b-reviews__title(href='#') Exante
+                        .b-reviews__content
+                            p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                        .b-reviews__footer
+                            span.b-reviews__date 11 января 2015
+                            a.b-reviews__link(href='#') Оригинал отзыва
+                    .b-reviews__item.b-reviews__item_type_social
+                        .b-reviews__header
+                            a.b-reviews__type(href='#') Социальные сети
+                            .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_tw
+                        .text-center: a.b-reviews__title(href='#') Exante
+                        .b-reviews__content
+                            p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                        .b-reviews__footer
+                            span.b-reviews__date 11 января 2015
+                            a.b-reviews__link(href='#') Оригинал отзыва
+                    .b-reviews__item.b-reviews__item_type_social
+                        .b-reviews__header
+                            a.b-reviews__type(href='#') Социальные сети
+                            .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_instagram
+                        .text-center: a.b-reviews__title(href='#') Exante
+                        .b-reviews__content
+                            p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                        .b-reviews__footer
+                            span.b-reviews__date 11 января 2015
+                            a.b-reviews__link(href='#') Оригинал отзыва
+                    .b-reviews__item.b-reviews__item_type_social
+                        .b-reviews__header
+                            a.b-reviews__type(href='#') Социальные сети
+                            .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_ok
+                        .text-center: a.b-reviews__title(href='#') Exante
+                        .b-reviews__content
+                            p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                        .b-reviews__footer
+                            span.b-reviews__date 11 января 2015
+                            a.b-reviews__link(href='#') Оригинал отзыва
+                    .b-reviews__item.b-reviews__item_type_fl
+                        .b-reviews__header
+                            a.b-reviews__type(href='#') Fl.ru
+                        .text-center: a.b-reviews__title(href='#') Exante
+                        .b-reviews__content
+                            p Задание было выполнено! Качество радует! Рекомендую!
+                        .b-reviews__footer
+                            span.b-reviews__date 11 января 2015
+                            a.b-reviews__link(href='#') Оригинал отзыва
+                    .b-reviews__item.b-reviews__item_type_forums
+                        .b-reviews__header
+                            a.b-reviews__type(href='#') Форумы
+                            .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_prcy
+                        .text-center: a.b-reviews__title(href='#') Exante
+                        .b-reviews__content
+                            p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
+                        .b-reviews__footer
+                            span.b-reviews__date 11 января 2015
+                            a.b-reviews__link(href='#') Оригинал отзыва
+                    .b-reviews__item.b-reviews__item_type_forums
+                        .b-reviews__header
+                            a.b-reviews__type(href='#') Форумы
+                            .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_cypr
+                        .text-center: a.b-reviews__title(href='#') Exante
+                        .b-reviews__content
+                            p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
+                        .b-reviews__footer
+                            span.b-reviews__date 11 января 2015
+                            a.b-reviews__link(href='#') Оригинал отзыва
