@@ -1,0 +1,32 @@
+@import "variables.less";
+@import "mixins";
+
+.b-client {
+
+}
+
+.b-client__image {
+	margin-top: 6px;
+	margin-right: 10px;
+}
+
+.b-client__link {
+	margin-top: 6px;
+	margin-left: 10px;
+	display: inline-block;
+	font-size: 30px;
+	color: @text-color;
+
+	border-bottom: 2px solid rgba(37, 37, 37, .1);
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		color: @link-hover-color;
+		border-bottom-color: @link-hover-color;
+	}
+}
+
+.b-client__text {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
