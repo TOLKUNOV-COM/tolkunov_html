@@ -1,0 +1,58 @@
+extends ./layouts/layout.jade
+
+block content
+    .b-page
+        .container
+            h1.b-page__title 3 месяца бесплатного использования Jivosite
+
+            .b-offer
+                img.img-responsive.b-offer__image(src='http://placehold.it/1000x300')
+
+                .b-offer__properties
+                    .b-offer__property #[span.text-muted Выгода до] 3200
+                    .b-offer__property #[span.text-muted Действует до] 10.06.2016
+                .b-offer__text.b-text
+                    p JivoSite — чат для сайта в разы увеличит количество обращений клиентов. Благодаря гибким настройкам дизайна, JivoSite аккуратно впишется в Ваш сайт и повысит его эффективность.
+                    h4 Подключите JivoSite к вашей CRM системе
+                    p JivoSite умеет сохранять историю преписки в карточку клиента в вашей CRM, а так же показывать информацию о клиенте из CRM в приложении оператора. А еще вы можете сделать свое решение с помощью API JivoSite.
+
+                    .text-center
+                        img(src='http://placehold.it/550x370')
+                    h4 Узнайте, как Ваши клиенты оценивают качество работы сотрудников
+                    p В ходе диалога, клиент может оценить качество обслуживания - положительно или отрицательно. Вы можете получить отчет по оценкам, выставленным клиентами, в личном кабинете.
+
+                .b-offer-variants
+                    p.b-offer-variants__header Бонусы в рублях при заказе баннера для тарифов
+
+                    .b-offer-variants__list
+                        .b-offer-variants__item.b-offer-variants__item_1
+                            p.b-offer-variants__title Стандарт
+
+                            p.b-offer-variants__text 1 месяц бесплатного использования чата без ограничений
+
+                            p.b-offer-variants__price 800
+                        .b-offer-variants__item.b-offer-variants__item_2
+                            p.b-offer-variants__title Премиум
+
+                            p.b-offer-variants__text 2 месяца использования чата без ограничений
+
+                            p.b-offer-variants__price 1600
+                        .b-offer-variants__item.b-offer-variants__item_3
+                            p.b-offer-variants__title Вип
+
+                            p.b-offer-variants__text 4 месяца бесплатного использования чата без ограничений
+
+                            p.b-offer-variants__price 3200
+                .b-offer__bottom
+                    | #[a.btn.btn-success.btn-lg(href='#') Заказать баннер] и получить бонус или #[a.btn.btn-primary.btn-lg(href='offers.html') Посмотреть все 24 акции]
+
+
+
+            .b-subscribe
+                p.b-subscribe__title Получайте новые акции прямо на почту
+                p.b-subscribe__lead Никакого спама или рекламы. Только акции.
+
+                form.form-inline.b-subscribe__form
+                    .form-group
+                        input.form-control.b-subscribe__input(name='email', type='email', placeholder='Введите свой email')
+                    button.btn.b-subscribe__button(type="submit") Подписаться
