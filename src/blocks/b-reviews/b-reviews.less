@@ -11,7 +11,7 @@
 
 .b-reviews__container {
 	background: #f5f9fc;
-	padding: 73px 0;
+	padding: 73px 0 0;
 }
 
 .b-reviews__list {
@@ -224,4 +224,49 @@
 
 .b-reviews__forum-icon_cypr {
 	background-position: -25px 0;
+}
+
+.b-reviews__loader {
+	background: #f4f9fc;
+	padding: 32px 0 48px;
+	margin-top: -100px;
+
+	position: relative;
+
+	&:before {
+		position: absolute;
+		top: -182px;
+		left: 0;
+		width: 100%;
+		height: 182px;
+		background: linear-gradient(to top, rgba(244, 249, 252, 1) 0%, rgba(244, 249, 252, 0) 100%);
+
+		content: '';
+	}
+}
+
+.b-reviews__button {
+	border: 2px solid #e9e9e9;
+	font-size: 30px;
+	font-weight: bold;
+	color: @text-color;
+	display: block;
+	width: 624px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 17px 0;
+
+	&:hover, &:active, &:focus {
+		color: #2ecc71;
+		border-color: #2ecc71;
+		text-decoration: none;
+
+		.b-reviews__button-text {
+			border-color: #2ecc71;
+		}
+	}
+}
+
+.b-reviews__button-text {
+	border-bottom: 2px dotted rgba(37, 37, 37, .15);
 }
