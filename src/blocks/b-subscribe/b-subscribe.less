@@ -1,0 +1,53 @@
+@import "variables.less";
+@import "mixins";
+
+.b-subscribe {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 115px;
+}
+
+.b-subscribe__title {
+	font-weight: bold;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+.b-subscribe__lead {
+	font-size: 30px;
+	margin-bottom: 40px;
+}
+
+.b-subscribe__form {
+}
+
+.b-subscribe__input {
+	background: #f4f4f4;
+	color: @text-color;
+	box-shadow: none;
+	border: none;
+	font-size: 24px;
+	padding: 16px 12px;
+	height: 52px;
+	width: 461px !important;
+	text-align: center;
+
+	&:focus {
+		background-color: #f3fcfa;
+		box-shadow: none;
+	}
+}
+
+.b-subscribe__button {
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #1abc9c;
+	padding: 12px 22px;
+	margin-left: 15px;
+
+	&:hover, &:active, &:focus, &.active {
+		color: #fff;
+		background-color: #18ad90;
+	}
+}

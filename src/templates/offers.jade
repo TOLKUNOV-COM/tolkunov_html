@@ -1,0 +1,97 @@
+extends ./layouts/layout.jade
+
+block content
+    .b-page
+        .container
+            h1.b-page__title Все акции
+
+            p.b-page__lead Бонусы от партнеров для наших клиентов
+
+            .b-offers
+                .b-offers__filter.b-offers-filter
+                    .b-offers-filter__block.b-offers-filter__block_color_yellow
+                        a.b-offers-filter__item.b-offers-filter__item_active(href='#') Все
+                    .b-offers-filter__block.b-offers-filter__block_color_red
+                        a.b-offers-filter__item(href='#') Эконом
+                        a.b-offers-filter__item(href='#') Стандарт
+                        a.b-offers-filter__item(href='#') Премиум
+                        a.b-offers-filter__item(href='#') Вип
+
+                        .b-offers-filter__title html5 и flash-баннеры
+                    .b-offers-filter__block.b-offers-filter__block_color_blue
+                        a.b-offers-filter__item(href='#') Мини
+                        a.b-offers-filter__item(href='#') Бизнес
+                        a.b-offers-filter__item(href='#') Анимация+
+
+                        .b-offers-filter__title gif-баннеры
+                    .b-offers-filter__block.b-offers-filter__block_color_green
+                        a.b-offers-filter__item(href='#') Смолл
+                        a.b-offers-filter__item(href='#') Мидл
+                        a.b-offers-filter__item(href='#') Биг
+
+                        .b-offers-filter__title jpg-баннеры
+                .b-offers__list
+                    a.b-offers__item(href='#')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+                    a.b-offers__item(href='#')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+                    a.b-offers__item(href='#')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+                    a.b-offers__item(href='#')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+                    a.b-offers__item(href='#')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+                    a.b-offers__item(href='#')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+                    a.b-offers__item(href='#')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+            .b-subscribe
+                p.b-subscribe__title Получайте новые акции прямо на почту
+                p.b-subscribe__lead Никакого спама или рекламы. Только акции.
+
+                form.form-inline.b-subscribe__form
+                    .form-group
+                        input.form-control.b-subscribe__input(name='email', type='email', placeholder='Введите свой email')
+                    button.btn.b-subscribe__button(type="submit") Подписаться
