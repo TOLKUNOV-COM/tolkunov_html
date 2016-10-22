@@ -188,7 +188,7 @@
 @input-bg-disabled:              @gray-lighter;
 
 //** Text color for `<input>`s
-@input-color:                    @gray;
+@input-color:                    @text-color;
 //** `<input>` border color
 @input-border:                   #ccc;
 
@@ -208,14 +208,14 @@
 @input-color-placeholder:        rgba(37, 37, 37, .2);
 
 //** Default `.form-control` height
-@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2) + 41px;
 //** Large `.form-control` height
 @input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
 //** Small `.form-control` height
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
 
 //** `.form-group` margin
-@form-group-margin-bottom:       15px;
+@form-group-margin-bottom:       50px;
 
 @legend-color:                   @gray-dark;
 @legend-border-color:            #e5e5e5;

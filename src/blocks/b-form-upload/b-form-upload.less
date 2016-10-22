@@ -1,0 +1,32 @@
+@import "variables.less";
+@import "mixins";
+
+.b-form-upload {
+	position: relative;
+	border: 2px dashed rgba(37, 37, 37, .2);
+
+	input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: block !important;
+		opacity: 0 !important;
+		overflow: hidden !important;
+		cursor: pointer;
+	}
+
+	&:hover, &:active, &:focus {
+		border-color: #2ecc71;
+	}
+}
+
+.b-form-upload__label {
+	font-size: 24px;
+	margin: 44px 0;
+	display: inline-block;
+
+	padding-left: 32px;
+	background: center left no-repeat url("../../assets/img/upload-icon.png");
+}

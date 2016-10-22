@@ -1,0 +1,48 @@
+extends ./layouts/layout.jade
+
+block content
+    .b-page
+        .container
+            h1.b-page__title Оформление заказа на разработку баннеров
+
+            p.b-page__lead Опишите проект. Чем больше информации, тем лучше результат.
+
+        .b-form
+            .container
+                form.b-form__form(action="order_3.html")
+                    .form-group
+                        label Что рекламируем и кто целевая аудитория
+                        p.help-block Например: tolkunov.com, предпрениматели, маркетологи. мужчины и женщины от 18 до 45 лет
+                        input.form-control(type="text")
+                    .form-group
+                        label Типы и размеры баннеров
+                        p.help-block Например: html5 - 240x400, 300x250, 728x90 или flash 160x600, 240x400 и т.д.
+                        input.form-control(type="text")
+                    .form-group
+                        label Содержимое баннеров
+                        p.help-block Какие фразы лучше всего использовать? Пожелания по сценарию? Пожелания по графике? Обязательные элементы в баннере?
+                        textarea.form-control(rows="7")
+
+                    .form-group
+                        label Файлы
+                        p.help-block Логотип, брендбук, фотографии - всё, что может пригодиться в разработке баннеров
+
+                        .b-form-upload.b-form__upload
+                            input(type="file")
+
+                            span.b-form-upload__label Выберите файлы или перетащите их в эту форму
+                    .form-group
+                        label Стиль баннеров
+                        p.help-block #[a(href='#') Мультипликация], #[a(href='#') фото-реалистичный], #[a(href='#') текстовый] или #[a(href='#') смешанный]?
+                        input.form-control(type="text")
+                    .form-group
+                        label Площадки размещения
+                        p.help-block Рекламная площадка и конкретное место размещения? Ссылка на технические требования к баннерам?
+                        input.form-control(type="text")
+                    .form-group
+                        label Предпочтительный способ оплаты
+                        p.help-block Счет Альфа-банка, карта Сбербанка, Яндекс.Деньги, QIWI, WebMoney, расчетный счет ИП или PayPal?
+                        input.form-control(type="text")
+                    input.btn.btn-primary.btn-lg.b-form__button(type="submit", value="Отправить заявку")
+                    br
+                    a.b-form__link(href='#') Соглашение о конфиденциальности

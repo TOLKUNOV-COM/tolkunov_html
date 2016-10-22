@@ -1,0 +1,22 @@
+extends ./layouts/layout.jade
+
+block content
+    .b-page
+        .container
+            h1.b-page__title Оформление заказа на разработку баннеров
+
+            p.b-page__lead Представьтесь, пожалуйста
+
+        .b-form
+            .container
+                form.b-form__form(action="order_2.html")
+                    .form-group
+                        label Имя
+                        input.form-control(type="text")
+                    .form-group
+                        label Email
+                        input.form-control(type="email")
+                    .form-group
+                        label Номер телефона
+                        input.form-control(type="text")
+                    input.btn.btn-primary.btn-lg.b-form__button(type="submit", value="Далее")

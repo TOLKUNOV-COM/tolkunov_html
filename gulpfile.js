@@ -111,7 +111,7 @@ gulp.task('less', ['clean:css:my'], function () {
     return gulp.src(paths.less)
         //.pipe(concat('common.less'))
         .pipe(less({
-            paths: ['src/less/bootstrap', path.resolve(paths.bootstrap, 'less'), path.resolve(paths.bootstrap, 'less/mixins')]
+            paths: ['src/less/bootstrap', path.resolve(paths.bootstrap, 'less'), path.resolve(paths.bootstrap, 'less/mixins'), 'src/less']
         }))
         .on('error', log)
         //.pipe(sourcemaps.init())
@@ -179,6 +179,7 @@ gulp.task('jade-watch', ['templates'], reloadCb);
 
 // watch files for changes and reload
 gulp.task('watch', ['build'], function () {
+    var argv = require('minimist')(process.argv.slice(2));
 
     browserSync.init({
         server: './build',
@@ -193,10 +194,13 @@ gulp.task('watch', ['build'], function () {
         notify: false
     }, function (err, server) {
         /* TODO: Добавить параметр запуска или какой-то другой способ отменять это */
-        var url = server.options.get('urls').get('local');
 
-        gulp.src('./build/*.html')
-            .pipe(open(url + '/<%=file.path.replace(file.base,"")%>', {app: 'chrome'}));
+        if (argv.open) {
+            var url = server.options.get('urls').get('local');
+
+            gulp.src('./build/*.html')
+                .pipe(open(url + '/<%=file.path.replace(file.base,"")%>', {app: 'chrome'}));
+        }
     });
 
     gulp.watch([paths.templates, 'src/templates/**/*.jade', './template_locals.json'], ['jade-watch']);

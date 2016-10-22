@@ -1,0 +1,11 @@
+.mylink(@color, @border-color, @hover-color) {
+	display: inline-block;
+	color: @color;
+	border-bottom: 2px solid @border-color;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		color: @hover-color;
+		border-bottom-color: @hover-color;
+	}
+}
