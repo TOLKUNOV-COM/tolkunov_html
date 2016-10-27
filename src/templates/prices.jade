@@ -5,14 +5,15 @@ block content
         .container
             h1.b-page__title Стоимость разработки баннеров
 
-            p.b-page__lead Несколько тарифов для всех типов баннеров: html5, flash, gif и jpg.#[br]Есть также постоянные #[a(href='#') скидки] и выгодные #[a(href='#') акции].
+            p.b-page__lead Несколько тарифов для всех типов баннеров: html5, flash, gif и jpg.#[br]Есть также постоянные #[a(href='#discounts') скидки] и выгодные #[a(href='#offers') акции].
 
-            .b-prices
+        .b-prices
+            .container
                 p.b-prices__header HTML5 и FLASH баннеры
 
                 p.b-prices__lead Лучший вариант для внешней рекламы: динамичная анимация, а также возможность добавить интерактив
 
-                .b-prices__list
+                .b-prices__list.b-prices__list_count_4
                     .b-prices__item.b-prices__item_color_green
                         p.b-prices__title Эконом
 
@@ -23,6 +24,209 @@ block content
                             p 1490 за ресайз
                             p 490 за гиф-заглушку
                         .b-prices__price 2990
-                        a.b-prices__link(href='#') Посмотреть примеры
+                        .text-center: a.b-prices__link(href='#') Посмотреть примеры
 
-                        a.b-prices__button(href='#') Выбрать
+                        a.btn.b-prices__button(href='#') Выбрать
+                    .b-prices__item.b-prices__item_color_red
+                        p.b-prices__title Стандарт
+
+                        .b-prices__text
+                            p Простая анимация
+                            p Можно вносить правки
+                            p От 2 дней на разработку
+                            p 1490 за ресайз
+                            p Гиф-заглушка в #[b подарок]
+                        .b-prices__price 4990
+                        .text-center: a.b-prices__link(href='#') Посмотреть примеры
+
+                        a.btn.b-prices__button(href='#') Выбрать
+                    .b-prices__item.b-prices__item_wide.b-prices__item_recommended.b-prices__item_color_blue
+                        p.b-prices__title Премиум
+
+                        .b-prices__text
+                            p Сложная анимация с #[b “вау-эффектом”]
+                            p Можно вносить правки
+                            p Можно добавить #[b интерактив]
+                            p От 2 дней на разработку
+                            p 1990 за ресайз
+                            p Гиф-заглушка в #[b подарок]
+                            p #[a(href="#") #[b Бонусов] до 3500]
+                        .b-prices__price 9990
+                        .text-center: a.b-prices__link(href='#') Посмотреть примеры
+
+                        a.btn.b-prices__button(href='#') Выбрать
+                    .b-prices__item.b-prices__item_color_purple
+                        p.b-prices__title Вип
+
+                        .b-prices__text
+                            p #[b Всё, что входит в тариф «Премиум» плюс:]
+                            p #[b Исследование] и сбор баннеров конкурентов
+                            p #[b 3 варианта] сценария на выбор
+                            p Раскадровка выбранного сценария
+                            p Адаптация баннера под 3 рекламных площадки
+                        .b-prices__price 19990
+
+                        a.btn.b-prices__button(href='#') Выбрать
+
+                p.b-prices__header GIF баннеры
+
+                p.b-prices__lead Альтернатива html5 и flash баннерам, если площадка не принимает их или необходимо сэкономить бюджет, сохранив анимацию
+
+                .b-prices__list.b-prices__list_count_3
+                    .b-prices__item.b-prices__item_color_green
+                        p.b-prices__title Мини
+
+                        .b-prices__text
+                            p Простые кнопки, очень маленькие баннеры, а также несложная анимация.
+                            p От 1 дня на разработку
+                            p 490 за ресайз
+                        .b-prices__price 990
+                        .text-center: a.b-prices__link(href='#') Посмотреть примеры
+
+                        a.btn.b-prices__button(href='#') Выбрать
+                    .b-prices__item.b-prices__item_color_red
+                        p.b-prices__title Бизнес
+
+                        .b-prices__text
+                            p #[b Крутые] гиф-баннеры, которые подойдут для рекламы любого проекта, а также для размещения на любой площадке.
+                            p От 2 дней на разработку
+                            p 990 за ресайз
+                        .b-prices__price 2490
+                        .text-center: a.b-prices__link(href='#') Посмотреть примеры
+
+                        a.btn.b-prices__button(href='#') Выбрать
+                    .b-prices__item.b-prices__item_color_blue
+                        p.b-prices__title Анимация+
+
+                        .b-prices__text
+                            p #[b Крутые] гиф-баннеры, плюс плавная анимация каждого кадра.
+                            p #[b Не для всех] площадок
+                            p От 3 дней на разработку
+                            p 1490 за ресайз
+                        .b-prices__price 4990
+                        .text-center: a.b-prices__link(href='#') Посмотреть примеры
+
+                        a.btn.b-prices__button(href='#') Выбрать
+                p.b-prices__header JPG/PNG баннеры
+
+                p.b-prices__lead Статичные баннеры отлично подходят для размещения в социальных сетях, а также на сайте компании в слайдере
+
+                .b-prices__list.b-prices__list_count_3
+                    .b-prices__item.b-prices__item_color_green
+                        p.b-prices__title Смолл
+
+                        .b-prices__text
+                            p #[b Простые] кнопки, очень маленькие баннеры.
+                            p От 1 дня на разработку
+                            p 290 за ресайз
+                        .b-prices__price 490
+                        .text-center: a.b-prices__link(href='#') Посмотреть примеры
+
+                        a.btn.b-prices__button(href='#') Выбрать
+                    .b-prices__item.b-prices__item_color_red
+                        p.b-prices__title Мидл
+
+                        .b-prices__text
+                            p #[b Крутые] статичные баннеры всех стандартных размеров, которые подойдут для рекламы любого проекта, а также для размещения на любой площадке.
+                            p От 1 дня на разработку
+                            p 690 за ресайз
+                        .b-prices__price 1990
+                        .text-center: a.b-prices__link(href='#') Посмотреть примеры
+
+                        a.btn.b-prices__button(href='#') Выбрать
+                    .b-prices__item.b-prices__item_color_blue
+                        p.b-prices__title Биг
+
+                        .b-prices__text
+                            p #[b Большие] статичные баннеры для рекламы в социальных сетях, слайдеров на сайте, а также для особых форматов на рекламных площадках.
+                            p От 2 дней на разработку
+                            p 990 за ресайз
+                        .b-prices__price 2990
+                        .text-center: a.b-prices__link(href='#') Посмотреть примеры
+
+                        a.btn.b-prices__button(href='#') Выбрать
+        .container
+            .b-discounts#discounts
+                h2.b-discounts__header Скидки
+
+                .b-discounts__list
+                    .b-discounts__item
+                        p.b-discounts__title До 10% за заказ от 50 000 рублей
+                        .b-discounts__text
+                            p Если сумма единовременного заказа превышает 50 т.р., то предоставляется скидка до 10% в зависимости от суммы заказа. Процент расчитывается индивидуально.
+                    .b-discounts__item
+                        p.b-discounts__title 5% за объём прошлого месяца
+                        .b-discounts__text
+                            p Если сумма заказов за прошлый месяц более 100 000 рублей, то весь текущий месяц на все заказы действует скидка 5%, независимо от суммы единовременного заказа.
+                    .b-discounts__item
+                        p.b-discounts__title До 100% за бартер
+                        .b-discounts__text
+                            p Если ваши товары или услуги нам интересны, то можем договориться на полный или частичный бартер.
+                    .b-discounts__item
+                        p.b-discounts__title До 1000 рублей за отзыв
+                        .b-discounts__text
+                            p Если мы для вас уже разрабатывали баннер, то вы можете получить скидку до 1000 рублей на следующий заказ. Сумма скидки зависит от типа отзыва. Скидка возможна только для клиентов, с которыми мы работали хотя бы один раз.
+        h2#offers.b-page__title Акции
+        p.b-page__lead Бонусы от партнеров для наших клиентов
+        .b-offers
+            .container
+                .b-offers__list
+                    a.b-offers__item(href='offer.html')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+                    a.b-offers__item(href='offer.html')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+                    a.b-offers__item(href='offer.html')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+                    a.b-offers__item(href='offer.html')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+                    a.b-offers__item(href='offer.html')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+                    a.b-offers__item(href='offer.html')
+                        p.b-offers__title 3 месяца бесплатного использования Jivosite
+                        .b-offers__content
+                            .b-offers__label Действует до 10.06.2016
+                            img.img-responsive.b-offers__image(src='assets/img/tmp/akcii.png')
+                        .b-offers__text
+                            p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
+                            p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
+            .b-offers__loader
+                a.btn.btn-primary.btn-lg.b-offers__button(href='#') Посмотреть все 12 акций
+        .container
+            .b-subscribe
+                p.b-subscribe__title Получайте новые акции прямо на почту
+                p.b-subscribe__lead Никакого спама или рекламы. Только акции.
+
+                form.form-inline.b-subscribe__form
+                    .form-group
+                        input.form-control.b-subscribe__input(name='email', type='email', placeholder='Введите свой email')
+                    button.btn.b-subscribe__button(type="submit") Подписаться

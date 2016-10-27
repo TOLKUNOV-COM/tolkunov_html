@@ -1,0 +1,34 @@
+@import "variables.less";
+@import "mixins";
+
+.b-discounts {
+	padding-top: 70px;
+	padding-bottom: 35px;
+}
+
+.b-discounts__header {
+	margin-top: 0;
+	margin-bottom: 50px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.b-discounts__list {
+	.make-row(50px);
+	.clearfix;
+}
+
+.b-discounts__item {
+	.make-xs-column(6, 50px);
+}
+
+.b-discounts__title {
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.b-discounts__text {
+	margin-bottom: 55px;
+}

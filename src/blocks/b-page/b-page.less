@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "mymixins";
 
 .b-page {
 
@@ -17,6 +18,10 @@
 	font-size: 30px;
 	margin-bottom: 40px;
 	text-align: center;
+
+	a {
+		.mylink-extended(@text-color, 2px dotted rgba(37, 37, 37, .05), @link-hover-color);
+	}
 }
 
 .b-page__link {
