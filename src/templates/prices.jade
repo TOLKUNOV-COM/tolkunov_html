@@ -1,0 +1,28 @@
+extends ./layouts/layout.jade
+
+block content
+    .b-page
+        .container
+            h1.b-page__title Стоимость разработки баннеров
+
+            p.b-page__lead Несколько тарифов для всех типов баннеров: html5, flash, gif и jpg.#[br]Есть также постоянные #[a(href='#') скидки] и выгодные #[a(href='#') акции].
+
+            .b-prices
+                p.b-prices__header HTML5 и FLASH баннеры
+
+                p.b-prices__lead Лучший вариант для внешней рекламы: динамичная анимация, а также возможность добавить интерактив
+
+                .b-prices__list
+                    .b-prices__item.b-prices__item_color_green
+                        p.b-prices__title Эконом
+
+                        .b-prices__text
+                            p Простая анимация
+                            p Нельзя вносить правки
+                            p От 5 дней на разработку
+                            p 1490 за ресайз
+                            p 490 за гиф-заглушку
+                        .b-prices__price 2990
+                        a.b-prices__link(href='#') Посмотреть примеры
+
+                        a.b-prices__button(href='#') Выбрать
