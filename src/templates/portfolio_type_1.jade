@@ -31,7 +31,7 @@ block content
 
                 .b-portfolio__list
                     - for (var i=0; i<12;++i)
-                        a.b-portfolio__item(href='#')
+                        a.b-portfolio__item(href='#portfolio_1', rel='portfolio')
                             img.b-portfolio__image(src='assets/img/tmp/pr-200x300-bosch-rotak.jpg')
                             .b-portfolio__content
                                 span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
@@ -40,7 +40,7 @@ block content
                                 p.b-portfolio__category Строительство
 
                                 p.b-portfolio__date 20 апреля 2016
-                        a.b-portfolio__item(href='#')
+                        a.b-portfolio__item(href='#portfolio_2', rel='portfolio')
                             img.b-portfolio__image(src='assets/img/tmp/pr-200x300-electrovenik.jpg')
                             .b-portfolio__content
                                 span.b-portfolio__type.b-portfolio__type_gif Gif-баннеры
@@ -49,7 +49,7 @@ block content
                                 p.b-portfolio__category Строительство
 
                                 p.b-portfolio__date 5 марта 2016
-                        a.b-portfolio__item(href='#')
+                        a.b-portfolio__item(href='#portfolio_1', rel='portfolio')
                             img.b-portfolio__image(src='assets/img/tmp/pr-200x300-mirta-n-0.jpg')
                             .b-portfolio__content
                                 span.b-portfolio__type.b-portfolio__type_jpg Jpeg-баннеры
@@ -58,7 +58,7 @@ block content
                                 p.b-portfolio__category Динное название категории
 
                                 p.b-portfolio__date 10 марта 2016
-                        a.b-portfolio__item(href='#')
+                        a.b-portfolio__item(href='#portfolio_2', rel='portfolio')
                             img.b-portfolio__image(src='assets/img/tmp/pr-200x600-adreals.jpg')
                             .b-portfolio__content
                                 span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
@@ -67,4 +67,269 @@ block content
                                 p.b-portfolio__date 20 апреля 2016
 
                 a.b-portfolio__button(href='#'): span.b-portfolio__button-text Загрузить ещё
+
+            .hidden
+                #portfolio_1(style='width:1080px;padding:0 40px')
+                    h1.b-page__title #[a.b-page__link(href="#") Флеш-баннер] для #[a.b-page__link(href="client.html") Exante] “Лучший брокер”
+
+                    .b-language-tabs
+                        ul.b-language-tabs__list(role="tablist")
+                            li.b-language-tabs__item.active(role="presentation"): a.b-language-tabs__link(href='#banner_language_ru', aria-controls="banner_language_ru", role="tab", data-toggle="tab"): span.b-language-tabs__title Русский
+                            li.b-language-tabs__item(role="presentation"): a.b-language-tabs__link(href='#banner_language_en', aria-controls="banner_language_en", role="tab", data-toggle="tab"): span.b-language-tabs__title Английский
+
+                    .b-portfolio-item
+                        .tab-content
+                            #banner_language_ru.tab-pane.active(role="tabpanel")
+                                ul.b-size-tabs.list-unstyled
+                                    li.b-size-tabs__item.active(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_240_400', aria-controls="banner_language_ru_size_240_400", role="tab", data-toggle="tab") 240#[span.b-size-tabs__divider x]400
+                                    li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_100_100', aria-controls="banner_language_ru_size_100_100", role="tab", data-toggle="tab") 100#[span.b-size-tabs__divider x]100
+                                    li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_200_300', aria-controls="banner_language_ru_size_200_300", role="tab", data-toggle="tab") 1200#[span.b-size-tabs__divider x]300
+                                    li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_160_600', aria-controls="banner_language_ru_size_160_600", role="tab", data-toggle="tab") 160#[span.b-size-tabs__divider x]600
+                                .tab-content
+                                    #banner_language_ru_size_240_400.tab-pane.active(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/970x90', alt='')
+                                    #banner_language_ru_size_100_100.tab-pane(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/100x100', alt='')
+                                    #banner_language_ru_size_200_300.tab-pane(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/1200x300', alt='')
+                                    #banner_language_ru_size_160_600.tab-pane(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/160x600', alt='')
+                            #banner_language_en.tab-pane(role="tabpanel")
+                                ul.b-size-tabs.list-unstyled
+                                    li.b-size-tabs__item.active(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_240_400', aria-controls="banner_language_en_size_240_400", role="tab", data-toggle="tab") 240#[span.b-size-tabs__divider x]400
+                                    li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_100_100', aria-controls="banner_language_en_size_100_100", role="tab", data-toggle="tab") 100#[span.b-size-tabs__divider x]100
+                                    li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_200_300', aria-controls="banner_language_en_size_200_300", role="tab", data-toggle="tab") 200#[span.b-size-tabs__divider x]300
+                                    li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_160_600', aria-controls="banner_language_en_size_160_600", role="tab", data-toggle="tab") 160#[span.b-size-tabs__divider x]600
+                                .tab-content
+                                    #banner_language_en_size_240_400.tab-pane.active(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/970x90', alt='')
+                                    #banner_language_en_size_100_100.tab-pane(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/100x100', alt='')
+                                    #banner_language_en_size_200_300.tab-pane(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/200x300', alt='')
+                                    #banner_language_en_size_160_600.tab-pane(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/160x600', alt='')
+                        .b-portfolio-item__lead
+                            .row
+                                .col-xs-8
+                                    .b-portfolio-item__info Сфера бизнеса: #[a.b-portfolio-item__link(href='#') Финансы]
+                                    .b-portfolio-item__info Стиль баннера: #[a.b-portfolio-item__link(href='#') Текстовый]
+                                .col-xs-4.text-right
+                                    .b-portfolio-item__date 2 марта 2016
+
+                                    .b-portfolio-item__share.pull-right
+                                        script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+                                        script(src="//yastatic.net/share2/share.js")
+                                        .ya-share2(data-services="vkontakte,facebook,gplus")
+                        .b-portfolio-item__text.b-text
+                            p Интерактивный флеш-баннер 240x400 для компании WikiPlanet, которая занимается организацией туров по всей России. Кстати, актуально при нынешнем курсе доллара.
+                            p Особенности:
+                            ol
+                                li Интерактивность. В зависимости от выбора человека предлагаем ему конкретный тур, который соответствует его увлечениям. Например, если выбрана "Рыбалка", то предлагаем ознакомится с возможностью порыбачить на тихоокеанских лососей на базе "Еловка".
+                                li При выборе отдыха необязательно кликать по кнопке "Рыбалка", достаточно подержать курсор над ней некоторое время, и баннер сам осуществит переход к следующей сцене. Это сделано для людей, которые опасаются кликать на интерактивные баннеры, т.к. научены горьким опытом обмана "лже-интерактивности".
+                                li Глаза человечка на баннере следят за курсором - поводите его туда-сюда по баннеру.
+                                li Баннер по итогу весит всего 46 кб, что позволяет его использоваться на большинстве рекламных площадок.
+                        .text-center
+                            a.btn.btn-success.btn-lg.b-portfolio-item__button(href='#') Заказать похожий баннер
+
+                        .b-portfolio
+                            h5.b-portfolio__header Другие баннеры на тему «Финансы»:
+
+                            .b-portfolio__list
+                                a.b-portfolio__item(href='#')
+                                    img.b-portfolio__image(src='assets/img/tmp/pr-200x300-bosch-rotak.jpg')
+                                    .b-portfolio__content
+                                        span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
+
+                                        p.b-portfolio__title QIVI
+                                        p.b-portfolio__category Строительство
+
+                                        p.b-portfolio__date 20 апреля 2016
+                                a.b-portfolio__item(href='#')
+                                    img.b-portfolio__image(src='assets/img/tmp/pr-200x300-electrovenik.jpg')
+                                    .b-portfolio__content
+                                        span.b-portfolio__type.b-portfolio__type_gif Gif-баннеры
+
+                                        p.b-portfolio__title Длинное название работы
+                                        p.b-portfolio__category Строительство
+
+                                        p.b-portfolio__date 5 марта 2016
+                                a.b-portfolio__item(href='#')
+                                    img.b-portfolio__image(src='assets/img/tmp/pr-200x300-mirta-n-0.jpg')
+                                    .b-portfolio__content
+                                        span.b-portfolio__type.b-portfolio__type_jpg Jpeg-баннеры
+
+                                        p.b-portfolio__title QIVI
+                                        p.b-portfolio__category Динное название категории
+
+                                        p.b-portfolio__date 10 марта 2016
+                                a.b-portfolio__item(href='#')
+                                    img.b-portfolio__image(src='assets/img/tmp/pr-200x600-adreals.jpg')
+                                    .b-portfolio__content
+                                        span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
+                                        p.b-portfolio__title QIVI
+                                        p.b-portfolio__category Строительство
+                                        p.b-portfolio__date 20 апреля 2016
+                                a.b-portfolio__item(href='#')
+                                    img.b-portfolio__image(src='assets/img/tmp/pr-200x300-bosch-rotak.jpg')
+                                    .b-portfolio__content
+                                        span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
+                                        p.b-portfolio__title QIVI
+                                        p.b-portfolio__category Строительство
+                                        p.b-portfolio__date 20 апреля 2016
+                                a.b-portfolio__item(href='#')
+                                    img.b-portfolio__image(src='assets/img/tmp/pr-200x300-electrovenik.jpg')
+                                    .b-portfolio__content
+                                        span.b-portfolio__type.b-portfolio__type_gif Gif-баннеры
+                                        p.b-portfolio__title Длинное название работы
+                                        p.b-portfolio__category Строительство
+                                        p.b-portfolio__date 5 марта 2016
+
+                #portfolio_2(style='width:1080px;padding:0 40px')
+                    h1.b-page__title #[a.b-page__link(href="#") Флеш-баннер] для #[a.b-page__link(href="client.html") Exante] “Лучший брокер” 2
+
+                    .b-language-tabs
+                        ul.b-language-tabs__list(role="tablist")
+                            li.b-language-tabs__item.active(role="presentation"): a.b-language-tabs__link(href='#banner_language_ru', aria-controls="banner_language_ru", role="tab", data-toggle="tab"): span.b-language-tabs__title Русский
+                            li.b-language-tabs__item(role="presentation"): a.b-language-tabs__link(href='#banner_language_en', aria-controls="banner_language_en", role="tab", data-toggle="tab"): span.b-language-tabs__title Английский
+
+                    .b-portfolio-item
+                        .tab-content
+                            #banner_language_ru.tab-pane.active(role="tabpanel")
+                                ul.b-size-tabs.list-unstyled
+                                    li.b-size-tabs__item.active(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_240_400', aria-controls="banner_language_ru_size_240_400", role="tab", data-toggle="tab") 240#[span.b-size-tabs__divider x]400
+                                    li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_100_100', aria-controls="banner_language_ru_size_100_100", role="tab", data-toggle="tab") 100#[span.b-size-tabs__divider x]100
+                                    li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_200_300', aria-controls="banner_language_ru_size_200_300", role="tab", data-toggle="tab") 1200#[span.b-size-tabs__divider x]300
+                                    li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_160_600', aria-controls="banner_language_ru_size_160_600", role="tab", data-toggle="tab") 160#[span.b-size-tabs__divider x]600
+                                .tab-content
+                                    #banner_language_ru_size_240_400.tab-pane.active(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/970x90', alt='')
+                                    #banner_language_ru_size_100_100.tab-pane(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/100x100', alt='')
+                                    #banner_language_ru_size_200_300.tab-pane(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/1200x300', alt='')
+                                    #banner_language_ru_size_160_600.tab-pane(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/160x600', alt='')
+                            #banner_language_en.tab-pane(role="tabpanel")
+                                ul.b-size-tabs.list-unstyled
+                                    li.b-size-tabs__item.active(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_240_400', aria-controls="banner_language_en_size_240_400", role="tab", data-toggle="tab") 240#[span.b-size-tabs__divider x]400
+                                    li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_100_100', aria-controls="banner_language_en_size_100_100", role="tab", data-toggle="tab") 100#[span.b-size-tabs__divider x]100
+                                    li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_200_300', aria-controls="banner_language_en_size_200_300", role="tab", data-toggle="tab") 200#[span.b-size-tabs__divider x]300
+                                    li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_160_600', aria-controls="banner_language_en_size_160_600", role="tab", data-toggle="tab") 160#[span.b-size-tabs__divider x]600
+                                .tab-content
+                                    #banner_language_en_size_240_400.tab-pane.active(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/970x90', alt='')
+                                    #banner_language_en_size_100_100.tab-pane(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/100x100', alt='')
+                                    #banner_language_en_size_200_300.tab-pane(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/200x300', alt='')
+                                    #banner_language_en_size_160_600.tab-pane(role="tabpanel")
+                                        .b-portfolio-item__view
+                                            .b-portfolio-item__image
+                                                img.img-responsive(src='http://placehold.it/160x600', alt='')
+                        .b-portfolio-item__lead
+                            .row
+                                .col-xs-8
+                                    .b-portfolio-item__info Сфера бизнеса: #[a.b-portfolio-item__link(href='#') Финансы]
+                                    .b-portfolio-item__info Стиль баннера: #[a.b-portfolio-item__link(href='#') Текстовый]
+                                .col-xs-4.text-right
+                                    .b-portfolio-item__date 2 марта 2016
+
+                                    .b-portfolio-item__share.pull-right
+                                        script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+                                        script(src="//yastatic.net/share2/share.js")
+                                        .ya-share2(data-services="vkontakte,facebook,gplus")
+                        .b-portfolio-item__text.b-text
+                            p Интерактивный флеш-баннер 240x400 для компании WikiPlanet, которая занимается организацией туров по всей России. Кстати, актуально при нынешнем курсе доллара.
+                            p Особенности:
+                            ol
+                                li Интерактивность. В зависимости от выбора человека предлагаем ему конкретный тур, который соответствует его увлечениям. Например, если выбрана "Рыбалка", то предлагаем ознакомится с возможностью порыбачить на тихоокеанских лососей на базе "Еловка".
+                                li При выборе отдыха необязательно кликать по кнопке "Рыбалка", достаточно подержать курсор над ней некоторое время, и баннер сам осуществит переход к следующей сцене. Это сделано для людей, которые опасаются кликать на интерактивные баннеры, т.к. научены горьким опытом обмана "лже-интерактивности".
+                                li Глаза человечка на баннере следят за курсором - поводите его туда-сюда по баннеру.
+                                li Баннер по итогу весит всего 46 кб, что позволяет его использоваться на большинстве рекламных площадок.
+                        .text-center
+                            a.btn.btn-success.btn-lg.b-portfolio-item__button(href='#') Заказать похожий баннер
+
+                        .b-portfolio
+                            h5.b-portfolio__header Другие баннеры на тему «Финансы»:
+
+                            .b-portfolio__list
+                                a.b-portfolio__item(href='#')
+                                    img.b-portfolio__image(src='assets/img/tmp/pr-200x300-bosch-rotak.jpg')
+                                    .b-portfolio__content
+                                        span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
+
+                                        p.b-portfolio__title QIVI
+                                        p.b-portfolio__category Строительство
+
+                                        p.b-portfolio__date 20 апреля 2016
+                                a.b-portfolio__item(href='#')
+                                    img.b-portfolio__image(src='assets/img/tmp/pr-200x300-electrovenik.jpg')
+                                    .b-portfolio__content
+                                        span.b-portfolio__type.b-portfolio__type_gif Gif-баннеры
+
+                                        p.b-portfolio__title Длинное название работы
+                                        p.b-portfolio__category Строительство
+
+                                        p.b-portfolio__date 5 марта 2016
+                                a.b-portfolio__item(href='#')
+                                    img.b-portfolio__image(src='assets/img/tmp/pr-200x300-mirta-n-0.jpg')
+                                    .b-portfolio__content
+                                        span.b-portfolio__type.b-portfolio__type_jpg Jpeg-баннеры
+
+                                        p.b-portfolio__title QIVI
+                                        p.b-portfolio__category Динное название категории
+
+                                        p.b-portfolio__date 10 марта 2016
+                                a.b-portfolio__item(href='#')
+                                    img.b-portfolio__image(src='assets/img/tmp/pr-200x600-adreals.jpg')
+                                    .b-portfolio__content
+                                        span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
+                                        p.b-portfolio__title QIVI
+                                        p.b-portfolio__category Строительство
+                                        p.b-portfolio__date 20 апреля 2016
+                                a.b-portfolio__item(href='#')
+                                    img.b-portfolio__image(src='assets/img/tmp/pr-200x300-bosch-rotak.jpg')
+                                    .b-portfolio__content
+                                        span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
+                                        p.b-portfolio__title QIVI
+                                        p.b-portfolio__category Строительство
+                                        p.b-portfolio__date 20 апреля 2016
+                                a.b-portfolio__item(href='#')
+                                    img.b-portfolio__image(src='assets/img/tmp/pr-200x300-electrovenik.jpg')
+                                    .b-portfolio__content
+                                        span.b-portfolio__type.b-portfolio__type_gif Gif-баннеры
+                                        p.b-portfolio__title Длинное название работы
+                                        p.b-portfolio__category Строительство
+                                        p.b-portfolio__date 5 марта 2016
 

@@ -124,3 +124,49 @@ body {
 		opacity: 1;
 	}
 }
+
+.fancybox-skin {
+	color: @text-color;
+	border-radius: 0;
+	box-shadow: none !important;
+}
+
+.fancybox-nav {
+	background: none !important;
+	color: #fff;
+	opacity: .3;
+	margin-top: -13px;
+
+	top: 353px;
+
+	&:hover {
+		color: #fff;
+		opacity: 1;
+	}
+
+	span {
+		display: none;
+	}
+}
+
+.fancybox-prev {
+	left: -50px;
+
+	width: 26px;
+	height: 26px;
+	border-left: solid 6px currentColor;
+	border-top: solid 6px currentColor;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.fancybox-next {
+	right: -50px;
+
+	width: 26px;
+	height: 26px;
+	border-right: solid 6px currentColor;
+	border-bottom: solid 6px currentColor;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
