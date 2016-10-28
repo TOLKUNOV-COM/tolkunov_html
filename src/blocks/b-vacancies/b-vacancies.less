@@ -1,0 +1,64 @@
+@import "variables.less";
+@import "mixins";
+@import "mymixins";
+
+.b-vacancies {
+	background: #f5f9fc;
+	margin-top: 18px;
+}
+
+.b-vacancies__list {
+
+}
+
+.b-vacancies__item {
+	background: #ffffff;
+	box-shadow: 2px 2px 0px rgba(0, 0, 0, .05);
+	margin: 28px 0;
+	padding: 0 50px;
+}
+
+.b-vacancies__item_collapsed {
+	.b-vacancies__image, .b-vacancies__content, .b-vacancies__button {
+		display: none;
+	}
+}
+
+.b-vacancies__title {
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+	margin: 17px 0;
+
+	.mylink-extended(@text-color, 2px dotted rgba(37, 37, 37, .1), #e74c3c);
+}
+
+.b-vacancies__image {
+	margin-top: 30px;
+	margin-bottom: 55px;
+}
+
+.b-vacancies__content {
+	.make-row(60px);
+	.clearfix();
+
+	margin-bottom: 38px;
+}
+
+.b-vacancies__text {
+	.make-xs-column(6, 60px);
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 0;
+		margin-bottom: 15px;
+	}
+}
+
+.b-vacancies__button {
+	font-weight: bold;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	margin-bottom: 48px;
+}
+

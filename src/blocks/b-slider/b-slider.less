@@ -1,0 +1,40 @@
+@import "variables.less";
+@import "mixins";
+
+.b-slider {
+	margin-bottom: 120px;
+
+	.slick-arrow {
+		color: #252525;
+		margin-top: -13px;
+
+		&:hover {
+			color: @link-hover-color;
+		}
+	}
+
+	.slick-prev {
+		left: -58px;
+
+		width: 26px;
+		height: 26px;
+		border-left: solid 6px currentColor;
+		border-top: solid 6px currentColor;
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	.slick-next {
+		right: -58px;
+
+		width: 26px;
+		height: 26px;
+		border-right: solid 6px currentColor;
+		border-bottom: solid 6px currentColor;
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+}
+
+.b-slider__item {
+
+}
