@@ -1,0 +1,42 @@
+@import "variables.less";
+@import "mixins";
+
+.b-search-form {
+	position: absolute;
+	top: 0;
+	left: -1000px+60px+(66px*2);
+	width: 1000px - (66px*2);
+	height: 54px;
+	background: #34495e 19px center no-repeat url("../../assets/img/menu-icon-search.svg");
+	background-size: 20px 19px;
+}
+
+.b-search-form__input {
+	border: none;
+	background-color: transparent;
+
+	position: absolute;
+	top: 0;
+	left: 60px;
+	width: 1000px - (60px*2) - (66px*2);
+	height: 100%;
+	font-size: 24px;
+	color: #fff;
+	text-align: center;
+
+	.placeholder(rgba(255, 255, 255, .1));
+}
+
+.b-search-form__close {
+	width: 60px;
+	height: 54px;
+	float: right;
+	background: #34495e center center no-repeat url("../../assets/img/menu-icon-close.svg");
+	background-size: 20px 20px;
+
+	&:hover, &:active, &:focus {
+		background: darken(#34495e, 5%) center center no-repeat url("../../assets/img/menu-icon-close.svg");
+		background-size: 20px 20px;
+	}
+}
+

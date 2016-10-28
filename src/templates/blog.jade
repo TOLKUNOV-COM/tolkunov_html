@@ -5,17 +5,29 @@ block content
         .container
             h1.b-page__title Справочник клиента
 
+            .b-blog-menu
+                .b-blog-menu__list
+                    .b-blog-menu__item.b-blog-menu__item_active.b-blog-menu__item_home: a.b-blog-menu__link(href='#'): i.b-blog-menu__icon.b-blog-menu__icon_home
+                    .b-blog-menu__item
+                        a.b-blog-menu__link(href='#') Баннеры
+                        .b-blog-menu__list
+                            .b-blog-menu__item: a.b-blog-menu__link(href='#') Площадки
+                            .b-blog-menu__item: a.b-blog-menu__link(href='#') Инструкции
+                            .b-blog-menu__item: a.b-blog-menu__link(href='#') Новинки индустрии
+                            .b-blog-menu__item: a.b-blog-menu__link(href='#') Типы баннеров
+                    .b-blog-menu__item: a.b-blog-menu__link(href='#') Сервисы
+                    .b-blog-menu__item: a.b-blog-menu__link(href='#') Реклама
+                    .b-blog-menu__item: a.b-blog-menu__link(href='#') Бизнес
+                    .b-blog-menu__item: a.b-blog-menu__link(href='#') Уроки
+                    .b-blog-menu__item: a.b-blog-menu__link(href='#') Жизнь студии
+                    .b-blog-menu__item.b-blog-menu__item_search
+                        a.b-blog-menu__link(href='#'): i.b-blog-menu__icon.b-blog-menu__icon_search
+                        form.b-search-form.hidden
+                            input.b-search-form__input(type="text", name="q", placeholder="Введите что-нибудь и нажмите “Enter”")
+                            a.b-search-form__close(href='#')
+
             p.b-page__lead Пишем о баннерах, рекламе, маркетинге, бизнесе, полезных сервисах, а&nbsp;также рассказываем немного о жизни студии.
 
-            .b-blog-menu
-                a.b-blog-menu__item(href='#') Главная
-                a.b-blog-menu__item(href='#') Баннеры
-                a.b-blog-menu__item(href='#') Сервисы
-                a.b-blog-menu__item(href='#') Реклама
-                a.b-blog-menu__item(href='#') Бизнес
-                a.b-blog-menu__item(href='#') Уроки
-                a.b-blog-menu__item(href='#') Жизнь студии
-                a.b-blog-menu__item(href='#') Поиск
             .b-blog
                 .b-blog__list
                     - for (var i=0; i<4;++i)
