@@ -1,0 +1,63 @@
+extends ./layouts/layout.jade
+
+block content
+    .b-page
+        .container
+            h1.b-page__title Контактная информация
+
+            .b-contacts
+                .row
+                    .col-xs-4
+                        .b-contacts__item.b-contacts__item_phone +7 (351) 277-91-60
+                    .col-xs-4
+                        .b-contacts__item.b-contacts__item_skype: a.b-contacts__link(href='#') tolkunovdb
+                    .col-xs-4
+                        .b-contacts__item.b-contacts__item_address Блюхера 69, офис 507
+                .row
+                    .col-xs-4
+                        .b-contacts__item.b-contacts__item_mail: a.b-contacts__link(href='#') order@tolkunov.com
+                    .col-xs-4
+                        .b-contacts__item.b-contacts__item_telegram: a.b-contacts__link(href='#') tolkunovdb
+                    .col-xs-4
+                        .b-contacts__item.b-contacts__item_time 10:00-19:00, пн-пт
+            .b-map
+                center
+                    a.dg-widget-link(href="http://2gis.ru/chelyabinsk/firm/70000001022907880/center/61.366946697235115,55.129851325891494/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap") Посмотреть на карте Челябинска
+                    .dg-widget-link
+                        a(href="http://2gis.ru/chelyabinsk/center/61.366953,55.128472/zoom/16/routeTab/rsType/bus/to/61.366953,55.128472╎TOLKUNOV.COM, студия разработки баннеров?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route") Найти проезд до TOLKUNOV.COM, студия разработки баннеров
+                    script(charset="utf-8", src="http://widgets.2gis.com/js/DGWidgetLoader.js")
+                    script(charset="utf-8").
+                        new DGWidgetLoader({
+                            "width": 1200,
+                            "height": 400,
+                            "borderColor": "#a3a3a3",
+                            "pos": {"lat": 55.129851325891494, "lon": 61.366946697235115, "zoom": 16},
+                            "opt": {"city": "chelyabinsk"},
+                            "org": [{"id": "70000001022907880"}]
+                        });
+                    noscript(style="color:#c00;font-size:16px;font-weight:bold;") Виджет карты использует JavaScript. Включите его в настройках вашего браузера.
+            .b-contact-links
+                h2.b-contact-links__header Официальные аккаунты
+
+                p.b-contact-links__lead Новые работы, полезности, акции, истории из жизни студии
+
+                .b-contact-links__list
+                    a.b-contact-links__item.b-contact-links__item_fb(href='#')
+                    a.b-contact-links__item.b-contact-links__item_vk(href='#')
+                    a.b-contact-links__item.b-contact-links__item_tw(href='#')
+                    a.b-contact-links__item.b-contact-links__item_instagram(href='#')
+                    a.b-contact-links__item.b-contact-links__item_youtube(href='#')
+                    a.b-contact-links__item.b-contact-links__item_spark(href='#')
+        .b-form
+            .container
+                form.b-form__form(action="order_3.html")
+                    h2.b-form__header Напишите нам
+
+                    p.b-form__lead Чтобы получить ответ, напишите как вас зовут и как с вами связаться
+
+                    .form-group
+                        textarea.form-control(rows="10")
+
+                    input.btn.btn-primary.btn-lg.b-form__button(type="submit", value="Отправить")
+                    br
+                    a.b-form__link(href='#') Соглашение о конфиденциальности

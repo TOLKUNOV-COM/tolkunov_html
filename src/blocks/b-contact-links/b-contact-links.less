@@ -1,0 +1,59 @@
+@import "variables.less";
+@import "mixins";
+
+.b-contact-links {
+	text-align: center;
+	margin-top: 75px;
+	margin-bottom: 90px;
+}
+
+.b-contact-links__header {
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.b-contact-links__lead {
+	font-size: 30px;
+}
+
+.b-contact-links__list {
+	margin-top: 44px;
+}
+
+.b-contact-links__item {
+	background: 0 0 no-repeat url("../../assets/img/contact-links.png");
+	width: 90px;
+	height: 89px;
+	display: inline-block;
+	margin: 0 5px;
+
+	&:hover, &:active, &:focus {
+		background-position-y: -89px;
+	}
+}
+
+.b-contact-links__item_fb {
+	background-position-x: 0;
+}
+
+.b-contact-links__item_vk {
+	background-position-x: -90px;
+}
+
+.b-contact-links__item_tw {
+	background-position-x: -90px * 2;
+}
+
+.b-contact-links__item_instagram {
+	background-position-x: -90px * 3;
+}
+
+.b-contact-links__item_youtube {
+	background-position-x: -90px * 4;
+}
+
+.b-contact-links__item_spark {
+	background-position-x: -90px * 5;
+}

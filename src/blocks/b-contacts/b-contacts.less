@@ -1,0 +1,48 @@
+@import "variables.less";
+@import "mixins";
+@import "mymixins";
+
+.b-contacts {
+	margin-top: 45px;
+	margin-bottom: 60px;
+}
+
+.b-contacts__item {
+	font-size: 30px;
+	padding: 5px 0 5px 44px + 14px;
+	margin: 10px 0;
+}
+
+.b-contacts__item_phone {
+	background: 4px center no-repeat url("../../assets/img/contacts/phone.png");
+	margin-left: 25px;
+}
+
+.b-contacts__item_skype {
+	background: 3px center no-repeat url("../../assets/img/contacts/skype.png");
+	margin-left: 38px;
+}
+
+.b-contacts__item_address {
+	background: 2px center no-repeat url("../../assets/img/contacts/map.png");
+	margin-left: -41px;
+}
+
+.b-contacts__item_mail {
+	background: 6px center no-repeat url("../../assets/img/contacts/mail.png");
+	margin-left: 25px;
+}
+
+.b-contacts__item_telegram {
+	background: 4px center no-repeat url("../../assets/img/contacts/telegram.png");
+	margin-left: 38px;
+}
+
+.b-contacts__item_time {
+	background: 0px center no-repeat url("../../assets/img/contacts/calendar.png");
+	margin-left: -41px;
+}
+
+.b-contacts__link {
+	.mylink-extended(@text-color, 2px solid rgba(37, 37, 37, .05), @link-hover-color);
+}
