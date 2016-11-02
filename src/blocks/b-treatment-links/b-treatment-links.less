@@ -1,0 +1,31 @@
+@import "variables.less";
+@import "mixins";
+
+.b-treatment-links {
+
+}
+
+.b-treatment-links__item {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background: 0 0 no-repeat url("../../assets/img/treatment-links.png");
+	margin-left: 12px;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		background-position-y: -30px;
+	}
+}
+
+.b-treatment-links__item_vk {
+	background-position-x: 0;
+}
+
+.b-treatment-links__item_fb {
+	background-position-x: -30px;
+}
+
+.b-treatment-links__item_tw {
+	background-position-x: -60px;
+}

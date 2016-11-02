@@ -1,0 +1,91 @@
+@import "variables.less";
+@import "mixins";
+@import "mymixins";
+
+.b-splash-prices {
+	margin-top: 90px;
+}
+
+.b-splash-prices__header {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 50px;
+}
+
+.b-splash-prices__list {
+	.make-row(80px);
+	.clearfix();
+}
+
+.b-splash-prices__item {
+	.make-xs-column(4, 80px);
+}
+
+.b-splash-prices__item_1 {
+	.b-splash-prices__title {
+		.mylink-extended(@text-color, 2px solid rgba(37, 37, 37, .05), #8e44ad);
+	}
+	.b-splash-prices__price {
+		background-position-x: 0;
+	}
+}
+
+.b-splash-prices__item_2 {
+	.b-splash-prices__title {
+		.mylink-extended(@text-color, 2px solid rgba(37, 37, 37, .05), #2980b9);
+	}
+	.b-splash-prices__price {
+		background-position-x: -570px/3;
+	}
+}
+
+.b-splash-prices__item_3 {
+	.b-splash-prices__title {
+		.mylink-extended(@text-color, 2px solid rgba(37, 37, 37, .05), #27ae60);
+	}
+	.b-splash-prices__price {
+		background-position-x: -570px/3 * 2;
+	}
+}
+
+.b-splash-prices__title {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 13px;
+}
+
+.b-splash-prices__text {
+	height: 117px;
+}
+
+.b-splash-prices__sizes {
+	margin-bottom: 42px - 6px;
+}
+
+.b-splash-prices__price {
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+
+	line-height: 92px/2;
+	height: 92px/2;
+	width: 570px/3;
+	background: 0 0 no-repeat url("../../assets/img/splash-prices.png");
+
+	padding-right: 26px;
+	text-align: center;
+	display: block;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		color: #fff;
+		background-position-y: -92px/2;
+	}
+}
+
+.b-splash-prices__button {
+	margin-top: 91px;
+	font-weight: bold;
+}

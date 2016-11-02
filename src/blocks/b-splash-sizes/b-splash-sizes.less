@@ -1,0 +1,34 @@
+@import "variables.less";
+@import "mixins";
+
+.b-splash-sizes {
+}
+
+.b-splash-sizes__item {
+	font-size: 18px;
+	color: @text-color;
+	display: inline-block;
+	border: 2px solid rgba(0, 0, 0, .05);
+	border-radius: 2px;
+	padding: 5px 0;
+	margin: 0 6px 6px 0;
+	width: 73px + 4px;
+	text-align: center;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		color: #fff;
+		border-color: #9b59b6;
+		background-color: #9b59b6;
+	}
+}
+
+.b-splash-sizes__item_more {
+	width: 22px;
+}
+
+.b-splash-sizes__divider {
+	position: relative;
+	top: -1px;
+	margin-left: 1px;
+}

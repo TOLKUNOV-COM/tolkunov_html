@@ -268,7 +268,7 @@ gulp.task('block', function () {
     /* Collect css classes and paste it to less file */
     var sourceClassNames = [];
     var existingClassNames = [];
-    var r = new RegExp('\.' + blockName + '[_]{1,2}[a-z\-_]+', 'gi');
+    var r = new RegExp('\.' + blockName + '[_]{1,2}[a-z\-_1-9]+', 'gi');
 
     gulp.src(['src/templates/*.jade', 'src/templates/**/*.jade'])
         .pipe(collector(function (files, dirname) {
