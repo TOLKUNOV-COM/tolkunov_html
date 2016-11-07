@@ -5,10 +5,11 @@ block content
         .container
             h1.b-page__title Стоимость разработки баннеров
 
-            p.b-page__lead Несколько тарифов для всех типов баннеров: html5, flash, gif и jpg.#[br]Есть также постоянные #[a(href='#discounts') скидки] и выгодные #[a(href='#offers') акции].
+            p.b-page__lead Несколько тарифов для всех типов баннеров: html5, flash, gif и jpg.#[br]Есть также постоянные #[a.b-page__anchor(href='#discounts') скидки] и выгодные #[a.b-page__anchor(href='#offers') акции].
 
         .b-prices
             .container
+                #html5
                 p.b-prices__header HTML5 и FLASH баннеры
 
                 p.b-prices__lead Лучший вариант для внешней рекламы: динамичная анимация, а также возможность добавить интерактив
@@ -68,6 +69,7 @@ block content
 
                         a.btn.b-prices__button(href='#') Выбрать
 
+                #gif
                 p.b-prices__header GIF баннеры
 
                 p.b-prices__lead Альтернатива html5 и flash баннерам, если площадка не принимает их или необходимо сэкономить бюджет, сохранив анимацию
@@ -107,6 +109,7 @@ block content
                         .text-center: a.b-prices__link(href='#prices_example_6') Посмотреть примеры
 
                         a.btn.b-prices__button(href='#') Выбрать
+                #jpeg
                 p.b-prices__header JPG/PNG баннеры
 
                 p.b-prices__lead Статичные баннеры отлично подходят для размещения в социальных сетях, а также на сайте компании в слайдере
@@ -220,17 +223,18 @@ block content
                         .b-offers__text
                             p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
                             p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
-            .b-offers__loader
-                a.btn.btn-primary.btn-lg.b-offers__button(href='#') Посмотреть все 12 акций
+            .g-loader
+                .g-loader__content
+                    a.btn.btn-primary.btn-lg.g-loader__link(href='offers.html') Посмотреть все 12 акций
         .container
-            .b-subscribe
+            .b-subscribe.b-subscribe_theme_alt
                 p.b-subscribe__title Получайте новые акции прямо на почту
                 p.b-subscribe__lead Никакого спама или рекламы. Только акции.
 
                 form.form-inline.b-subscribe__form
                     .form-group
                         input.form-control.b-subscribe__input(name='email', type='email', placeholder='Введите свой email')
-                    button.btn.b-subscribe__button(type="submit") Подписаться
+                    button.btn.btn-lg.btn-success.b-subscribe__button(type="submit") Подписаться
         .hidden
             #prices_example_1
                 .b-price-modal.b-price-modal_color_green

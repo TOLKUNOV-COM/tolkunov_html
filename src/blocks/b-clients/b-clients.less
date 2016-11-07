@@ -4,11 +4,11 @@
 .b-clients {
 	background: #f5f9fc;
 	margin-top: 50px;
+	padding-bottom: 40px;
 }
 
 .b-clients__list {
 	padding: 40px 20px 0;
-	margin-bottom: 65px;
 
 	.clearfix();
 }
@@ -66,65 +66,4 @@
 
 .b-clients__image_hover {
 	display: none;
-}
-
-.b-clients__button {
-	border: 2px solid rgba(0, 0, 0, .1);
-	font-size: 30px;
-	font-weight: bold;
-	color: @text-color;
-	display: block;
-	width: 624px;
-	margin: 0 auto 85px;
-	text-align: center;
-	padding: 17px 0;
-
-	&:hover, &:active, &:focus {
-		color: #2ecc71;
-		border-color: #2ecc71;
-		text-decoration: none;
-
-		.b-clients__button-text {
-			border-color: #2ecc71;
-		}
-	}
-}
-
-.b-clients__button-icon {
-	display: inline-block;
-	position: relative;
-	top: 5px;
-	width: 28px;
-	height: 28px;
-	border: 2px solid currentColor;
-	border-radius: 50%;
-
-	margin-right: 10px;
-
-	&:before {
-		content: '';
-		position: absolute;
-		width: 16px;
-		height: 2px;
-		background-color: currentColor;
-
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	&:after {
-		content: '';
-		position: absolute;
-		width: 16px;
-		height: 2px;
-		background-color: currentColor;
-
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%) rotate(90deg);
-	}
-}
-
-.b-clients__button-text {
-	border-bottom: 2px dotted rgba(37, 37, 37, .15);
 }

@@ -77,7 +77,7 @@ block content
                                     br
                                     | — Желание обучаться новому.
                         .text-center
-                            a.btn.btn-info.btn-lg.b-vacancies__button(href='#') Отправить резюме
+                            a.btn.btn-info.btn-lg.b-vacancies__button(href='#vacancy_form') Отправить резюме
                     .b-vacancies__item.b-vacancies__item_collapsed
                         .text-center
                             a.b-vacancies__title(href='#') Бухгалтер
@@ -110,4 +110,29 @@ block content
                                     br
                                     | — Желание обучаться новому.
                         .text-center
-                            a.btn.btn-info.btn-lg.b-vacancies__button(href='#') Отправить резюме
+                            a.btn.btn-info.btn-lg.b-vacancies__button(href='#vacancy_form') Отправить резюме
+        .hidden
+            .b-modal-form#vacancy_form
+                p.b-modal-form__header Отправка резюме
+
+                .b-form.b-modal-form__form
+                    form.b-form__form(action="")
+                        .form-group
+                            label Ваше имя
+                            input.form-control(type="text")
+                        .form-group
+                            label Номер телефона
+                            input.form-control(type="text")
+                        .form-group
+                            label Email
+                            input.form-control(type="email")
+                        .form-group
+                            label Файлы
+                            p.help-block Резюме, портфолио, сертификаты
+                            .b-form-upload.b-form__upload
+                                input(type="file")
+                                span.b-form-upload__label Выберите файлы или перетащите их в эту форму
+
+                        input.btn.btn-success.btn-lg.b-form__button(type="submit", value="Отправить")
+                        br
+                        a.b-form__link(href='#') Соглашение о конфиденциальности

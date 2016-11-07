@@ -103,11 +103,14 @@ block content
                         .b-offers__text
                             p JivoSite позволяет Вам общаться в чате с посетителями Вашего сайта.
                             p Это увеличивает эффективность сайта, повышая продажи без дополнительных вложений в рекламу.
-            .b-subscribe
+                .g-loader
+                    .g-loader__content
+                        a.g-loader__button(href='#') #[i.g-loader__button-icon]#[span.g-loader__button-text Загрузить ещё]
+            .b-subscribe.b-subscribe_theme_alt
                 p.b-subscribe__title Получайте новые акции прямо на почту
                 p.b-subscribe__lead Никакого спама или рекламы. Только акции.
 
                 form.form-inline.b-subscribe__form
                     .form-group
                         input.form-control.b-subscribe__input(name='email', type='email', placeholder='Введите свой email')
-                    button.btn.b-subscribe__button(type="submit") Подписаться
+                    button.btn.btn-lg.btn-success.b-subscribe__button(type="submit") Подписаться

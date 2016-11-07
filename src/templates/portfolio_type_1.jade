@@ -31,7 +31,7 @@ block content
 
                 .b-portfolio__list
                     - for (var i=0; i<12;++i)
-                        a.b-portfolio__item(href='#portfolio_1', rel='portfolio')
+                        a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
                             img.b-portfolio__image(src='assets/img/tmp/pr-200x300-bosch-rotak.jpg')
                             .b-portfolio__content
                                 span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
@@ -40,7 +40,7 @@ block content
                                 p.b-portfolio__category Строительство
 
                                 p.b-portfolio__date 20 апреля 2016
-                        a.b-portfolio__item(href='#portfolio_2', rel='portfolio')
+                        a.b-portfolio__item.emerge(href='#portfolio_2', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
                             img.b-portfolio__image(src='assets/img/tmp/pr-200x300-electrovenik.jpg')
                             .b-portfolio__content
                                 span.b-portfolio__type.b-portfolio__type_gif Gif-баннеры
@@ -49,7 +49,7 @@ block content
                                 p.b-portfolio__category Строительство
 
                                 p.b-portfolio__date 5 марта 2016
-                        a.b-portfolio__item(href='#portfolio_1', rel='portfolio')
+                        a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
                             img.b-portfolio__image(src='assets/img/tmp/pr-200x300-mirta-n-0.jpg')
                             .b-portfolio__content
                                 span.b-portfolio__type.b-portfolio__type_jpg Jpeg-баннеры
@@ -58,17 +58,22 @@ block content
                                 p.b-portfolio__category Динное название категории
 
                                 p.b-portfolio__date 10 марта 2016
-                        a.b-portfolio__item(href='#portfolio_2', rel='portfolio')
+                        a.b-portfolio__item.emerge(href='#portfolio_2', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
                             img.b-portfolio__image(src='assets/img/tmp/pr-200x600-adreals.jpg')
                             .b-portfolio__content
                                 span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
                                 p.b-portfolio__title QIVI
                                 p.b-portfolio__category Строительство
                                 p.b-portfolio__date 20 апреля 2016
+                script.
+                    $('.b-portfolio__item').each(function(){
+                        $(this).data('hold', Math.floor(Math.random() * 400) + 50);
+                        $(this).data('effect', 'zoom');
+                    });
 
-                a.b-portfolio__button(href='#')
-                    i.b-portfolio__button-icon
-                    span.b-portfolio__button-text Загрузить ещё
+            .g-loader
+                .g-loader__content
+                    a.g-loader__button(href='#') #[i.g-loader__button-icon]#[span.g-loader__button-text Загрузить ещё]
 
             .hidden
                 #portfolio_1(style='width:1080px;padding:0 40px')

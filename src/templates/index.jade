@@ -9,13 +9,13 @@ block content
 
             .b-summary
                 a.b-summary__item.b-summary__item_1(href='portfolio_type_1.html')
-                    .b-summary__number 985
+                    .b-summary__number.odometer(data-number="985") 000
                     .b-summary__text баннеров#[br]в портфолио
                 a.b-summary__item.b-summary__item_2(href='reviews.html')
-                    .b-summary__number 232
+                    .b-summary__number.odometer(data-number="232") 000
                     .b-summary__text отзыва#[br]от клиентов
                 a.b-summary__item.b-summary__item_3(href='blog.html')
-                    .b-summary__number 15
+                    .b-summary__number.odometer(data-number="15") 00
                     .b-summary__text статей в нашем#[br]справочнике
             .b-portfolio
                 .b-portfolio__list
@@ -55,11 +55,12 @@ block content
                                 p.b-portfolio__category Строительство
                                 p.b-portfolio__date 20 апреля 2016
 
-            .g-loader
-                a.btn.btn-info.btn-lg.g-loader__button(href='portfolio_type_1.html') Посмотреть все 985 работ
+                .g-loader
+                    .g-loader__content
+                        a.btn.btn-info.btn-lg.g-loader__link(href='portfolio_type_1.html') Посмотреть все 985 работ
 
-                p.g-loader__text Запаситесь чашечкой чая или кофе — для просмотра всех работ потребуется больше 50 минут.
-        .b-treatment
+                        p.g-loader__text Запаситесь чашечкой чая или кофе — для просмотра всех работ потребуется больше 50 минут.
+        .b-treatment.g-mt20
             .b-treatment__content
                 .container
                     p.b-treatment__title Вместе с эффектной графикой анализ рекламной площадки
@@ -92,7 +93,7 @@ block content
                             a.b-splash-sizes__item(href='#') 160#[span.b-splash-sizes__divider x]600
                             a.b-splash-sizes__item(href='#') 300#[span.b-splash-sizes__divider x]300
                             a.b-splash-sizes__item.b-splash-sizes__item_more(href='#') ...
-                        a.b-splash-prices__price(href='#') От 2990 руб.
+                        a.b-splash-prices__price(href='prices.html#html5') От 2990 руб.
                     .b-splash-prices__item.b-splash-prices__item_2
                         a.b-splash-prices__title(href='#') GIF-баннеры
 
@@ -106,7 +107,7 @@ block content
                             a.b-splash-sizes__item(href='#') 160#[span.b-splash-sizes__divider x]600
                             a.b-splash-sizes__item(href='#') 300#[span.b-splash-sizes__divider x]300
                             a.b-splash-sizes__item.b-splash-sizes__item_more(href='#') ...
-                        a.b-splash-prices__price(href='#') От 990 руб.
+                        a.b-splash-prices__price(href='prices.html#gif') От 990 руб.
                     .b-splash-prices__item.b-splash-prices__item_3
                         a.b-splash-prices__title(href='#') JPG-баннеры
 
@@ -120,9 +121,9 @@ block content
                             a.b-splash-sizes__item(href='#') 160#[span.b-splash-sizes__divider x]600
                             a.b-splash-sizes__item(href='#') 300#[span.b-splash-sizes__divider x]300
                             a.b-splash-sizes__item.b-splash-sizes__item_more(href='#') ...
-                        a.b-splash-prices__price(href='#') От 490 руб.
+                        a.b-splash-prices__price(href='prices.html#jpeg') От 490 руб.
                 .text-center
-                    a.btn.btn-success.btn-lg.b-splash-prices__button(href='#') Посмотреть все тарифы
+                    a.btn.btn-success.btn-lg.b-splash-prices__button(href='prices.html') Посмотреть все тарифы
             .b-why-us
                 h2.b-why-us__header Комфортное сотрудничество
 
@@ -277,7 +278,8 @@ block content
                             span.b-reviews__date 11 января 2015
                             a.b-reviews__link(href='#') Оригинал отзыва
             .g-loader.g-loader_theme_dark
-                a.btn.btn-info.btn-lg.g-loader__button(href='reviews.html') Посмотреть все 232 отзыва
+                .g-loader__content
+                    a.btn.btn-info.btn-lg.g-loader__link(href='reviews.html') Посмотреть все 232 отзыва
         .container
             .b-blog.g-mb50
                 h2.b-blog__header Справочник клиента
@@ -320,8 +322,9 @@ block content
                                     span 16 марта 2015
                                 .col-xs-6.text-right
                                     span 16 марта 2015
-                .g-loader
-                    a.btn.btn-success.btn-lg.g-loader__button(href='blog.html') Почитать все 15 статей
+        .g-loader
+            .g-loader__content
+                a.btn.btn-success.btn-lg.g-loader__link(href='blog.html') Почитать все 15 статей
         .hidden
             #review_1
                 .b-review-image

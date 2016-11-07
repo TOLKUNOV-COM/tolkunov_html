@@ -2,11 +2,22 @@
 @import "mixins";
 
 .g-loader {
-	background: #fff;
-	padding: 36px 0 45px;
-	text-align: center;
-
 	position: relative;
+	height: 50px;
+}
+
+.g-loader__content {
+	position: absolute;
+	top: -100px;
+
+	width: 100%;
+	height: 150px;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+
+	background: #fff;
 
 	&:before {
 		position: absolute;
@@ -21,18 +32,88 @@
 }
 
 .g-loader_theme_dark {
-	background: #f4f9fc;
+	.g-loader__content {
+		background: #f4f9fc;
 
-	&:before {
-		background: linear-gradient(to top, rgba(244, 249, 252, 1) 0%, rgba(244, 249, 252, 0) 100%);
+		&:before {
+			background: linear-gradient(to top, rgba(244, 249, 252, 1) 0%, rgba(244, 249, 252, 0) 100%);
+		}
 	}
 }
 
-.g-loader__button {
+.g-loader__link {
 	font-weight: bold;
 }
 
 .g-loader__text {
 	color: #8e8e8e;
 	margin-top: 15px;
+	margin-bottom: 0;
+}
+
+.g-loader__button {
+	border: 2px solid #e9e9e9;
+	font-size: 30px;
+	font-weight: bold;
+	color: @text-color;
+	display: block;
+	width: 624px;
+	margin: 0 auto;
+	text-align: center;
+
+	line-height: 1;
+
+	@base-padding: 12px;
+
+	padding-top: @base-padding;
+	padding-bottom: @base-padding + 9px;
+
+	&:hover, &:active, &:focus {
+		color: #2ecc71;
+		border-color: #2ecc71;
+		text-decoration: none;
+
+		.g-loader__button-text {
+			border-color: #2ecc71;
+		}
+	}
+}
+
+.g-loader__button-icon {
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	width: 28px;
+	height: 28px;
+	border: 2px solid currentColor;
+	border-radius: 50%;
+
+	margin-right: 8px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 16px;
+		height: 2px;
+		background-color: currentColor;
+
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		width: 16px;
+		height: 2px;
+		background-color: currentColor;
+
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(90deg);
+	}
+}
+
+.g-loader__button-text {
+	border-bottom: 2px dotted rgba(37, 37, 37, .15);
 }

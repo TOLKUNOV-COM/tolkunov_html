@@ -67,11 +67,14 @@ block content
                                     span 16 марта 2015
                                 .col-xs-6.text-right
                                     span 16 марта 2015
-            .b-subscribe.b-subscribe_theme_alt
+            .g-loader
+                .g-loader__content
+                    a.g-loader__button(href='#') #[i.g-loader__button-icon]#[span.g-loader__button-text Загрузить ещё]
+            .b-subscribe
                 p.b-subscribe__title Получайте новые статьи прямо на почту
                 p.b-subscribe__lead Никакого спама или рекламы. Только статьи.
 
                 form.form-inline.b-subscribe__form(action='blog_done.html')
                     .form-group
                         input.form-control.b-subscribe__input(name='email', type='email', placeholder='Введите свой email')
-                    button.btn.b-subscribe__button(type="submit") Подписаться
+                    button.btn.btn-lg.btn-success.b-subscribe__button(type="submit") Подписаться

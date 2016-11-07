@@ -21,7 +21,7 @@ html, body {
 
 /* Account for fixed navbar */
 body {
-	min-width: 1000px;
+	min-width: 1080px;
 	//position: relative;
 
 	font-weight: 300;
@@ -95,19 +95,88 @@ body {
 	.resizable(vertical);
 }
 
-.btn-success.active, .btn-success:active, .btn-success:hover, .open > .dropdown-toggle.btn-success {
-	background-color: #9eb000;
-	border-color: #9eb000;
+/* .btn-success */
+.btn-success {
+	&.active,
+	&:active,
+	&:hover,
+	&.active.focus,
+	&.active:focus,
+	&.active:hover,
+	&:active.focus,
+	&:active:focus,
+	&:active:hover {
+		background-color: #9eb000;
+		border-color: #9eb000;
+	}
 }
 
-.btn-primary.active, .btn-primary:active, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
-	background-color: #841893;
-	border-color: #841893;
+.open > .dropdown-toggle.btn-success {
+	&, &.focus, &:focus, &:hover {
+		background-color: #9eb000;
+		border-color: #9eb000;
+	}
 }
 
-.btn-info.active, .btn-info:active, .btn-info:hover, .open > .dropdown-toggle.btn-info {
-	background-color: #007cb5;
-	border-color: #007cb5;
+/* .btn-primary */
+.btn-primary {
+	&.active,
+	&:active,
+	&:hover,
+	&.active.focus,
+	&.active:focus,
+	&.active:hover,
+	&:active.focus,
+	&:active:focus,
+	&:active:hover {
+		background-color: #841893;
+		border-color: #841893;
+	}
+}
+
+.open > .dropdown-toggle.btn-primary {
+	&, &.focus, &:focus, &:hover {
+		background-color: #841893;
+		border-color: #841893;
+	}
+}
+
+/* .btn-info */
+.btn-info {
+	&.active,
+	&:active,
+	&:hover,
+	&.active.focus,
+	&.active:focus,
+	&.active:hover,
+	&:active.focus,
+	&:active:focus,
+	&:active:hover {
+		background-color: #007cb5;
+		border-color: #007cb5;
+	}
+}
+
+.open > .dropdown-toggle.btn-info {
+	&, &.focus, &:focus, &:hover {
+		background-color: #007cb5;
+		border-color: #007cb5;
+	}
+}
+
+/* .btn-lg */
+.btn-group-lg > .btn, .btn-lg {
+	line-height: 1;
+
+	@base-padding: 11px;
+
+	padding-top: @base-padding;
+	padding-bottom: @base-padding + 4px;
+}
+
+/* Remove inner shadow active button */
+.btn.active, .btn:active {
+	box-shadow: none;
 }
 
 .fancybox-close {
@@ -130,6 +199,7 @@ body {
 	border-radius: 0;
 	box-shadow: none !important;
 	background: #fff;
+	margin-bottom: 50px;
 }
 
 .fancybox-nav {
@@ -168,4 +238,9 @@ body {
 	border-right: solid 6px currentColor;
 	border-bottom: solid 6px currentColor;
 	transform: rotate(-45deg);
+}
+
+.fancybox-lock .fancybox-overlay {
+	//overflow: hidden;
+	//overflow-y: auto;
 }
