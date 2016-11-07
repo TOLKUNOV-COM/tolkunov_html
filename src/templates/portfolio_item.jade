@@ -77,51 +77,36 @@ block content
                     h5.b-portfolio__header Другие баннеры на тему «Финансы»:
 
                     .b-portfolio__list
-                        a.b-portfolio__item(href='#')
-                            img.b-portfolio__image(src='assets/img/tmp/pr-200x300-bosch-rotak.jpg')
+                        a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                            img.b-portfolio__image(src='assets/img/tmp/portfolio1.png')
                             .b-portfolio__content
-                                span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
-
-                                p.b-portfolio__title QIVI
+                                p.b-portfolio__title Самоедлинноеназваниефирмы
                                 p.b-portfolio__category Строительство
-
-                                p.b-portfolio__date 20 апреля 2016
-                        a.b-portfolio__item(href='#')
-                            img.b-portfolio__image(src='assets/img/tmp/pr-200x300-electrovenik.jpg')
+                            span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                            p.b-portfolio__date 10.02.2010
+                        a.b-portfolio__item.emerge(href='#portfolio_2', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                            img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
                             .b-portfolio__content
-                                span.b-portfolio__type.b-portfolio__type_gif Gif-баннеры
-
-                                p.b-portfolio__title Длинное название работы
+                                p.b-portfolio__title Длинное название фирмы
                                 p.b-portfolio__category Строительство
-
-                                p.b-portfolio__date 5 марта 2016
-                        a.b-portfolio__item(href='#')
-                            img.b-portfolio__image(src='assets/img/tmp/pr-200x300-mirta-n-0.jpg')
+                            span.b-portfolio__type.b-portfolio__type_gif GIF
+                            p.b-portfolio__date 10.02.2010
+                        a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                            img.b-portfolio__image(src='assets/img/tmp/portfolio3.png')
                             .b-portfolio__content
-                                span.b-portfolio__type.b-portfolio__type_jpg Jpeg-баннеры
-
                                 p.b-portfolio__title QIVI
                                 p.b-portfolio__category Динное название категории
-
-                                p.b-portfolio__date 10 марта 2016
-                        a.b-portfolio__item(href='#')
-                            img.b-portfolio__image(src='assets/img/tmp/pr-200x600-adreals.jpg')
+                            span.b-portfolio__type.b-portfolio__type_jpg JPG
+                            span.b-portfolio__like
+                            p.b-portfolio__date 10.02.2010
+                        a.b-portfolio__item.emerge(href='#portfolio_2', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                            img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
                             .b-portfolio__content
-                                span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
                                 p.b-portfolio__title QIVI
                                 p.b-portfolio__category Строительство
-                                p.b-portfolio__date 20 апреля 2016
-                        a.b-portfolio__item(href='#')
-                            img.b-portfolio__image(src='assets/img/tmp/pr-200x300-bosch-rotak.jpg')
-                            .b-portfolio__content
-                                span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
-                                p.b-portfolio__title QIVI
-                                p.b-portfolio__category Строительство
-                                p.b-portfolio__date 20 апреля 2016
-                        a.b-portfolio__item(href='#')
-                            img.b-portfolio__image(src='assets/img/tmp/pr-200x300-electrovenik.jpg')
-                            .b-portfolio__content
-                                span.b-portfolio__type.b-portfolio__type_gif Gif-баннеры
-                                p.b-portfolio__title Длинное название работы
-                                p.b-portfolio__category Строительство
-                                p.b-portfolio__date 5 марта 2016
+                            span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                            p.b-portfolio__date 10.02.2010
+                    script.
+                        $('.b-portfolio__item').each(function(){
+                            $(this).data('hold', Math.floor(Math.random() * 400) + 50);
+                        });

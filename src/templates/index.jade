@@ -17,49 +17,48 @@ block content
                 a.b-summary__item.b-summary__item_3(href='blog.html')
                     .b-summary__number.odometer(data-number="15") 00
                     .b-summary__text статей в нашем#[br]справочнике
-            .b-portfolio
-                .b-portfolio__list
-                    - for (var i=0; i<6;++i)
-                        a.b-portfolio__item(href='#portfolio_1', rel='portfolio')
-                            img.b-portfolio__image(src='assets/img/tmp/pr-200x300-bosch-rotak.jpg')
-                            .b-portfolio__content
-                                span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
+        .b-portfolio
+            .b-portfolio__list
+                - for (var i=0; i<6;++i)
+                    a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                        img.b-portfolio__image(src='assets/img/tmp/portfolio1.png')
+                        .b-portfolio__content
+                            p.b-portfolio__title Самоедлинноеназваниефирмы
+                            p.b-portfolio__category Строительство
+                        span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                        p.b-portfolio__date 10.02.2010
+                    a.b-portfolio__item.emerge(href='#portfolio_2', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                        img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
+                        .b-portfolio__content
+                            p.b-portfolio__title Длинное название фирмы
+                            p.b-portfolio__category Строительство
+                        span.b-portfolio__type.b-portfolio__type_gif GIF
+                        p.b-portfolio__date 10.02.2010
+                    a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                        img.b-portfolio__image(src='assets/img/tmp/portfolio3.png')
+                        .b-portfolio__content
+                            p.b-portfolio__title QIVI
+                            p.b-portfolio__category Динное название категории
+                        span.b-portfolio__type.b-portfolio__type_jpg JPG
+                        span.b-portfolio__like
+                        p.b-portfolio__date 10.02.2010
+                    a.b-portfolio__item.emerge(href='#portfolio_2', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                        img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
+                        .b-portfolio__content
+                            p.b-portfolio__title QIVI
+                            p.b-portfolio__category Строительство
+                        span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                        p.b-portfolio__date 10.02.2010
+            script.
+                $('.b-portfolio__item').each(function(){
+                    $(this).data('hold', Math.floor(Math.random() * 400) + 50);
+                });
 
-                                p.b-portfolio__title QIVI
-                                p.b-portfolio__category Строительство
+            .g-loader
+                .g-loader__content
+                    a.btn.btn-info.btn-lg.g-loader__link(href='portfolio_type_1.html') Посмотреть все 985 работ
 
-                                p.b-portfolio__date 20 апреля 2016
-                        a.b-portfolio__item(href='#portfolio_2', rel='portfolio')
-                            img.b-portfolio__image(src='assets/img/tmp/pr-200x300-electrovenik.jpg')
-                            .b-portfolio__content
-                                span.b-portfolio__type.b-portfolio__type_gif Gif-баннеры
-
-                                p.b-portfolio__title Длинное название работы
-                                p.b-portfolio__category Строительство
-
-                                p.b-portfolio__date 5 марта 2016
-                        a.b-portfolio__item(href='#portfolio_1', rel='portfolio')
-                            img.b-portfolio__image(src='assets/img/tmp/pr-200x300-mirta-n-0.jpg')
-                            .b-portfolio__content
-                                span.b-portfolio__type.b-portfolio__type_jpg Jpeg-баннеры
-
-                                p.b-portfolio__title QIVI
-                                p.b-portfolio__category Динное название категории
-
-                                p.b-portfolio__date 10 марта 2016
-                        a.b-portfolio__item(href='#portfolio_2', rel='portfolio')
-                            img.b-portfolio__image(src='assets/img/tmp/pr-200x600-adreals.jpg')
-                            .b-portfolio__content
-                                span.b-portfolio__type.b-portfolio__type_html5 Html5-баннеры
-                                p.b-portfolio__title QIVI
-                                p.b-portfolio__category Строительство
-                                p.b-portfolio__date 20 апреля 2016
-
-                .g-loader
-                    .g-loader__content
-                        a.btn.btn-info.btn-lg.g-loader__link(href='portfolio_type_1.html') Посмотреть все 985 работ
-
-                        p.g-loader__text Запаситесь чашечкой чая или кофе — для просмотра всех работ потребуется больше 50 минут.
+                    p.g-loader__text Запаситесь чашечкой чая или кофе — для просмотра всех работ потребуется больше 50 минут.
         .b-treatment.g-mt20
             .b-treatment__content
                 .container
@@ -172,156 +171,154 @@ block content
                         .b-why-us__text
                             p Помогаем выходить из тупиковых ситуаций, когда баннер нужен «еще вчера», а исполнитель перестал выходить на связь.
         .b-reviews__container
-            .container
-                h2.b-reviews__head Отзывы клиентов
+            h2.b-reviews__head Отзывы клиентов
 
-                p.b-reviews__lead Возможно они расскажут о нашей работе что-то более важное и близкое вам
+            p.b-reviews__lead Возможно они расскажут о нашей работе что-то более важное и близкое вам
 
-                .b-reviews__list
-                    .b-reviews__item.b-reviews__item_type_video
-                        .b-reviews__header
-                            a.b-reviews__type(href='#') Видеоотзывы
-                        .text-center: a.b-reviews__title(href='#') 1ДСКиКО
-                        .b-reviews__content
-                            .b-review.b-review_video
-                                a.b-review__link(href='http://www.youtube.com/watch?v=opj24KnzrWo'): img.img-responsive(src='http://placehold.it/320x180')
-                        .b-reviews__footer
-                            span.b-reviews__date 22 июня 2016
-                            a.b-reviews__link(href='#') Оригинал отзыва
-                    .b-reviews__item.b-reviews__item_type_mail
-                        .b-reviews__header
-                            a.b-reviews__type(href='#') Рекомендательные письма
-                        .text-center: a.b-reviews__title(href='#') Газелькин
-                        .b-reviews__content.b-reviews__content_type_image
-                            .b-review.b-review_image
-                                a.b-review__link(href='#review_1'): img.img-responsive(src='http://placehold.it/196x264')
-                        .b-reviews__footer
-                            span.b-reviews__date 5 февраля 2015
-                            a.b-reviews__link(href='#') Оригинал отзыва
-                    .b-reviews__item.b-reviews__item_type_social
-                        .b-reviews__header
-                            a.b-reviews__type(href='#') Социальные сети
-                            .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_fb
-                        .text-center: a.b-reviews__title(href='#') Exante
-                        .b-reviews__content.b-reviews__content_type_text
-                            p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
-                        .b-reviews__footer
-                            span.b-reviews__date 11 января 2015
-                            a.b-reviews__link(href='#') Оригинал отзыва
-                    .b-reviews__item.b-reviews__item_type_social
-                        .b-reviews__header
-                            a.b-reviews__type(href='#') Социальные сети
-                            .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_vk
-                        .text-center: a.b-reviews__title(href='#') Exante
-                        .b-reviews__content.b-reviews__content_type_text
-                            p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
-                        .b-reviews__footer
-                            span.b-reviews__date 11 января 2015
-                            a.b-reviews__link(href='#') Оригинал отзыва
-                    .b-reviews__item.b-reviews__item_type_social
-                        .b-reviews__header
-                            a.b-reviews__type(href='#') Социальные сети
-                            .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_tw
-                        .text-center: a.b-reviews__title(href='#') Exante
-                        .b-reviews__content.b-reviews__content_type_text
-                            p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
-                        .b-reviews__footer
-                            span.b-reviews__date 11 января 2015
-                            a.b-reviews__link(href='#') Оригинал отзыва
-                    .b-reviews__item.b-reviews__item_type_social
-                        .b-reviews__header
-                            a.b-reviews__type(href='#') Социальные сети
-                            .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_instagram
-                        .text-center: a.b-reviews__title(href='#') Exante
-                        .b-reviews__content.b-reviews__content_type_text
-                            p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
-                        .b-reviews__footer
-                            span.b-reviews__date 11 января 2015
-                            a.b-reviews__link(href='#') Оригинал отзыва
-                    .b-reviews__item.b-reviews__item_type_social
-                        .b-reviews__header
-                            a.b-reviews__type(href='#') Социальные сети
-                            .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_ok
-                        .text-center: a.b-reviews__title(href='#') Exante
-                        .b-reviews__content.b-reviews__content_type_text
-                            p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
-                        .b-reviews__footer
-                            span.b-reviews__date 11 января 2015
-                            a.b-reviews__link(href='#') Оригинал отзыва
-                    .b-reviews__item.b-reviews__item_type_fl
-                        .b-reviews__header
-                            a.b-reviews__type(href='#') Fl.ru
-                        .text-center: a.b-reviews__title(href='#') Exante
-                        .b-reviews__content.b-reviews__content_type_text
-                            p Задание было выполнено! Качество радует! Рекомендую!
-                        .b-reviews__footer
-                            span.b-reviews__date 11 января 2015
-                            a.b-reviews__link(href='#') Оригинал отзыва
-                    .b-reviews__item.b-reviews__item_type_forums
-                        .b-reviews__header
-                            a.b-reviews__type(href='#') Форумы
-                            .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_prcy
-                        .text-center: a.b-reviews__title(href='#') Exante
-                        .b-reviews__content.b-reviews__content_type_text
-                            p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
-                        .b-reviews__footer
-                            span.b-reviews__date 11 января 2015
-                            a.b-reviews__link(href='#') Оригинал отзыва
-                    .b-reviews__item.b-reviews__item_type_forums
-                        .b-reviews__header
-                            a.b-reviews__type(href='#') Форумы
-                            .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_cypr
-                        .text-center: a.b-reviews__title(href='#') Exante
-                        .b-reviews__content.b-reviews__content_type_text
-                            p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
-                        .b-reviews__footer
-                            span.b-reviews__date 11 января 2015
-                            a.b-reviews__link(href='#') Оригинал отзыва
+            .b-reviews__list
+                .b-reviews__item.b-reviews__item_type_video
+                    .b-reviews__header
+                        a.b-reviews__type(href='#') Видеоотзывы
+                    .text-center: a.b-reviews__title(href='#') 1ДСКиКО
+                    .b-reviews__content
+                        .b-review.b-review_video
+                            a.b-review__link(href='http://www.youtube.com/watch?v=opj24KnzrWo'): img.img-responsive(src='http://placehold.it/320x180')
+                    .b-reviews__footer
+                        span.b-reviews__date 22 июня 2016
+                        a.b-reviews__link(href='#') Оригинал отзыва
+                .b-reviews__item.b-reviews__item_type_mail
+                    .b-reviews__header
+                        a.b-reviews__type(href='#') Рекомендательные письма
+                    .text-center: a.b-reviews__title(href='#') Газелькин
+                    .b-reviews__content.b-reviews__content_type_image
+                        .b-review.b-review_image
+                            a.b-review__link(href='#review_1'): img.img-responsive(src='http://placehold.it/196x264')
+                    .b-reviews__footer
+                        span.b-reviews__date 5 февраля 2015
+                        a.b-reviews__link(href='#') Оригинал отзыва
+                .b-reviews__item.b-reviews__item_type_social
+                    .b-reviews__header
+                        a.b-reviews__type(href='#') Социальные сети
+                        .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_fb
+                    .text-center: a.b-reviews__title(href='#') Exante
+                    .b-reviews__content.b-reviews__content_type_text
+                        p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                    .b-reviews__footer
+                        span.b-reviews__date 11 января 2015
+                        a.b-reviews__link(href='#') Оригинал отзыва
+                .b-reviews__item.b-reviews__item_type_social
+                    .b-reviews__header
+                        a.b-reviews__type(href='#') Социальные сети
+                        .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_vk
+                    .text-center: a.b-reviews__title(href='#') Exante
+                    .b-reviews__content.b-reviews__content_type_text
+                        p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                    .b-reviews__footer
+                        span.b-reviews__date 11 января 2015
+                        a.b-reviews__link(href='#') Оригинал отзыва
+                .b-reviews__item.b-reviews__item_type_social
+                    .b-reviews__header
+                        a.b-reviews__type(href='#') Социальные сети
+                        .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_tw
+                    .text-center: a.b-reviews__title(href='#') Exante
+                    .b-reviews__content.b-reviews__content_type_text
+                        p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                    .b-reviews__footer
+                        span.b-reviews__date 11 января 2015
+                        a.b-reviews__link(href='#') Оригинал отзыва
+                .b-reviews__item.b-reviews__item_type_social
+                    .b-reviews__header
+                        a.b-reviews__type(href='#') Социальные сети
+                        .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_instagram
+                    .text-center: a.b-reviews__title(href='#') Exante
+                    .b-reviews__content.b-reviews__content_type_text
+                        p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                    .b-reviews__footer
+                        span.b-reviews__date 11 января 2015
+                        a.b-reviews__link(href='#') Оригинал отзыва
+                .b-reviews__item.b-reviews__item_type_social
+                    .b-reviews__header
+                        a.b-reviews__type(href='#') Социальные сети
+                        .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_ok
+                    .text-center: a.b-reviews__title(href='#') Exante
+                    .b-reviews__content.b-reviews__content_type_text
+                        p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                    .b-reviews__footer
+                        span.b-reviews__date 11 января 2015
+                        a.b-reviews__link(href='#') Оригинал отзыва
+                .b-reviews__item.b-reviews__item_type_fl
+                    .b-reviews__header
+                        a.b-reviews__type(href='#') Fl.ru
+                    .text-center: a.b-reviews__title(href='#') Exante
+                    .b-reviews__content.b-reviews__content_type_text
+                        p Задание было выполнено! Качество радует! Рекомендую!
+                    .b-reviews__footer
+                        span.b-reviews__date 11 января 2015
+                        a.b-reviews__link(href='#') Оригинал отзыва
+                .b-reviews__item.b-reviews__item_type_forums
+                    .b-reviews__header
+                        a.b-reviews__type(href='#') Форумы
+                        .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_prcy
+                    .text-center: a.b-reviews__title(href='#') Exante
+                    .b-reviews__content.b-reviews__content_type_text
+                        p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
+                    .b-reviews__footer
+                        span.b-reviews__date 11 января 2015
+                        a.b-reviews__link(href='#') Оригинал отзыва
+                .b-reviews__item.b-reviews__item_type_forums
+                    .b-reviews__header
+                        a.b-reviews__type(href='#') Форумы
+                        .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_cypr
+                    .text-center: a.b-reviews__title(href='#') Exante
+                    .b-reviews__content.b-reviews__content_type_text
+                        p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
+                    .b-reviews__footer
+                        span.b-reviews__date 11 января 2015
+                        a.b-reviews__link(href='#') Оригинал отзыва
             .g-loader.g-loader_theme_dark
                 .g-loader__content
                     a.btn.btn-info.btn-lg.g-loader__link(href='reviews.html') Посмотреть все 232 отзыва
-        .container
-            .b-blog.g-mb50
-                h2.b-blog__header Справочник клиента
+        .b-blog.g-mb50
+            h2.b-blog__header Справочник клиента
 
-                .b-blog__list
-                    - for (var i=0; i<3;++i)
-                        a.b-blog__item(href='blog_item.html')
-                            p.b-blog__title Яндекс.Баян: пошаговое руководство по настройке рекламной кампании
+            .b-blog__list
+                - for (var i=0; i<3;++i)
+                    a.b-blog__item(href='blog_item.html')
+                        p.b-blog__title Яндекс.Баян: пошаговое руководство по настройке рекламной кампании
 
-                            .b-blog__content
-                                img.img-responsive.b-blog__image(src='assets/img/tmp/akcii.png')
-                            .b-blog__text
-                                p Один из самых доступных и популярных каналов входящего трафика, который конвертируется на целевых страницах и превращается в лиды или заявки.
-                            .row.text-muted
-                                .col-xs-6
-                                    span 16 марта 2015
-                                .col-xs-6.text-right
-                                    span 4 комментария
-                        a.b-blog__item(href='blog_item.html')
-                            p.b-blog__title Почему 9 из 10 слайдеров не работают и как это исправить?
+                        .b-blog__content
+                            img.img-responsive.b-blog__image(src='assets/img/tmp/akcii.png')
+                        .b-blog__text
+                            p Один из самых доступных и популярных каналов входящего трафика, который конвертируется на целевых страницах и превращается в лиды или заявки.
+                        .row.text-muted
+                            .col-xs-6
+                                span 16 марта 2015
+                            .col-xs-6.text-right
+                                span 4 комментария
+                    a.b-blog__item(href='blog_item.html')
+                        p.b-blog__title Почему 9 из 10 слайдеров не работают и как это исправить?
 
-                            .b-blog__content
-                                img.img-responsive.b-blog__image(src='assets/img/tmp/akcii.png')
-                            .b-blog__text
-                                p Оригинальный слайдер картинок. Слайдеры картинок удобно использовать в разделах фотогалерей, на сайтах интернет-магазинов для подробного описания.
-                            .row.text-muted
-                                .col-xs-6
-                                    span 15 августа 2013
-                                .col-xs-6.text-right
-                                    span 1 комментарий
-                        a.b-blog__item(href='blog_item.html')
-                            p.b-blog__title Flash или HTML5: сравнение по 10 критериям
+                        .b-blog__content
+                            img.img-responsive.b-blog__image(src='assets/img/tmp/akcii.png')
+                        .b-blog__text
+                            p Оригинальный слайдер картинок. Слайдеры картинок удобно использовать в разделах фотогалерей, на сайтах интернет-магазинов для подробного описания.
+                        .row.text-muted
+                            .col-xs-6
+                                span 15 августа 2013
+                            .col-xs-6.text-right
+                                span 1 комментарий
+                    a.b-blog__item(href='blog_item.html')
+                        p.b-blog__title Flash или HTML5: сравнение по 10 критериям
 
-                            .b-blog__content
-                                img.img-responsive.b-blog__image(src='assets/img/tmp/akcii.png')
-                            .b-blog__text
-                                p Начнем с того, что Flash технология переживает кризис уже не первый год. Наверное с 2000х годов время от времени поднимаются вопросы о том, какой Flash не актуальный.
-                            .row.text-muted
-                                .col-xs-6
-                                    span 16 марта 2015
-                                .col-xs-6.text-right
-                                    span 16 марта 2015
+                        .b-blog__content
+                            img.img-responsive.b-blog__image(src='assets/img/tmp/akcii.png')
+                        .b-blog__text
+                            p Начнем с того, что Flash технология переживает кризис уже не первый год. Наверное с 2000х годов время от времени поднимаются вопросы о том, какой Flash не актуальный.
+                        .row.text-muted
+                            .col-xs-6
+                                span 16 марта 2015
+                            .col-xs-6.text-right
+                                span 16 марта 2015
         .g-loader
             .g-loader__content
                 a.btn.btn-success.btn-lg.g-loader__link(href='blog.html') Почитать все 15 статей

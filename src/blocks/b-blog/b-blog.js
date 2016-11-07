@@ -2,7 +2,10 @@ $(function () {
     function initMasonry() {
         $('.b-blog__list').masonry({
             itemSelector: '.b-blog__item',
-            columnWidth: 356
+            columnWidth: 320,
+            gutter: 20,
+            // no transitions
+            transitionDuration: 0
         });
     }
 

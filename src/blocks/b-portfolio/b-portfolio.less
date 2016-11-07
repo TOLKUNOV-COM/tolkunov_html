@@ -17,39 +17,36 @@
 }
 
 .b-portfolio__list {
-	.clearfix();
-	width: (150px + 3px)*6;
-	margin: 0 auto;
+	margin: -10px auto 0;
+	text-align: center;
 }
 
 .b-portfolio__item {
-	float: left;
-	display: block;
-	width: 150px;
-	height: 150px;
-	margin: 0 3px 3px 0;
+	display: inline-block;
+	width: 204px;
+	height: 204px;
+	margin: 10px;
 	position: relative;
+	color: #fff;
 
 	&:hover, &:active, &:focus {
+		color: #fff;
+		text-decoration: none;
+
 		.b-portfolio__content {
-			background: rgba(44, 62, 80, .7);
-		}
-		.b-portfolio__title, .b-portfolio__category {
-			display: block;
-		}
-		.b-portfolio__type_html5 {
-			background-color: #834b9a;
-		}
-		.b-portfolio__type_gif {
-			background-color: #007db2;
-		}
-		.b-portfolio__type_jpg {
-			background-color: #29b866;
+			opacity: 1;
 		}
 	}
 }
 
 .b-portfolio__image {
+	max-width: 204px;
+	max-height: 204px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .b-portfolio__content {
@@ -59,54 +56,85 @@
 	right: 0;
 	bottom: 0;
 
-	background: linear-gradient(to top, rgba(44, 62, 80, .7) 0%, rgba(44, 62, 80, 0) 47%);
+	background: rgba(37, 37, 37, .8);
+	border-radius: 10px;
 
 	color: #fff;
+
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+	opacity: 0;
+	transition: opacity .15s ease-out;
 }
 
 .b-portfolio__type {
-	font-size: 14px;
+	position: absolute;
+	top: 11px;
+	left: 10px;
+	font-weight: bold;
+	font-size: 13px;
 	line-height: 25px;
 	display: inline-block;
+	border-radius: 25px/2;
 
-	margin-top: 7px;
-	margin-bottom: 7px;
 	padding: 0 9px;
 }
 
+.b-portfolio__like {
+	position: absolute;
+	top: 11px;
+	right: 10px;
+
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #f82125 center center no-repeat url("../../assets/img/love.svg");
+	background-size: 13px 12px;
+}
+
 .b-portfolio__type_html5 {
-	@type-color: #9b59b6;
+	@type-color: #a840b7;
 	background: @type-color;
 }
 
 .b-portfolio__type_gif {
-	@type-color: #008fcb;
+	@type-color: #008ece;
 	background: @type-color;
 }
 
 .b-portfolio__type_jpg {
-	@type-color: #2ecc71;
+	@type-color: #00d873;
 	background: @type-color;
 }
 
 .b-portfolio__title {
 	font-weight: bold;
-	margin-bottom: 4px;
-	margin-left: 7px;
-	display: none;
+	font-size: 24px;
+	line-height: 22px;
+	word-wrap: break-word;
+	letter-spacing: 0;
+	margin: 0 10px 4px;
 }
 
 .b-portfolio__category {
-	font-size: 14px;
+	font-size: 10px;
 	margin-left: 7px;
-	display: none;
+	text-transform: uppercase;
+	letter-spacing: 0.140em;
 }
 
 .b-portfolio__date {
-	font-size: 14px;
 	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin-bottom: 7px;
-	margin-left: 7px;
+	right: 10px;
+	bottom: 10px;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 25px;
+	display: inline-block;
+	border-radius: 25px/2;
+
+	padding: 0 9px;
+	margin: 0;
+	background-color: @text-color;
 }

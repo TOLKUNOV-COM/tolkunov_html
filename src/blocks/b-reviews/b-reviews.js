@@ -3,7 +3,10 @@ $(function () {
     function initMasonry() {
         $('.b-reviews__list').masonry({
             itemSelector: '.b-reviews__item',
-            columnWidth: 340
+            columnWidth: 320,
+            gutter: 20,
+            // no transitions
+            transitionDuration: 0
         });
     }
 

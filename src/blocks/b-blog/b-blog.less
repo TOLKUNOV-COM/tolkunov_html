@@ -22,15 +22,25 @@
 }
 
 .b-blog__list {
-	margin: 60px -44px 0 -24px;
+	width: 1020px;
+	margin: 60px auto 0;
+	padding-left: 10px;
+
+	@media (min-width: 1360px) {
+		width: 1360px;
+	}
+
+	@media (min-width: 1700px) {
+		width: 1700px;
+	}
 }
 
 .b-blog__item {
 	padding: 11px 20px 17px;
 	border: 4px solid transparent;
 	border-radius: 4px;
-	width: 336px;
-	margin-bottom: 28px;
+	width: 320px;
+	margin-bottom: 20px;
 	color: @text-color;
 
 	float: left;

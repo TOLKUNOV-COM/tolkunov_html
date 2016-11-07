@@ -11,6 +11,8 @@
 
 html, body {
 	//height: 100%;
+
+	//-webkit-font-smoothing: antialiased;
 }
 
 /* Template-specific stuff
@@ -203,44 +205,44 @@ body {
 }
 
 .fancybox-nav {
-	background: none !important;
-	color: #fff;
-	opacity: .3;
-	margin-top: -13px;
-
-	top: 353px;
-
-	&:hover {
+	&:hover span {
 		color: #fff;
 		opacity: 1;
 	}
 
 	span {
-		display: none;
+		visibility: visible;
+		background: none !important;
+		color: #fff;
+		opacity: .3;
+		margin-top: -13px;
+		top: 353px;
+
+		width: 26px;
+		height: 26px;
 	}
 }
 
 .fancybox-prev {
-	left: -50px;
+	left: -100px;
+	width: 100px;
 
-	width: 26px;
-	height: 26px;
-	border-left: solid 6px currentColor;
-	border-top: solid 6px currentColor;
-	transform: rotate(-45deg);
+	span {
+		left: 50px;
+		border-left: solid 6px currentColor;
+		border-top: solid 6px currentColor;
+		transform: rotate(-45deg);
+	}
 }
 
 .fancybox-next {
-	right: -50px;
+	right: -100px;
+	width: 100px;
 
-	width: 26px;
-	height: 26px;
-	border-right: solid 6px currentColor;
-	border-bottom: solid 6px currentColor;
-	transform: rotate(-45deg);
-}
-
-.fancybox-lock .fancybox-overlay {
-	//overflow: hidden;
-	//overflow-y: auto;
+	span {
+		right: 50px;
+		border-right: solid 6px currentColor;
+		border-bottom: solid 6px currentColor;
+		transform: rotate(-45deg);
+	}
 }
