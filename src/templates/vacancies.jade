@@ -45,72 +45,15 @@ block content
         .b-vacancies
             .container
                 .b-vacancies__list
-                    .b-vacancies__item
-                        .text-center
-                            a.b-vacancies__title(href='#') Web-дизайнер
+                    a.b-vacancies__item(href='vacancy.html')
+                        p.b-vacancies__title Web-дизайнер
+
+                        img.img-responsive.b-vacancies__image(src='http://placehold.it/900x360')
+                    a.b-vacancies__item(href='vacancy.html')
+                        p.b-vacancies__title Бухгалтер
 
                         img.img-responsive.b-vacancies__image(src='http://placehold.it/900x360')
 
-                        .b-vacancies__content
-                            .b-vacancies__text
-                                h3 Что нужно будет делать:
-                                p
-                                    | — Разрабатывать баннеры для интернет-рекламы (html5, flash, gif, jpg);
-                                    br
-                                    | — Создавать макеты landing page, а также полноценных сайтов;
-                                    br
-                                    | — Разрабатывать оформление для групп в социальных сетях;
-                                    br
-                                    | — Готовить макеты полиграфический продукции.
-                            .b-vacancies__text
-                                h3 Что для нас важно:
-                                p
-                                    | — Понимание современных трендов в web и графическом дизайне;
-                                    br
-                                    | — Отличное знание Adobe Photoshop;
-                                    br
-                                    | — Наличие портфолио;
-                                    br
-                                    | — Внимание к деталям, хороший вкус, скорость работы, перфекционизм;
-                                    br
-                                    | — Умение разрабатывать крутую анимацию;
-                                    br
-                                    | — Желание обучаться новому.
-                        .text-center
-                            a.btn.btn-info.btn-lg.b-vacancies__button(href='#vacancy_form') Отправить резюме
-                    .b-vacancies__item.b-vacancies__item_collapsed
-                        .text-center
-                            a.b-vacancies__title(href='#') Бухгалтер
-
-                        img.img-responsive.b-vacancies__image(src='http://placehold.it/900x360')
-
-                        .b-vacancies__content
-                            .b-vacancies__text
-                                h3 Что нужно будет делать:
-                                p
-                                    | — Разрабатывать баннеры для интернет-рекламы (html5, flash, gif, jpg);
-                                    br
-                                    | — Создавать макеты landing page, а также полноценных сайтов;
-                                    br
-                                    | — Разрабатывать оформление для групп в социальных сетях;
-                                    br
-                                    | — Готовить макеты полиграфический продукции.
-                            .b-vacancies__text
-                                h3 Что для нас важно:
-                                p
-                                    | — Понимание современных трендов в web и графическом дизайне;
-                                    br
-                                    | — Отличное знание Adobe Photoshop;
-                                    br
-                                    | — Наличие портфолио;
-                                    br
-                                    | — Внимание к деталям, хороший вкус, скорость работы, перфекционизм;
-                                    br
-                                    | — Умение разрабатывать крутую анимацию;
-                                    br
-                                    | — Желание обучаться новому.
-                        .text-center
-                            a.btn.btn-info.btn-lg.b-vacancies__button(href='#vacancy_form') Отправить резюме
         .hidden
             .b-modal-form#vacancy_form
                 p.b-modal-form__header Отправка резюме
@@ -129,8 +72,22 @@ block content
                         .form-group
                             label Файлы
                             p.help-block Резюме, портфолио, сертификаты
+                            .b-form-files
+                                .b-form-files__item
+                                    .b-form-files__name resum.doc
+                                    .b-form-files__size 6.12 мб
+                                    .b-form-files__delete
+                                .b-form-files__item
+                                    .b-form-files__name resum.doc
+                                    .b-form-files__size 6.12 мб
+                                    .b-form-files__delete
+                                .b-form-files__item
+                                    .b-form-files__name resume_my.doc
+                                    .b-form-files__size 6.12 мб
+                                    .b-form-files__delete
+
                             .b-form-upload.b-form__upload
-                                input(type="file")
+                                input(type="file", multiple="multiple", name="VacancyResume[files][]", id="VacancyResume_files_0", data-id="VacancyResume_files")
                                 span.b-form-upload__label Выберите файлы или перетащите их в эту форму
 
                         input.btn.btn-success.btn-lg.b-form__button(type="submit", value="Отправить")

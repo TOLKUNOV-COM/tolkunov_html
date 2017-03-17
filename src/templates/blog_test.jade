@@ -1,0 +1,85 @@
+extends ./layouts/layout.jade
+
+block content
+    .b-page
+        .container
+            h1.b-page__title Справочник клиента
+
+            .b-blog-menu
+                .b-blog-menu__list
+                    .b-blog-menu__item.b-blog-menu__item_active.b-blog-menu__item_home: a.b-blog-menu__link(href='#'): i.b-blog-menu__icon.b-blog-menu__icon_home
+                    .b-blog-menu__item
+                        a.b-blog-menu__link(href='#') Баннеры
+                        .b-blog-menu__list
+                            .b-blog-menu__item: a.b-blog-menu__link(href='#') Площадки
+                            .b-blog-menu__item: a.b-blog-menu__link(href='#') Инструкции
+                            .b-blog-menu__item: a.b-blog-menu__link(href='#') Новинки индустрии
+                            .b-blog-menu__item: a.b-blog-menu__link(href='#') Типы баннеров
+                    .b-blog-menu__item: a.b-blog-menu__link(href='#') Сервисы
+                    .b-blog-menu__item: a.b-blog-menu__link(href='#') Реклама
+                    .b-blog-menu__item: a.b-blog-menu__link(href='#') Бизнес
+                    .b-blog-menu__item: a.b-blog-menu__link(href='#') Уроки
+                    .b-blog-menu__item: a.b-blog-menu__link(href='#') Жизнь студии
+                    .b-blog-menu__item.b-blog-menu__item_search
+                        a.b-blog-menu__link(href='#'): i.b-blog-menu__icon.b-blog-menu__icon_search
+                        form.b-search-form.hidden
+                            input.b-search-form__input(type="text", name="q", placeholder="Введите что-нибудь и нажмите “Enter”")
+                            a.b-search-form__close(href='#')
+
+            p.b-page__lead Пишем о баннерах, рекламе, маркетинге, бизнесе, полезных сервисах, а&nbsp;также рассказываем немного о жизни студии.
+
+        .b-blog
+            .b-blog__list
+                - for (var i=0; i<1;++i)
+                    a.b-blog__item.emerge(href='blog_item.html', data-effect="relax", data-origin="top", data-expose="true")
+                        p.b-blog__title Яндекс.Баян: пошаговое руководство по настройке рекламной кампании
+
+                        .b-blog__content
+                            img.img-responsive.b-blog__image(src='assets/img/tmp/akcii.png')
+                        .b-blog__text
+                            p Один из самых доступных и популярных каналов входящего трафика, который конвертируется на целевых страницах и превращается в лиды или заявки.
+                        .row.text-muted
+                            .col-xs-6
+                                span 16 марта 2015
+                            .col-xs-6.text-right
+                                span 4 комментария
+                    a.b-blog__item.emerge(href='blog_item.html', data-effect="relax", data-origin="top", data-expose="true")
+                        p.b-blog__title Почему 9 из 10 слайдеров не работают и как это исправить?
+
+                        .b-blog__content
+                            img.img-responsive.b-blog__image(src='assets/img/tmp/akcii.png')
+                        .b-blog__text
+                            p Оригинальный слайдер картинок. Слайдеры картинок удобно использовать в разделах фотогалерей, на сайтах интернет-магазинов для подробного описания.
+                        .row.text-muted
+                            .col-xs-6
+                                span 15 августа 2013
+                            .col-xs-6.text-right
+                                span 1 комментарий
+                    a.b-blog__item.emerge(href='blog_item.html', data-effect="relax", data-origin="top", data-expose="true")
+                        p.b-blog__title Flash или HTML5: сравнение по 10 критериям
+
+                        .b-blog__content
+                            img.img-responsive.b-blog__image(src='assets/img/tmp/akcii.png')
+                        .b-blog__text
+                            p Начнем с того, что Flash технология переживает кризис уже не первый год. Наверное с 2000х годов время от времени поднимаются вопросы о том, какой Flash не актуальный.
+                        .row.text-muted
+                            .col-xs-6
+                                span 16 марта 2015
+                            .col-xs-6.text-right
+                                span 16 марта 2015
+            script.
+                $('.b-blog__item').each(function(){
+                    $(this).data('hold', Math.floor(Math.random() * 450) + 50);
+                });
+        .g-loader
+            .g-loader__content
+                a.g-loader__button(href='#') #[i.g-loader__button-icon]#[span.g-loader__button-text Загрузить ещё]
+        .container
+            .b-subscribe
+                p.b-subscribe__title Получайте новые статьи прямо на почту
+                p.b-subscribe__lead Никакого спама или рекламы. Только статьи.
+
+                form.form-inline.b-subscribe__form(action='blog_done.html')
+                    .form-group
+                        input.form-control.b-subscribe__input(name='email', type='email', placeholder='Введите свой email')
+                    button.btn.btn-lg.btn-success.b-subscribe__button(type="submit") Подписаться

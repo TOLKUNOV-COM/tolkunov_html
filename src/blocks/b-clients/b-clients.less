@@ -40,6 +40,18 @@
 			display: block;
 		}
 	}
+
+	position: relative;
+
+	&:after {
+		position: absolute;
+		width: 15px;
+		top: 0;
+		right: 10px;
+		bottom: 0;
+		background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, .2));
+		content: '';
+	}
 }
 
 .b-clients__title {
@@ -47,6 +59,11 @@
 	font-weight: bold;
 	border-bottom: 2px solid rgba(37, 37, 37, .05);
 	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	//text-overflow: ellipsis;
+	max-width: 180px;
+	margin: 0 10px;
 }
 
 .b-clients__content {

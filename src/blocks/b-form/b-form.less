@@ -24,11 +24,15 @@
 	}
 	.help-block {
 		color: rgba(37, 37, 37, .5);
-		margin-top: 0;
+		//margin-top: 0;
 		margin-bottom: 12px;
 
 		a {
 			.mylink(rgba(37, 37, 37, .5), rgba(37, 37, 37, .05), #008fcb);
+		}
+
+		&.error {
+			color: @state-danger-text;
 		}
 	}
 	.form-control {

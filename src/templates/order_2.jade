@@ -27,10 +27,12 @@ block content
                         label Файлы
                         p.help-block Логотип, брендбук, фотографии - всё, что может пригодиться в разработке баннеров
 
-                        .b-form-upload.b-form__upload
-                            input(type="file")
+                        .b-form-files
 
+                        .b-form-upload.b-form__upload
+                            input(type="file", multiple="multiple", name="VacancyResume[files]", id="VacancyResume_files")
                             span.b-form-upload__label Выберите файлы или перетащите их в эту форму
+
                     .form-group
                         label Стиль баннеров
                         p.help-block #[a(href='#') Мультипликация], #[a(href='#') фото-реалистичный], #[a(href='#') текстовый] или #[a(href='#') смешанный]?

@@ -6,7 +6,7 @@
 }
 
 .b-portfolio-item__view {
-	background: left top repeat url("../../assets/img/banner-background.jpg");
+	background: left top repeat url("../../assets/img/banner-background.png");
 	padding: 105px 40px+15px;
 	margin: 0 -40px;
 	border-radius: 10px;
@@ -24,6 +24,7 @@
 
 .b-portfolio-item__lead {
 	margin: 45px 0;
+	.clearfix();
 }
 
 .b-portfolio-item__info {
@@ -31,7 +32,12 @@
 	font-size: 24px;
 	line-height: 28px;
 	display: inline-block;
-	margin-right: 35px;
+	margin-left: 35px;
+	float: left;
+}
+
+.b-portfolio-item__lead .b-portfolio-item__info:first-child {
+	margin-left: 0;
 }
 
 .b-portfolio-item__link {
@@ -50,6 +56,7 @@
 	line-height: 28px;
 	display: inline-block;
 	margin-right: 30px;
+	float: right;
 }
 
 .b-portfolio-item__share {

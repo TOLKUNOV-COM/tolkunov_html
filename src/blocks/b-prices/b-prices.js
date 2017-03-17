@@ -8,3 +8,11 @@ $(function () {
         fitToView: false
     });
 });
+
+$(function () {
+    $('[data-toggle="popover"]').popover({
+        html: true,
+        placement: 'top',
+        trigger: 'hover',
+    })
+})

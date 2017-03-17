@@ -1,0 +1,54 @@
+extends ./layouts/layout.jade
+
+block content
+    .b-page
+        .container
+            .text-center
+                a.b-page__back(href='vacancies.html') Посмотреть все вакансии
+            h1.b-page__title Вакансия web-дизайнера
+
+            .b-text.g-mb60
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus leo orci, tempor at faucibus sit amet, condimentum at orci. Nunc dolor ligula, venenatis eu malesuada et, laoreet vitae urna. Cras quis feugiat leo. Proin ut turpis ut elit commodo dignissim et at orci. Morbi blandit quis eros at faucibus. Nunc id rhoncus turpis. Aenean quis eros quis mi viverra efficitur id in velit. Donec euismod quis justo vitae pulvinar. Nam eget odio in risus fermentum pretium. Morbi eu urna elementum, condimentum tortor vel, dapibus velit. Nam eu interdum nibh.
+                p Donec tristique id turpis sed interdum. Nullam in velit eget massa ultricies ornare. Fusce ut ipsum faucibus, eleifend lorem molestie, congue ligula. Integer congue imperdiet purus, vitae feugiat augue consequat ac. Duis aliquam tristique sapien non vehicula. Suspendisse ac porttitor leo. Donec id tortor a lacus efficitur euismod. Praesent pellentesque ultricies odio a lobortis. Duis sit amet lacus nec diam fringilla maximus ac laoreet purus. Donec non nunc condimentum, suscipit diam a, ultrices nulla. Quisque aliquam finibus suscipit. Integer ut tellus aliquam lorem interdum sodales. In maximus sagittis eros. Mauris in maximus odio. Sed pharetra nisl eget ex feugiat, nec viverra nunc accumsan. Nullam dignissim, massa in tristique laoreet, orci lectus rutrum ligula, ut consequat diam tellus a turpis.
+                p Aenean fringilla mauris magna, nec auctor dolor vestibulum id. Integer ac lacus ut risus volutpat porta eget ut dolor. Maecenas eu commodo dolor. Cras ac condimentum sem. Vestibulum vitae arcu ut enim maximus volutpat et quis augue. Sed facilisis, eros eget porttitor cursus, sem quam euismod eros, id consectetur lacus risus fermentum ipsum. Fusce aliquet nulla dolor, non mattis massa condimentum condimentum. Morbi sit amet scelerisque massa. Nam laoreet lorem eu efficitur faucibus. In aliquet sem a ligula consectetur, sed condimentum leo aliquam. Proin ac porttitor lorem. Curabitur gravida consectetur nisl ut pulvinar. Mauris in bibendum nulla.
+                p Vivamus mi nibh, vulputate sit amet tempor vel, dictum in urna. Mauris vitae eros a dolor sodales mollis. Duis eu lorem hendrerit erat congue vestibulum ac ut odio. Cras mollis nisl venenatis pretium aliquam. Aenean ultricies, nisi nec finibus pharetra, justo turpis pharetra nisi, eu sollicitudin justo turpis eget elit. Phasellus ex sapien, viverra non dolor non, efficitur commodo felis. Phasellus luctus tortor ipsum, sed efficitur lacus hendrerit vel. Nullam pretium semper cursus. Cras laoreet ex risus, ac commodo nulla convallis eget.
+                p Vestibulum nulla velit, ultricies quis hendrerit vel, mattis non purus. Cras pellentesque mi pulvinar felis interdum, vel accumsan leo convallis. Fusce aliquet orci quis elit molestie placerat. In nec leo ultricies, sagittis diam at, lobortis neque. Morbi feugiat pharetra nunc, quis eleifend diam maximus ac. Aliquam eu tincidunt lacus, ut imperdiet lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ornare massa felis, ac mollis augue porttitor at. Morbi libero nisi, egestas vitae hendrerit et, semper non enim. Sed commodo nec leo in rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus id augue felis.
+
+        .container
+            p.b-page__title Отправка резюме
+        .b-form
+            .container
+                form.b-form__form(action="")
+                    .form-group
+                        label Ваше имя
+                        input.form-control(type="text")
+                    .form-group
+                        label Номер телефона
+                        input.form-control(type="text")
+                    .form-group
+                        label Email
+                        input.form-control(type="email")
+                    .form-group
+                        label Файлы
+                        p.help-block Резюме, портфолио, сертификаты
+                        .b-form-files
+                            .b-form-files__item
+                                .b-form-files__name resum.doc
+                                .b-form-files__size 6.12 мб
+                                .b-form-files__delete
+                            .b-form-files__item
+                                .b-form-files__name resum.doc
+                                .b-form-files__size 6.12 мб
+                                .b-form-files__delete
+                            .b-form-files__item
+                                .b-form-files__name resume_my.doc
+                                .b-form-files__size 6.12 мб
+                                .b-form-files__delete
+
+                        .b-form-upload.b-form__upload
+                            input(type="file", multiple="multiple", name="VacancyResume[files][]", id="VacancyResume_files_0", data-id="VacancyResume_files")
+                            span.b-form-upload__label Выберите файлы или перетащите их в эту форму
+
+                    input.btn.btn-success.btn-lg.b-form__button(type="submit", value="Отправить")
+                    br
+                    a.b-form__link(href='#') Соглашение о конфиденциальности

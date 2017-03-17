@@ -4,6 +4,7 @@ $(function () {
             itemSelector: '.b-blog__item',
             columnWidth: 320,
             gutter: 20,
+            fitWidth: true,
             // no transitions
             transitionDuration: 0
         });
@@ -16,6 +17,6 @@ $(function () {
 
         initMasonry();
     }).each(function () {
-        if (this.complete) $(this).load();
+        if (this.complete) $(this).trigger('load');
     });
 });

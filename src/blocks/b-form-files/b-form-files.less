@@ -1,0 +1,48 @@
+@import "variables.less";
+@import "mixins";
+
+.b-form-files {
+	font-size: 24px;
+	display: flex;
+	flex-flow: row wrap;
+	text-align: left;
+	margin-bottom: 15px;
+}
+
+.b-form-files__item {
+	width: 50%;
+	margin: 10px 0;
+
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+.b-form-files__name {
+	flex: 1;
+
+	padding-left: 34px;
+	margin-left: 10px;
+	background: center left no-repeat url("../../assets/img/file-icon.png");
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.b-form-files__size {
+	color: rgba(37, 37, 37, .5);
+	margin: 0 14px;
+	white-space: nowrap;
+}
+
+.b-form-files__delete {
+	background: left top no-repeat url("../../assets/img/file-delete.png");
+	width: 14px;
+	height: 13px;
+	cursor: pointer;
+	margin-right: 15px;
+
+	&:hover, &:active, &:focus {
+		background-position: -14px 0;
+	}
+}

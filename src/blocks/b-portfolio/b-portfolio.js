@@ -1,3 +1,7 @@
+var portfolioBaseUrl = location.href;
+var portfolioBaseState = null;
+var needChangeState = true;
+
 $(function () {
     var F = $.fancybox;
     var getScalar = function (orig, dim) {
@@ -84,7 +88,7 @@ $(function () {
     }
 
     $('.b-portfolio__item').fancybox({
-        type: 'inline',
+        type: 'ajax',
         //openEffect: 'fade',
         //closeEffect: 'none',
         //nextEffect: 'none',
@@ -94,9 +98,62 @@ $(function () {
         padding: [50, 0, 0, 0],
         margin: [74, 0, 100, 0],
         fitToView: false,
+        beforeShow: function () {
+            var path = $.fancybox.current.href;
+
+            var state = {action: 'portfolioItem', path: path};
+            var currentState = history.state;
+
+            console.log('beforeShow', state, history);
+
+            // Change URL in browser
+            if (needChangeState) {
+                if ($($.fancybox.current.element).closest('.fancybox-inner').length) {
+                    history.replaceState(state, document.title, path);
+                } else {
+                    history.pushState(state, document.title, path);
+                }
+            }
+            needChangeState = true;
+        },
+        afterShow: function () {
+            if (typeof window.showIframe == "function") {
+                setTimeout(showIframe, 1);
+            }
+        },
+        beforeClose: function () {
+            var currentstate = history.state;
+
+            console.log('beforeClose', currentstate, history);
+
+            if (currentstate && currentstate.action == 'portfolioItem' && needChangeState) {
+                history.pushState(portfolioBaseState, document.title, portfolioBaseUrl);
+            }
+        }
         //width: 1082
         //tpl: {
         //    image: '<div class="b-review-image"><div class="b-review-image__container"><img class="" src="{href}" alt="" /></div></div>'
         //}
+    });
+
+    // Listen for history state changes
+    window.addEventListener('popstate', function (e) {
+        var state = history.state;
+
+        console.log('popstate', state, history);
+        // back button pressed. close popup
+        if (!state || state.action == 'popup') {
+            $.fancybox.close();
+        } else {
+            // Forward button pressed, reopen popup
+            if (state.action == 'portfolioItem') {
+                needChangeState = false;
+                console.log('dont need state change');
+                $('a.b-portfolio__item[href=\"' + state.path + '\"]').trigger('click');
+            }
+            //$(state.modal).modal({
+            //    remote: window.location.href,
+            //});
+        }
     });
 });
