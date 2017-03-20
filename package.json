@@ -7,7 +7,7 @@
     "del": "^1.1.1",
     "gulp": "3.*",
     "gulp-autoprefixer": "^2.1.0",
-    "gulp-clean-css": "^2.0.8",
+    "gulp-clean-css": "~2.0.8",
     "gulp-collector": "^0.1.0",
     "gulp-concat": "^2.5.2",
     "gulp-imagemin": "^2.4.0",
