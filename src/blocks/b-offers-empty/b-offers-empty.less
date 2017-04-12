@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-offers-empty {
 	background: #f4f9fc right 60px top 45px no-repeat url("../../assets/img/offers-empty.png");
@@ -26,13 +27,6 @@
 	}
 
 	a {
-		color: @text-color;
-		text-decoration: none;
-		border-bottom: 2px solid rgba(37, 37, 37, .1);
-
-		&:hover, &:active, &:focus {
-			color: #008fca;
-			border-bottom-color: #008fca;
-		}
+		.mylink-extended(@text-color, 2px dotted rgba(37, 37, 37, .1));
 	}
 }
