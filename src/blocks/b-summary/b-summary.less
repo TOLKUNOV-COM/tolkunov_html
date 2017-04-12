@@ -5,6 +5,8 @@
 	text-align: center;
 	margin-top: 30px;
 	margin-bottom: 40px;
+	margin-left: -10px;
+	margin-right: -10px;
 }
 
 .b-summary__item {
@@ -12,8 +14,8 @@
 
 	.clearfix();
 	display: inline-block;
-	padding: 11px 20px;
-	margin: 0 8px;
+	padding: 14px 20px 8px;
+	margin: 0 5px;
 
 	color: @text-color;
 
@@ -61,5 +63,14 @@
 
 	&:hover, &:active, &:focus {
 		background: rgba(46, 204, 113, 1);
+	}
+}
+
+.b-summary__item_4 {
+	background: rgba(156, 28, 174, .05);
+
+	&:hover, &:active, &:focus {
+		background: rgba(156, 28, 174, 1);
+		color: #fff;
 	}
 }

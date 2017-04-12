@@ -3,14 +3,24 @@ extends ./layouts/layout.jade
 block content
     .b-page
         .container
+            .text-center
+                a.b-page__back(href='offers.html') Посмотреть все акции
             h1.b-page__title 3 месяца бесплатного использования Jivosite
 
             .b-offer
-                img.img-responsive.b-offer__image(src='http://placehold.it/1000x300')
+                .b-offer__cover
+                    img.img-responsive.b-offer__image(src='http://placehold.it/1000x300')
 
-                .b-offer__properties
-                    .b-offer__property #[span.text-muted Выгода до] 3200#[span.b-offer__rub ₽]
-                    .b-offer__property #[span.text-muted Действует до] 10.06.2016
+                    .b-offer__properties.b-offer-properties
+                        .b-offer-properties__item
+                            p.b-offer-properties__title Бонусов до
+                            p.b-offer-properties__value 3200#[span.b-offer__rub ₽]
+                        .b-offer-properties__item
+                            p.b-offer-properties__title Действует до
+                            p.b-offer-properties__value 10.06.2016
+                        .b-offer-properties__item
+                            p.b-offer-properties__title Промокодов
+                            p.b-offer-properties__value 15
                 .b-offer__text.b-text
                     p JivoSite — чат для сайта в разы увеличит количество обращений клиентов. Благодаря гибким настройкам дизайна, JivoSite аккуратно впишется в Ваш сайт и повысит его эффективность.
                     h4 Подключите JivoSite к вашей CRM системе
