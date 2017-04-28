@@ -126,6 +126,11 @@ $(function () {
 
             console.log('beforeClose', currentstate, history);
 
+            if (previousTitle) {
+                document.title = previousTitle;
+                previousTitle = null;
+            }
+
             if (currentstate && currentstate.action == 'portfolioItem' && needChangeState) {
                 history.pushState(portfolioBaseState, document.title, portfolioBaseUrl);
             }

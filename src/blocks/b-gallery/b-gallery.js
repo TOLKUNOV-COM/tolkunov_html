@@ -5,7 +5,7 @@ $(function () {
         prevMethod: 'myOut',
         padding: 0,
         margin: [74, 0, 0, 0],
-        //fitToView: false,
+        fitToView: true,
         nextClick: true,
         //helpers: {
         //    thumbs: {
