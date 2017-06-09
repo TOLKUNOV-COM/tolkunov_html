@@ -9,39 +9,53 @@
 
 .b-contacts__item {
 	font-size: 30px;
+	line-height: 36px;
 	padding: 5px 0 5px 44px + 14px;
 	margin: 10px 0;
 }
 
 .b-contacts__item_phone {
-	background: 4px center no-repeat url("../../assets/img/contacts/phone.png");
+	background: left center no-repeat url("../../assets/img/contacts/phone.svg");
+	background-size: 43px 45px;
+	padding-left: 56px;
 	margin-left: 25px;
 }
 
 .b-contacts__item_skype {
-	background: 3px center no-repeat url("../../assets/img/contacts/skype.png");
+	background: left center no-repeat url("../../assets/img/contacts/skype.svg");
+	background-size: 46px;
 	margin-left: 38px;
-}
-
-.b-contacts__item_address {
-	background: 2px center no-repeat url("../../assets/img/contacts/map.png");
-	margin-left: -41px;
 }
 
 .b-contacts__item_mail {
-	background: 6px center no-repeat url("../../assets/img/contacts/mail.png");
+	background: left center no-repeat url("../../assets/img/contacts/gmail.svg");
+	background-size: 45px 33px;
 	margin-left: 25px;
+	padding-left: 55px;
 }
 
 .b-contacts__item_telegram {
-	background: 4px center no-repeat url("../../assets/img/contacts/telegram.png");
+	background: left center no-repeat url("../../assets/img/contacts/telegram.svg");
+	background-size: 46px;
 	margin-left: 38px;
 }
 
-.b-contacts__item_time {
-	background: 0px center no-repeat url("../../assets/img/contacts/calendar.png");
+.b-contacts__item_vk {
+	background: left center no-repeat url("../../assets/img/contacts/vk-messenger.svg");
+	background-size: 46px;
 	margin-left: -41px;
 }
+
+.b-contacts__item_fb {
+	background: left center no-repeat url("../../assets/img/contacts/messenger-facebook.svg");
+	background-size: 45px 46px;
+	margin-left: -41px;
+}
+
+//.b-contacts__item_time {
+//	background: 0px center no-repeat url("../../assets/img/contacts/calendar.png");
+//	margin-left: -41px;
+//}
 
 .b-contacts__link {
 	.mylink-extended(@text-color, 2px solid rgba(37, 37, 37, .05), @link-hover-color);
