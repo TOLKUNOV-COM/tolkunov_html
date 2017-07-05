@@ -33,11 +33,8 @@
 			border-bottom-color: #1abc9c;
 		}
 
-		.b-clients__image_default {
-			display: none;
-		}
-		.b-clients__image_hover {
-			display: block;
+		.b-clients__image:not(.b-clients__image_empty) {
+			filter: grayscale(1);
 		}
 	}
 
@@ -75,12 +72,4 @@
 }
 
 .b-clients__image {
-}
-
-.b-clients__image_default {
-
-}
-
-.b-clients__image_hover {
-	display: none;
 }

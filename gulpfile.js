@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 var gulp = require('gulp'); // Сообственно Gulp JS
+const changed = require('gulp-changed');
 var open = require('gulp-open');
 const imagemin = require('gulp-imagemin'); // Минификация изображений
 var uglify = require('gulp-uglify'); // Минификация JS
@@ -10,7 +11,7 @@ var reload = browserSync.reload;
 var del = require('del');
 
 var cleanCSS = require('gulp-clean-css'); // сжимает, оптимизирует
-var sourcemaps = require('gulp-sourcemaps');
+const sourcemaps = require('gulp-sourcemaps');
 
 var less = require('gulp-less');
 var path = require('path');
@@ -21,10 +22,12 @@ var autoprefixer = require('gulp-autoprefixer');
 var jade = require('gulp-jade');
 const collector = require('gulp-collector');
 
+const yaml = require('js-yaml');
+
 var paths = {
     scripts: ['src/assets/js/*.js', 'src/blocks/*', 'src/blocks/**/*.js'],
     images: ['src/assets/img/*.{jpg,jpeg,png,gif,bmp,svg}', 'src/assets/img/**', 'src/assets/img/*'],
-    less: ['src/less/bootstrap/variables.less', 'src/blocks/*', 'src/blocks/**/*.less', 'src/less/*.less'],
+    less: ['src/less/bootstrap/variables.less', 'src/less/*.less', 'src/blocks/*', 'src/blocks/**/*.less'],
     bootstrap: 'build/assets/vendor/bootstrap',
     templates: 'src/templates/*.jade'
 };
@@ -32,7 +35,7 @@ var paths = {
 // Browser definitions for autoprefixer
 var AUTOPREFIXER_BROWSERS = [
     'last 3 versions',
-    'ie >= 8',
+    'ie >= 9',
     'ios >= 7',
     'android >= 4.4',
     'bb >= 10'
@@ -58,7 +61,7 @@ function log(error) {
 }
 
 var reloadCb = function (cb) {
-    reload();
+    browserSync.reload();
     return cb();
 }
 
@@ -93,41 +96,45 @@ gulp.task('clean:templates', function (cb) {
 gulp.task('clean', ['clean:css', 'clean:js', 'clean:img', 'clean:templates']);
 
 gulp.task('bootstrap', ['clean:css:bootstrap'], function () {
-    return gulp.src(['./src/less/bootstrap/*.less', '!./src/less/bootstrap/variables.less'])
-        .pipe(concat('bootstrap.less'))
+    return gulp.src(['./src/less/bootstrap/bootstrap.less'])
+        .pipe(sourcemaps.init())
         .pipe(less({
             paths: [path.resolve(paths.bootstrap, 'less')]
         }))
         .on('error', log)
         .pipe(concat('bootstrap.css'))
         .pipe(gulp.dest('./build/assets/css'))
-        .pipe(cleanCSS())
-        .pipe(rename({suffix: ".min"}))
-        .pipe(gulp.dest('./build/assets/css'))
-        .pipe(reload({stream: true}));
-});
-
-gulp.task('less', ['clean:css:my'], function () {
-    return gulp.src(paths.less)
-        //.pipe(concat('common.less'))
-        .pipe(less({
-            paths: ['src/less/bootstrap', path.resolve(paths.bootstrap, 'less'), path.resolve(paths.bootstrap, 'less/mixins'), 'src/less']
-        }))
-        .on('error', log)
-        //.pipe(sourcemaps.init())
-        .pipe(concat('common.css'))
-        .pipe(autoprefixer({
-            browsers: AUTOPREFIXER_BROWSERS,
-            cascade: false
-        }))
         .pipe(cleanCSS({debug: true}, function (details) {
             console.log(details.name + ': ' + details.stats.originalSize);
             console.log(details.name + ': ' + details.stats.minifiedSize);
         }))
         .pipe(rename({suffix: ".min"}))
-        //.pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./build/assets/css'))
-        .pipe(reload({stream: true}));
+        .pipe(browserSync.stream({match: '**/*.css'}));
+});
+
+gulp.task('less', ['clean:css:my'], function () {
+    return gulp.src(paths.less)
+        .pipe(sourcemaps.init())
+        //.pipe(concat('common.less'))
+        .pipe(less({
+            paths: ['src/less/bootstrap', path.resolve(paths.bootstrap, 'less'), path.resolve(paths.bootstrap, 'less/mixins'), 'src/less']
+        }))
+        .on('error', log)
+        .pipe(autoprefixer({
+            browsers: AUTOPREFIXER_BROWSERS,
+            cascade: false
+        }))
+        .pipe(concat('common.css'))
+        .pipe(cleanCSS({debug: true}, function (details) {
+            console.log(details.name + ': ' + details.stats.originalSize);
+            console.log(details.name + ': ' + details.stats.minifiedSize);
+        }))
+        .pipe(rename({suffix: ".min"}))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./build/assets/css'))
+        .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 gulp.task('js', ['clean:js'], function () {
@@ -141,12 +148,13 @@ gulp.task('js', ['clean:js'], function () {
         //    includeContent: false,
         //    sourceRoot: '/app/scss'
         //})
-        .pipe(gulp.dest('./build/assets/js'))
-        .pipe(reload({stream: true}));
+        .pipe(gulp.dest('./build/assets/js'));
+        //.pipe(reload({stream: true}));
 });
 
 gulp.task('img', [], function () {
     gulp.src(paths.images)
+        .pipe(changed('./build/assets/img'))
         //.pipe(imagemin({
         //    progressive: true,
         //    interlaced: true,
@@ -160,7 +168,14 @@ gulp.task('img', [], function () {
  * Compile jade files into HTML
  */
 gulp.task('templates', [/*'clean:templates'*/], function () {
-    var YOUR_LOCALS = JSON.parse(fs.readFileSync('./template_locals.json', 'utf8'));
+    //var YOUR_LOCALS = JSON.parse(fs.readFileSync('./template_locals.json', 'utf8'));
+
+    // Get document, or throw exception on error
+    try {
+        var YOUR_LOCALS = yaml.safeLoad(fs.readFileSync('./template_locals.yml', 'utf8'));
+    } catch (e) {
+        console.error(e);
+    }
 
     return gulp.src(paths.templates)
         .pipe(jade({
@@ -176,6 +191,10 @@ gulp.task('templates', [/*'clean:templates'*/], function () {
  * Separate task for the reaction to `.jade` files
  */
 gulp.task('jade-watch', ['templates'], reloadCb);
+
+// create a task that ensures the `js` task is complete before
+// reloading browsers
+gulp.task('js-watch', ['js'], reloadCb);
 
 // watch files for changes and reload
 gulp.task('watch', ['build'], function () {
@@ -193,8 +212,6 @@ gulp.task('watch', ['build'], function () {
         // Don't show any notifications in the browser.
         notify: false
     }, function (err, server) {
-        /* TODO: Добавить параметр запуска или какой-то другой способ отменять это */
-
         if (argv.open) {
             var url = server.options.get('urls').get('local');
 
@@ -203,11 +220,11 @@ gulp.task('watch', ['build'], function () {
         }
     });
 
-    gulp.watch([paths.templates, 'src/templates/**/*.jade', './template_locals.json'], ['jade-watch']);
+    gulp.watch([paths.templates, 'src/templates/**/*.jade', './template_locals.yml'], ['jade-watch']);
     //gulp.watch(['*.html']).on('change', reload);
-    gulp.watch(['src/less/bootstrap/*.less'], {cwd: '.'}, ['bootstrap']).on('error', log);
+    gulp.watch(['src/less/bootstrap/*.less', 'src/less/bootstrap/*', 'src/less/bootstrap/**/*.less'], {cwd: '.'}, ['bootstrap']).on('error', log);
     gulp.watch(paths.less, {cwd: '.'}, ['less']).on('error', log);
-    gulp.watch(paths.scripts, {cwd: '.'}, ['js']).on('error', log);
+    gulp.watch(paths.scripts, {cwd: '.'}, ['js-watch']).on('error', log);
     gulp.watch(paths.images, {cwd: '.'}, ['img', reload]);
 });
 
