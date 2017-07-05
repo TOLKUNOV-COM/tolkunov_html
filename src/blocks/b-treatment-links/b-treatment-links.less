@@ -7,25 +7,47 @@
 
 .b-treatment-links__item {
 	width: 30px;
-	height: 30px;
+	height: 40px;
 	display: inline-block;
-	background: 0 0 no-repeat url("../../assets/img/treatment-links.png");
-	margin-left: 12px;
+	float: left;
+	margin-left: 8px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
 
 	&:hover, &:active, &:focus {
 		text-decoration: none;
-		background-position-y: -30px;
+		border-bottom-width: 5px;
+		margin-top: -2px;
+		height: 42px;
 	}
 }
 
 .b-treatment-links__item_vk {
-	background-position-x: 0;
+	border-bottom-color: #396e90;
+	background: center top 4px no-repeat url("../../assets/img/social-links/Vk.svg");
+	background-size: 29px 17px;
+
+	&:hover, &:active, &:focus {
+		background-image: url("../../assets/img/social-links/hover/Vk.svg");
+	}
 }
 
 .b-treatment-links__item_fb {
-	background-position-x: -30px;
+	border-bottom-color: #2f558f;
+	background: center top no-repeat url("../../assets/img/social-links/Facebook.svg");
+	background-size: 13px 24px;
+
+	&:hover, &:active, &:focus {
+		background-image: url("../../assets/img/social-links/hover/Facebook.svg");
+	}
 }
 
 .b-treatment-links__item_tw {
-	background-position-x: -60px;
+	border-bottom-color: #00a2d7;
+	background: center top 2px no-repeat url("../../assets/img/social-links/Twitter.svg");
+	background-size: 23px 21px;
+
+	&:hover, &:active, &:focus {
+		background-image: url("../../assets/img/social-links/hover/Twitter.svg");
+	}
 }

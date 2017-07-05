@@ -2,85 +2,103 @@
 @import "mixins";
 
 .b-treatment {
-	background: #000;
+	background: #f5f9fc;
 	position: relative;
 	height: 421px;
 }
 
-@media (max-width: 1500px) {
-	.b-treatment {
-		overflow: hidden;
-	}
+.b-treatment__container {
+	height: 421px;
+	position: relative;
+	//background: right -168px top no-repeat url("../../assets/img/splash-treatment.jpg");
+	//background-size: auto 421px;
 }
 
-.b-treatment__content {
+.b-treatment__image {
 	position: absolute;
 	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 1500px;
-	height: 421px;
-	background: #000 center top no-repeat url("../../assets/img/splash-treatment.jpg");
-	margin: 0 auto;
-	color: #fff;
-	box-shadow: inset 0 -10px 145px #000;
+	right: -168px;
 
-	.container {
-		position: relative;
-		height: 421px;
-	}
+	width: 809px;
+	height: 421px;
+	background: left top no-repeat url("../../assets/img/splash-treatment.jpg");
+	background-size: contain;
+
+	z-index: 100;
 
 	&:before {
+		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 240px;
-		height: 100%;
-
-		background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-		content: '';
+		width: 168px;
+		bottom: 0;
+		background: linear-gradient(to right, rgba(245, 249, 252, 1), rgba(245, 249, 252, 0));
 	}
 	&:after {
+		content: '';
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 240px;
-		height: 100%;
-
-		background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-		content: '';
+		width: 168px;
+		bottom: 0;
+		background: linear-gradient(to left, rgba(245, 249, 252, 1), rgba(245, 249, 252, 0));
 	}
+}
+
+.b-treatment__gradient {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 168px;
+
+	background: linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0));
+	z-index: 101;
+}
+
+.b-treatment__content {
+	position: relative;
+	z-index: 102;
+	height: 421px;
 }
 
 .b-treatment__title {
-	font-size: 40px;
+	font-size: 48px;
 	font-weight: bold;
-	line-height: 38px;
-	margin-top: 45px;
-	margin-bottom: 25px;
-	width: 600px;
+	line-height: 46px;
+	padding-top: 62px;
+	margin-bottom: 30px;
 }
 
 .b-treatment__text {
-	width: 600px;
-
-	p {
-		margin-bottom: 20px;
-	}
+	line-height: 22px;
+	width: 424px;
+	color: #000;
 }
 
 .b-treatment__name {
 	font-size: 24px;
-	line-height: 1;
-	text-align: right;
+	color: #ffffff;
 
 	position: absolute;
-	right: 42px;
-	bottom: 54px;
+	right: 28px;
+	bottom: 78px;
+}
+
+.b-treatment__role {
+	font-size: 12px;
+	color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+
+	position: absolute;
+	right: 28px;
+	bottom: 50px;
 }
 
 .b-treatment__links {
 	position: absolute;
-	bottom: 9px;
-	right: 42px;
+	bottom: 0;
+	right: 28px;
 }
