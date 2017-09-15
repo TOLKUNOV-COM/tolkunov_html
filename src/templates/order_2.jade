@@ -45,6 +45,11 @@ block content
                         label Предпочтительный способ оплаты
                         p.help-block Счет Альфа-банка, карта Сбербанка, Яндекс.Деньги, QIWI, WebMoney, расчетный счет ИП или PayPal?
                         input.form-control(type="text")
+                    .form-group
+                        .b-checkbox
+                            input(type="checkbox", id="FeedBackForm_agree", value="1")
+                            label(for="#FeedBackForm_agree") Я соглашаюсь на передачу персональных данных согласно #[br]#[a политике конфиденциальности] и #[a пользовательскому соглашению]
+
                     input.btn.btn-info.btn-lg.b-form__button(type="submit", value="Отправить заявку")
                     br
                     a.b-form__link(href='#') Соглашение о конфиденциальности

@@ -1,3 +1,9 @@
+$.fn.preload = function () {
+    this.each(function () {
+        $('<img/>')[0].src = this;
+    });
+}
+
 $(function () {
     $('.js-fancybox-video').fancybox({
         openEffect: 'none',

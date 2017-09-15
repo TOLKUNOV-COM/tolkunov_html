@@ -28,7 +28,12 @@
 		.mylink-extended(@text-color, 2px solid rgba(37, 37, 37, .05), #8e44ad);
 	}
 	.b-splash-prices__price {
-		background-position-x: 0;
+		background: left top no-repeat data-uri("../../assets/img/splash-prices/price-html5-up.svg");
+
+		&:hover, &:active, &:focus {
+			background-image: data-uri("../../assets/img/splash-prices/price-html5-over.svg");
+		}
+		//background-position-x: 0;
 	}
 }
 
@@ -37,7 +42,12 @@
 		.mylink-extended(@text-color, 2px solid rgba(37, 37, 37, .05), #2980b9);
 	}
 	.b-splash-prices__price {
-		background-position-x: -570px/3;
+		//background-position-x: -570px/3;
+		background: left top no-repeat url("../../assets/img/splash-prices/price-gif-up.svg");
+
+		&:hover, &:active, &:focus {
+			background-image: data-uri("../../assets/img/splash-prices/price-gif-over.svg");
+		}
 	}
 }
 
@@ -46,7 +56,12 @@
 		.mylink-extended(@text-color, 2px solid rgba(37, 37, 37, .05), #27ae60);
 	}
 	.b-splash-prices__price {
-		background-position-x: -570px/3 * 2;
+		//background-position-x: -570px/3 * 2;
+		background: left top no-repeat url("../../assets/img/splash-prices/price-jpg.svg");
+
+		&:hover, &:active, &:focus {
+			background-image: data-uri("../../assets/img/splash-prices/price-jpg-over.svg");
+		}
 	}
 }
 
@@ -72,16 +87,18 @@
 	line-height: 92px/2;
 	height: 92px/2;
 	width: 570px/3;
-	background: 0 0 no-repeat url("../../assets/img/splash-prices.png");
+	//background: 0 0 no-repeat url("../../assets/img/splash-prices.png");
 
 	padding-right: 26px;
 	text-align: center;
 	display: block;
+	//opacity: .8;
 
 	&:hover, &:active, &:focus {
 		text-decoration: none;
 		color: #fff;
-		background-position-y: -92px/2;
+		//opacity: 1;
+		//background-position-y: -92px/2;
 	}
 }
 
