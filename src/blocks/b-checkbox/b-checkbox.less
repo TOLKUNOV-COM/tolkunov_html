@@ -1,6 +1,67 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-checkbox {
+	margin-top: -10px;
+	margin-bottom: -20px;
+	padding-left: 45px;
 
+	input[type="checkbox"] {
+		display: none;
+
+		&:checked + label:after {
+			opacity: 1;
+		}
+
+		& + label {
+			font-size: 16px;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+			line-height: 20px;
+			text-align: left;
+			color: #282828;
+			padding-left: 0;
+
+			position: relative;
+			cursor: pointer;
+
+			&:before {
+				position: absolute;
+				width: 32px;
+				height: 32px;
+				left: -45px;
+				top: 50%;
+				transform: translateY(-50%);
+				content: '';
+				background: #fff;
+				border-radius: 2px;
+				box-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+			}
+
+			&:after {
+				position: absolute;
+				width: 32px;
+				height: 32px;
+				left: -45px;
+				top: 50%;
+				transform: translateY(-50%);
+				content: '';
+
+				background: center center no-repeat url("../../assets/img/tick-sign.svg");
+				background-size: 17px;
+				opacity: 0;
+			}
+
+			a {
+				.mylink-extended(#3b8dc5);
+				//color: #3b8dc5;
+				//text-decoration: underline;
+
+				&:hover, &:active, &:focus {
+					//text-decoration: none;
+				}
+			}
+		}
+	}
 }
