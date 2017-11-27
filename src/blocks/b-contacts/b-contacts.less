@@ -3,12 +3,23 @@
 @import "mymixins";
 
 .b-contacts {
-	margin-top: 45px;
-	margin-bottom: 60px;
+	margin: 45px auto 60px;
+	width: 280px;
+
+	@media (min-width: @screen-md-min) {
+		width: auto;
+	}
 }
 
 .b-contacts__item {
-	font-size: 30px;
+	font-size: 24px;
+
+	@media (min-width: @screen-xl-min) {
+		font-size: 30px;
+	}
+
+	min-height: 48px;
+
 	line-height: 36px;
 	padding: 5px 0 5px 44px + 14px;
 	margin: 10px 0;
@@ -18,38 +29,56 @@
 	background: left center no-repeat url("../../assets/img/contacts/phone.svg");
 	background-size: 43px 45px;
 	padding-left: 56px;
-	margin-left: 25px;
+
+	@media (min-width: @screen-lg-min) {
+		margin-left: 25px;
+	}
 }
 
 .b-contacts__item_skype {
 	background: left center no-repeat url("../../assets/img/contacts/skype.svg");
 	background-size: 46px;
-	margin-left: 38px;
+
+	@media (min-width: @screen-lg-min) {
+		margin-left: 38px;
+	}
 }
 
 .b-contacts__item_mail {
 	background: left center no-repeat url("../../assets/img/contacts/gmail.svg");
 	background-size: 45px 33px;
-	margin-left: 25px;
 	padding-left: 55px;
+
+	@media (min-width: @screen-lg-min) {
+		margin-left: 25px;
+	}
 }
 
 .b-contacts__item_telegram {
 	background: left center no-repeat url("../../assets/img/contacts/telegram.svg");
 	background-size: 46px;
-	margin-left: 38px;
+
+	@media (min-width: @screen-lg-min) {
+		margin-left: 38px;
+	}
 }
 
 .b-contacts__item_vk {
 	background: left center no-repeat url("../../assets/img/contacts/vk-messenger.svg");
 	background-size: 46px;
-	margin-left: -41px;
+
+	@media (min-width: @screen-lg-min) {
+		margin-left: -41px;
+	}
 }
 
 .b-contacts__item_fb {
 	background: left center no-repeat url("../../assets/img/contacts/messenger-facebook.svg");
 	background-size: 45px 46px;
-	margin-left: -41px;
+
+	@media (min-width: @screen-lg-min) {
+		margin-left: -41px;
+	}
 }
 
 //.b-contacts__item_time {

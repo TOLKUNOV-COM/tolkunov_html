@@ -47,8 +47,7 @@
 
 .g-loader__text {
 	color: #8e8e8e;
-	margin-top: 15px;
-	margin-bottom: 0;
+	margin: 15px 15px 0;
 }
 
 .g-loader__button {
@@ -57,7 +56,12 @@
 	font-weight: bold;
 	color: @text-color;
 	display: block;
-	width: 624px;
+	width: 95%;
+
+	@media (min-width: @screen-md-min) {
+		width: 624px;
+	}
+
 	margin: 0 auto;
 	text-align: center;
 
@@ -89,6 +93,10 @@
 	border-radius: 50%;
 
 	margin-right: 8px;
+
+	@media (max-width: @screen-xs-max) {
+		display: none;
+	}
 
 	&:before {
 		content: '';

@@ -4,6 +4,7 @@ var loadReviews = function (cb) {
             itemSelector: '.b-reviews__item',
             columnWidth: 320,
             gutter: 20,
+            fitWidth: true,
             // no transitions
             transitionDuration: 0,
             initLayout: false

@@ -9,7 +9,9 @@ block content
 
             .b-offer
                 .b-offer__cover
-                    img.img-responsive.b-offer__image(src='http://placehold.it/1000x300')
+                    img.img-responsive.b-offer__image.hidden-xs.hidden-sm(src='http://placehold.it/1000x300')
+                    img.img-responsive.b-offer__image.visible-xs(src='http://placehold.it/500x300')
+                    img.img-responsive.b-offer__image.visible-sm(src='http://placehold.it/800x300')
 
                     .b-offer__properties.b-offer-properties
                         .b-offer-properties__item
@@ -38,7 +40,7 @@ block content
                         .b-offer-variants__item.b-offer-variants__item_color_red
                             p.b-offer-variants__title Стандарт
 
-                            p.b-offer-variants__text 1 месяц бесплатного использования чата без ограничений
+                            p.b-offer-variants__text 1 месяц бесплатного использования чата без ограничений 1 месяц бесплатного использования чата без ограничений
 
                             p.b-offer-variants__price 800#[small.b-offer-variants__rub ₽]
                         .b-offer-variants__item.b-offer-variants__item_color_blue
@@ -60,9 +62,9 @@ block content
 
                             p.b-offer-variants__price 3200#[small.b-offer-variants__rub ₽]
                 .b-offer__bottom
-                    | #[a.btn.btn-success.btn-lg(href='order_1.html') Заказать баннер] и получить бонус или #[a.btn.btn-primary.btn-lg(href='offers.html') Посмотреть все 24 акции]
-
-
+                    a.btn.btn-success.btn-lg(href='order_1.html') Заказать баннер
+                    .b-offer__bottom-text &nbsp;и получить бонус или&nbsp;
+                    a.btn.btn-primary.btn-lg(href='offers.html') Посмотреть все 24 акции
 
             .b-subscribe.b-subscribe_theme_alt
                 p.b-subscribe__title Получайте новые акции прямо на почту

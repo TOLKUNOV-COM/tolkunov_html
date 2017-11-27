@@ -13,5 +13,16 @@ $(function () {
         //        height: 50
         //    }
         //}
+        beforeLoad: function () {
+            if ($(window).width() < 768) {
+                var url = $(this.element).attr('href');
+
+                window.open(url, '_self');
+
+                return false;
+            }
+
+            return true;
+        }
     });
 });

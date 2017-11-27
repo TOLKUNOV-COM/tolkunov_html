@@ -1,19 +1,41 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-error {
 	text-align: center;
-	margin-top: 95px;
-	margin-bottom: 320px;
+	margin-top: 60px;
+	margin-bottom: 140px;
+
+	@media (min-width: @grid-float-breakpoint) {
+		margin-top: 95px;
+		margin-bottom: 280px;
+	}
 }
 
 .b-error__title {
-	font-size: 300px;
+	font-size: 60px;
+
+	@media (min-width: @screen-sm-min) {
+		font-size: 120px;
+	}
+	@media (min-width: @grid-float-breakpoint) {
+		font-size: 300px;
+	}
+
 	font-weight: bold;
 }
 
 .b-error__text {
-	font-size: 40px;
+	font-size: 20px;
 	font-weight: bold;
-	margin-top: -45px;
+
+	@media (min-width: @screen-sm-min) {
+		font-size: 30px;
+	}
+
+	@media (min-width: @grid-float-breakpoint) {
+		font-size: 40px;
+		margin-top: -45px;
+	}
 }

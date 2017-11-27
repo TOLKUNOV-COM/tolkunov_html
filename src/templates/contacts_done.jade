@@ -6,20 +6,19 @@ block content
             h1.b-page__title Контактная информация
 
             .b-contacts
-                .row
-                    .col-xs-4
-                        .b-contacts__item.b-contacts__item_phone +7 (351) 277-91-60
-                    .col-xs-4
-                        .b-contacts__item.b-contacts__item_skype: a.b-contacts__link(href='#') tolkunovdb
-                    .col-xs-4
-                        .b-contacts__item.b-contacts__item_address Блюхера 69, офис 507
-                .row
-                    .col-xs-4
-                        .b-contacts__item.b-contacts__item_mail: a.b-contacts__link(href='#') order@tolkunov.com
-                    .col-xs-4
-                        .b-contacts__item.b-contacts__item_telegram: a.b-contacts__link(href='#') tolkunovdb
-                    .col-xs-4
-                        .b-contacts__item.b-contacts__item_time 10:00-19:00, пн-пт
+                .b-contacts-grid
+                    .b-contacts-grid__item.b-contacts-grid__item_phone
+                        .b-contacts__item.b-contacts__item_phone +7 (812) 603-70-97
+                    .b-contacts-grid__item.b-contacts-grid__item_skype
+                        .b-contacts__item.b-contacts__item_skype: a.b-contacts__link(href='skype:tolkunovdb?chat') tolkunovdb
+                    .b-contacts-grid__item.b-contacts-grid__item_vk
+                        .b-contacts__item.b-contacts__item_vk: a.b-contacts__link(href='https://vk.com/im?media=&sel=-68302756', target='_blank') Messenger VK
+                    .b-contacts-grid__item.b-contacts-grid__item_mail
+                        .b-contacts__item.b-contacts__item_mail: a.b-contacts__link(href='mailto:order@tolkunov.com') order@tolkunov.com
+                    .b-contacts-grid__item.b-contacts-grid__item_telegram
+                        .b-contacts__item.b-contacts__item_telegram: a.b-contacts__link(href='http://telegram.me/tolkunovdb', target='_blank') tolkunovdb
+                    .b-contacts-grid__item.b-contacts-grid__item_fb
+                        .b-contacts__item.b-contacts__item_fb: a.b-contacts__link(href='https://www.facebook.com/messages/t/tolkunov', target='_blank') Messenger Facebook
             .b-map
                 center
                     a.dg-widget-link(href="http://2gis.ru/chelyabinsk/firm/70000001022907880/center/61.366946697235115,55.129851325891494/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap") Посмотреть на карте Челябинска
@@ -28,7 +27,7 @@ block content
                     script(charset="utf-8", src="http://widgets.2gis.com/js/DGWidgetLoader.js")
                     script(charset="utf-8").
                         new DGWidgetLoader({
-                            "width": 1200,
+                            "width": "100%",
                             "height": 400,
                             "borderColor": "#a3a3a3",
                             "pos": {"lat": 55.129851325891494, "lon": 61.366946697235115, "zoom": 16},

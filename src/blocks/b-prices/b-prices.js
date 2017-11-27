@@ -13,6 +13,6 @@ $(function () {
     $('[data-toggle="popover"]').popover({
         html: true,
         placement: 'top',
-        trigger: 'hover',
+        trigger: 'hover'
     })
-})
+});

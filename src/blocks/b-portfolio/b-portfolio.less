@@ -1,12 +1,13 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-portfolio {
 	font-weight: 300;
 }
 
 .b-portfolio__header {
-	font-size: 30px;
+	.my-heading-lead();
 	font-weight: bold;
 	text-align: center;
 	margin-top: 0;
@@ -19,13 +20,21 @@
 .b-portfolio__list {
 	margin: -10px auto 0;
 	text-align: center;
+	overflow: hidden;
 }
 
 .b-portfolio__item {
 	display: inline-block;
-	width: 204px;
-	height: 204px;
-	margin: 10px;
+	width: 150px;
+	height: 150px;
+	margin: 5px;
+
+	@media (min-width: @screen-md-min) {
+		width: 204px;
+		height: 204px;
+		margin: 10px;
+	}
+
 	position: relative;
 	color: #fff;
 
@@ -40,8 +49,13 @@
 }
 
 .b-portfolio__image {
-	max-width: 204px;
-	max-height: 204px;
+	max-width: 150px;
+	max-height: 150px;
+
+	@media (min-width: @screen-md-min) {
+		max-width: 204px;
+		max-height: 204px;
+	}
 
 	position: absolute;
 	top: 50%;
@@ -110,8 +124,10 @@
 
 .b-portfolio__title {
 	font-weight: bold;
-	font-size: 24px;
-	line-height: 22px;
+
+	.my-heading-h3();
+	line-height: 24/22;
+
 	word-wrap: break-word;
 	letter-spacing: 0;
 	margin: 0 10px 4px;

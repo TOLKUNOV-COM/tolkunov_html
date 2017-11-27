@@ -19,7 +19,9 @@
 	}
 
 	img {
-		margin: 38px 0;
+		margin: 38px auto;
+
+		.img-responsive();
 	}
 
 	a {
@@ -37,15 +39,29 @@
 		color: @text-color;
 		border: none;
 		background: #f5f9fc;
-		padding: 25px 86px;
+		padding: 65px 16px;
+
+		@media (min-width: @screen-sm-min) {
+			padding: 65px 16px+26px;
+		}
+		@media (min-width: @screen-md-min) {
+			padding: 25px 86px;
+		}
+
 		margin: 27px 0 20px;
 
 		position: relative;
 
 		&:before {
 			position: absolute;
-			left: 29px;
-			top: 50%;
+			left: 16px;
+			top: 33px;
+
+			@media (min-width: @screen-md-min) {
+				left: 29px;
+				top: 50%;
+			}
+
 			transform: translateY(-50%);
 
 			width: 26px;
@@ -57,8 +73,15 @@
 		}
 		&:after {
 			position: absolute;
-			right: 29px;
-			top: 50%;
+			right: 16px;
+			bottom: 2px;
+
+			@media (min-width: @screen-md-min) {
+				right: 29px;
+				top: 50%;
+				bottom: inherit;
+			}
+
 			transform: translateY(-50%) rotate(180deg);
 
 			width: 26px;

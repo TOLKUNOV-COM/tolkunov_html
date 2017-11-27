@@ -11,14 +11,16 @@
 	margin-bottom: 22px;
 	text-align: center;
 	font-weight: bold;
-	font-size: 40px;
 	line-height: 1.275;
+
+	.my-heading-h1();
 }
 
 .b-page__lead {
-	font-size: 30px;
 	margin-bottom: 40px;
 	text-align: center;
+
+	.my-heading-lead();
 
 	a {
 		.mylink-extended(@text-color, 2px dotted rgba(37, 37, 37, .05), @link-hover-color);
@@ -36,7 +38,8 @@
 }
 
 .b-page__sub-title {
-	font-size: 40px;
+	.my-heading-h1();
+
 	text-align: center;
 	margin-top: -7px - 22px + 10px;
 }

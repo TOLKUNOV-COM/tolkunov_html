@@ -1,0 +1,79 @@
+@import "variables.less";
+@import "mixins";
+
+.b-contacts-grid {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.b-contacts-grid__item {
+	width: 100%;
+
+	@media (min-width: @screen-md-min) {
+		width: 50%;
+	}
+
+	@media (min-width: @screen-lg-min) {
+		width: 100%/3;
+	}
+}
+
+.b-contacts-grid__item_phone {
+	order: 1;
+
+	@media (min-width: @screen-md-min) {
+		order: 1;
+	}
+	@media (min-width: @screen-lg-min) {
+		order: 1;
+	}
+}
+
+.b-contacts-grid__item_skype {
+	order: 4;
+
+	@media (min-width: @screen-md-min) {
+		order: 2;
+	}
+	@media (min-width: @screen-lg-min) {
+		order: 2;
+	}
+}
+
+.b-contacts-grid__item_vk {
+	order: 5;
+
+	@media (min-width: @screen-md-min) {
+		order: 4;
+	}
+	@media (min-width: @screen-lg-min) {
+		order: 3;
+	}
+}
+
+.b-contacts-grid__item_mail {
+	order: 2;
+
+	@media (min-width: @screen-md-min) {
+		order: 3;
+	}
+	@media (min-width: @screen-lg-min) {
+		order: 4;
+	}
+}
+
+.b-contacts-grid__item_telegram {
+	order: 3;
+
+	@media (min-width: @screen-md-min) {
+		order: 5;
+	}
+}
+
+.b-contacts-grid__item_fb {
+	order: 6;
+
+	@media (min-width: @screen-md-min) {
+		order: 6;
+	}
+}

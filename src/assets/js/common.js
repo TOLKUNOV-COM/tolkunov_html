@@ -12,8 +12,20 @@ $(function () {
         margin: [74, 0, 0, 0],
         helpers: {
             media: {}
+        },
+        beforeLoad: function () {
+            if ($(window).width() < 768) {
+                var url = $(this.element).attr('href');
+
+                window.open(url, '_self');
+
+                return false;
+            }
+
+            return true;
         }
     });
+
     $('.js-fancybox-inline').fancybox({
         type: 'inline',
         openEffect: 'none',

@@ -2,33 +2,20 @@
 @import "mixins";
 
 .b-header {
-	margin-bottom: 68px;
 }
 
 .b-header__logo {
 	display: inline-block;
-	float: left;
-	width: 240px;
-	height: 53px;
+	width: 168px;
+	height: 38px;
 	background: left top no-repeat url("../../assets/img/logo-black.svg");
-	margin-top: 54px;
 
 	&:hover, &:active, &:focus {
 		background-image: url("../../assets/img/logo-blue.svg");
 	}
-}
 
-.b-header__menu {
-	float: left;
-	width: 490px;
-	margin-top: 49px;
-	margin-left: 33px;
-}
-
-.b-header__button {
-	float: right;
-	font-weight: bold;
-	padding-left: 19px;
-	padding-right: 19px;
-	margin-top: 53px;
+	@media (min-width: @grid-float-breakpoint) {
+		width: 240px;
+		height: 53px;
+	}
 }

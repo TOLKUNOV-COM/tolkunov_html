@@ -2,7 +2,12 @@
 @import "mixins";
 
 .b-blog-menu {
-	display: table;
+	display: none;
+
+	@media (min-width: @screen-lg-min) {
+		display: table;
+	}
+
 	width: 1000px - (66px*2);
 	margin: 32px 66px;
 	position: relative;

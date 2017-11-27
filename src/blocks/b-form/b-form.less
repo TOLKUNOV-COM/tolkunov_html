@@ -5,18 +5,29 @@
 .b-form {
 	background: #f5f9fc;
 	margin-top: 5px;
-	padding: 50px 0 60px;
+	padding: 27px 0 60px;
+
+	@media (min-width: @screen-md-min) {
+		padding: 40px 0 60px;
+	}
+
+	@media (min-width: @grid-float-breakpoint) {
+		padding: 50px 0 60px;
+	}
 }
 
 .b-form__form {
 	text-align: center;
 
-	.form-group {
-	}
 	label {
-		font-size: 30px;
+		.my-heading-lead();
+
 		font-weight: 300;
-		margin-bottom: 18px;
+		margin-bottom: 12px;
+
+		@media (min-width: @screen-md-min) {
+			margin-bottom: 18px;
+		}
 
 		& + .help-block {
 			margin-top: -10px;
@@ -24,7 +35,6 @@
 	}
 	.help-block {
 		color: rgba(37, 37, 37, .5);
-		//margin-top: 0;
 		margin-bottom: 12px;
 
 		a {
@@ -39,10 +49,14 @@
 		border-color: #fff;
 		background-color: #fff;
 		box-shadow: 2px 3px 0 rgba(0, 0, 0, .05);
-		font-size: 24px;
+		font-size: 18px;
 		color: @text-color;
 		padding-left: 22px;
 		padding-right: 22px;
+
+		@media (min-width: @grid-float-breakpoint) {
+			font-size: 24px;
+		}
 	}
 	textarea {
 		padding-top: 18px;
@@ -54,10 +68,18 @@
 }
 
 .b-form__button {
-	font-size: 30px;
+	.my-heading-lead();
+
 	font-weight: bold;
-	padding: 19px 70px 25px !important;
+	padding: 19px 60px 23px !important;
 	margin-top: 10px;
+
+	@media (min-width: @screen-sm-min) {
+		padding: 19px 70px 23px !important;
+	}
+	@media (min-width: @grid-float-breakpoint) {
+		padding: 19px 70px 25px !important;
+	}
 }
 
 .b-form__link {
@@ -74,13 +96,13 @@
 }
 
 .b-form__header {
-	font-size: 40px;
+	.my-heading-h1();
 	font-weight: bold;
 	margin-top: 30px;
 	margin-bottom: 10px;
 }
 
 .b-form__lead {
-	font-size: 30px;
+	.my-heading-lead();
 	margin-bottom: 35px;
 }

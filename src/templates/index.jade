@@ -9,13 +9,13 @@ block content
 
             .b-summary
                 a.b-summary__item.b-summary__item_1(href='portfolio_type_1.html')
-                    .b-summary__number.odometer(data-number="985") 985
+                    .b-summary__number.odometer(data-number="985") 9999
                     .b-summary__text баннеров#[br]в портфолио
                 a.b-summary__item.b-summary__item_2(href='reviews.html')
-                    .b-summary__number.odometer(data-number="232") 232
+                    .b-summary__number.odometer(data-number="232") 9999
                     .b-summary__text отзыва#[br]от клиентов
                 a.b-summary__item.b-summary__item_3(href='blog.html')
-                    .b-summary__number.odometer(data-number="15") 15
+                    .b-summary__number.odometer(data-number="15") 9999
                     .b-summary__text статей в нашем#[br]справочнике
                 a.b-summary__item.b-summary__item_4(href='offers.html')
                     .b-summary__number.odometer(data-number="40000") 40000
@@ -68,17 +68,19 @@ block content
                 .b-treatment__image
 
                 .b-treatment__content
-                    p.b-treatment__title Эффектная графика#[br]с анализом рекламной#[br]площадки
+                    .b-treatment__column.b-treatment__column_1
+                        p.b-treatment__title Эффектная графика#[br]с анализом рекламной#[br]площадки
 
-                    .b-treatment__text
-                        p Чтобы выделить предложение, я и моя команда анализируем площадку и информационное окружение баннера. Разрабатываем стилистику и анимацию для преодоления «баннерной слепоты» и привлечения внимания посетителей.
-                    b.b-treatment__name Толкунов Дмитрий
-                    p.b-treatment__role директор студии
+                        .b-treatment__text
+                            p Чтобы выделить предложение, я и моя команда анализируем площадку и информационное окружение баннера. Разрабатываем стилистику и анимацию для преодоления «баннерной слепоты» и привлечения внимания посетителей.
+                    .b-treatment__column.b-treatment__column_2
+                        b.b-treatment__name Толкунов Дмитрий
+                        p.b-treatment__role директор студии
 
-                    .b-treatment-links.b-treatment__links
-                        a.b-treatment-links__item.b-treatment-links__item_vk(href='#')
-                        a.b-treatment-links__item.b-treatment-links__item_fb(href='#')
-                        a.b-treatment-links__item.b-treatment-links__item_tw(href='#')
+                        .b-treatment-links.b-treatment__links
+                            a.b-treatment-links__item.b-treatment-links__item_vk(href='#')
+                            a.b-treatment-links__item.b-treatment-links__item_fb(href='#')
+                            a.b-treatment-links__item.b-treatment-links__item_tw(href='#')
         .container
             .b-splash-prices
                 h2.b-splash-prices__header Интернет-баннеры всех видов и размеров
@@ -153,7 +155,6 @@ block content
 
                         .b-why-us__text
                             p Клиент оплачивает решение задачи, а не просто красивую картинку. Если в готовом баннере что-то не устроит — бесплатно внесём обоснованные правки.
-                .b-why-us__list
                     .b-why-us__item
                         .b-why-us__image
                             img(src='assets/img/why-us/04-icon-ponocsh.svg', width=156, height=157)
@@ -579,4 +580,3 @@ block content
                                     p.b-portfolio__title Длинное название работы
                                     p.b-portfolio__category Строительство
                                     p.b-portfolio__date 5 марта 2016
-

@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-offer-variants {
 	text-align: center;
@@ -8,24 +9,29 @@
 }
 
 .b-offer-variants__header {
-	font-size: 40px;
-	line-height: 48px;
+	.my-heading-h1();
+	line-height: 1.2;
 	font-weight: bold;
 	margin-bottom: 32px;
 }
 
 .b-offer-variants__list {
-	.clearfix();
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
 	padding: 0 20px;
 }
 
 .b-offer-variants__item {
-	float: left;
 	background: #f5f9fc;
 	margin: 10px;
 	width: 300px;
 	border-radius: 5px;
 	padding: 15px 14px;
+
+	display: flex;
+	flex-flow: column nowrap;
 }
 
 .b-offer-variants__title {
@@ -36,6 +42,9 @@
 
 .b-offer-variants__text {
 	margin-bottom: 15px;
+
+	max-width: 100%;
+	flex: 1 0 auto;
 }
 
 .b-offer-variants__price {

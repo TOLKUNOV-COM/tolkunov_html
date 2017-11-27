@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-filter {
 	text-align: center;
@@ -12,9 +13,14 @@
 
 	display: inline-block;
 	padding: 8px 20px;
-	font-size: 30px;
 	color: @text-color;
-	line-height: 32px;
+
+	.my-heading-lead();
+	line-height: 1.1;
+
+	@media (min-width: @grid-float-breakpoint) {
+		line-height: 32px;
+	}
 
 	&:not(.b-filter__item_active) .b-filter__title {
 		border-bottom-color: rgba(37, 37, 37, .05);

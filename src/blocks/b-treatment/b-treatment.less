@@ -1,23 +1,22 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-treatment {
 	background: #f5f9fc;
 	position: relative;
-	height: 421px;
+	//height: 421px;
 	overflow: hidden;
 }
 
 .b-treatment__container {
-	height: 421px;
+	//height: 421px;
 	position: relative;
-	//background: right -168px top no-repeat url("../../assets/img/splash-treatment.jpg");
-	//background-size: auto 421px;
 }
 
 .b-treatment__image {
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	right: -168px;
 
 	width: 809px;
@@ -61,21 +60,52 @@
 .b-treatment__content {
 	position: relative;
 	z-index: 102;
+	//height: 421px;
+
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.b-treatment__column {
+	width: 100%;
+}
+
+.b-treatment__column_1 {
+	@media (min-width: @screen-lg-min) {
+		width: 60%;
+	}
+}
+
+.b-treatment__column_2 {
 	height: 421px;
+
+	@media (min-width: @screen-lg-min) {
+		width: 40%;
+	}
 }
 
 .b-treatment__title {
-	font-size: 40px;
+	.my-heading-h1();
+
 	font-weight: bold;
-	line-height: 38px;
-	padding-top: 62px;
-	margin-bottom: 30px;
+	line-height: 1;
+	padding-top: 30px;
+	margin-bottom: 20px;
+
+	@media (min-width: @screen-lg-min) {
+		padding-top: 62px;
+		margin-bottom: 30px;
+	}
 }
 
 .b-treatment__text {
-	line-height: 22px;
-	width: 424px;
+	line-height: 22/18;
 	color: #000;
+	margin-bottom: 30px;
+
+	@media (min-width: @screen-lg-min) {
+		width: 424px;
+	}
 }
 
 .b-treatment__name {

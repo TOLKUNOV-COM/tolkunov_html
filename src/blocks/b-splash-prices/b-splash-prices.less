@@ -3,11 +3,17 @@
 @import "mymixins";
 
 .b-splash-prices {
-	margin-top: 90px;
+	margin-top: 60px;
+	overflow: hidden;
+
+	@media (min-width: @grid-float-breakpoint) {
+		margin-top: 90px;
+	}
 }
 
 .b-splash-prices__header {
-	font-size: 40px;
+	.my-heading-h1();
+
 	font-weight: bold;
 	text-align: center;
 	margin-top: 0;
@@ -15,12 +21,28 @@
 }
 
 .b-splash-prices__list {
-	.make-row(80px);
-	.clearfix();
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	margin: -30px -40px;
 }
 
 .b-splash-prices__item {
-	.make-xs-column(4, 80px);
+	width: 100%;
+
+	@media (min-width: @screen-md-min) {
+		width: ~"calc(100%/2 - 80px)";
+	}
+	@media (min-width: @screen-lg-min) {
+		width: ~"calc(100%/3 - 80px)";
+	}
+
+	margin: 30px 40px;
+
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-start;
 }
 
 .b-splash-prices__item_1 {
@@ -72,11 +94,14 @@
 }
 
 .b-splash-prices__text {
-	height: 117px;
+	margin-bottom: 37px;
+	flex: 1 0 auto;
+	max-width: 100%;
 }
 
 .b-splash-prices__sizes {
 	margin-bottom: 42px - 6px;
+	max-width: 100%;
 }
 
 .b-splash-prices__price {

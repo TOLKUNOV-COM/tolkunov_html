@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "mymixins";
 
 .browserupgrade {
 	margin: 0 0 0.2em;
@@ -23,7 +24,7 @@ html, body {
 
 /* Account for fixed navbar */
 body {
-	min-width: 1080px;
+	//min-width: 1080px;
 	//position: relative;
 
 	font-weight: 300;
@@ -37,15 +38,15 @@ body {
  */
 
 /* Reset the container */
-.container {
-	width: 1030px;
-	max-width: none !important;
-}
+//.container {
+//	width: 1030px;
+//	max-width: none !important;
+//}
 
 /**
 * Generate .g-mt10, .g-mt-20, .g-mb10 classes
 */
-@iterations: 6;
+@iterations: 8;
 
 .margin-top-loop (@i) when (@i > 0) {
 	.g-mt@{i}0 {
@@ -222,12 +223,18 @@ body {
 
 /* .btn-lg */
 .btn-group-lg > .btn, .btn-lg {
+	.my-heading-h3();
+	font-size: 20px;
 	line-height: 1;
 
 	@base-padding: 11px;
 
 	padding-top: @base-padding;
-	padding-bottom: @base-padding + 4px;
+	padding-bottom: @base-padding + 3px;
+
+	@media (min-width: @screen-md-min) {
+		padding-bottom: @base-padding + 4px;
+	}
 }
 
 /* Remove inner shadow active button */
@@ -235,15 +242,31 @@ body {
 	box-shadow: none;
 }
 
+.fancybox-overlay {
+	background: rgba(0, 0, 0, .8);
+
+	@media (min-width: @grid-float-breakpoint) {
+		background: rgba(0, 0, 0, .65);
+	}
+}
+
 .fancybox-close {
 	top: -53px;
-	right: 0;
+	right: 21px;
 	width: 32px;
 	height: 32px;
 
 	background: left top no-repeat url("../../assets/img/close.svg");
-	opacity: .3;
+	opacity: .8;
 	transition: all .1s ease-out;
+
+	@media (min-width: @screen-md-min) {
+		right: 0;
+	}
+
+	@media (min-width: @grid-float-breakpoint) {
+		opacity: .3;
+	}
 
 	&:hover, &:active, &:focus {
 		opacity: 1;
@@ -321,4 +344,16 @@ body {
 [data-rjs-processed="true"][width="0"][height="0"] {
 	width: auto !important;
 	height: auto !important;
+}
+
+.form-control {
+	@media (min-width: @grid-float-breakpoint) {
+		height: 75px;
+	}
+}
+
+.form-group {
+	@media (min-width: @grid-float-breakpoint) {
+		margin-bottom: 50px;
+	}
 }

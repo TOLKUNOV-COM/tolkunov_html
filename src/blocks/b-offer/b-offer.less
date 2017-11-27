@@ -8,11 +8,22 @@
 
 .b-offer__cover {
 	position: relative;
-	margin-bottom: 88px;
+	margin-bottom: 30px;
+
+	@media (min-width: @screen-sm-min) {
+		margin-bottom: 50px;
+	}
+	@media (min-width: @grid-float-breakpoint) {
+		margin-bottom: 88px;
+	}
 }
 
 .b-offer__image {
 	border-radius: 13px;
+}
+
+.b-offer__properties {
+	margin-top: 40px;
 }
 
 .b-offer__rub {
@@ -25,10 +36,30 @@
 
 .b-offer__bottom {
 	text-align: center;
-	font-size: 24px;
+	font-size: 20px;
+
+	@media (min-width: @screen-lg-min) {
+		font-size: 24px;
+	}
 
 	.btn {
 		font-weight: bold;
-		margin: 0 13px;
+		font-size: 20px;
+
+		@media (min-width: @screen-md-min) {
+			margin: 0 13px;
+		}
+
+		@media (min-width: @screen-lg-min) {
+			font-size: @font-size-large;
+		}
+	}
+}
+
+.b-offer__bottom-text {
+	margin: 15px 0;
+
+	@media (min-width: @screen-md-min) {
+		display: inline;
 	}
 }

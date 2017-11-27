@@ -3,22 +3,41 @@
 
 .b-clients {
 	background: #f5f9fc;
-	margin-top: 50px;
+	margin-top: 20px;
 	padding-bottom: 40px;
+
+	@media (min-width: @grid-float-breakpoint) {
+		margin-top: 50px;
+	}
 }
 
 .b-clients__list {
 	padding: 40px 20px 0;
 
-	.clearfix();
+	display: flex;
+	flex-flow: row wrap;
 }
 
 .b-clients__item {
 	background: #ffffff;
-	box-shadow: 2px 2px 0px rgba(0, 0, 0, .05);
+	box-shadow: 2px 2px 0 rgba(0, 0, 0, .05);
 	margin: 20px;
-	width: 200px;
-	float: left;
+	min-width: 200px;
+	overflow: hidden;
+
+	flex-basis: ~"calc(100% - 40px)";
+
+	@media (min-width: 568px) {
+		flex-basis: ~"calc(50% - 40px)";
+	}
+
+	@media (min-width: @screen-lg-min) {
+		flex-basis: ~"calc(100% / 3 - 40px)";
+	}
+
+	@media (min-width: @screen-xl-min) {
+		flex-basis: ~"calc(100% / 4 - 40px)";
+	}
 
 	padding: 20px 0 16px;
 
@@ -42,11 +61,11 @@
 
 	&:after {
 		position: absolute;
-		width: 15px;
+		width: 25px;
 		top: 0;
-		right: 10px;
+		right: 0;
 		bottom: 0;
-		background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, .2));
+		background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, .2));
 		content: '';
 	}
 }
@@ -58,8 +77,6 @@
 	display: inline-block;
 	white-space: nowrap;
 	overflow: hidden;
-	//text-overflow: ellipsis;
-	max-width: 180px;
 	margin: 0 10px;
 }
 

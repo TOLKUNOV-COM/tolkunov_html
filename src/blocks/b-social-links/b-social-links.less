@@ -4,16 +4,27 @@
 .b-social-links {
 	display: flex;
 	flex-flow: row wrap;
-	width: 141px;
+
 	margin: 32px auto 0;
+
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+		margin-top: 0;
+	}
+	@media (min-width: @screen-md-min) {
+		width: 141px;
+	}
 }
 
 .b-social-links__item {
-	flex-basis: 100%/3;
+	flex-basis: 100%/6;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 10px 0;
+
+	@media (min-width: @screen-md-min) {
+		flex-basis: 100%/3;
+	}
 }
 
 .b-social-links__link {

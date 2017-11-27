@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-portfolio-filter {
 	text-align: center;
@@ -8,12 +9,17 @@
 }
 
 .b-portfolio-filter__item {
-	font-size: 24px;
-	line-height: 28px;
+	.my-heading-h3();
+
+	line-height: 28/24;
 	color: @text-color;
-	margin: 0 25px;
+	margin: 6px 25px;
 	display: inline-block;
 	position: relative;
+
+	@media (min-width: @grid-float-breakpoint) {
+		margin: 0 25px;
+	}
 
 	&:not(.b-portfolio-filter__item_active) .b-portfolio-filter__title {
 		border-bottom-color: rgba(37, 37, 37, .05);

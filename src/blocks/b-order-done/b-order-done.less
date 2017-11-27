@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-order-done {
 	padding-top: 160px;
@@ -10,9 +11,10 @@
 
 .b-order-done__title {
 	font-weight: bold;
-	font-size: 40px;
+
+	.my-heading-h1();
 }
 
 .b-order-done__text {
-	font-size: 30px;
+	.my-heading-lead();
 }

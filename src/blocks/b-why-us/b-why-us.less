@@ -1,13 +1,21 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-why-us {
 	margin-top: 110px;
 	margin-bottom: 30px;
+
+	overflow: hidden;
+
+	@media (max-width: @screen-xs-max) {
+		text-align: center;
+	}
 }
 
 .b-why-us__header {
-	font-size: 40px;
+	.my-heading-h1();
+
 	font-weight: bold;
 	text-align: center;
 	margin-top: 0;
@@ -15,13 +23,22 @@
 }
 
 .b-why-us__list {
-	.make-row(40px);
-	.clearfix();
+	display: flex;
+	flex-flow: row wrap;
+
+	margin: 0 -20px -50px;
 }
 
 .b-why-us__item {
-	.make-xs-column(4, 40px);
-	margin-bottom: 55px;
+	width: ~"calc(100% - 40px)";
+	margin: 0 20px 55px;
+
+	@media (min-width: @screen-sm-min) {
+		width: ~"calc(100%/2 - 40px)";
+	}
+	@media (min-width: @screen-lg-min) {
+		width: ~"calc(100%/3 - 40px)";
+	}
 }
 
 .b-why-us__image {
@@ -29,7 +46,8 @@
 }
 
 .b-why-us__title {
-	font-size: 24px;
+	.my-heading-h3();
+
 	line-height: 1;
 	font-weight: bold;
 	margin-bottom: 17px;

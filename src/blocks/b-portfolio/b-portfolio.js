@@ -98,6 +98,17 @@ $(function () {
         padding: [50, 0, 0, 0],
         margin: [74, 0, 100, 0],
         fitToView: false,
+        beforeLoad: function () {
+            if ($(window).width() < 768) {
+                var url = $(this.element).attr('href');
+
+                window.open(url, '_self');
+
+                return false;
+            }
+
+            return true;
+        },
         beforeShow: function () {
             var path = $.fancybox.current.href;
 

@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-size-filter {
 	background: #fbfbfc;
@@ -10,7 +11,8 @@
 }
 
 .b-size-filter__item {
-	font-size: 24px;
+	.my-heading-h3();
+
 	color: @text-color;
 	display: inline-block;
 	border: 2px solid rgba(0, 0, 0, .05);
@@ -46,12 +48,20 @@
 }
 
 .b-size-filter__list_collapsed {
-	max-height: 92px;
+	max-height: 80px;
+
+	@media (min-width: @screen-md-min) {
+		max-height: 84px;
+	}
+
+	@media (min-width: @grid-float-breakpoint) {
+		max-height: 92px;
+	}
 }
 
 .b-size-filter__toggle {
+	.my-heading-h3();
 	color: @text-color;
-	font-size: 24px;
 	text-decoration: none;
 	border-bottom: 2px dotted rgba(37, 37, 37, .05);
 	display: inline-block;

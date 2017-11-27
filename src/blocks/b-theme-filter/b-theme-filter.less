@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-theme-filter {
 	background: #fbfbfc;
@@ -10,7 +11,8 @@
 }
 
 .b-theme-filter__item {
-	font-size: 24px;
+	.my-heading-h3();
+
 	color: @text-color;
 	display: inline-block;
 	border-bottom: 2px solid rgba(37, 37, 37, .05);

@@ -1,0 +1,145 @@
+@import "variables.less";
+@import "mixins";
+
+.b-navbar {
+	border: none;
+
+	@media (min-width: @grid-float-breakpoint) {
+		background: none;
+		margin-bottom: 68px;
+		overflow-x: hidden;
+	}
+
+	.navbar-collapse {
+		@media (min-width: @grid-float-breakpoint) {
+			//padding-left: 0;
+			//padding-right: 0;
+			//margin-left: -@navbar-padding-horizontal;
+		}
+	}
+
+	.navbar-toggle {
+		padding: 5px 10px;
+		border: 0;
+	}
+
+	.navbar-toggle .icon-bar {
+		width: 32px;
+		height: 4px;
+		border-radius: 2px;
+	}
+
+	.navbar-toggle .icon-bar + .icon-bar {
+		margin-top: 5px;
+	}
+
+	@media (min-width: @grid-float-breakpoint) {
+		.navbar-brand {
+			padding: 0;
+			height: 53px;
+			margin-top: 54px;
+		}
+
+		.navbar-nav {
+			width: 450px;
+			margin-top: 49px;
+			margin-left: 18px;
+
+			& > li {
+				display: inline-block;
+				margin-bottom: 9px;
+				margin-left: 30px;
+			}
+		}
+	}
+
+	@media (min-width: @screen-xl-min) {
+		.navbar-nav {
+			width: 490px;
+			margin-left: 33px;
+
+			& > li {
+				margin-left: 40px;
+			}
+		}
+	}
+
+	.navbar-nav > li > a {
+		display: inline-block;
+		padding: 0;
+		line-height: @line-height-base;
+
+		font-weight: bold;
+		font-size: 24px;
+		color: @text-color;
+		text-decoration: none;
+		border-bottom: 2px solid rgba(38, 50, 57, .05);
+
+		&:hover, &:active, &:focus {
+			color: #2980b9;
+			border-bottom-color: #2980b9;
+
+			text-decoration: none;
+		}
+	}
+
+	.navbar-btn {
+		font-weight: bold;
+		padding-left: 19px;
+		padding-right: 19px;
+		margin-right: 15px;
+
+		@media (min-width: @grid-float-breakpoint) {
+			margin-top: 53px;
+		}
+		@media (min-width: @screen-xl-min) {
+			//margin-right: 15px;
+		}
+	}
+
+	.navbar-collapse .navbar-header {
+		@media (min-width: @grid-float-breakpoint) {
+			display: none;
+		}
+	}
+
+	.navbar-collapse.in {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: @navbar-default-bg;
+		//background: linear-gradient(to right, #6e1478, #aa3282);
+		overflow-x: hidden;
+		overflow-y: auto;
+		border: none;
+		z-index: @zindex-navbar + 1;
+
+		.navbar-nav {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		.navbar-nav > li {
+			//border-width: 0 0 1px 0;
+			//border-image: linear-gradient(to right, #57105e, #902a6e) 100% 1;
+
+			display: block;
+			margin-bottom: 20px;
+			margin-left: 29px - 15px;
+		}
+
+		.navbar-nav > li > a {
+			//padding-top: 26px;
+			//padding-bottom: 25px;
+
+			//padding-left: 29px;
+		}
+
+		.navbar-btn {
+			margin-left: -1px;
+			margin-bottom: 20px;
+		}
+	}
+}

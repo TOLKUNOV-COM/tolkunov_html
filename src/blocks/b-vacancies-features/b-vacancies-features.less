@@ -2,16 +2,26 @@
 @import "mixins";
 
 .b-vacancies-features {
-	.clearfix();
-	.make-row(60px);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 
 	text-align: center;
-	margin-top: 70px;
-	margin-bottom: 60px;
+	margin-top: 50px;
+	margin-bottom: 40px;
 }
 
 .b-vacancies-features__item {
-	.make-xs-column(3, 60px);
+	padding: 20px 30px;
+	width: 100%;
+
+	@media (min-width: @screen-md-min) {
+		width: 50%;
+	}
+
+	@media (min-width: @screen-xl-min) {
+		width: 25%;
+	}
 }
 
 .b-vacancies-features__image {

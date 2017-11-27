@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-review {
 
@@ -83,7 +84,8 @@
 }
 
 .b-reviews__head {
-	font-size: 40px;
+	.my-heading-h1();
+
 	font-weight: bold;
 	margin-top: -30px;
 	margin-bottom: 10px;
@@ -91,7 +93,8 @@
 }
 
 .b-reviews__lead {
-	font-size: 30px;
-	margin-bottom: 58px;
+	.my-heading-lead();
+
+	margin: 0 15px 58px;
 	text-align: center;
 }

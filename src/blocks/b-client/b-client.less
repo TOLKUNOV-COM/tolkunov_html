@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-client {
 
@@ -7,21 +8,24 @@
 
 .b-client__head {
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	margin-top: 6px;
+	margin-top: 6px - 15px;
+	margin-bottom: -15px;
 }
 
 .b-client__image {
-	margin: 0 25px;
+	margin: 15px 25px;
 	max-height: 40px;
 }
 
 .b-client__link {
-	margin: 0 25px;
+	.my-heading-lead();
+	margin: 15px 25px;
 	display: inline-block;
-	font-size: 30px;
 	color: @text-color;
+	white-space: nowrap;
 
 	border-bottom: 2px solid rgba(37, 37, 37, .1);
 

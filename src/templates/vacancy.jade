@@ -48,7 +48,11 @@ block content
                         .b-form-upload.b-form__upload
                             input(type="file", multiple="multiple", name="VacancyResume[files][]", id="VacancyResume_files_0", data-id="VacancyResume_files")
                             span.b-form-upload__label Выберите файлы или перетащите их в эту форму
+                    .form-group
+                        .b-checkbox
+                            input(type="checkbox", id="FeedBackForm_agree", value="1")
+                            label(for="FeedBackForm_agree") Я соглашаюсь на передачу персональных данных согласно #[a(href="http://ya.ru/", target="_blank") политике конфиденциальности] и #[a(href="http://ya.ru/", target="_blank") пользовательскому соглашению]
 
                     input.btn.btn-success.btn-lg.b-form__button(type="submit", value="Отправить")
-                    br
-                    a.b-form__link(href='#') Соглашение о конфиденциальности
+                    //br
+                    //a.b-form__link(href='#') Соглашение о конфиденциальности

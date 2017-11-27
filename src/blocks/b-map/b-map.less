@@ -2,17 +2,11 @@
 @import "mixins";
 
 .b-map {
-	width: 1200px;
-	margin-left: -100px;
-
 	margin-top: 60px;
 	margin-bottom: 75px;
-}
 
-@media (max-width: 1500px) {
-	.b-map {
-		width: auto;
-		margin-left: 0;
-		overflow: hidden;
+	@media (min-width: 1300px) {
+		width: 1200px;
+		margin-left: -100px;
 	}
 }

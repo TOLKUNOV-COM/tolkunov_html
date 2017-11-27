@@ -1,21 +1,38 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-subscribe-done {
-	background: 93px 6px no-repeat url("../../assets/img/order-done.png");
-	background-size: 101px;
+	padding-top: 160px;
+	background: center top no-repeat url("../../assets/img/order-done.png");
+	text-align: center;
+
 	margin-top: 50px;
 	margin-bottom: 115px;
+
+	@media (min-width: @grid-float-breakpoint) {
+		background: 93px 6px no-repeat url("../../assets/img/order-done.png");
+		background-size: 101px;
+		text-align: left;
+		padding-top: 0;
+	}
 }
 
 .b-subscribe-done__title {
 	font-weight: bold;
-	font-size: 40px;
-	margin-left: 225px;
+
+	.my-heading-h1();
+
+	@media (min-width: @grid-float-breakpoint) {
+		margin-left: 225px;
+	}
 }
 
 .b-subscribe-done__text {
-	font-size: 30px;
-	line-height: 32px;
-	margin-left: 225px;
+	.my-heading-lead();
+
+	@media (min-width: @grid-float-breakpoint) {
+		line-height: 32/30;
+		margin-left: 225px;
+	}
 }

@@ -1,7 +1,9 @@
 const fs = require('fs');
 
 var gulp = require('gulp'); // Сообственно Gulp JS
-const changed = require('gulp-changed');
+var changed = require('gulp-changed');
+var cached = require('gulp-cached');
+var filter = require('gulp-filter');
 var open = require('gulp-open');
 const imagemin = require('gulp-imagemin'); // Минификация изображений
 var uglify = require('gulp-uglify'); // Минификация JS
@@ -24,12 +26,14 @@ const collector = require('gulp-collector');
 
 const yaml = require('js-yaml');
 
+var jadeInheritance = require('gulp-jade-inheritance');
+
 var paths = {
     scripts: ['src/assets/js/*.js', 'src/blocks/*', 'src/blocks/**/*.js'],
     images: ['src/assets/img/*.{jpg,jpeg,png,gif,bmp,svg}', 'src/assets/img/**', 'src/assets/img/*'],
     less: ['src/less/bootstrap/variables.less', 'src/less/*.less', 'src/blocks/*', 'src/blocks/**/*.less'],
     bootstrap: 'build/assets/vendor/bootstrap',
-    templates: 'src/templates/*.jade'
+    templates: ['src/templates/*.jade', 'src/templates/**/*.jade']
 };
 
 // Browser definitions for autoprefixer
@@ -149,7 +153,7 @@ gulp.task('js', ['clean:js'], function () {
         //    sourceRoot: '/app/scss'
         //})
         .pipe(gulp.dest('./build/assets/js'));
-        //.pipe(reload({stream: true}));
+    //.pipe(reload({stream: true}));
 });
 
 gulp.task('img', [], function () {
@@ -178,12 +182,51 @@ gulp.task('templates', [/*'clean:templates'*/], function () {
     }
 
     return gulp.src(paths.templates)
+
+        //only pass unchanged *main* files and *all* the partials
+        .pipe(changed('build', {extension: '.html'}))
+
+        //filter out unchanged partials, but it only works when watching
+        .pipe(cached('jade'))
+        //.pipe(gulpif(global.isWatching, cached('jade')))
+
+        //find files that depend on the files that have changed
+        .pipe(jadeInheritance({basedir: 'src/templates'}))
+
+        //filter out partials (folders and files starting with "_" )
+        .pipe(filter(function (file) {
+            //console.log(file.relative);
+            return !/^includes/.test(file.relative) && !/^layouts/.test(file.relative);
+        }))
+
         .pipe(jade({
             locals: YOUR_LOCALS,
             pretty: true
         }))
         .on('error', log)
-        .pipe(gulp.dest('./build/'));
+        .pipe(gulp.dest('build'));
+});
+
+gulp.task('templates-full', [], function () {
+    try {
+        var YOUR_LOCALS = yaml.safeLoad(fs.readFileSync('./template_locals.yml', 'utf8'));
+    } catch (e) {
+        console.error(e);
+    }
+
+    return gulp.src(paths.templates)
+
+        //filter out partials (folders and files starting with "_" )
+        .pipe(filter(function (file) {
+            return !/^includes/.test(file.relative) && !/^layouts/.test(file.relative);
+        }))
+
+        .pipe(jade({
+            locals: YOUR_LOCALS,
+            pretty: true
+        }))
+        .on('error', log)
+        .pipe(gulp.dest('build'));
 });
 
 /**
@@ -191,6 +234,8 @@ gulp.task('templates', [/*'clean:templates'*/], function () {
  * Separate task for the reaction to `.jade` files
  */
 gulp.task('jade-watch', ['templates'], reloadCb);
+
+gulp.task('jade-vars-watch', ['templates-full'], reloadCb);
 
 // create a task that ensures the `js` task is complete before
 // reloading browsers
@@ -220,7 +265,8 @@ gulp.task('watch', ['build'], function () {
         }
     });
 
-    gulp.watch([paths.templates, 'src/templates/**/*.jade', './template_locals.yml'], ['jade-watch']);
+    gulp.watch(paths.templates, {cwd: '.'}, ['jade-watch']);
+    gulp.watch(['./template_locals.yml'], {cwd: '.'}, ['jade-vars-watch']);
     //gulp.watch(['*.html']).on('change', reload);
     gulp.watch(['src/less/bootstrap/*.less', 'src/less/bootstrap/*', 'src/less/bootstrap/**/*.less'], {cwd: '.'}, ['bootstrap']).on('error', log);
     gulp.watch(paths.less, {cwd: '.'}, ['less']).on('error', log);
