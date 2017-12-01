@@ -3,6 +3,8 @@ extends ./layouts/layout.jade
 block content
     .b-page
         .container
+            .text-center
+                a.b-page__back(href='clients.html') Посмотреть всех клиентов
             h1.b-page__title Классика
 
             .b-client
@@ -13,39 +15,160 @@ block content
                 .b-client__text.b-text
                     p На фармацевтическом рынке сеть аптек «Классика» существует с 1995 года. Это крупнейшая аптечная сеть на Урале, включающая более 180 аптек в 26 городах Челябинской и Свердловской областей. Аптеки находятся в Челябинске, Екатеринбурге, Тюмени и Магнитогорске. За эти 20 лет «Классика» прошла большой путь и приобрела имя, ставшее синонимом надежности и качества для людей по всему Уралу.
 
-        .b-portfolio.g-mb60
-            .b-portfolio__list
-                - for (var i=0; i<12;++i)
-                    a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
-                        img.b-portfolio__image(src='assets/img/tmp/portfolio1.png')
-                        .b-portfolio__content
-                            p.b-portfolio__title Самоедлинноеназваниефирмы
-                            p.b-portfolio__category Строительство
-                        span.b-portfolio__type.b-portfolio__type_html5 HTML5
-                        p.b-portfolio__date 10.02.2010
-                    a.b-portfolio__item.emerge(href='#portfolio_2', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
-                        img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
-                        .b-portfolio__content
-                            p.b-portfolio__title Длинное название фирмы
-                            p.b-portfolio__category Строительство
-                        span.b-portfolio__type.b-portfolio__type_gif GIF
-                        p.b-portfolio__date 10.02.2010
-                    a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
-                        img.b-portfolio__image(src='assets/img/tmp/portfolio3.png')
-                        .b-portfolio__content
-                            p.b-portfolio__title QIVI
-                            p.b-portfolio__category Динное название категории
-                        span.b-portfolio__type.b-portfolio__type_jpg JPG
-                        span.b-portfolio__like
-                        p.b-portfolio__date 10.02.2010
-                    a.b-portfolio__item.emerge(href='#portfolio_2', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
-                        img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
-                        .b-portfolio__content
-                            p.b-portfolio__title QIVI
-                            p.b-portfolio__category Строительство
-                        span.b-portfolio__type.b-portfolio__type_html5 HTML5
-                        p.b-portfolio__date 10.02.2010
-            script.
-                $('.b-portfolio__item').each(function(){
-                    $(this).data('hold', Math.floor(Math.random() * 400) + 50);
+        .b-language-tabs
+            ul.b-language-tabs__list(role="tablist")
+                li.b-language-tabs__item.active(role="presentation"): a.b-language-tabs__link(href='#portfolio', aria-controls="portfolio", role="tab", data-toggle="tab"): span.b-language-tabs__title Работы
+                li.b-language-tabs__item(role="presentation"): a.b-language-tabs__link(href='#reviews', aria-controls="reviews", role="tab", data-toggle="tab"): span.b-language-tabs__title Отзывы
+        .tab-content
+            #portfolio.tab-pane.active(role="tabpanel")
+                .b-portfolio.g-mb60.g-mt30
+                    .b-portfolio__list
+                        - for (var i=0; i<12;++i)
+                            a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                                img.b-portfolio__image(src='assets/img/tmp/portfolio1.png')
+                                .b-portfolio__content
+                                    p.b-portfolio__title Самоедлинноеназваниефирмы
+                                    p.b-portfolio__category Строительство
+                                span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                                p.b-portfolio__date 10.02.2010
+                            a.b-portfolio__item.emerge(href='#portfolio_2', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                                img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
+                                .b-portfolio__content
+                                    p.b-portfolio__title Длинное название фирмы
+                                    p.b-portfolio__category Строительство
+                                span.b-portfolio__type.b-portfolio__type_gif GIF
+                                p.b-portfolio__date 10.02.2010
+                            a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                                img.b-portfolio__image(src='assets/img/tmp/portfolio3.png')
+                                .b-portfolio__content
+                                    p.b-portfolio__title QIVI
+                                    p.b-portfolio__category Динное название категории
+                                span.b-portfolio__type.b-portfolio__type_jpg JPG
+                                span.b-portfolio__like
+                                p.b-portfolio__date 10.02.2010
+                            a.b-portfolio__item.emerge(href='#portfolio_2', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                                img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
+                                .b-portfolio__content
+                                    p.b-portfolio__title QIVI
+                                    p.b-portfolio__category Строительство
+                                span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                                p.b-portfolio__date 10.02.2010
+            #reviews.tab-pane(role="tabpanel")
+                .b-reviews__container.g-pb60
+                    .b-reviews__list
+                        .b-reviews__item.emerge.b-reviews__item_type_video(data-effect="relax", data-origin="top", data-expose="true")
+                            .b-reviews__header
+                                a.b-reviews__type(href='#') Видеоотзывы
+                            .text-center: a.b-reviews__title(href='#') 1ДСКиКО
+                            .b-reviews__content
+                                .b-review.b-review_video
+                                    a.b-review__link(href='http://www.youtube.com/watch?v=opj24KnzrWo'): img.img-responsive(src='http://placehold.it/320x180')
+                            .b-reviews__footer
+                                span.b-reviews__date 22 июня 2016
+                                a.b-reviews__link(href='#') Оригинал отзыва
+                        .b-reviews__item.emerge.b-reviews__item_type_mail(data-effect="relax", data-origin="top", data-expose="true")
+                            .b-reviews__header
+                                a.b-reviews__type(href='#') Рекомендательные письма
+                            .text-center: a.b-reviews__title(href='#') Газелькин
+                            .b-reviews__content.b-reviews__content_type_image
+                                .b-review.b-review_image
+                                    a.b-review__link(href='#review_1', data-url="http://placehold.it/196x264"): img.img-responsive(src='http://placehold.it/196x264')
+                            .b-reviews__footer
+                                span.b-reviews__date 5 февраля 2015
+                                a.b-reviews__link(href='#') Оригинал отзыва
+                        .b-reviews__item.emerge.b-reviews__item_type_social(data-effect="relax", data-origin="top", data-expose="true")
+                            .b-reviews__header
+                                a.b-reviews__type(href='#') Социальные сети
+                                .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_fb
+                            .text-center: a.b-reviews__title(href='#') Exante
+                            .b-reviews__content.b-reviews__content_type_text
+                                p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                            .b-reviews__footer
+                                span.b-reviews__date 11 января 2015
+                                a.b-reviews__link(href='#') Оригинал отзыва
+                        .b-reviews__item.emerge.b-reviews__item_type_social(data-effect="relax", data-origin="top", data-expose="true")
+                            .b-reviews__header
+                                a.b-reviews__type(href='#') Социальные сети
+                                .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_vk
+                            .text-center: a.b-reviews__title(href='#') Exante
+                            .b-reviews__content.b-reviews__content_type_text
+                                p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                            .b-reviews__footer
+                                span.b-reviews__date 11 января 2015
+                                a.b-reviews__link(href='#') Оригинал отзыва
+                        .b-reviews__item.emerge.b-reviews__item_type_social(data-effect="relax", data-origin="top", data-expose="true")
+                            .b-reviews__header
+                                a.b-reviews__type(href='#') Социальные сети
+                                .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_tw
+                            .text-center: a.b-reviews__title(href='#') Exante
+                            .b-reviews__content.b-reviews__content_type_text
+                                p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                            .b-reviews__footer
+                                span.b-reviews__date 11 января 2015
+                                a.b-reviews__link(href='#') Оригинал отзыва
+                        .b-reviews__item.emerge.b-reviews__item_type_social(data-effect="relax", data-origin="top", data-expose="true")
+                            .b-reviews__header
+                                a.b-reviews__type(href='#') Социальные сети
+                                .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_instagram
+                            .text-center: a.b-reviews__title(href='#') Exante
+                            .b-reviews__content.b-reviews__content_type_text
+                                p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                            .b-reviews__footer
+                                span.b-reviews__date 11 января 2015
+                                a.b-reviews__link(href='#') Оригинал отзыва
+                        .b-reviews__item.emerge.b-reviews__item_type_social(data-effect="relax", data-origin="top", data-expose="true")
+                            .b-reviews__header
+                                a.b-reviews__type(href='#') Социальные сети
+                                .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_ok
+                            .text-center: a.b-reviews__title(href='#') Exante
+                            .b-reviews__content.b-reviews__content_type_text
+                                p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
+                            .b-reviews__footer
+                                span.b-reviews__date 11 января 2015
+                                a.b-reviews__link(href='#') Оригинал отзыва
+                        .b-reviews__item.emerge.b-reviews__item_type_fl(data-effect="relax", data-origin="top", data-expose="true")
+                            .b-reviews__header
+                                a.b-reviews__type(href='#') Fl.ru
+                            .text-center: a.b-reviews__title(href='#') Exante
+                            .b-reviews__content.b-reviews__content_type_text
+                                p Задание было выполнено! Качество радует! Рекомендую!
+                            .b-reviews__footer
+                                span.b-reviews__date 11 января 2015
+                                a.b-reviews__link(href='#') Оригинал отзыва
+                        .b-reviews__item.emerge.b-reviews__item_type_forums(data-effect="relax", data-origin="top", data-expose="true")
+                            .b-reviews__header
+                                a.b-reviews__type(href='#') Форумы
+                                .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_prcy
+                            .text-center: a.b-reviews__title(href='#') Exante
+                            .b-reviews__content.b-reviews__content_type_text
+                                p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
+                            .b-reviews__footer
+                                span.b-reviews__date 11 января 2015
+                                a.b-reviews__link(href='#') Оригинал отзыва
+                        .b-reviews__item.emerge.b-reviews__item_type_forums(data-effect="relax", data-origin="top", data-expose="true")
+                            .b-reviews__header
+                                a.b-reviews__type(href='#') Форумы
+                                .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_cypr
+                            .text-center: a.b-reviews__title(href='#') Exante
+                            .b-reviews__content.b-reviews__content_type_text
+                                p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
+                            .b-reviews__footer
+                                span.b-reviews__date 11 января 2015
+                                a.b-reviews__link(href='#') Оригинал отзыва
+                .hidden
+                    #review_1
+                        .b-review-image
+                            .b-review-image__container
+                                img(src="http://placehold.it/592x793", alt="")
+
+        script.
+            $('.b-portfolio__item').each(function(){
+                $(this).data('hold', Math.floor(Math.random() * 400) + 50);
+            });
+            $('.b-reviews__container').css('visibility', 'hidden');
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                $('.b-reviews__container').css('visibility', 'hidden');
+                loadReviews(function(){
+                    $('.b-reviews__container').css('visibility', 'inherit');
                 });
+            });
