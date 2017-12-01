@@ -34,4 +34,6 @@ $(function () {
         margin: [74, 0, 0, 0],
         fitToView: false
     });
+
+    $('.b-portfolio-item__scroll').scrollbar();
 });
