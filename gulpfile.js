@@ -31,6 +31,7 @@ var jadeInheritance = require('gulp-jade-inheritance');
 var paths = {
     scripts: ['src/assets/js/*.js', 'src/blocks/*', 'src/blocks/**/*.js'],
     images: ['src/assets/img/*.{jpg,jpeg,png,gif,bmp,svg}', 'src/assets/img/**', 'src/assets/img/*'],
+    fonts: ['src/assets/fonts/**/*.*'],
     less: ['src/less/bootstrap/variables.less', 'src/less/*.less', 'src/blocks/*', 'src/blocks/**/*.less'],
     bootstrap: 'build/assets/vendor/bootstrap',
     templates: ['src/templates/*.jade', 'src/templates/**/*.jade']
@@ -92,12 +93,15 @@ gulp.task('clean:js', function (cb) {
 gulp.task('clean:img', function (cb) {
     return del(['build/assets/img/*'], cb);
 });
+gulp.task('clean:fonts', function (cb) {
+    return del(['build/assets/fonts/**/*.*'], cb);
+});
 
 gulp.task('clean:templates', function (cb) {
     return del(['build/*.html'], cb);
 });
 
-gulp.task('clean', ['clean:css', 'clean:js', 'clean:img', 'clean:templates']);
+gulp.task('clean', ['clean:css', 'clean:js', 'clean:img', 'clean:fonts', 'clean:templates']);
 
 gulp.task('bootstrap', ['clean:css:bootstrap'], function () {
     return gulp.src(['./src/less/bootstrap/bootstrap.less'])
@@ -166,6 +170,10 @@ gulp.task('img', [], function () {
         //}))
         .pipe(imagemin())
         .pipe(gulp.dest('./build/assets/img'));
+});
+gulp.task('fonts', [], function () {
+    gulp.src(paths.fonts)
+        .pipe(gulp.dest('./build/assets/fonts'));
 });
 
 /**
@@ -274,7 +282,7 @@ gulp.task('watch', ['build'], function () {
     gulp.watch(paths.images, {cwd: '.'}, ['img', reload]);
 });
 
-gulp.task('build', ['clean', 'bootstrap', 'less', 'js', 'img', 'templates'], function () {
+gulp.task('build', ['clean', 'bootstrap', 'less', 'js', 'img', 'fonts', 'templates'], function () {
 
 });
 
