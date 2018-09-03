@@ -2,25 +2,36 @@ extends ./layouts/layout.jade
 
 block content
     .b-page
-        .container
-            h1.b-page__title Делаем баннеры для интернет-рекламы с 2010 года
+        .b-container-wide
+            .row
+                .clearfix
+                    .col-xs-12.col-lg-6.col-xl-7
+                        h1.b-page__title.b-page__title_index Делаем баннеры #[br] для медийной рекламы
 
-            p.b-page__sub-title html5, flash, gif и jpg баннеры
+                        .b-summary
+                            a.b-summary__item.b-summary__item_1(href='portfolio_type_1.html')
+                                .b-summary__number.odometer(data-number="985") 999
+                                .b-summary__text баннеров&nbsp;#[br]в портфолио
+                            a.b-summary__item.b-summary__item_2(href='reviews.html')
+                                .b-summary__number.odometer(data-number="232") 999
+                                .b-summary__text отзыва&nbsp;#[br]от клиентов
+                        .b-showreel.b-showreel_mobile.hidden-lg
+                            a.js-showreel.b-showreel__link(href='https://www.youtube.com/embed/xqB9KJsbIlU'): img.b-showreel__circle(src='/assets/img/showreel/showreel-circle.png')
+                        .b-portfolio-tag-outer.b-portfolio-tag-outer_index
+                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_text.b-portfolio-tag_theme-violet(href='#' data-tag-background-hover="#252525") HTML5
+                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(href='#' data-tag-background-hover="#FD0000"): img.b-portfolio-tag__image(src='/assets/img/tmp/portfolio-tag/Яндекс-Лого.png' data-hover-src='/assets/img/tmp/portfolio-tag/hover/Яндекс-Лого.png')
+                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(href='#' data-tag-background-hover="#FEBB00"): img.b-portfolio-tag__image(src='/assets/img/tmp/portfolio-tag/Google-Лого.png' data-hover-src='/assets/img/tmp/portfolio-tag/hover/Google-Лого.png')
+                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_text.b-portfolio-tag_theme-green(href='#' data-tag-background-hover="#252525") JPG
+                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(href='#' data-tag-background-hover="#008CE2"): img.b-portfolio-tag__image(src='/assets/img/tmp/portfolio-tag/Mail.png' data-hover-src='/assets/img/tmp/portfolio-tag/hover/Mail.png')
+                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(href='#' data-tag-background-hover="#005EFD"): img.b-portfolio-tag__image(src='/assets/img/tmp/portfolio-tag/Рамблер-Лого.png' data-hover-src='/assets/img/tmp/portfolio-tag/hover/Рамблер-Лого.png')
+                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(href='#' data-tag-background-hover="#77D000"): img.b-portfolio-tag__image(src='/assets/img/tmp/portfolio-tag/Лого-Авито.png' data-hover-src='/assets/img/tmp/portfolio-tag/hover/Лого-Авито.png')
+                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_text.b-portfolio-tag_theme-blue(href='#' data-tag-background-hover="#252525") GIF
 
-            .b-summary
-                a.b-summary__item.b-summary__item_1(href='portfolio_type_1.html')
-                    .b-summary__number.odometer(data-number="985") 9999
-                    .b-summary__text баннеров#[br]в портфолио
-                a.b-summary__item.b-summary__item_2(href='reviews.html')
-                    .b-summary__number.odometer(data-number="232") 9999
-                    .b-summary__text отзыва#[br]от клиентов
-                a.b-summary__item.b-summary__item_3(href='blog.html')
-                    .b-summary__number.odometer(data-number="15") 9999
-                    .b-summary__text статей в нашем#[br]справочнике
-                a.b-summary__item.b-summary__item_4(href='offers.html')
-                    .b-summary__number.odometer(data-number="40000") 40000
-                    .b-summary__text рублей#[br]бонусов
-        .b-portfolio
+
+                    .col-xs-12.col-lg-6.col-xl-5.visible-lg
+                        .b-showreel.b-showreel_desktop
+                            a.js-showreel.b-showreel__link(href='https://www.youtube.com/embed/xqB9KJsbIlU'): img.b-showreel__circle(src='/assets/img/showreel/showreel-circle.png')
+        .clearfix.b-portfolio
             .b-portfolio__list
                 - for (var i=0; i<6;++i)
                     a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")

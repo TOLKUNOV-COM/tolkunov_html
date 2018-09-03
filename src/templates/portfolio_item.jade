@@ -28,7 +28,7 @@ block content
                                 .b-portfolio-item__view
                                     .b-portfolio-item__scroll.scrollbar-light
                                         .b-iframe-scroll(style="width:728px;height:90px;")
-                                            <iframe src="http://home.nanoteam.net/tolkunov/public/uploads/portfolio/cd7511c14132cc75594276b90af20f7c/728x90-adxxx-adalt-traffic.html" width="728" height="90" frameborder="0" scrolling="no"></iframe>
+                                            <iframe src="https://tolkunov.com/uploads/portfolio/3140f491b1c328a74e750416859c5117/300x250-paybis-bicoin-to-card.html" width="728" height="90" frameborder="0" scrolling="no"></iframe>
                                             .b-iframe-scroll__fix
                             #banner_language_ru_size_200_300.tab-pane(role="tabpanel")
                                 .b-portfolio-item__view
@@ -56,15 +56,25 @@ block content
                                 .b-portfolio-item__view
                                     img.b-portfolio-item__image.img-responsive(src='http://placehold.it/160x600', alt='')
                 .b-portfolio-item__lead
-                    .b-portfolio-item__info.b-portfolio-item__info_category Сфера бизнеса: #[a.b-portfolio-item__link(href='#') Интернет-магазины]
-                    .b-portfolio-item__info.b-portfolio-item__info_style Стиль баннера: #[a.b-portfolio-item__link(href='#') Фото-реалистичный]
-                    .b-portfolio-item__info.b-portfolio-item__info_date 2 марта 2016
+                    .row
+                        .col-xs-12.col-md-5.b-portfolio-item__leadLeft
+                            .b-portfolio-item__info.b-portfolio-item__info_category Сфера бизнеса: #[a.b-portfolio-item__link(href='#') Интернет-магазины]
+                            .b-portfolio-item__info.b-portfolio-item__info_style Стиль баннера: #[a.b-portfolio-item__link(href='#') Фото-реалистичный]
+                        .col-xs-12.col-md-5.b-portfolio-item__leadCenter
+                            .b-portfolio-tag-outer.b-portfolio-tag-outer_detailview
+                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(data-tag-background='#ffffff', data-tag-background-hover='#ff0000', data-tag-color='', data-tag-color-hover='', style='background:#ffffff;', href='#')
+                                  img.b-portfolio-tag__image(data-hover-src='/assets/img/tmp/portfolio-tag/hover/Яндекс-Лого.png', src='/assets/img/tmp/portfolio-tag/Яндекс-Лого.png', alt='Яндекс')
+                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(data-tag-background='#ffffff', data-tag-background-hover='#FEBB00', data-tag-color='', data-tag-color-hover='', style='background:#ffffff;', href='#')
+                                  img.b-portfolio-tag__image(data-hover-src='/assets/img/tmp/portfolio-tag/hover/Google-Лого.png', src='/assets/img/tmp/portfolio-tag/Google-Лого.png', alt='Рамблер')
 
-                    .b-portfolio-item__info.b-portfolio-item__info_share
-                        .b-portfolio-item__share
-                            script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
-                            script(src="//yastatic.net/share2/share.js")
-                            .ya-share2(data-services="vkontakte,facebook,twitter")
+                        .col-xs-12.col-md-2.b-portfolio-item__leadRight
+                            .b-portfolio-item__info.b-portfolio-item__info_date 2 марта 2016
+
+                            .b-portfolio-item__info.b-portfolio-item__info_share
+                                .b-portfolio-item__share
+                                    script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+                                    script(src="//yastatic.net/share2/share.js")
+                                    .ya-share2(data-services="vkontakte,facebook,twitter")
                 .b-portfolio-item__text.b-text
                     p Интерактивный флеш-баннер 240x400 для компании WikiPlanet, которая занимается организацией туров по всей России. Кстати, актуально при нынешнем курсе доллара.
                     p Особенности:

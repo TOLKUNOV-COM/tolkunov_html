@@ -3,7 +3,13 @@
 @import "mymixins";
 
 .b-page {
-
+	&__header
+	{
+	  	margin-bottom: 80px;
+		@media (min-width: 768px) {
+		    margin-bottom: 100px;
+		}
+	}
 }
 
 .b-page__title {
@@ -14,6 +20,20 @@
 	line-height: 1.275;
 
 	.my-heading-h1();
+
+	&_index
+	{
+		text-align  : left !important;
+		color       : rgb(37, 37, 37);
+		font-size   : 68px;
+		line-height : 75px;
+
+		@media(max-width:@screen-sm-max)
+		{
+			font-size: 50px;
+			line-height: 55px;
+		}
+	}
 }
 
 .b-page__lead {

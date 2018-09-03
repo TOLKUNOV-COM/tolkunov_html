@@ -1,21 +1,29 @@
 @import "variables.less";
 @import "mixins";
 
-.b-header {
+.b-header
+{
 }
 
-.b-header__logo {
-	display: inline-block;
-	width: 168px;
-	height: 38px;
-	background: left top no-repeat url("../../assets/img/logo-black.svg");
+.b-header__logo
+{
+	//margin-top  : 54px;
+	display     : block;
+	float       : left;
+	width       : 168px;
+	height      : 38px;
+	text-indent : -9999px;
+	overflow    : hidden;
+	background  : 0 0 no-repeat url("../../assets/img/logo-black.svg");
 
-	&:hover, &:active, &:focus {
-		background-image: url("../../assets/img/logo-blue.svg");
+	&:hover, &:active, &:focus
+	{
+		background-image : url("../../assets/img/logo-blue.svg");
 	}
 
-	@media (min-width: @grid-float-breakpoint) {
-		width: 240px;
-		height: 53px;
+	@media (min-width : @grid-float-breakpoint)
+	{
+		width  : 176px;
+		height : 40px;
 	}
 }

@@ -5,29 +5,62 @@ p.browserupgrade.
 <!--<![endif]-->
 
 nav.navbar.navbar-default.b-navbar
-    .container
-        // Brand and toggle get grouped for better mobile display
-        .navbar-header
-            button.navbar-toggle.collapsed(type='button', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-                span.sr-only Toggle navigation
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-            a.navbar-brand(href='index.html'): .b-header__logo
-        // Collect the nav links, forms, and other content for toggling
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-            .container
-                .navbar-header
-                    button.navbar-toggle(type='button', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-                        span.sr-only Toggle navigation
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
-                    a.navbar-brand(href='index.html'): .b-header__logo
-                ul.nav.navbar-nav
+    #bs-example-navbar-collapse-1.b-navbar__outer
+        .b-navbar__container
+            .b-navbar__left
+                a.b-header__logo(href="/") TOLKUNOV.COM
+                ul.b-navbar__nav.visible-md.visible-lg
                     li: a(href='portfolio_type_1.html') Портфолио
                     li: a(href='reviews.html') Отзывы
                     li: a(href='prices.html') Стоимость
-                    li: a(href='blog.html') Справочник клиента
                     li: a(href='contacts.html') Контакты
-                a.btn.btn-success.btn-lg.navbar-btn.navbar-right(href='order_1.html') Заказать баннер
+            .b-navbar__right
+                a.btn.btn-success.b-navbar__btn.b-navbar__btn_order.hidden-xs.hidden-sm(href='order_1.html') Заказать баннер
+                span.b-navbar__burger(data-target-selector='#bs-example-navbar-collapse-1')
+                    span.burger-icon
+                    span.burger-icon
+                    span.burger-icon
+
+        .container.b-header-nav
+            .row.b-header-nav__row
+                .b-header-nav__column.b-header-nav__column_1
+                    .b-header-menu
+                        p.b-header-menu__header Студия
+
+                        .row
+                            .col-xs-6.col-md-12.b-header-menu__item: a.b-header-menu__link(href='portfolio_type_1.html') Портфолио
+                            .col-xs-6.col-md-12.b-header-menu__item: a.b-header-menu__link(href='prices.html') Стоимость
+                            .col-xs-6.col-md-12.b-header-menu__item: a.b-header-menu__link(href='reviews.html') Отзывы
+                            .col-xs-6.col-md-12.b-header-menu__item: a.b-header-menu__link(href='clients.html') Клиенты
+                            .col-xs-6.col-md-12.b-header-menu__item: a.b-header-menu__link(href='vacancies.html') Вакансии
+                            .col-xs-6.col-md-12.b-header-menu__item: a.b-header-menu__link(href='blog.html') Блокнот
+                        a.btn.btn-success.b-navbar__btn.b-navbar__btn_order.hidden-md.hidden-lg(href='order_1.html') Заказать баннер
+                .b-header-nav__column.b-header-nav__column_2
+                    .b-header-menu
+                        p.b-header-menu__header Контакты
+
+                        .b-header-menu__item: a.b-header-menu__link(href='mailto:order@tolkunov.com') order@tolkunov.com
+                        .b-header-menu__item: a.b-header-menu__link(href='tel:+78126037097') +7 (812) 603-70-97
+                        .b-header-menu__item: a.b-header-menu__link(href='https://telegram.me/tolkunovdb') Telegram
+                        .b-header-menu__item: a.b-header-menu__link(href='skype:tolkunovdb?chat') Skype
+                        .b-header-menu__item: a.b-header-menu__link(href='https://vk.com/im?sel=-68302756') Чат в VK
+                        .b-header-menu__item: a.b-header-menu__link(href='https://www.facebook.com/messages/t/tolkunov') Чат в Facebook
+                .b-header-nav__column.b-header-nav__column_3
+                    .b-header-menu
+                        p.b-header-menu__header Ссылки
+                        .b-social-links.b-social-links_header-nav
+                            .b-social-links__item
+                                a.b-social-links__link.b-social-links__link_dark.b-social-links__link_vk(href='#')
+                            .b-social-links__item
+                                a.b-social-links__link.b-social-links__link_dark.b-social-links__link_fb(href='#')
+                            .b-social-links__item
+                                a.b-social-links__link.b-social-links__link_dark.b-social-links__link_tw(href='#')
+                            .b-social-links__item
+                                a.b-social-links__link.b-social-links__link_dark.b-social-links__link_instagram(href='#')
+                            .b-social-links__item
+                                a.b-social-links__link.b-social-links__link_dark.b-social-links__link_youtube(href='#')
+                            .b-social-links__item
+                                a.b-social-links__link.b-social-links__link_dark.b-social-links__link_spark(href='#')
+            .row.b-header-nav__row: .b-header-nav__copyright.clearfix © Студия Дмитрия Толкунова, 2010‐2018
+    .b-navbar__heightFix
+
