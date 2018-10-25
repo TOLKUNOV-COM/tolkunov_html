@@ -26,30 +26,33 @@
 }
 
 .b-review_image {
-	background: left top repeat-y url("../../assets/img/reviews-list-type-mail-center.png");
-	width: 258px;
-	padding: 0 31px;
-	margin: 24px auto 31px;
+	background: left top no-repeat url("../../assets/img/reviews-list-type-mail-center.png");
+	background-size: cover;
+	width: 278px;
+	padding: 0 56px 0 32px;
+	margin: 35px 0 50px 32px;
 
 	position: relative;
 
 	&:before {
 		position: absolute;
-		top: -24px;
+		top: -35px;
 		left: 0;
 		background: left top no-repeat url("../../assets/img/reviews-list-type-mail-top.png");
-		width: 258px;
-		height: 24px;
+		background-size: 278px 35px;
+		width: 278px;
+		height: 35px;
 
 		content: '';
 	}
 	&:after {
 		position: absolute;
-		bottom: -31px;
+		bottom: -60px;
 		left: 0;
 		background: left top no-repeat url("../../assets/img/reviews-list-type-mail-bottom.png");
-		width: 258px;
-		height: 31px;
+		background-size: 278px 60px;
+		width: 278px;
+		height: 60px;
 
 		content: '';
 	}
@@ -58,6 +61,7 @@
 		&:after {
 			background: #008fcb center center no-repeat url("../../assets/img/zoom.svg");
 			background-size: 14px;
+			box-shadow: 0 8px 48px rgba(0, 143, 203, .4);
 		}
 
 		&:hover:after {
@@ -73,6 +77,7 @@
 		&:after {
 			background: #e74c3c center center no-repeat url("../../assets/img/play.svg");
 			background-size: 13px 15px;
+			box-shadow: 0 8px 48px rgba(231, 76, 60, .8);
 		}
 
 		&:hover:after {
@@ -87,7 +92,6 @@
 	.my-heading-h1();
 
 	font-weight: bold;
-	margin-top: -30px;
 	margin-bottom: 10px;
 	text-align: center;
 }
@@ -95,6 +99,6 @@
 .b-reviews__lead {
 	.my-heading-lead();
 
-	margin: 0 15px 58px;
+	margin: 0 15px 90px;
 	text-align: center;
 }

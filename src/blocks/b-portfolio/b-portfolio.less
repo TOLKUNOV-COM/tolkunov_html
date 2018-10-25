@@ -4,23 +4,26 @@
 
 .b-portfolio {
 	font-weight: 300;
+	overflow: hidden;
 }
 
 .b-portfolio__header {
-	.my-heading-lead();
+	.my-heading-h1();
 	font-weight: bold;
 	text-align: center;
 	margin-top: 0;
-	margin-bottom: 20px;
+	margin-bottom: 53px;
 }
 
 .b-portfolio__filter {
 }
 
 .b-portfolio__list {
-	margin: -10px auto 0;
+	margin: 0 auto;
+	//margin: -10px auto 0;
 	text-align: center;
-	overflow: hidden;
+	//overflow: hidden;
+	padding-bottom: 20px;
 }
 
 .b-portfolio__item {
@@ -48,7 +51,39 @@
 	}
 }
 
+.b-portfolio__item_width_2 {
+	@size: 204px*2 + 20px;
+
+	width: @size;
+
+	.b-portfolio__image {
+		max-width: @size;
+	}
+}
+
+.b-portfolio__item_height_2 {
+	@size: 204px*2 + 20px;
+
+	height: @size;
+
+	.b-portfolio__image {
+		max-height: @size;
+	}
+}
+
+.b-portfolio__item_height_3 {
+	@size: 204px*3 + 20px*2;
+
+	height: @size;
+
+	.b-portfolio__image {
+		max-height: @size;
+	}
+}
+
 .b-portfolio__image {
+	border-radius: 15px;
+
 	max-width: 150px;
 	max-height: 150px;
 
@@ -70,8 +105,8 @@
 	right: 0;
 	bottom: 0;
 
-	background: rgba(37, 37, 37, .8);
-	border-radius: 10px;
+	background: rgba(76, 83, 112, .9);
+	border-radius: 15px;
 
 	color: #fff;
 
@@ -84,20 +119,21 @@
 
 .b-portfolio__type {
 	position: absolute;
-	top: 11px;
+	top: 10px;
 	left: 10px;
 	font-weight: bold;
 	font-size: 13px;
 	line-height: 25px;
 	display: inline-block;
 	border-radius: 25px/2;
+	letter-spacing: .1em;
 
-	padding: 0 9px;
+	padding: 0 11px;
 }
 
 .b-portfolio__like {
 	position: absolute;
-	top: 11px;
+	top: 10px;
 	right: 10px;
 
 	width: 25px;
@@ -105,21 +141,37 @@
 	border-radius: 50%;
 	background: #f82125 center center no-repeat url("../../assets/img/love.svg");
 	background-size: 13px 12px;
+	box-shadow: 0 8px 48px rgba(248, 33, 37, .4);
 }
 
 .b-portfolio__type_html5 {
 	@type-color: #a840b7;
 	background: @type-color;
+	box-shadow: 0 8px 48px fade(@type-color, 40%);
 }
 
 .b-portfolio__type_gif {
 	@type-color: #008ece;
 	background: @type-color;
+	box-shadow: 0 8px 48px fade(@type-color, 40%);
 }
 
 .b-portfolio__type_jpg {
 	@type-color: #00d873;
 	background: @type-color;
+	box-shadow: 0 8px 48px fade(@type-color, 40%);
+}
+
+.b-portfolio__type_video {
+	@type-color: #4c5370;
+	background: @type-color;
+	box-shadow: 0 8px 48px fade(@type-color, 40%);
+}
+
+.b-portfolio__type_story {
+	@type-color: #4c5370;
+	background: @type-color;
+	box-shadow: 0 8px 48px fade(@type-color, 40%);
 }
 
 .b-portfolio__title {
@@ -130,7 +182,7 @@
 
 	word-wrap: break-word;
 	letter-spacing: 0;
-	margin: 0 10px 4px;
+	margin: 0 10px 8px;
 }
 
 .b-portfolio__category {
@@ -142,15 +194,18 @@
 
 .b-portfolio__date {
 	position: absolute;
-	right: 10px;
-	bottom: 10px;
+	right: 11px;
+	bottom: 11px;
 	font-weight: bold;
 	font-size: 13px;
 	line-height: 25px;
+	letter-spacing: .05em;
 	display: inline-block;
 	border-radius: 25px/2;
 
-	padding: 0 9px;
+	padding: 0 11px;
 	margin: 0;
-	background-color: @text-color;
+	color: #4c5370;
+	background-color: #ffffff;
+	box-shadow: 0 8px 48px rgba(76, 83, 112, .4);
 }

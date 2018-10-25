@@ -11,32 +11,27 @@
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	margin-top: 6px - 15px;
+	margin-top: 6px - 15px - 10px;
 	margin-bottom: -15px;
 }
 
 .b-client__image {
 	margin: 15px 25px;
-	max-height: 40px;
+	max-height: 50px;
 }
 
 .b-client__link {
 	.my-heading-lead();
+	.my-default-link();
+	line-height: 1.2;
 	margin: 15px 25px;
 	display: inline-block;
-	color: @text-color;
 	white-space: nowrap;
-
-	border-bottom: 2px solid rgba(37, 37, 37, .1);
-
-	&:hover, &:active, &:focus {
-		text-decoration: none;
-		color: @link-hover-color;
-		border-bottom-color: @link-hover-color;
-	}
 }
 
 .b-client__text {
-	margin-top: 40px;
-	margin-bottom: 10px;
+	.my-heading-lead();
+	line-height: 1.2;
+	margin-top: 100px;
+	margin-bottom: 20px;
 }

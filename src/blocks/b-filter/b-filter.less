@@ -4,7 +4,7 @@
 
 .b-filter {
 	text-align: center;
-	margin-bottom: 55px;
+	margin-bottom: 50px;
 }
 
 .b-filter__item {
@@ -23,19 +23,21 @@
 	}
 
 	&:not(.b-filter__item_active) .b-filter__title {
-		border-bottom-color: rgba(37, 37, 37, .05);
+		border-bottom-color: #f5f6fa;
 	}
 
 	&:hover, &:active, &:focus {
+		color: #4c5370;
+
 		.b-filter__title {
-			border-bottom-color: @link-hover-color;
+			border-bottom-color: #d9dbe6;
 		}
 	}
 }
 
 .b-filter__item_active {
 	.b-filter__title {
-		color: rgb(0, 143, 203) !important;
+		color: #4c5370 !important;
 		border-bottom-color: transparent !important;
 	}
 
@@ -43,7 +45,7 @@
 		content: '';
 
 		position: absolute;
-		bottom: -10px - 16px;
+		bottom: -10px - 11px;
 		left: 50%;
 		transform: translateX(-50%);
 
@@ -52,7 +54,7 @@
 		border-left: 10px solid transparent;
 		border-right: 10px solid transparent;
 
-		border-bottom: 10px solid #fbfbfc;
+		border-bottom: 10px solid #f5f6fa;
 	}
 }
 

@@ -4,7 +4,7 @@ block content
     .b-page
         .container
             .text-center
-                a.b-page__back(href='clients.html') Посмотреть всех клиентов
+                a.b-page__back(href='clients.html') КЛИЕНТЫ
             h1.b-page__title Классика
 
             .b-client
@@ -21,7 +21,7 @@ block content
                 li.b-language-tabs__item(role="presentation"): a.b-language-tabs__link(href='#reviews', aria-controls="reviews", role="tab", data-toggle="tab"): span.b-language-tabs__title Отзывы
         .tab-content
             #portfolio.tab-pane.active(role="tabpanel")
-                .b-portfolio.g-mb60.g-mt30
+                .b-portfolio.g-mb60.g-mt40
                     .b-portfolio__list
                         - for (var i=0; i<12;++i)
                             a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
@@ -46,12 +46,19 @@ block content
                                 span.b-portfolio__type.b-portfolio__type_jpg JPG
                                 span.b-portfolio__like
                                 p.b-portfolio__date 10.02.2010
-                            a.b-portfolio__item.emerge(href='#portfolio_2', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
-                                img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
+                            a.b-portfolio__item.b-portfolio__item_width_2.emerge(href='#portfolio_2', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                                img.b-portfolio__image(src='//placehold.it/428x204')
                                 .b-portfolio__content
                                     p.b-portfolio__title QIVI
                                     p.b-portfolio__category Строительство
-                                span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                                span.b-portfolio__type.b-portfolio__type_video ВИДЕО
+                                p.b-portfolio__date 10.02.2010
+                            a.b-portfolio__item.b-portfolio__item_width_2.b-portfolio__item_height_2.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                                img.b-portfolio__image(src='//placehold.it/428x428')
+                                .b-portfolio__content
+                                    p.b-portfolio__title QIVI
+                                    p.b-portfolio__category Строительство
+                                span.b-portfolio__type.b-portfolio__type_story СТОРИС
                                 p.b-portfolio__date 10.02.2010
             #reviews.tab-pane(role="tabpanel")
                 .b-reviews__container.g-pb60
@@ -64,7 +71,7 @@ block content
                                 .b-review.b-review_video
                                     a.b-review__link(href='http://www.youtube.com/watch?v=opj24KnzrWo'): img.img-responsive(src='http://placehold.it/320x180')
                             .b-reviews__footer
-                                span.b-reviews__date 22 июня 2016
+                                span.b-reviews__date 22.06.2016
                                 a.b-reviews__link(href='#') Оригинал отзыва
                         .b-reviews__item.emerge.b-reviews__item_type_mail(data-effect="relax", data-origin="top", data-expose="true")
                             .b-reviews__header
@@ -74,7 +81,7 @@ block content
                                 .b-review.b-review_image
                                     a.b-review__link(href='#review_1', data-url="http://placehold.it/196x264"): img.img-responsive(src='http://placehold.it/196x264')
                             .b-reviews__footer
-                                span.b-reviews__date 5 февраля 2015
+                                span.b-reviews__date 22.06.2016
                                 a.b-reviews__link(href='#') Оригинал отзыва
                         .b-reviews__item.emerge.b-reviews__item_type_social(data-effect="relax", data-origin="top", data-expose="true")
                             .b-reviews__header
@@ -84,7 +91,7 @@ block content
                             .b-reviews__content.b-reviews__content_type_text
                                 p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                             .b-reviews__footer
-                                span.b-reviews__date 11 января 2015
+                                span.b-reviews__date 22.06.2016
                                 a.b-reviews__link(href='#') Оригинал отзыва
                         .b-reviews__item.emerge.b-reviews__item_type_social(data-effect="relax", data-origin="top", data-expose="true")
                             .b-reviews__header
@@ -94,7 +101,7 @@ block content
                             .b-reviews__content.b-reviews__content_type_text
                                 p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                             .b-reviews__footer
-                                span.b-reviews__date 11 января 2015
+                                span.b-reviews__date 22.06.2016
                                 a.b-reviews__link(href='#') Оригинал отзыва
                         .b-reviews__item.emerge.b-reviews__item_type_social(data-effect="relax", data-origin="top", data-expose="true")
                             .b-reviews__header
@@ -104,7 +111,7 @@ block content
                             .b-reviews__content.b-reviews__content_type_text
                                 p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                             .b-reviews__footer
-                                span.b-reviews__date 11 января 2015
+                                span.b-reviews__date 22.06.2016
                                 a.b-reviews__link(href='#') Оригинал отзыва
                         .b-reviews__item.emerge.b-reviews__item_type_social(data-effect="relax", data-origin="top", data-expose="true")
                             .b-reviews__header
@@ -114,7 +121,7 @@ block content
                             .b-reviews__content.b-reviews__content_type_text
                                 p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                             .b-reviews__footer
-                                span.b-reviews__date 11 января 2015
+                                span.b-reviews__date 22.06.2016
                                 a.b-reviews__link(href='#') Оригинал отзыва
                         .b-reviews__item.emerge.b-reviews__item_type_social(data-effect="relax", data-origin="top", data-expose="true")
                             .b-reviews__header
@@ -124,7 +131,7 @@ block content
                             .b-reviews__content.b-reviews__content_type_text
                                 p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                             .b-reviews__footer
-                                span.b-reviews__date 11 января 2015
+                                span.b-reviews__date 22.06.2016
                                 a.b-reviews__link(href='#') Оригинал отзыва
                         .b-reviews__item.emerge.b-reviews__item_type_fl(data-effect="relax", data-origin="top", data-expose="true")
                             .b-reviews__header
@@ -133,7 +140,7 @@ block content
                             .b-reviews__content.b-reviews__content_type_text
                                 p Задание было выполнено! Качество радует! Рекомендую!
                             .b-reviews__footer
-                                span.b-reviews__date 11 января 2015
+                                span.b-reviews__date 22.06.2016
                                 a.b-reviews__link(href='#') Оригинал отзыва
                         .b-reviews__item.emerge.b-reviews__item_type_forums(data-effect="relax", data-origin="top", data-expose="true")
                             .b-reviews__header
@@ -143,7 +150,7 @@ block content
                             .b-reviews__content.b-reviews__content_type_text
                                 p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
                             .b-reviews__footer
-                                span.b-reviews__date 11 января 2015
+                                span.b-reviews__date 22.06.2016
                                 a.b-reviews__link(href='#') Оригинал отзыва
                         .b-reviews__item.emerge.b-reviews__item_type_forums(data-effect="relax", data-origin="top", data-expose="true")
                             .b-reviews__header
@@ -153,7 +160,7 @@ block content
                             .b-reviews__content.b-reviews__content_type_text
                                 p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
                             .b-reviews__footer
-                                span.b-reviews__date 11 января 2015
+                                span.b-reviews__date 22.06.2016
                                 a.b-reviews__link(href='#') Оригинал отзыва
                 .hidden
                     #review_1

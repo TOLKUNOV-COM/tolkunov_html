@@ -4,8 +4,8 @@
 
 .b-size-tabs {
 	text-align: center;
-	margin-top: -4px;
-	margin-bottom: 6px;
+	margin-top: 6px;
+	margin-bottom: 36px;
 }
 
 .b-size-tabs__item {
@@ -13,31 +13,48 @@
 }
 
 .b-size-tabs__link {
-	.my-heading-h3();
-
-	color: @text-color;
+	font-size: 12px;
+	line-height: 32px;
+	color: #4c5370;
+	font-weight: bold;
+	letter-spacing: .1em;
 	display: inline-block;
-	border: 2px dashed rgba(0, 0, 0, .05);
-	border-radius: 2px;
-	padding: 3px 10px;
-	margin: 4px 2px;
+	border: 2px dashed #d9dbe6;
+	border-radius: 5px;
+	padding: 0 11px;
+	margin: 4px 5px;
+
+	&:before {
+		content: '#';
+		font-size: 15px;
+		color: #d9dbe6;
+		margin-right: 10px;
+	}
 
 	&:hover, &:active, &:focus {
 		text-decoration: none;
-		color: @text-color;
-		border-color: #9b5ab6;
+		color: #4c5370;
+		border: 2px solid #fff;
+		background: #fff;
+		box-shadow: 1.5px 1.5px 32px rgba(0, 0, 0, .1);
 	}
 }
 
 .b-size-tabs__item.active .b-size-tabs__link {
-	border-color: #9b59b6;
-	border-style: solid;
-	background: #9b59b6;
+	border: 2px solid #4c5370;
+	background: #4c5370;
 	color: #fff;
+
+	&:before {
+		color: #9ba1b6;
+	}
 }
 
 .b-size-tabs__divider {
-	position: relative;
-	top: -1px;
-	left: 1px;
+	//position: relative;
+	//top: -1px;
+	//left: 1px;
+	margin-left: 3px;
+	margin-right: 5px;
+	text-transform: uppercase;
 }

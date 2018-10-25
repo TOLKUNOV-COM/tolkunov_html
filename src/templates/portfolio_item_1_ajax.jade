@@ -1,4 +1,6 @@
-#portfolio_1(style='width:1080px;padding:0 40px')
+#portfolio_1(style='width:1080px;padding:114px 40px 0;background:#fff;border-radius:15px;')
+    .b-portfolio-item__date 2 марта 2016
+
     h1.b-page__title #[a.b-page__link(href="#") Флеш-баннер] для #[a.b-page__link(href="client.html") Exante] “Лучший брокер”
 
     .b-language-tabs
@@ -46,18 +48,12 @@
                     #banner_language_en_size_160_600.tab-pane(role="tabpanel")
                         .b-portfolio-item__view
                             img.b-portfolio-item__image.img-responsive(src='http://placehold.it/160x600', alt='')
-        .b-portfolio-item__lead
-            .row
-                .col-xs-8
-                    .b-portfolio-item__info Сфера бизнеса: #[a.b-portfolio-item__link(href='#') Финансы]
-                    .b-portfolio-item__info Стиль баннера: #[a.b-portfolio-item__link(href='#') Текстовый]
-                .col-xs-4.text-right
-                    .b-portfolio-item__date 2 марта 2016
+        .b-portfolio-tag-outer.b-portfolio-tag-outer_detailview
+            a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(data-tag-background='#ffffff', data-tag-background-hover='#ff0000', data-tag-color='', data-tag-color-hover='', style='background:#ffffff;', href='#')
+                img.b-portfolio-tag__image(data-hover-src='/assets/img/tmp/portfolio-tag/hover/Яндекс-Лого.png', src='/assets/img/tmp/portfolio-tag/Яндекс-Лого.png', alt='Яндекс')
+            a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(data-tag-background='#ffffff', data-tag-background-hover='#FEBB00', data-tag-color='', data-tag-color-hover='', style='background:#ffffff;', href='#')
+                img.b-portfolio-tag__image(data-hover-src='/assets/img/tmp/portfolio-tag/hover/Google-Лого.png', src='/assets/img/tmp/portfolio-tag/Google-Лого.png', alt='Рамблер')
 
-                    .b-portfolio-item__share.pull-right
-                        script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
-                        script(src="//yastatic.net/share2/share.js")
-                        .ya-share2(data-services="vkontakte,facebook,gplus")
         .b-portfolio-item__text.b-text
             p Интерактивный флеш-баннер 240x400 для компании WikiPlanet, которая занимается организацией туров по всей России. Кстати, актуально при нынешнем курсе доллара.
             p Особенности:
@@ -66,43 +62,5 @@
                 li При выборе отдыха необязательно кликать по кнопке "Рыбалка", достаточно подержать курсор над ней некоторое время, и баннер сам осуществит переход к следующей сцене. Это сделано для людей, которые опасаются кликать на интерактивные баннеры, т.к. научены горьким опытом обмана "лже-интерактивности".
                 li Глаза человечка на баннере следят за курсором - поводите его туда-сюда по баннеру.
                 li Баннер по итогу весит всего 46 кб, что позволяет его использоваться на большинстве рекламных площадок.
-        .text-center
+        .text-center.b-portfolio-item__btn-container
             a.btn.btn-success.btn-lg.b-portfolio-item__button(href='#') Заказать похожий баннер
-
-        .b-portfolio
-            h5.b-portfolio__header Другие баннеры на тему «Финансы»:
-
-            .b-portfolio__list
-                a.b-portfolio__item(href='portfolio_item_1_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
-                    img.b-portfolio__image(src='assets/img/tmp/portfolio1.png')
-                    .b-portfolio__content
-                        p.b-portfolio__title Самоедлинноеназваниефирмы
-                        p.b-portfolio__category Строительство
-                    span.b-portfolio__type.b-portfolio__type_html5 HTML5
-                    p.b-portfolio__date 10.02.2010
-                a.b-portfolio__item(href='portfolio_item_2_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
-                    img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
-                    .b-portfolio__content
-                        p.b-portfolio__title Длинное название фирмы
-                        p.b-portfolio__category Строительство
-                    span.b-portfolio__type.b-portfolio__type_gif GIF
-                    p.b-portfolio__date 10.02.2010
-                a.b-portfolio__item(href='portfolio_item_1_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
-                    img.b-portfolio__image(src='assets/img/tmp/portfolio3.png')
-                    .b-portfolio__content
-                        p.b-portfolio__title QIVI
-                        p.b-portfolio__category Динное название категории
-                    span.b-portfolio__type.b-portfolio__type_jpg JPG
-                    span.b-portfolio__like
-                    p.b-portfolio__date 10.02.2010
-                a.b-portfolio__item(href='portfolio_item_2_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
-                    img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
-                    .b-portfolio__content
-                        p.b-portfolio__title QIVI
-                        p.b-portfolio__category Строительство
-                    span.b-portfolio__type.b-portfolio__type_html5 HTML5
-                    p.b-portfolio__date 10.02.2010
-            script.
-                $('.b-portfolio__item').each(function(){
-                    $(this).data('hold', Math.floor(Math.random() * 400) + 50);
-                });

@@ -5,7 +5,7 @@
 .b-language-tabs {
 	text-align: center;
 	margin-bottom: 9px;
-	margin-top: 31px;
+	margin-top: 41px;
 }
 
 .b-language-tabs__list {
@@ -17,7 +17,7 @@
 
 	@media (min-width: @screen-md-min) {
 		display: inline-block;
-		border-bottom: 2px solid rgba(0, 0, 0, .05);
+		border-bottom: 2px solid #f5f6fa;
 		padding: 0 40px;
 	}
 }
@@ -32,6 +32,7 @@
 
 .b-language-tabs__link {
 	.my-heading-h3();
+	line-height: 36/24;
 
 	color: @text-color;
 	padding: 8px 0;
@@ -40,26 +41,26 @@
 	position: relative;
 
 	&:hover, &:active, &:focus {
-		color: #e74c3c;
+		color: #4c5370;
 		text-decoration: none;
 
 		.b-language-tabs__title {
-			border-bottom-color: #e74c3c;
+			border-bottom-color: #a2a8bb;
 		}
 	}
 
 	@media (min-width: @screen-md-min) {
-		padding: 18px 0;
+		padding: 18px 0 13px;
 	}
 }
 
 .b-language-tabs__item.active .b-language-tabs__link {
-	color: #e74c3c;
+	color: #4c5370;
 
 	@media (min-width: @screen-md-min) {
-		border-bottom: 2px solid #e74c3c;
+		border-bottom: 2px solid #4c5370;
 		margin-bottom: -2px;
-		padding: 22px 0 14px;
+		padding: 22px 0 9px;
 	}
 
 	&:before {
@@ -79,7 +80,7 @@
 		border-left: 10px solid transparent;
 		border-right: 10px solid transparent;
 
-		border-bottom: 10px solid #e74c3c;
+		border-bottom: 10px solid #4c5370;
 	}
 	&:after {
 		@media (max-width: @screen-sm-max) {
@@ -107,6 +108,6 @@
 }
 
 .b-language-tabs__title {
-	border-bottom: 2px dashed rgba(37, 37, 37, .05);
+	border-bottom: 2px dotted #d9dbe6;
 	display: inline-block;
 }

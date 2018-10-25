@@ -2,38 +2,17 @@ extends ./layouts/layout.jade
 
 block content
     .b-page
-        .b-portfolio-filter.b-portfolio__filter
-            span.b-portfolio-filter__head-label
-                span ФИЛЬТР ПО ТИПУ БАННЕРОВ
-            .b-portfolio-filter__container
-                .b-portfolio-filter__inner
-                    a.b-portfolio-filter__item.b-portfolio-filter__item_type_all.b-portfolio-filter__item_active(href='#')
-                        span.b-portfolio-filter__title Все
-                        span.b-portfolio-filter__count 985
-                    a.b-portfolio-filter__item.b-portfolio-filter__item_type_html5(href='#')
-                        span.b-portfolio-filter__title HTML5
-                        span.b-portfolio-filter__count 128
-                    a.b-portfolio-filter__item.b-portfolio-filter__item_type_gif(href='#')
-                        span.b-portfolio-filter__title GIF
-                        span.b-portfolio-filter__count 191
-                    a.b-portfolio-filter__item.b-portfolio-filter__item_type_jpg(href='#')
-                        span.b-portfolio-filter__title JPG
-                        span.b-portfolio-filter__count 266
-
-        h1.b-page__title В портфолио 985 баннеров
-
         .b-filter
-            a.b-filter__item(href='portfolio_type_1.html'): span.b-filter__title Последние
-            a.b-filter__item(href='portfolio_type_2.html'): span.b-filter__title Любимые
-            a.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_3.html'): span.b-filter__title По темам
-            a.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_4.html'): span.b-filter__title По размерам
+            a.b-filter__item(href='portfolio_type_1.html'): span.b-filter__title Все
+            a.b-filter__item(href='#'): span.b-filter__title По типу
+            a.b-filter__item.b-filter__item_with-arrow(href='#'): span.b-filter__title По темам
+            a.b-filter__item.b-filter__item_with-arrow(href='#'): span.b-filter__title По размерам
             a.b-filter__item.b-filter__item_with-arrow.b-filter__item_active(href='portfolio_type_5.html'): span.b-filter__title По стилям
+            a.b-filter__item.b-filter__item_with-arrow(href='#'): span.b-filter__title По площадкам
         .container
-            .b-style-filter
-                a.b-style-filter__item.b-style-filter__item_active(href='#') Мультипликация
-                a.b-style-filter__item(href='#') Фото-реалистичный
-                a.b-style-filter__item(href='#') Текстовый
-                a.b-style-filter__item(href='#') Смешанный
+            .b-portfolio-tag-outer
+                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_selected.b-portfolio-tag_text(data-tag-background="#ffffff", data-tag-background-hover, data-tag-color="#4c5370", data-tag-color-hover, href="#") РЕАЛИЗМ
+                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_text(data-tag-background="#ffffff", data-tag-background-hover="#4c5370", data-tag-color="#4c5370", data-tag-color-hover="#ffffff", href="#") мультипликация
 
         .b-portfolio
             h5.b-portfolio__header Мультяшные баннеры
@@ -62,12 +41,35 @@ block content
                         span.b-portfolio__type.b-portfolio__type_jpg JPG
                         span.b-portfolio__like
                         p.b-portfolio__date 10.02.2010
-                    a.b-portfolio__item.emerge(href='#portfolio_2', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
-                        img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
+                    a.b-portfolio__item.b-portfolio__item_width_2.emerge(href='#portfolio_2', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                        img.b-portfolio__image(src='//placehold.it/428x204')
                         .b-portfolio__content
                             p.b-portfolio__title QIVI
                             p.b-portfolio__category Строительство
-                        span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                        span.b-portfolio__type.b-portfolio__type_video ВИДЕО
+                        p.b-portfolio__date 10.02.2010
+                    a.b-portfolio__item.b-portfolio__item_width_2.b-portfolio__item_height_2.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                        img.b-portfolio__image(src='//placehold.it/428x428')
+                        .b-portfolio__content
+                            p.b-portfolio__title QIVI
+                            p.b-portfolio__category Строительство
+                        span.b-portfolio__type.b-portfolio__type_story СТОРИС
+                        p.b-portfolio__date 10.02.2010
+                    a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                        img.b-portfolio__image(src='assets/img/tmp/portfolio3.png')
+                        .b-portfolio__content
+                            p.b-portfolio__title QIVI
+                            p.b-portfolio__category Динное название категории
+                        span.b-portfolio__type.b-portfolio__type_jpg JPG
+                        span.b-portfolio__like
+                        p.b-portfolio__date 10.02.2010
+                    a.b-portfolio__item.emerge(href='#portfolio_1', rel='portfolio', data-effect="zoom", data-origin="bottom", data-expose="true")
+                        img.b-portfolio__image(src='assets/img/tmp/portfolio3.png')
+                        .b-portfolio__content
+                            p.b-portfolio__title QIVI
+                            p.b-portfolio__category Динное название категории
+                        span.b-portfolio__type.b-portfolio__type_jpg JPG
+                        span.b-portfolio__like
                         p.b-portfolio__date 10.02.2010
             script.
                 $('.b-portfolio__item').each(function(){

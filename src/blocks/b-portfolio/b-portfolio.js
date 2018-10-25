@@ -95,7 +95,7 @@ $(function () {
         //prevEffect: 'none',
         nextMethod: 'myIn',
         prevMethod: 'myOut',
-        padding: [50, 0, 0, 0],
+        padding: [0, 0, 0, 0],
         margin: [74, 0, 100, 0],
         fitToView: false,
         beforeLoad: function () {
@@ -171,5 +171,18 @@ $(function () {
             //    remote: window.location.href,
             //});
         }
+    });
+
+    $('.b-portfolio__list').masonry({
+        // set itemSelector so .grid-sizer is not used in layout
+        itemSelector: '.b-portfolio__item',
+        // use element for option
+        //columnWidth: '.grid-sizer',
+        //percentPosition: true
+        columnWidth: 224,
+        //gutter: 20,
+        fitWidth: true,
+        // no transitions
+        transitionDuration: 0
     });
 });

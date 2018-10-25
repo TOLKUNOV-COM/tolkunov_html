@@ -5,11 +5,24 @@
 .b-portfolio-item {
 }
 
+.b-portfolio-item__date {
+	font-size: 18px;
+	color: #9ba1b6;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: .1em;
+	margin-bottom: 26px;
+}
+
 .b-portfolio-item__view {
-	background: left top repeat url("../../assets/img/banner-background.png");
+	background: #f5f6fa;
+	//background: left top repeat url("../../assets/img/banner-background.png");
 	padding: 80px 15px;
 	margin: 0 -15px;
-	border-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	//border-radius: 10px 10px 0 0;
 	text-align: center;
 
 	@media (min-width: @grid-float-breakpoint) {
@@ -55,9 +68,11 @@
 	}
 }
 
-.b-portfolio-item__info_category {}
+.b-portfolio-item__info_category {
+}
 
-.b-portfolio-item__info_style {}
+.b-portfolio-item__info_style {
+}
 
 .b-portfolio-item__info_date {
 	@media (min-width: @screen-sm-min) {
@@ -90,23 +105,35 @@
 }
 
 .b-portfolio-item__text {
-	margin-bottom: 50px;
+	margin-top: 100px;
+	margin-bottom: 70px;
+
+	@media (min-width: @screen-md-min) {
+		font-size: 18px;
+	}
 }
 
 .b-portfolio-item__button {
-	font-size: 20px;
-
-	@media (min-width: @screen-sm-min) {
-		font-size: 24px;
-	}
+	font-size: 16px;
 
 	font-weight: bold;
-	padding-left: 19px;
-	padding-right: 19px;
-	margin-bottom: 63px;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	padding: 18px 45px;
+	border-radius: 54px/2;
+
+	transition: all .2s;
+
+	box-shadow: 0 8px 24px fade(#acc000, 40%);
 
 	&:hover, &:active, &:focus {
 		background-color: #9eb000;
 		border-color: #9eb000;
+		box-shadow: 0 8px 24px fade(#9eb000, 40%);
+		transform: scale(1.07);
 	}
+}
+
+.b-portfolio-item__btn-container {
+	height: 154px;
 }

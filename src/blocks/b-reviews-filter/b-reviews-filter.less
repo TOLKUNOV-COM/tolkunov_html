@@ -6,161 +6,49 @@
 }
 
 .b-reviews-filter__item {
-	font-size: 24px;
-	line-height: 28px;
-	color: @text-color;
-	margin: 10px 29px;
+	font-size: 26px;
+	line-height: 1.4;
+	color: #9ba1b6;
+	margin: 10px 20px;
 	display: inline-block;
 	position: relative;
 
 	&:not(.b-reviews-filter__item_active) .b-reviews-filter__title {
-		border-bottom-color: rgba(37, 37, 37, .05);
+		border-bottom-color: #f5f6fa;
 	}
 
 	&:hover, &:active, &:focus {
 		text-decoration: none;
+		color: #4c5370;
+
+		&:not(.b-reviews-filter__item_active) .b-reviews-filter__title {
+			border-bottom-color: #d9dbe6;
+		}
 	}
 }
 
 .b-reviews-filter__item_active {
-	&:before {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-10px);
-		left: -20px;
-		width: 17px;
-		height: 17px;
+	color: #4c5370;
 
-		content: '';
-	}
+	//&:before {
+	//	position: absolute;
+	//	top: 50%;
+	//	transform: translateY(-10px);
+	//	left: -20px;
+	//	width: 17px;
+	//	height: 17px;
+	//
+	//	content: '';
+	//}
 }
 
 .b-reviews-filter__title {
-	margin-right: 6px;
+	//margin-right: 6px;
 	display: inline-block;
 	border-bottom: 2px dotted transparent;
 }
 
 .b-reviews-filter__count {
+	display: none;
 	color: rgba(37, 37, 37, .15);
-}
-
-.b-reviews-filter__item_type_all {
-	@filter-type-color: #acc000;
-
-	&:hover, &:active, &:focus {
-		color: @filter-type-color;
-
-		.b-reviews-filter__title {
-			border-bottom-color: @filter-type-color;
-		}
-	}
-
-	&.b-reviews-filter__item_active {
-		color: @filter-type-color;
-
-		&:before {
-			background: @filter-type-color center center no-repeat url("../../assets/img/portfolio-filter-active.png");
-		}
-	}
-}
-
-.b-reviews-filter__item_type_video {
-	@filter-type-color: #e74c3c;
-
-	&:hover, &:active, &:focus {
-		color: @filter-type-color;
-
-		.b-reviews-filter__title {
-			border-bottom-color: @filter-type-color;
-		}
-	}
-
-	&.b-reviews-filter__item_active {
-		color: @filter-type-color;
-
-		&:before {
-			background: @filter-type-color center center no-repeat url("../../assets/img/portfolio-filter-active.png");
-		}
-	}
-}
-
-.b-reviews-filter__item_type_mail {
-	@filter-type-color: #008fcb;
-
-	&:hover, &:active, &:focus {
-		color: @filter-type-color;
-
-		.b-reviews-filter__title {
-			border-bottom-color: @filter-type-color;
-		}
-	}
-
-	&.b-reviews-filter__item_active {
-		color: @filter-type-color;
-
-		&:before {
-			background: @filter-type-color center center no-repeat url("../../assets/img/portfolio-filter-active.png");
-		}
-	}
-}
-
-.b-reviews-filter__item_type_social {
-	@filter-type-color: #9b59b6;
-
-	&:hover, &:active, &:focus {
-		color: @filter-type-color;
-
-		.b-reviews-filter__title {
-			border-bottom-color: @filter-type-color;
-		}
-	}
-
-	&.b-reviews-filter__item_active {
-		color: @filter-type-color;
-
-		&:before {
-			background: @filter-type-color center center no-repeat url("../../assets/img/portfolio-filter-active.png");
-		}
-	}
-}
-
-.b-reviews-filter__item_type_fl {
-	@filter-type-color: #2ecc71;
-
-	&:hover, &:active, &:focus {
-		color: @filter-type-color;
-
-		.b-reviews-filter__title {
-			border-bottom-color: @filter-type-color;
-		}
-	}
-
-	&.b-reviews-filter__item_active {
-		color: @filter-type-color;
-
-		&:before {
-			background: @filter-type-color center center no-repeat url("../../assets/img/portfolio-filter-active.png");
-		}
-	}
-}
-
-.b-reviews-filter__item_type_forums {
-	@filter-type-color: #1abc9c;
-
-	&:hover, &:active, &:focus {
-		color: @filter-type-color;
-
-		.b-reviews-filter__title {
-			border-bottom-color: @filter-type-color;
-		}
-	}
-
-	&.b-reviews-filter__item_active {
-		color: @filter-type-color;
-
-		&:before {
-			background: @filter-type-color center center no-repeat url("../../assets/img/portfolio-filter-active.png");
-		}
-	}
 }

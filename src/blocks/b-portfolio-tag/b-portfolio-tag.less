@@ -3,15 +3,15 @@
 
 .b-portfolio-tag-outer
 {
-	margin : 30px 0 80px;
+	background: #f5f6fa;
+	text-align: center;
+	padding: 40px 0 25px;
+	margin : -29px 0 100px;
+	border-radius: 10px;
 
 	@media (max-width : 699px)
 	{
 		clear : both;
-	}
-	@media (min-width : @screen-lg-min)
-	{
-		margin-top : 70px;
 	}
 
 	&_index
@@ -25,56 +25,48 @@
 	}
 	&_detailview
 	{
-		margin : 15px 0 0;
-
-		@media (min-width : @screen-md-min)
-		{
-			margin : 5px 0 0;
-		}
+		padding-top: 4px;
+		padding-bottom: 40px;
+		margin : 0 -40px;
+		border-radius: 0;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
 	}
 }
 
 .b-portfolio-tag
 {
-	@height : 36px; //48
+	@height : 36px;
 	display            : inline-block;
 	height             : @height;
 	line-height        : @height;
 	border-radius      : 5px;
-	box-shadow         : 1.5px 3px 32px rgba(0, 0, 0, 0.1);
-	padding-left       : 12px; //42px;
-	padding-right      : 12px; //17px;
+	box-shadow         : 1.5px 1.5px 32px rgba(0, 0, 0, 0.1);
+	padding-left       : 12px;
+	padding-right      : 12px;
 	white-space        : nowrap;
-	margin-right       : 15px; //19px;
-	margin-bottom      : 15px; //19px;
-	-webkit-transition : all 0.3s;
-	-moz-transition    : all 0.3s;
-	-ms-transition     : all 0.3s;
-	-o-transition      : all 0.3s;
-	transition         : all 0.3s;
+	margin: 0 15px 15px 0;
+	transition         : all .1s;
 	will-change        : transform;
 
-	color              : #FFF;
-	font-size          : 15px; //19
+	background: #fff;
+	color              : #4c5370;
+	font-size          : 12px;
 	font-weight        : bold;
 	text-transform     : uppercase;
-	letter-spacing     : 0.0995em;
+	letter-spacing     : .1em;
 	text-decoration    : none !important;
 
-	&::before
+	&:before
 	{
 		content        : '#';
-		color          : #000;
+		color          : #d9dbe6;
 		display        : inline-block;
-		vertical-align : middle;
-		font-size      : 17px;
+		font-size      : 15px;
 		font-weight    : bold;
-		margin-right   : 3px;
-		height         : 19px;
-		line-height    : 17px;
-		opacity        : 0.2;
-		will-change    : transform, opacity;
-
+		margin-right   : 10px;
+		height         : @height;
+		line-height    : @height;
 	}
 
 	&_image
@@ -95,52 +87,21 @@
 		}
 	}
 
+	&_selected {
+		background: #4c5370;
+		color: #fff;
+		box-shadow: none;
+	}
+
 	&:hover
 	{
-		-webkit-transform : scale(1.07);
-		-moz-transform    : scale(1.07);
-		-ms-transform     : scale(1.07);
-		-o-transform      : scale(1.07);
 		transform         : scale(1.07);
 	}
 
-	&:hover::before,
-	&_selected::before
+	&:hover:before,
+	&_selected:before
 	{
-		opacity : .5;
-		color   : #FFF;
-	}
-
-	@media (min-width : @screen-xl-min)
-	{
-		@height : 48px; //48
-		height        : @height;
-		line-height   : @height;
-		padding-left  : 15px; //42px;
-		padding-right : 16px; //17px;
-		margin-right  : 17px;
-		margin-bottom : 17px;
-		font-size     : 19px;
-
-		&::before
-		{
-			font-size   : 20px;
-			height      : 22px;
-			line-height : 19px;
-		}
-
-		&_image
-		{
-
-			&::before
-			{
-				line-height : 21px;
-			}
-			.b-portfolio-tag__image
-			{
-				height : 22px;
-			}
-		}
+		color   : fade(#9ba1b6, 40%);
 	}
 }
 

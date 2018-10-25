@@ -3,43 +3,54 @@
 @import "mymixins";
 
 .b-size-filter {
-	background: #fbfbfc;
+	background: #f5f6fa;
 	text-align: center;
-	padding: 21px 0;
-	margin-top: -29px;
-	margin-bottom: 40px;
+	padding: 40px 0 25px;
+	margin : -29px 0 100px;
+	border-radius: 10px;
 }
 
 .b-size-filter__item {
-	.my-heading-h3();
-
-	color: @text-color;
+	font-size: 12px;
+	line-height: 32px;
+	color: #4c5370;
+	font-weight: bold;
+	letter-spacing: .1em;
 	display: inline-block;
-	border: 2px solid rgba(0, 0, 0, .05);
-	border-radius: 2px;
-	padding: 3px 10px;
-	margin: 5px;
+	border: 2px dashed #d9dbe6;
+	border-radius: 5px;
+	padding: 0 11px;
+	margin: 4px 5px;
+
+	&:before {
+		content: '#';
+		font-size: 15px;
+		color: #d9dbe6;
+		margin-right: 10px;
+	}
 
 	&:hover, &:active, &:focus {
 		text-decoration: none;
-		color: @text-color;
-		border-color: #9b59b6;
+		color: #4c5370;
+		//border: 2px solid #fff;
+		background: #fff;
+		//box-shadow: 1.5px 1.5px 32px rgba(0, 0, 0, .1);
 	}
 }
 
 .b-size-filter__divider {
-	position: relative;
-	top: -2px;
-	left: 1px;
+	margin-left: 3px;
+	margin-right: 5px;
+	text-transform: uppercase;
 }
 
 .b-size-filter__item_active {
-	color: #fff;
-	border-color: #9b59b6;
-	background: #9b59b6;
+	border: 2px solid #4c5370 !important;
+	background: #4c5370 !important;
+	color: #fff !important;
 
-	&:hover, &:active, &:focus {
-		color: #fff;
+	&:before {
+		color: #9ba1b6;
 	}
 }
 
@@ -48,15 +59,7 @@
 }
 
 .b-size-filter__list_collapsed {
-	max-height: 80px;
-
-	@media (min-width: @screen-md-min) {
-		max-height: 84px;
-	}
-
-	@media (min-width: @grid-float-breakpoint) {
-		max-height: 92px;
-	}
+	max-height: (37px + 8px) * 2;
 }
 
 .b-size-filter__toggle {

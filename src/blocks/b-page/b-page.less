@@ -3,33 +3,30 @@
 @import "mymixins";
 
 .b-page {
-	&__header
-	{
-	  	margin-bottom: 80px;
+	&__header {
+		margin-bottom: 80px;
 		@media (min-width: 768px) {
-		    margin-bottom: 100px;
+			margin-bottom: 100px;
 		}
 	}
 }
 
 .b-page__title {
 	margin-top: 0;
-	margin-bottom: 22px;
+	margin-bottom: 45px;
 	text-align: center;
 	font-weight: bold;
 	line-height: 1.275;
 
 	.my-heading-h1();
 
-	&_index
-	{
-		text-align  : left !important;
-		color       : rgb(37, 37, 37);
-		font-size   : 68px;
-		line-height : 75px;
+	&_index {
+		text-align: left !important;
+		color: rgb(37, 37, 37);
+		font-size: 68px;
+		line-height: 75px;
 
-		@media(max-width:@screen-sm-max)
-		{
+		@media (max-width: @screen-sm-max) {
 			font-size: 50px;
 			line-height: 55px;
 		}
@@ -37,7 +34,7 @@
 }
 
 .b-page__lead {
-	margin-bottom: 40px;
+	margin-bottom: 55px;
 	text-align: center;
 
 	.my-heading-lead();
@@ -48,12 +45,23 @@
 }
 
 .b-page__link {
-	color: @text-color;
-	border-bottom: 3px solid rgba(37, 37, 37, .05);
+	.my-default-link();
+	color: #4c5370;
+	border-bottom-color: #f5f6fa;
+	border-bottom-width: 4px;
+
+	position: relative;
+	top: 0;
+	transition: all .2s;
 
 	&:hover, &:active, &:focus {
-		text-decoration: none;
-		border-bottom-color: @link-hover-color;
+		color: #4c5370;
+		opacity: .8;
+		//color: #9ba1b6;
+		border-bottom-color: #d9dbe6;
+
+		top: -5px;
+		padding-bottom: 5px;
 	}
 }
 
@@ -70,19 +78,42 @@
 
 .b-page__back {
 	display: inline-block;
-	background: #f5f9fc;
-	padding: 10px 16px;
+	background: #fff;
+	padding: 0 13px 0 34px;
 	font-size: 12px;
+	line-height: 36px;
 	font-weight: bold;
-	color: #868686;
+	color: #9ba1b6;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	margin: 0 10px 20px;
-	border-radius: 4px;
+	letter-spacing: .1em;
+	margin: 0 10px 32px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 65px rgba(0, 0, 0, .1);
+
+	position: relative;
+
+	transition-property: background-color, color, transform;
+	transition-duration: .1s;
+	transition-timing-function: ease;
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 13px;
+		content: '#';
+		font-size: 15px;
+		font-weight: bold;
+		color: #d9dbe6;
+	}
 
 	&:hover, &:active, &:focus {
-		color: #fff;
 		text-decoration: none;
-		background: #008fcb;
+		color: #fff;
+		background: #4c5370;
+		transform: scale(1.05);
+
+		&:before {
+			color: #9ba1b6;
+		}
 	}
 }

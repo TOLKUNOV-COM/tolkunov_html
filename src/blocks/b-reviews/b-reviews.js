@@ -3,7 +3,7 @@ var loadReviews = function (cb) {
         var $grid = $('.b-reviews__list').masonry({
             itemSelector: '.b-reviews__item',
             columnWidth: 320,
-            gutter: 20,
+            gutter: 45,
             fitWidth: true,
             // no transitions
             transitionDuration: 0,
@@ -14,7 +14,8 @@ var loadReviews = function (cb) {
         $grid.masonry('on', 'layoutComplete', function () {
             cb && cb();
         });
-// trigger initial layout
+
+        // trigger initial layout
         $grid.masonry();
     }
 
