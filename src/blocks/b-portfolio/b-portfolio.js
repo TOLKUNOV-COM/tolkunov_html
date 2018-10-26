@@ -21,6 +21,7 @@ $(function () {
 
         // Для того, чтобы не отображался горизонтальный скрол во время анимации. Нельзя задавать через css, т.к. на маленьких экранах не будет скрола, когда он нужен (ширина всплывающего окна ~1000px)
         $('.fancybox-lock .fancybox-overlay').css('overflow-x', 'hidden');
+        $('.fancybox-close').hide();
 
         var current = F.current,
             effect = current.nextEffect,
@@ -56,6 +57,7 @@ $(function () {
                 complete: function () {
                     $('.fancybox-lock .fancybox-overlay').css('overflow-x', 'auto');
                     F._afterZoomIn();
+                    $('.fancybox-close').show();
                 }
             });
         }
@@ -66,6 +68,7 @@ $(function () {
 
         // Для того, чтобы не отображался горизонтальный скрол во время анимации. Нельзя задавать через css, т.к. на маленьких экранах не будет скрола, когда он нужен (ширина всплывающего окна ~1000px)
         $('.fancybox-lock .fancybox-overlay').css('overflow-x', 'hidden');
+        $('.fancybox-close').hide();
 
         var previous = F.previous,
             effect = previous.prevEffect,
@@ -83,6 +86,7 @@ $(function () {
             complete: function () {
                 $('.fancybox-lock .fancybox-overlay').css('overflow-x', 'auto');
                 $(this).trigger('onReset').remove();
+                $('.fancybox-close').show();
             }
         });
     }
@@ -96,7 +100,7 @@ $(function () {
         nextMethod: 'myIn',
         prevMethod: 'myOut',
         padding: [0, 0, 0, 0],
-        margin: [74, 0, 100, 0],
+        margin: [168, 0, 100, 0],
         fitToView: false,
         beforeLoad: function () {
             if ($(window).width() < 768) {
