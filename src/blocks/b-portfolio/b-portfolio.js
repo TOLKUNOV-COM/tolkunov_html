@@ -176,9 +176,10 @@ $(function () {
             //});
         }
     });
+});
 
-    $('.b-portfolio__list').masonry({
-        // set itemSelector so .grid-sizer is not used in layout
+var loadPortfolio = function (cb) {
+    var $grid = $('.b-portfolio__list').masonry({
         itemSelector: '.b-portfolio__item',
         // use element for option
         //columnWidth: '.grid-sizer',
@@ -188,6 +189,19 @@ $(function () {
         //gutter: 20,
         fitWidth: true,
         // no transitions
-        transitionDuration: 0
+        transitionDuration: 0,
+        initLayout: false
     });
+
+    // bind event
+    $grid.masonry('on', 'layoutComplete', function () {
+        cb && cb();
+    });
+
+    // trigger initial layout
+    $grid.masonry();
+};
+
+$(function () {
+    loadPortfolio();
 });

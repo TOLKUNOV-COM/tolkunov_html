@@ -40,13 +40,17 @@
 	border-radius: 0;
 }
 
-.b-portfolio-item__image {
+.b-portfolio-item__image, .b-portfolio-item__video {
 	margin-left: auto;
 	margin-right: auto;
 
 	@media (min-width: @grid-float-breakpoint) {
 		.img-responsive();
 	}
+}
+
+.b-portfolio-item__video {
+	.img-responsive();
 }
 
 .b-portfolio-item__lead {
