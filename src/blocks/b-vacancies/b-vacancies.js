@@ -10,7 +10,7 @@ $(function () {
         openEffect: 'none',
         closeEffect: 'none',
         padding: 0,
-        margin: [168, 0, 100, 0],
+        margin: [45, 0, 100, 0],
         fitToView: false
     });
 });

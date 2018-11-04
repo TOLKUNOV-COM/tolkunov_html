@@ -96,3 +96,15 @@
 		border-bottom-color: #d9dbe6;
 	}
 }
+
+.portfolio-width-helper (@i) when (@i < 9) {
+
+	@screen-width: (@i * (204px + 20px));
+	@width: (@i * (204px + 20px) - 20px);
+
+	@media (min-width: @screen-width) {
+		width: @width;
+	}
+
+	.portfolio-width-helper(@i + 1);
+}

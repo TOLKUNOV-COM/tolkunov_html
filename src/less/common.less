@@ -46,7 +46,7 @@ body {
 /**
 * Generate .g-mt10, .g-mt-20, .g-mb10 classes
 */
-@iterations: 8;
+@iterations: 15;
 
 .margin-top-loop (@i) when (@i > 0) {
 	.g-mt@{i}0 {
@@ -244,13 +244,6 @@ body {
 
 .fancybox-overlay {
 	background: fade(#4c5370, 70%);
-	//background: fade(#4c5370, 80%);
-
-	//background: rgba(0, 0, 0, .8);
-	//
-	//@media (min-width: @grid-float-breakpoint) {
-	//	background: rgba(0, 0, 0, .65);
-	//}
 }
 
 .fancybox-close {

@@ -9,7 +9,7 @@ $(function () {
         openEffect: 'none',
         closeEffect: 'none',
         padding: 0,
-        margin: [168, 0, 100, 0],
+        margin: [45, 0, 100, 0],
         helpers: {
             media: {}
         },
@@ -31,9 +31,15 @@ $(function () {
         openEffect: 'none',
         closeEffect: 'none',
         padding: 0,
-        margin: [168, 0, 100, 0],
+        margin: [45, 0, 100, 0],
         fitToView: false
     });
 
     $('.b-portfolio-item__scroll').scrollbar();
 });
+
+function fixFancyboxArrows() {
+    $(".fancybox-overlay").on('scroll', function () {
+        $('.fancybox-nav span').css({top: ($('.fancybox-overlay').scrollTop() + 355) + 'px'});
+    });
+}

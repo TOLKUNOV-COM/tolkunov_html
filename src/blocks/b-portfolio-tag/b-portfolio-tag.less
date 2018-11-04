@@ -1,13 +1,16 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-portfolio-tag-outer
 {
 	background: #f5f6fa;
 	text-align: center;
 	padding: 40px 0 25px;
-	margin : -29px 0 100px;
+	margin : -29px auto 100px;
 	border-radius: 10px;
+
+	.portfolio-width-helper(3);
 
 	@media (max-width : 699px)
 	{
@@ -16,6 +19,7 @@
 
 	&_index
 	{
+		width: auto !important;
 		margin-bottom : 80px;
 
 		@media (min-width : @screen-md-min)
@@ -31,6 +35,7 @@
 		border-radius: 0;
 		border-bottom-left-radius: 10px;
 		border-bottom-right-radius: 10px;
+		width: auto !important;
 
 		@media (min-width: 1200px) {
 			margin: 0 -40px;
@@ -99,13 +104,14 @@
 
 	&:hover
 	{
-		transform         : scale(1.07);
+		transform         : scale(1.05);
 	}
 
 	&:hover:before,
 	&_selected:before
 	{
-		color   : fade(#9ba1b6, 40%);
+		color   : #9ba1b6;
+		opacity : .4;
 	}
 }
 

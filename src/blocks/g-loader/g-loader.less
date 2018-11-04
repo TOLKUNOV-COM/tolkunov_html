@@ -3,7 +3,7 @@
 
 .g-loader:not(.g-loader_without-gradient) {
 	position: relative;
-	height: 80px;
+	height: 0;
 }
 
 .g-loader_without-gradient {
@@ -21,20 +21,21 @@
 
 .g-loader:not(.g-loader_without-gradient) .g-loader__content {
 	position: absolute;
-	top: -100px;
+	top: -280px;
 
 	width: 100%;
-	height: 180px;
+	height: 280px;
+	padding-top: 100px;
 
 	background: #fff;
 
 	&:before {
 		position: absolute;
-		top: -270px;
+		top: -200px;
 		left: 0;
 		width: 100%;
-		height: 270px;
-		background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+		height: 200px;
+		background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .6) 60%, rgba(255, 255, 255, 0) 100%);
 		content: '';
 	}
 }
@@ -44,7 +45,7 @@
 		background: #f5f6fa;
 
 		&:before {
-			background: linear-gradient(to top, rgba(245, 246, 250, 1) 0%, rgba(245, 246, 250, 0) 100%);
+			background: linear-gradient(to top, rgba(245, 246, 250, 1) 0%, rgba(245, 246, 250, .6) 60%, rgba(245, 246, 250, 0) 100%);
 		}
 	}
 }
@@ -70,7 +71,7 @@
 	}
 
 	&:hover, &:active, &:focus {
-		transform: scale(1.07);
+		transform: scale(1.05);
 	}
 }
 
@@ -106,6 +107,57 @@
 		}
 	}
 }
+
+/* For portfolio */
+.button-width-loop (@i) when (@i < 9) {
+
+	@screen-width: (@i * (204px + 20px));
+	@button-width: (@i * (204px + 20px) - 20px);
+
+	.g-loader_portfolio .g-loader__button {
+		@media (min-width: @screen-width) {
+			width: @button-width;
+		}
+	}
+
+	.button-width-loop(@i + 1);
+}
+
+.button-width-loop(4);
+
+/* For reviews */
+.button-width-loop (@i) when (@i < 6) {
+
+	@screen-width: (@i * (320px + 45px));
+	@button-width: (@i * (320px + 45px) - 45px);
+
+	.g-loader_reviews .g-loader__button {
+		@media (min-width: @screen-width) {
+			width: @button-width;
+		}
+	}
+
+	.button-width-loop(@i + 1);
+}
+
+.button-width-loop(2);
+
+/* For clients */
+.button-width-loop (@i) when (@i < 8) {
+
+	@screen-width: (@i * (200px + 40px) + 40px + 30px);
+	@button-width: (@i * (200px + 40px) - 40px);
+
+	.g-loader_clients .g-loader__button {
+		@media (min-width: @screen-width) and (min-width: @screen-xl-min) {
+			width: @button-width;
+		}
+	}
+
+	.button-width-loop(@i + 1);
+}
+
+.button-width-loop(4);
 
 .g-loader__button-icon {
 	//display: inline-block;

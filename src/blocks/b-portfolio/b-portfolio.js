@@ -100,7 +100,7 @@ $(function () {
         nextMethod: 'myIn',
         prevMethod: 'myOut',
         padding: [0, 0, 0, 0],
-        margin: [168, 0, 100, 0],
+        margin: [45, 0, 100, 0],
         fitToView: false,
         beforeLoad: function () {
             if ($(window).width() < 768) {
@@ -135,6 +135,8 @@ $(function () {
             if (typeof window.showIframe == "function") {
                 setTimeout(showIframe, 1);
             }
+
+            fixFancyboxArrows();
         },
         beforeClose: function () {
             var currentstate = history.state;

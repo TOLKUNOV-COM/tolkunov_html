@@ -31,7 +31,7 @@ block content
             h1.b-portfolio__header В портфолио 985 баннеров
 
             .b-portfolio__list
-                - for (var i=0; i<12;++i)
+                - for (var i=0; i<13;++i)
                     a.b-portfolio__item(href='portfolio_item_1_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
                         img.b-portfolio__image(src='assets/img/tmp/portfolio1.png')
                         .b-portfolio__content
@@ -66,6 +66,6 @@ block content
                     $(this).data('hold', Math.floor(Math.random() * 450) + 50);
                 });
 
-        .g-loader
+        .g-loader.g-loader_portfolio
             .g-loader__content
                 a.g-loader__button(href='#') #[i.g-loader__button-icon]#[span.g-loader__button-text Загрузить ещё]
