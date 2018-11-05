@@ -6,7 +6,7 @@
 {
 	background: #f5f6fa;
 	text-align: center;
-	padding: 40px 0 25px;
+	padding: 40px-15px/2 0 25px+15px/2;
 	margin : -29px auto 100px;
 	border-radius: 10px;
 
@@ -54,7 +54,7 @@
 	padding-left       : 12px;
 	padding-right      : 12px;
 	white-space        : nowrap;
-	margin: 0 15px 15px 0;
+	margin: 15px/2;
 	transition         : all .1s;
 	will-change        : transform;
 
@@ -69,7 +69,7 @@
 	&:before
 	{
 		content        : '#';
-		color          : #d9dbe6;
+		color          : fade(#4C5370, 20%);
 		display        : inline-block;
 		font-size      : 15px;
 		font-weight    : bold;
@@ -110,8 +110,7 @@
 	&:hover:before,
 	&_selected:before
 	{
-		color   : #9ba1b6;
-		opacity : .4;
+		color   : fade(#ffffff, 20%);
 	}
 }
 

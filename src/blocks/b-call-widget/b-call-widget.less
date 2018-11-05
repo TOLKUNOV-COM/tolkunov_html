@@ -1,0 +1,115 @@
+@import "variables.less";
+@import "mixins";
+
+.b-call-widget {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 2;
+}
+
+/* The animation code */
+@keyframes handshake {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-20deg);
+	}
+	75% {
+		transform: rotate(20deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.b-call-widget__button {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+
+	width: 60px;
+	height: 60px;
+	background: #2392ec;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, .06), 0 2px 32px rgba(0, 0, 0, .16) !important;
+	z-index: 9999;
+
+	&:before {
+		content: '';
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 15px;
+		left: 13px;
+		opacity: 0;
+		transform: rotate(-180deg);
+		transition: all 0.4s ease-out;
+
+		background: center center no-repeat url("../../assets/img/hand.svg");
+		background-size: auto 30px;
+	}
+
+	&:after {
+		content: '';
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 18px;
+		left: 18px;
+		opacity: 1;
+		transform: rotate(-180deg);
+		transition: all 0.4s ease-out;
+
+		background: center center no-repeat url("../../assets/img/slider-close.png");
+		background-size: auto 24px;
+	}
+}
+
+.b-call-widget__collapsed .b-call-widget__button {
+	&:hover, &:active, &:focus {
+		animation-name: handshake;
+		animation-duration: .8s;
+	}
+}
+
+.b-call-widget__content {
+	z-index: 100000;
+	width: 375px;
+	height: 700px;
+	max-height: ~"calc(100% - 105px)";
+	max-width: ~"calc(100% - 20px)";
+	overflow: hidden;
+
+	border-radius: 12px;
+	background-color: #fff;
+	box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1);
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+
+	position: fixed;
+	bottom: 86px;
+	right: 10px;
+	transition: all 0.3s ease-out;
+	transform: translate3d(0px, 0px, 0px);
+	opacity: 1;
+}
+
+.b-call-widget__collapsed .b-call-widget__content {
+	transform: translate3d(0, 20px, 0);
+	opacity: 0;
+	//z-index: -1;
+}
+
+.b-call-widget__collapsed .b-call-widget__button {
+	&:before {
+		opacity: 1;
+		transform: rotate(0deg);
+	}
+	&:after {
+		opacity: 0;
+		transform: rotate(0deg);
+	}
+}

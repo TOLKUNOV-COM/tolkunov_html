@@ -62,5 +62,41 @@
                 li При выборе отдыха необязательно кликать по кнопке "Рыбалка", достаточно подержать курсор над ней некоторое время, и баннер сам осуществит переход к следующей сцене. Это сделано для людей, которые опасаются кликать на интерактивные баннеры, т.к. научены горьким опытом обмана "лже-интерактивности".
                 li Глаза человечка на баннере следят за курсором - поводите его туда-сюда по баннеру.
                 li Баннер по итогу весит всего 46 кб, что позволяет его использоваться на большинстве рекламных площадок.
-        .text-center.b-portfolio-item__btn-container
-            a.btn.btn-success.btn-lg.b-portfolio-item__button(href='#') Заказать похожий баннер
+        .b-portfolio.g-pb80
+            h5.b-portfolio__header.b-portfolio__header_small Похожие баннеры
+
+            .b-portfolio__list.b-portfolio__list_faded
+                - for (var i=0; i<6;++i)
+                    a.b-portfolio__item(href='portfolio_item_1_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
+                        img.b-portfolio__image(src='assets/img/tmp/portfolio1.png')
+                        .b-portfolio__content
+                            p.b-portfolio__title Самоедлинноеназваниефирмы
+                            p.b-portfolio__category Строительство
+                        span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                        p.b-portfolio__date 10.02.2010
+                    a.b-portfolio__item(href='portfolio_item_2_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
+                        img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
+                        .b-portfolio__content
+                            p.b-portfolio__title Длинное название фирмы
+                            p.b-portfolio__category Строительство
+                        span.b-portfolio__type.b-portfolio__type_gif GIF
+                        p.b-portfolio__date 10.02.2010
+                    a.b-portfolio__item(href='portfolio_item_1_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
+                        img.b-portfolio__image(src='assets/img/tmp/portfolio3.png')
+                        .b-portfolio__content
+                            p.b-portfolio__title QIVI
+                            p.b-portfolio__category Динное название категории
+                        span.b-portfolio__type.b-portfolio__type_jpg JPG
+                        span.b-portfolio__like
+                        p.b-portfolio__date 10.02.2010
+                    a.b-portfolio__item(href='portfolio_item_2_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
+                        img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
+                        .b-portfolio__content
+                            p.b-portfolio__title QIVI
+                            p.b-portfolio__category Строительство
+                        span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                        p.b-portfolio__date 10.02.2010
+            script.
+                $('.b-portfolio__item').each(function(){
+                    $(this).data('hold', Math.floor(Math.random() * 450) + 50);
+                });
