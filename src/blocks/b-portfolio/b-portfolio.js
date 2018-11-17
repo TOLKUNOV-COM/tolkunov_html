@@ -202,6 +202,12 @@ var loadPortfolio = function (cb) {
 
     // trigger initial layout
     $grid.masonry();
+
+    $(".b-portfolio__list img").one("load", function () {
+        $(this).closest('.b-portfolio__item').addClass('b-portfolio__item_loaded');
+    }).each(function () {
+        if (this.complete) $(this).trigger('load');
+    });
 };
 
 $(function () {

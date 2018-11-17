@@ -37,14 +37,14 @@ block content
                         .b-portfolio__content
                             p.b-portfolio__title Самоедлинноеназваниефирмы
                             p.b-portfolio__category Строительство
-                        span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                        span.b-portfolio__type HTML5
                         p.b-portfolio__date 10.02.2010
                     a.b-portfolio__item(href='portfolio_item_2_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
                         img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
                         .b-portfolio__content
                             p.b-portfolio__title Длинное название фирмы
                             p.b-portfolio__category Строительство
-                        span.b-portfolio__type.b-portfolio__type_gif GIF
+                        span.b-portfolio__type GIF
                         p.b-portfolio__date 10.02.2010
                     a.b-portfolio__item(href='portfolio_item_1_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
                         img.b-portfolio__image(src='assets/img/tmp/portfolio3.png')
@@ -68,4 +68,6 @@ block content
 
         .g-loader.g-loader_portfolio
             .g-loader__content
-                a.g-loader__button(href='#') #[i.g-loader__button-icon]#[span.g-loader__button-text Загрузить ещё]
+                a.g-loader__button.g-loader__button_state_loading(href='#')
+                    .g-loader__button-icon
+                    span.g-loader__button-text Загрузить ещё

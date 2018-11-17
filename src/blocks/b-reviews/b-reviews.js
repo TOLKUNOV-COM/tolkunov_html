@@ -37,6 +37,7 @@ var loadReviews = function (cb) {
 
     $.when.apply(null, loaders).done(function () {
         //$(this).closest('.b-reviews__item').fadeIn();
+        $('.b-reviews__item').addClass('b-reviews__item_loaded');
 
         initMasonry(cb);
     });
@@ -50,7 +51,8 @@ var loadReviews = function (cb) {
     //});
 
     if (!$('.b-reviews__list img').length) {
-        initMasonry();
+        $('.b-reviews__item').addClass('b-reviews__item_loaded');
+        initMasonry(cb);
     }
 };
 
