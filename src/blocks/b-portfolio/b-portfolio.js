@@ -103,7 +103,7 @@ $(function () {
         margin: [45, 0, 100, 0],
         fitToView: false,
         beforeLoad: function () {
-            if ($(window).width() < 768) {
+            if ($(window).width() < 1080) {
                 var url = $(this.element).attr('href');
 
                 window.open(url, '_self');
@@ -181,7 +181,7 @@ $(function () {
 });
 
 var loadPortfolio = function (cb) {
-    var $grid = $('.b-portfolio__list').masonry({
+    var $grid = $('.b-portfolio__list').packery({
         itemSelector: '.b-portfolio__item',
         // use element for option
         //columnWidth: '.grid-sizer',
@@ -189,19 +189,22 @@ var loadPortfolio = function (cb) {
         columnWidth: $(window).width() < 768 ? 160 : 224,
         //columnWidth: 224,
         //gutter: 20,
-        fitWidth: true,
+        //fitWidth: true,
+        // no transitions
+        // no transitions
+        stagger: 0,
         // no transitions
         transitionDuration: 0,
         initLayout: false
     });
 
     // bind event
-    $grid.masonry('on', 'layoutComplete', function () {
+    $grid.packery('on', 'layoutComplete', function () {
         cb && cb();
     });
 
     // trigger initial layout
-    $grid.masonry();
+    $grid.packery();
 
     $(".b-portfolio__list img").one("load", function () {
         $(this).closest('.b-portfolio__item').addClass('b-portfolio__item_loaded');

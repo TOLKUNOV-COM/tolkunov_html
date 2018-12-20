@@ -21,7 +21,8 @@
     "masonry": "^4.1.1",
     "odometer": "^0.4.7",
     "retina.js": "^2.1.2",
-    "jquery.scrollbar": "^0.2.11"
+    "jquery.scrollbar": "^0.2.11",
+    "packery": "^2.1.2"
   },
   "main": "index.html"
 }
