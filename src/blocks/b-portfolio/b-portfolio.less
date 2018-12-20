@@ -23,13 +23,14 @@
 }
 
 @portfolio-breakpoint: @screen-md-min;
+@portfolio-width-small: 160px;
+@portfolio-width-big: 224px;
 
 .b-portfolio__list {
 	margin: 0 auto;
 	text-align: center;
 	padding-bottom: 20px;
 
-	@portfolio-width-small: 160px;
 	max-width: @portfolio-width-small * 2;
 
 	@media (min-width: 480px) {
@@ -71,6 +72,23 @@
 	@portfolio-width: 224px;
 
 	max-width: @portfolio-width * 4;
+}
+
+.portfolio-width-loop(10);
+
+.portfolio-width-loop(@n, @i: 1) when (@i =< @n) {
+	.b-portfolio__list_width_@{i} {
+
+		@media (max-width: @portfolio-breakpoint) and (min-width: (@portfolio-width-small * @i)) {
+			max-width: @portfolio-width-small * @i;
+		}
+
+		@media (min-width: @portfolio-breakpoint) and (min-width: (@portfolio-width-big * @i)) {
+			max-width: @portfolio-width-big * @i;
+		}
+	}
+
+	.portfolio-width-loop(@n, (@i + 1));
 }
 
 .b-portfolio__list_faded {
