@@ -15,11 +15,11 @@
 .b-size-tabs__link {
 	font-size: 12px;
 	line-height: 32px;
-	color: #4c5370;
+	color: @text-color;
 	font-weight: bold;
 	letter-spacing: .1em;
 	display: inline-block;
-	border: 2px dashed #d9dbe6;
+	border: 2px dashed #e5ebff;
 	border-radius: 5px;
 	padding: 0 11px;
 	margin: 4px 5px;
@@ -27,13 +27,13 @@
 	&:before {
 		content: '#';
 		font-size: 15px;
-		color: fade(#4C5370, 20%);
+		color: fade(#e5ebff, 100%);
 		margin-right: 10px;
 	}
 
 	&:hover, &:active, &:focus {
 		text-decoration: none;
-		color: #4c5370;
+		color: @link-hover-color;
 		border: 2px solid #fff;
 		background: #fff;
 		box-shadow: 1.5px 1.5px 32px rgba(0, 0, 0, .1);
@@ -41,9 +41,11 @@
 }
 
 .b-size-tabs__item.active .b-size-tabs__link {
-	border: 2px solid #4c5370;
-	background: #4c5370;
+	border: 2px solid @link-active-color;
+	background: @link-active-color;
 	color: #fff;
+	box-shadow: none;
+	cursor: default;
 
 	&:before {
 		color: fade(#ffffff, 20%);

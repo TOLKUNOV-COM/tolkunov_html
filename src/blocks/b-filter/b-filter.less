@@ -13,7 +13,7 @@
 
 	display: inline-block;
 	padding: 8px 20px;
-	color: @text-color;
+	color: @block-link-color;
 
 	.my-heading-lead();
 	line-height: 1.1;
@@ -23,22 +23,22 @@
 	}
 
 	&:not(.b-filter__item_active) .b-filter__title {
-		border-bottom-color: #f5f6fa;
+		border-bottom-color: @block-link-border-color;
 	}
 
 	&:hover, &:active, &:focus {
-		color: #4c5370;
+		color: @block-link-hover-color;
 
 		.b-filter__title {
-			border-bottom-color: #d9dbe6;
+			border-bottom-color: @block-link-hover-border-color;
 		}
 	}
 }
 
 .b-filter__item_active {
 	.b-filter__title {
-		color: #4c5370 !important;
-		border-bottom-color: transparent !important;
+		color: @block-link-hover-color !important;
+		border-bottom-color: @block-link-hover-border-color !important;
 	}
 
 	&.b-filter__item_with-arrow:after {
@@ -55,7 +55,7 @@
 			border-left: 10px solid transparent;
 			border-right: 10px solid transparent;
 
-			border-bottom: 10px solid #f5f6fa;
+			border-bottom: 10px solid @body-muted-bg;
 		}
 	}
 }

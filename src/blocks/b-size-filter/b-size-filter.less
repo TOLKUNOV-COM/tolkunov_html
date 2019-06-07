@@ -3,7 +3,7 @@
 @import "mymixins";
 
 .b-size-filter {
-	background: #f5f6fa;
+	background: @body-muted-bg;
 	text-align: center;
 	//padding: (40px - 15px/2) 10px 25px;
 	margin: -29px auto 100px;
@@ -16,9 +16,9 @@
 	font-size: 12px;
 	line-height: 36px;
 	height: 36px;
-	color: #4c5370;
+	color: @block-link-color;
 	background: #fff;
-	box-shadow: 1.5px 1.5px 32px rgba(0, 0, 0, .1);
+	box-shadow: 1.5px 1.5px 32px fade(#161f6a, 10%);
 	font-weight: bold;
 	letter-spacing: .1em;
 	display: inline-block;
@@ -30,7 +30,7 @@
 	&:before {
 		content: '#';
 		font-size: 15px;
-		color: fade(#4C5370, 20%);
+		color: fade(#161f6a, 20%);
 		margin-right: 10px;
 		transition: all .2s;
 	}
@@ -38,7 +38,7 @@
 	&:hover, &:active, &:focus {
 		text-decoration: none;
 		color: #ffffff;
-		background: #4c5370;
+		background: #161f6a;
 
 		&:before {
 			color: fade(#ffffff, 20%);
@@ -53,7 +53,7 @@
 }
 
 .b-size-filter__item_active {
-	background: #4c5370 !important;
+	background: #161f6a !important;
 	color: #fff !important;
 
 	&:before {
@@ -107,18 +107,18 @@
 	font-weight: bold;
 	font-size: 15px;
 	line-height: 1.4;
-	color: #9ba1b6;
+	color: @block-link-color;
 	letter-spacing: .2em;
 	text-transform: uppercase;
 	text-decoration: none;
-	border-bottom: 2px dotted #d9dbe6;
+	border-bottom: 2px dotted @block-link-border-color;
 	display: inline-block;
 	margin-top: 15px;
 	transition: all .2s;
 
 	&:hover, &:active, &:focus {
-		color: #4c5370;
-		border-bottom-color: #9ba1b6;
+		color: @block-link-hover-color;
+		border-bottom-color: @block-link-hover-border-color;
 		text-decoration: none;
 	}
 }

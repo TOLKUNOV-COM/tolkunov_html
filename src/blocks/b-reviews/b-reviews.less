@@ -15,7 +15,7 @@
 }
 
 .b-reviews__container {
-	background: #f5f6fa;
+	background: @body-muted-bg;
 	padding: 113px 0 50px;
 
 	margin-top: 20px;
@@ -36,7 +36,7 @@
 
 	background: #ffffff;
 	border-radius: 10px;
-	box-shadow: 0 8px 48px rgba(76, 83, 112, .1);
+	box-shadow: 0 8px 48px fade(#161f6a, 10%);
 
 	transition: opacity 200ms ease-out, transform 200ms cubic-bezier(0, 0, 0.001, 1);
 	opacity: 0;
@@ -57,7 +57,7 @@
 	display: inline-block;
 	font-size: 12px;
 	line-height: 25px;
-	color: #d9dbe6;
+	color: #161f6a;
 	font-weight: bold;
 	//padding: 0 12px;
 	text-transform: uppercase;
@@ -66,15 +66,15 @@
 
 	&:hover, &:active, &:focus {
 		text-decoration: none;
-		color: #d9dbe6;
+		color: #161f6a;
 	}
 }
 
 .b-reviews__title {
-	color: #9ba1b6;
+	color: @block-link-color;
 	font-size: 24px;
 	font-weight: bold;
-	border-bottom: 2px solid #f5f6fa;
+	border-bottom: 2px solid @block-link-border-color;
 
 	display: inline-block;
 	margin: 10px 10px 22px;
@@ -82,8 +82,8 @@
 
 	&:hover, &:active, &:focus {
 		text-decoration: none;
-		color: #4c5370;
-		border-bottom-color: #d9dbe6;
+		color: @block-link-hover-color;
+		border-bottom-color: @block-link-hover-border-color;
 	}
 }
 
@@ -92,7 +92,7 @@
 }
 
 .b-reviews__content_type_text {
-	color: #9ba1b6;
+	color: #161f6a;
 	padding: 0 20px 3px;
 }
 
@@ -103,7 +103,7 @@
 
 .b-reviews__date {
 	float: left;
-	color: #9ba1b6;
+	color: #161f6a;
 	font-weight: bold;
 	font-size: 12px;
 	letter-spacing: .1em;

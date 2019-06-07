@@ -16,7 +16,7 @@
 
 @brand-primary:         darken(#428bca, 6.5%); // #337ab7
 @brand-success:         #5cb85c;
-@brand-info:            #008fcb;
+@brand-info:            #2856f6;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
@@ -27,16 +27,27 @@
 
 //** Background color for `<body>`.
 @body-bg:               #fff;
+
+@body-muted-bg: #fafbff; // old: #f5f6fa
 //** Global text color on `<body>`.
-@text-color:            #9ba1b6;
+@text-color:            #161f6a;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
+
+@link-decoration-color: #e5ebff;
 //** Link hover color set via `darken()` function.
-@link-hover-color:      #008fcb;//darken(@link-color, 15%);
+@link-hover-color:      #2856f6;//darken(@link-color, 15%);
 //** Link hover decoration.
 @link-hover-decoration: underline;
 
+@link-active-color: #2856f6;
+
+@block-link-color: @text-color;
+@block-link-border-color: #e5ebff;
+
+@block-link-hover-color: @link-hover-color;
+@block-link-hover-border-color: #e5ebff;
 
 //== Typography
 //
@@ -70,7 +81,7 @@
 @headings-font-family:    inherit;
 @headings-font-weight:    bold;
 @headings-line-height:    1.1;
-@headings-color:          #4c5370; //inherit;
+@headings-color:          #161f6a; //inherit;
 
 
 //== Iconography
@@ -159,7 +170,7 @@
 @btn-success-border:             darken(@btn-success-bg, 0%);
 
 @btn-info-color:                 #fff;
-@btn-info-bg:                    #008fcb;
+@btn-info-bg:                    #2856f6;//#008fcb;
 @btn-info-border:                darken(@btn-info-bg, 0%);
 
 @btn-warning-color:              #fff;

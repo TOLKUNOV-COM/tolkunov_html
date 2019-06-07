@@ -42,10 +42,10 @@
 
 .g-loader_theme_dark:not(.g-loader_without-gradient) {
 	.g-loader__content {
-		background: #f5f6fa;
+		background: @body-muted-bg;
 
 		&:before {
-			background: linear-gradient(to top, rgba(245, 246, 250, 1) 0%, rgba(245, 246, 250, .6) 60%, rgba(245, 246, 250, 0) 100%);
+			background: linear-gradient(to top, fade(@body-muted-bg, 100%) 0%, fade(@body-muted-bg, 60%) 60%, fade(@body-muted-bg, 0%) 100%);
 		}
 	}
 }
@@ -72,7 +72,7 @@
 	}
 
 	&.btn-info {
-		box-shadow: 0 8px 24px rgba(0, 143, 203, .4);
+		box-shadow: 0 8px 24px fade(#2856f6, 40%);
 	}
 
 	&:hover, &:active, &:focus {
@@ -81,7 +81,7 @@
 }
 
 .g-loader__text {
-	color: #9ba1b6;
+	color: @text-color;
 	margin: 50px 15px 0;
 }
 

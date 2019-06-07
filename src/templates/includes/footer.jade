@@ -1,7 +1,19 @@
 .b-call-widget.b-call-widget__collapsed
     .b-call-widget__button
     .b-call-widget__content
-        <iframe src="https://tolkunov.com/block/callback" frameborder="0" width="100%" height="100%" id="callbackFrame"></iframe>
+        iframe#callbackFrame(src='http://82.193.158.2:3002/widget.html')
+script.
+    /* When iframe is loaded */
+    $(function () {
+        $('#callbackFrame').ready(function () {
+            console.log('iframe loaded successfully');
+
+            setTimeout(function () {
+                $('.b-call-widget__content').css('display', 'none');
+            }, 1);
+        });
+    });
+
 .b-footer
     .container
         .row.b-footer__row

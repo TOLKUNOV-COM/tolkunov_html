@@ -2,7 +2,7 @@
 @import "mixins";
 
 .b-clients {
-	background: #f5f6fa;
+	background: @body-muted-bg;
 	margin-top: 20px;
 	padding-bottom: 40px;
 
@@ -22,7 +22,7 @@
 .b-clients__item {
 	background: #ffffff;
 	border-radius: 10px;
-	box-shadow: 0 8px 48px rgba(76, 83, 112, .1);
+	box-shadow: 0 8px 48px fade(#161f6a, 10%);
 	margin: 20px;
 	min-width: 200px;
 	overflow: hidden;
@@ -51,8 +51,8 @@
 		color: #1abc9c;
 
 		.b-clients__title {
-			color: #4c5370;
-			border-bottom-color: #d9dbe6;
+			color: @block-link-hover-color;
+			border-bottom-color: @block-link-hover-border-color;
 		}
 
 		.b-clients__image {
@@ -83,11 +83,11 @@
 }
 
 .b-clients__title {
-	color: #9ba1b6;
+	color: @block-link-color;
 	font-size: 24px;
 	line-height: 34px;
 	font-weight: bold;
-	border-bottom: 2px solid #f5f6fa;
+	border-bottom: 2px solid @block-link-border-color;
 	display: inline-block;
 	white-space: nowrap;
 	overflow: hidden;

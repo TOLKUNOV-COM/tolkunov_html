@@ -4,7 +4,7 @@
 
 .b-portfolio-tag-outer
 {
-	background: #f5f6fa;
+	background: @body-muted-bg;
 	text-align: center;
 	padding: 40px-15px/2 30px 25px+15px/2;
 	margin : -29px auto 100px;
@@ -50,7 +50,7 @@
 	height             : @height;
 	line-height        : @height;
 	border-radius      : 5px;
-	box-shadow         : 1.5px 1.5px 32px rgba(0, 0, 0, 0.1);
+	box-shadow         : 1.5px 1.5px 32px fade(#161f6a, 10%);
 	padding-left       : 12px;
 	padding-right      : 12px;
 	white-space        : nowrap;
@@ -59,7 +59,7 @@
 	will-change        : transform;
 
 	background: #fff;
-	color              : #4c5370;
+	color              : @link-active-color;
 	font-size          : 12px;
 	font-weight        : bold;
 	text-transform     : uppercase;
@@ -69,7 +69,7 @@
 	&:before
 	{
 		content        : '#';
-		color          : fade(#4C5370, 20%);
+		color          : fade(#e5ebff, 100%);
 		display        : inline-block;
 		font-size      : 15px;
 		font-weight    : bold;
@@ -97,7 +97,7 @@
 	}
 
 	&_selected {
-		background: #4c5370;
+		background: @link-active-color;
 		color: #fff;
 		box-shadow: none;
 	}

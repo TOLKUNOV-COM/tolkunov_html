@@ -17,7 +17,7 @@
 
 	@media (min-width: @screen-md-min) {
 		display: inline-block;
-		border-bottom: 2px solid #f5f6fa;
+		border-bottom: 2px solid @link-decoration-color;
 		padding: 0 40px;
 	}
 }
@@ -34,18 +34,18 @@
 	.my-heading-h3();
 	line-height: 36/24;
 
-	color: @text-color;
+	color: @block-link-color;
 	padding: 8px 0;
 	margin: 0 20px;
 	display: block;
 	position: relative;
 
 	&:hover, &:active, &:focus {
-		color: #4c5370;
+		color: @block-link-hover-color;
 		text-decoration: none;
 
 		.b-language-tabs__title {
-			border-bottom-color: #a2a8bb;
+			border-bottom-color: @block-link-hover-border-color;
 		}
 	}
 
@@ -55,10 +55,10 @@
 }
 
 .b-language-tabs__item.active .b-language-tabs__link {
-	color: #4c5370;
+	color: @block-link-hover-color;
 
 	@media (min-width: @screen-md-min) {
-		border-bottom: 2px solid #4c5370;
+		border-bottom: 2px solid @link-active-color;
 		margin-bottom: -2px;
 		padding: 22px 0 9px;
 	}
@@ -80,7 +80,7 @@
 		border-left: 10px solid transparent;
 		border-right: 10px solid transparent;
 
-		border-bottom: 10px solid #4c5370;
+		border-bottom: 10px solid @link-active-color;
 	}
 	&:after {
 		@media (max-width: @screen-sm-max) {
@@ -108,6 +108,6 @@
 }
 
 .b-language-tabs__title {
-	border-bottom: 2px dotted #d9dbe6;
+	border-bottom: 2px dotted @block-link-border-color;
 	display: inline-block;
 }

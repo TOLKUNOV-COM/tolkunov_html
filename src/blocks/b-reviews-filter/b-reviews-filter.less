@@ -8,42 +8,30 @@
 .b-reviews-filter__item {
 	font-size: 26px;
 	line-height: 1.4;
-	color: #9ba1b6;
+	color: @block-link-color;
 	margin: 10px 20px;
 	display: inline-block;
 	position: relative;
 
 	&:not(.b-reviews-filter__item_active) .b-reviews-filter__title {
-		border-bottom-color: #f5f6fa;
+		border-bottom-color: @block-link-border-color;
 	}
 
 	&:hover, &:active, &:focus {
 		text-decoration: none;
-		color: #4c5370;
+		color: @block-link-hover-color;
 
 		&:not(.b-reviews-filter__item_active) .b-reviews-filter__title {
-			border-bottom-color: #d9dbe6;
+			border-bottom-color: @block-link-hover-border-color;
 		}
 	}
 }
 
 .b-reviews-filter__item_active {
-	color: #4c5370;
-
-	//&:before {
-	//	position: absolute;
-	//	top: 50%;
-	//	transform: translateY(-10px);
-	//	left: -20px;
-	//	width: 17px;
-	//	height: 17px;
-	//
-	//	content: '';
-	//}
+	color: @block-link-hover-color;
 }
 
 .b-reviews-filter__title {
-	//margin-right: 6px;
 	display: inline-block;
 	border-bottom: 2px dotted transparent;
 }

@@ -13,7 +13,7 @@
 	}
 }
 
-.mylink-extended(@color: @text-color, @border: 2px solid rgba(37,37,37,.05), @hover-color: @link-hover-color) {
+.mylink-extended(@color: @text-color, @border: 2px solid @link-decoration-color, @hover-color: @link-hover-color) {
 	display: inline-block;
 	color: @color;
 	border-bottom: @border;
@@ -50,7 +50,6 @@
 }
 
 .my-heading-lead() {
-	color: #9ba1b6;
 	font-size: 20px;
 
 	@media (min-width: @screen-md-min) {
@@ -87,13 +86,13 @@
 }
 
 .my-default-link() {
-	color: #9ba1b6;
-	border-bottom: 2px solid #f5f6fa;
+	color: @block-link-color;
+	border-bottom: 2px solid @block-link-border-color;
 
 	&:hover, &:active, &:focus {
 		text-decoration: none;
-		color: #4c5370;
-		border-bottom-color: #d9dbe6;
+		color: @block-link-hover-color;
+		border-bottom-color: @block-link-hover-border-color;
 	}
 }
 
