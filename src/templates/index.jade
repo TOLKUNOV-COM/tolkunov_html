@@ -2,35 +2,6 @@ extends ./layouts/layout.jade
 
 block content
     .b-page
-        .b-container-wide
-            .row
-                .clearfix
-                    .col-xs-12.col-lg-6.col-xl-7
-                        h1.b-page__title.b-page__title_index Делаем баннеры #[br] для медийной рекламы
-
-                        .b-summary
-                            a.b-summary__item.b-summary__item_1(href='portfolio_type_1.html')
-                                .b-summary__number.odometer(data-number="985") 999
-                                .b-summary__text баннеров&nbsp;#[br]в портфолио
-                            a.b-summary__item.b-summary__item_2(href='reviews.html')
-                                .b-summary__number.odometer(data-number="232") 999
-                                .b-summary__text отзыва&nbsp;#[br]от клиентов
-                        .b-showreel.b-showreel_mobile.hidden-lg
-                            a.js-showreel.b-showreel__link(href='https://www.youtube.com/embed/xqB9KJsbIlU'): img.b-showreel__circle(src='/assets/img/showreel/showreel-circle.png')
-                        .b-portfolio-tag-outer.b-portfolio-tag-outer_index
-                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_text.b-portfolio-tag_theme-violet(href='#' data-tag-background-hover="#252525") HTML5
-                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(href='#' data-tag-background-hover="#FD0000"): img.b-portfolio-tag__image(src='/assets/img/tmp/portfolio-tag/Яндекс-Лого.png' data-hover-src='/assets/img/tmp/portfolio-tag/hover/Яндекс-Лого.png')
-                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(href='#' data-tag-background-hover="#FEBB00"): img.b-portfolio-tag__image(src='/assets/img/tmp/portfolio-tag/Google-Лого.png' data-hover-src='/assets/img/tmp/portfolio-tag/hover/Google-Лого.png')
-                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_text.b-portfolio-tag_theme-green(href='#' data-tag-background-hover="#252525") JPG
-                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(href='#' data-tag-background-hover="#008CE2"): img.b-portfolio-tag__image(src='/assets/img/tmp/portfolio-tag/Mail.png' data-hover-src='/assets/img/tmp/portfolio-tag/hover/Mail.png')
-                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(href='#' data-tag-background-hover="#005EFD"): img.b-portfolio-tag__image(src='/assets/img/tmp/portfolio-tag/Рамблер-Лого.png' data-hover-src='/assets/img/tmp/portfolio-tag/hover/Рамблер-Лого.png')
-                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_image(href='#' data-tag-background-hover="#77D000"): img.b-portfolio-tag__image(src='/assets/img/tmp/portfolio-tag/Лого-Авито.png' data-hover-src='/assets/img/tmp/portfolio-tag/hover/Лого-Авито.png')
-                                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_text.b-portfolio-tag_theme-blue(href='#' data-tag-background-hover="#252525") GIF
-
-
-                    .col-xs-12.col-lg-6.col-xl-5.visible-lg
-                        .b-showreel.b-showreel_desktop
-                            a.js-showreel.b-showreel__link(href='https://www.youtube.com/embed/xqB9KJsbIlU'): img.b-showreel__circle(src='/assets/img/showreel/showreel-circle.png')
         .clearfix.b-portfolio
             .b-portfolio__list
                 - for (var i=0; i<6;++i)
@@ -70,9 +41,8 @@ block content
 
             .g-loader
                 .g-loader__content
-                    a.btn.btn-info.g-loader__link(href='portfolio_type_1.html') Смотреть все 985 работ
-
-                    p.g-loader__text Запаситесь чашечкой чая или кофе — для просмотра всех работ потребуется больше 50 минут.
+                    .container
+                        a.btn.btn-info.g-loader__link(href='portfolio_type_1.html') Все работы
         .b-treatment.g-mt20
             .b-treatment__gradient
             .container.b-treatment__container
@@ -188,15 +158,16 @@ block content
                         .b-why-us__text
                             p Помогаем выходить из тупиковых ситуаций, когда баннер нужен «еще вчера», а исполнитель перестал выходить на связь.
         .b-reviews__container
-            h2.b-reviews__head Отзывы клиентов
+            .container
+                h2.b-reviews__head Отзывы клиентов
 
-            p.b-reviews__lead Возможно они расскажут о нашей работе что-то более важное и близкое вам
+                p.b-reviews__lead Возможно они расскажут о нашей работе что-то более важное и близкое вам
 
             .b-reviews__list
                 .b-reviews__item.b-reviews__item_type_video
                     .b-reviews__header
                         a.b-reviews__type(href='#') Видеоотзывы
-                    .text-center: a.b-reviews__title(href='#') 1ДСКиКО
+                    .text-center: a.b-reviews__title(href='client.html') 1ДСКиКО
                     .b-reviews__content
                         .b-review.b-review_video
                             a.b-review__link(href='http://www.youtube.com/watch?v=opj24KnzrWo'): img.img-responsive(src='http://placehold.it/320x180')
@@ -206,7 +177,7 @@ block content
                 .b-reviews__item.b-reviews__item_type_mail
                     .b-reviews__header
                         a.b-reviews__type(href='#') Рекомендательные письма
-                    .text-center: a.b-reviews__title(href='#') Газелькин
+                    .text-center: a.b-reviews__title(href='client.html') Газелькин
                     .b-reviews__content.b-reviews__content_type_image
                         .b-review.b-review_image
                             a.b-review__link(href='#review_1'): img.img-responsive(src='http://placehold.it/196x264')
@@ -217,7 +188,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Социальные сети
                         .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_fb
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                     .b-reviews__footer
@@ -227,7 +198,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Социальные сети
                         .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_vk
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                     .b-reviews__footer
@@ -237,7 +208,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Социальные сети
                         .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_tw
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                     .b-reviews__footer
@@ -247,7 +218,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Социальные сети
                         .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_instagram
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                     .b-reviews__footer
@@ -257,7 +228,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Социальные сети
                         .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_ok
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                     .b-reviews__footer
@@ -266,7 +237,7 @@ block content
                 .b-reviews__item.b-reviews__item_type_fl
                     .b-reviews__header
                         a.b-reviews__type(href='#') Fl.ru
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Задание было выполнено! Качество радует! Рекомендую!
                     .b-reviews__footer
@@ -276,7 +247,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Форумы
                         .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_prcy
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
                     .b-reviews__footer
@@ -286,7 +257,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Форумы
                         .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_cypr
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
                     .b-reviews__footer
@@ -294,7 +265,49 @@ block content
                         a.b-reviews__link(href='#') Оригинал отзыва
             .g-loader.g-loader_theme_dark
                 .g-loader__content
-                    a.btn.btn-info.g-loader__link(href='reviews.html') Смотреть все 232 отзыва
+                    .container
+                        a.btn.btn-info.g-loader__link(href='reviews.html') Все отзывы
+        .b-clients__container
+            .container
+                h2.b-clients__head Клиенты
+
+                p.b-clients__lead Самые лучшие люди и компании. Будем рады вас видеть в этом списке.
+
+            .container-fluid.g-mb50
+                .b-clients__list.b-clients__list_faded
+                    - for (var i=0; i<4;++i)
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title Классика
+                            .b-clients__content
+                                img.b-clients__image(src='assets/img/tmp/client_1_on.png')
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title MAXPROMO
+                            .b-clients__content
+                                img.b-clients__image(src='assets/img/tmp/client_2_on.png')
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title Жулькон
+                            .b-clients__content
+                                img.b-clients__image.b-clients__image_empty(src='assets/img/empty-logo.png')
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title MAXPROMO
+                            .b-clients__content
+                                img.b-clients__image(src='assets/img/tmp/client_2_on.png')
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title Московская консерватория
+                            .b-clients__content
+                                img.b-clients__image(src='assets/img/tmp/client_2_on.png')
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title Практика комфорта
+                            .b-clients__content
+                                img.b-clients__image(src='assets/img/tmp/client_2_on.png')
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title Евгений Лановой
+                            .b-clients__content
+                                img.b-clients__image(src='assets/img/tmp/client_2_on.png')
+            .g-loader.g-loader_theme_dark
+                .g-loader__content
+                    .container
+                        a.btn.btn-info.g-loader__link(href='clients.html') Все клиенты
         .b-blog.g-mb50
             h2.b-blog__header Справочник клиента
 
@@ -338,7 +351,8 @@ block content
                                 span 16 марта 2015
         .g-loader.g-loader_without-gradient
             .g-loader__content
-                a.btn.btn-success.g-loader__link(href='blog.html') Почитать все 15 статей
+                .container
+                    a.btn.btn-success.g-loader__link(href='blog.html') Почитать все 15 статей
         .hidden
             #review_1
                 .b-review-image
@@ -355,7 +369,7 @@ block content
                 .b-portfolio-item
                     .tab-content
                         #banner_language_ru.tab-pane.active(role="tabpanel")
-                            ul.b-size-tabs.list-unstyled
+                            ul.b-size-tabs
                                 li.b-size-tabs__item.active(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_240_400', aria-controls="banner_language_ru_size_240_400", role="tab", data-toggle="tab") 240#[span.b-size-tabs__divider x]400
                                 li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_100_100', aria-controls="banner_language_ru_size_100_100", role="tab", data-toggle="tab") 100#[span.b-size-tabs__divider x]100
                                 li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_200_300', aria-controls="banner_language_ru_size_200_300", role="tab", data-toggle="tab") 1200#[span.b-size-tabs__divider x]300
@@ -374,7 +388,7 @@ block content
                                     .b-portfolio-item__view
                                         img.b-portfolio-item__image.img-responsive(src='http://placehold.it/160x600', alt='')
                         #banner_language_en.tab-pane(role="tabpanel")
-                            ul.b-size-tabs.list-unstyled
+                            ul.b-size-tabs
                                 li.b-size-tabs__item.active(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_240_400', aria-controls="banner_language_en_size_240_400", role="tab", data-toggle="tab") 240#[span.b-size-tabs__divider x]400
                                 li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_100_100', aria-controls="banner_language_en_size_100_100", role="tab", data-toggle="tab") 100#[span.b-size-tabs__divider x]100
                                 li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_200_300', aria-controls="banner_language_en_size_200_300", role="tab", data-toggle="tab") 200#[span.b-size-tabs__divider x]300
@@ -479,7 +493,7 @@ block content
                 .b-portfolio-item
                     .tab-content
                         #banner_language_ru.tab-pane.active(role="tabpanel")
-                            ul.b-size-tabs.list-unstyled
+                            ul.b-size-tabs
                                 li.b-size-tabs__item.active(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_240_400', aria-controls="banner_language_ru_size_240_400", role="tab", data-toggle="tab") 240#[span.b-size-tabs__divider x]400
                                 li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_100_100', aria-controls="banner_language_ru_size_100_100", role="tab", data-toggle="tab") 100#[span.b-size-tabs__divider x]100
                                 li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_ru_size_200_300', aria-controls="banner_language_ru_size_200_300", role="tab", data-toggle="tab") 1200#[span.b-size-tabs__divider x]300
@@ -498,7 +512,7 @@ block content
                                     .b-portfolio-item__view
                                         img.b-portfolio-item__image.img-responsive(src='http://placehold.it/160x600', alt='')
                         #banner_language_en.tab-pane(role="tabpanel")
-                            ul.b-size-tabs.list-unstyled
+                            ul.b-size-tabs
                                 li.b-size-tabs__item.active(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_240_400', aria-controls="banner_language_en_size_240_400", role="tab", data-toggle="tab") 240#[span.b-size-tabs__divider x]400
                                 li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_100_100', aria-controls="banner_language_en_size_100_100", role="tab", data-toggle="tab") 100#[span.b-size-tabs__divider x]100
                                 li.b-size-tabs__item(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_200_300', aria-controls="banner_language_en_size_200_300", role="tab", data-toggle="tab") 200#[span.b-size-tabs__divider x]300

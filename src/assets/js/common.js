@@ -46,3 +46,26 @@ function fixFancyboxArrows() {
         $('.fancybox-nav span').css({top: ($(document).scrollTop() + 355) + 'px'});
     });
 }
+
+var mySwiper;
+
+$(function () {
+    var initMySwiper = function () {
+        mySwiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            freeMode: true
+        });
+    };
+
+    var destroyMySwiper = function () {
+        mySwiper.destroy();
+    };
+
+    $(window).on('resize', function () {
+        if ($(window).width() < 990 && (!mySwiper || mySwiper.destroyed)) {
+            initMySwiper();
+        } else if ($(window).width() >= 990 && mySwiper && mySwiper.initialized === true) {
+            destroyMySwiper();
+        }
+    }).trigger('resize');
+});

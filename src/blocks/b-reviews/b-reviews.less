@@ -3,15 +3,13 @@
 @import "mymixins";
 
 .b-reviews {
-
+	overflow: hidden;
+	margin-top: -10px;
 }
 
 .b-reviews__filter {
-	margin: -20px 30px 95px;
-
-	@media (max-width: @screen-xs-max) {
-		.responsive-invisibility();
-	}
+	margin: -10px 0 95px;
+	//margin: -10px -20px 95px;
 }
 
 .b-reviews__container {
@@ -173,17 +171,15 @@
 }
 
 .b-reviews__head {
-	.my-heading-h1();
+	.my-heading-h2();
 
 	font-weight: bold;
 	margin-top: 0;
 	margin-bottom: 45px;
-	text-align: center;
 }
 
 .b-reviews__lead {
 	.my-heading-lead();
 
-	margin: 0 15px 100px;
-	text-align: center;
+	margin: 0 0 100px;
 }

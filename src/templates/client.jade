@@ -3,22 +3,20 @@ extends ./layouts/layout.jade
 block content
     .b-page
         .container
-            .text-center
-                a.b-page__back(href='clients.html') КЛИЕНТЫ
             h1.b-page__title Классика
 
             .b-client
                 .b-client__head
-                    img.b-client__image(src='assets/img/tmp/client_1_on.png')
+                    img.b-client__image(src='https://placehold.it/200x33')
                     a.b-client__link(href='#') apteka-klassika.ru
 
                 .b-client__text.b-text
                     p На фармацевтическом рынке сеть аптек «Классика» существует с 1995 года. Это крупнейшая аптечная сеть на Урале, включающая более 180 аптек в 26 городах Челябинской и Свердловской областей. Аптеки находятся в Челябинске, Екатеринбурге, Тюмени и Магнитогорске. За эти 20 лет «Классика» прошла большой путь и приобрела имя, ставшее синонимом надежности и качества для людей по всему Уралу.
+            .b-language-tabs
+                ul.b-language-tabs__list(role="tablist")
+                    li.b-language-tabs__item.active(role="presentation"): a.b-language-tabs__link(href='#portfolio', aria-controls="portfolio", role="tab", data-toggle="tab"): span.b-language-tabs__title Работы
+                    li.b-language-tabs__item(role="presentation"): a.b-language-tabs__link(href='#reviews', aria-controls="reviews", role="tab", data-toggle="tab"): span.b-language-tabs__title Отзывы
 
-        .b-language-tabs
-            ul.b-language-tabs__list(role="tablist")
-                li.b-language-tabs__item.active(role="presentation"): a.b-language-tabs__link(href='#portfolio', aria-controls="portfolio", role="tab", data-toggle="tab"): span.b-language-tabs__title Работы
-                li.b-language-tabs__item(role="presentation"): a.b-language-tabs__link(href='#reviews', aria-controls="reviews", role="tab", data-toggle="tab"): span.b-language-tabs__title Отзывы
         .tab-content
             #portfolio.tab-pane.active(role="tabpanel")
                 .b-portfolio.g-mb150.g-mt40
@@ -61,12 +59,12 @@ block content
                                 span.b-portfolio__type.b-portfolio__type_story СТОРИС
                                 p.b-portfolio__date 10.02.2010
             #reviews.tab-pane(role="tabpanel")
-                .b-reviews__container.g-pb90
+                .b-reviews__container.g-pb90.g-mb20
                     .b-reviews__list
                         .b-reviews__item.emerge.b-reviews__item_type_video(data-effect="relax", data-origin="top", data-expose="true")
                             .b-reviews__header
                                 a.b-reviews__type(href='#') Видеоотзывы
-                            .text-center: a.b-reviews__title(href='#') 1ДСКиКО
+                            .text-center: a.b-reviews__title(href='client.html') 1ДСКиКО
                             .b-reviews__content
                                 .b-review.b-review_video
                                     a.b-review__link(href='http://www.youtube.com/watch?v=opj24KnzrWo'): img.img-responsive(src='http://placehold.it/320x180')
@@ -76,7 +74,7 @@ block content
                         .b-reviews__item.emerge.b-reviews__item_type_mail(data-effect="relax", data-origin="top", data-expose="true")
                             .b-reviews__header
                                 a.b-reviews__type(href='#') Рекомендательные письма
-                            .text-center: a.b-reviews__title(href='#') Газелькин
+                            .text-center: a.b-reviews__title(href='client.html') Газелькин
                             .b-reviews__content.b-reviews__content_type_image
                                 .b-review.b-review_image
                                     a.b-review__link(href='#review_1', data-url="http://placehold.it/196x264"): img.img-responsive(src='http://placehold.it/196x264')
@@ -87,7 +85,7 @@ block content
                             .b-reviews__header
                                 a.b-reviews__type(href='#') Социальные сети
                                 .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_fb
-                            .text-center: a.b-reviews__title(href='#') Exante
+                            .text-center: a.b-reviews__title(href='client.html') Exante
                             .b-reviews__content.b-reviews__content_type_text
                                 p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                             .b-reviews__footer
@@ -97,7 +95,7 @@ block content
                             .b-reviews__header
                                 a.b-reviews__type(href='#') Социальные сети
                                 .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_vk
-                            .text-center: a.b-reviews__title(href='#') Exante
+                            .text-center: a.b-reviews__title(href='client.html') Exante
                             .b-reviews__content.b-reviews__content_type_text
                                 p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                             .b-reviews__footer
@@ -107,7 +105,7 @@ block content
                             .b-reviews__header
                                 a.b-reviews__type(href='#') Социальные сети
                                 .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_tw
-                            .text-center: a.b-reviews__title(href='#') Exante
+                            .text-center: a.b-reviews__title(href='client.html') Exante
                             .b-reviews__content.b-reviews__content_type_text
                                 p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                             .b-reviews__footer
@@ -117,7 +115,7 @@ block content
                             .b-reviews__header
                                 a.b-reviews__type(href='#') Социальные сети
                                 .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_instagram
-                            .text-center: a.b-reviews__title(href='#') Exante
+                            .text-center: a.b-reviews__title(href='client.html') Exante
                             .b-reviews__content.b-reviews__content_type_text
                                 p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                             .b-reviews__footer
@@ -127,7 +125,7 @@ block content
                             .b-reviews__header
                                 a.b-reviews__type(href='#') Социальные сети
                                 .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_ok
-                            .text-center: a.b-reviews__title(href='#') Exante
+                            .text-center: a.b-reviews__title(href='client.html') Exante
                             .b-reviews__content.b-reviews__content_type_text
                                 p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                             .b-reviews__footer
@@ -136,7 +134,7 @@ block content
                         .b-reviews__item.emerge.b-reviews__item_type_fl(data-effect="relax", data-origin="top", data-expose="true")
                             .b-reviews__header
                                 a.b-reviews__type(href='#') Fl.ru
-                            .text-center: a.b-reviews__title(href='#') Exante
+                            .text-center: a.b-reviews__title(href='client.html') Exante
                             .b-reviews__content.b-reviews__content_type_text
                                 p Задание было выполнено! Качество радует! Рекомендую!
                             .b-reviews__footer
@@ -146,7 +144,7 @@ block content
                             .b-reviews__header
                                 a.b-reviews__type(href='#') Форумы
                                 .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_prcy
-                            .text-center: a.b-reviews__title(href='#') Exante
+                            .text-center: a.b-reviews__title(href='client.html') Exante
                             .b-reviews__content.b-reviews__content_type_text
                                 p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
                             .b-reviews__footer
@@ -156,7 +154,7 @@ block content
                             .b-reviews__header
                                 a.b-reviews__type(href='#') Форумы
                                 .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_cypr
-                            .text-center: a.b-reviews__title(href='#') Exante
+                            .text-center: a.b-reviews__title(href='client.html') Exante
                             .b-reviews__content.b-reviews__content_type_text
                                 p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
                             .b-reviews__footer
@@ -166,7 +164,47 @@ block content
                     #review_1
                         .b-review-image
                             .b-review-image__container
-                                img(src="http://placehold.it/592x793", alt="")
+                                img(src="http://placehold.it/519x731", alt="")
+
+        .container
+            h2.b-page__title_small Другие клиенты
+
+        .b-clients
+            .container-fluid
+                .b-clients__list.b-clients__list_faded
+                    - for (var i=0; i<4;++i)
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title Классика
+                            .b-clients__content
+                                img.b-clients__image(src='assets/img/tmp/client_1_on.png')
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title MAXPROMO
+                            .b-clients__content
+                                img.b-clients__image(src='assets/img/tmp/client_2_on.png')
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title Жулькон
+                            .b-clients__content
+                                img.b-clients__image.b-clients__image_empty(src='assets/img/empty-logo.png')
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title MAXPROMO
+                            .b-clients__content
+                                img.b-clients__image(src='assets/img/tmp/client_2_on.png')
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title Московская консерватория
+                            .b-clients__content
+                                img.b-clients__image(src='assets/img/tmp/client_2_on.png')
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title Практика комфорта
+                            .b-clients__content
+                                img.b-clients__image(src='assets/img/tmp/client_2_on.png')
+                        a.b-clients__item(href='client.html')
+                            span.b-clients__title Евгений Лановой
+                            .b-clients__content
+                                img.b-clients__image(src='assets/img/tmp/client_2_on.png')
+            .g-loader.g-loader_theme_dark
+                .g-loader__content
+                    .container
+                        a.btn.btn-info.g-loader__link(href='clients.html') Все клиенты
 
         script.
             $('.b-portfolio__item').each(function(){

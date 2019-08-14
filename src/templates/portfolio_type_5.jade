@@ -2,19 +2,23 @@ extends ./layouts/layout.jade
 
 block content
     .b-page
-        .b-filter
-            a.b-filter__item(href='portfolio_type_1.html'): span.b-filter__title Все
-            a.b-filter__item(href='#'): span.b-filter__title По типу
-            a.b-filter__item.b-filter__item_with-arrow(href='#'): span.b-filter__title По темам
-            a.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_4.html'): span.b-filter__title По размерам
-            a.b-filter__item.b-filter__item_with-arrow.b-filter__item_active(href='portfolio_type_5.html'): span.b-filter__title По стилям
-            a.b-filter__item.b-filter__item_with-arrow(href='#'): span.b-filter__title По площадкам
-        .b-portfolio-tag-outer
-            a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_selected.b-portfolio-tag_text(data-tag-background="#ffffff", data-tag-background-hover, data-tag-color="#161f6a", data-tag-color-hover, href="#") РЕАЛИЗМ
-            a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_text(data-tag-background="#ffffff", data-tag-background-hover="#161f6a", data-tag-color="#161f6a", data-tag-color-hover="#ffffff", href="#") мультипликация
+        .container
+            div
+                .b-filter.swiper-container
+                    .swiper-wrapper
+                        a.swiper-slide.b-filter__item(href='portfolio_type_1.html'): span.b-filter__title Все
+                        a.swiper-slide.b-filter__item(href='#'): span.b-filter__title По типу
+                        a.swiper-slide.b-filter__item.b-filter__item_with-arrow(href='#'): span.b-filter__title По темам
+                        a.swiper-slide.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_4.html'): span.b-filter__title По размерам
+                        a.swiper-slide.b-filter__item.b-filter__item_with-arrow.b-filter__item_active(href='portfolio_type_5.html'): span.b-filter__title По стилям
+                        a.swiper-slide.b-filter__item.b-filter__item_with-arrow(href='#'): span.b-filter__title По площадкам
+            .b-portfolio-tag-outer
+                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_selected.b-portfolio-tag_text(data-tag-background="#ffffff", data-tag-background-hover, data-tag-color="#161f6a", data-tag-color-hover, href="#") РЕАЛИЗМ
+                a.js-portfolio-tag.b-portfolio-tag.b-portfolio-tag_text(data-tag-background="#ffffff", data-tag-background-hover="#161f6a", data-tag-color="#161f6a", data-tag-color-hover="#ffffff", href="#") мультипликация
 
         .b-portfolio
-            h5.b-portfolio__header Мультяшные баннеры
+            .container
+                h5.b-portfolio__header Мультяшные баннеры
 
             .b-portfolio__list
                 - for (var i=0; i<12;++i)

@@ -5,28 +5,15 @@
 .b-portfolio-tag-outer
 {
 	background: @body-muted-bg;
-	text-align: center;
-	padding: 40px-15px/2 30px 25px+15px/2;
+	padding: 40px-15px/2 15px 25px+15px/2;
 	margin : -29px auto 100px;
 	border-radius: 10px;
 
-	.portfolio-width-helper(3);
-
-	@media (max-width : 699px)
-	{
-		clear : both;
+	@media (min-width: @screen-md-min) {
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 
-	&_index
-	{
-		width: auto !important;
-		margin-bottom : 80px;
-
-		@media (min-width : @screen-md-min)
-		{
-			margin-bottom : 100px;
-		}
-	}
 	&_detailview
 	{
 		padding-top: 4px;

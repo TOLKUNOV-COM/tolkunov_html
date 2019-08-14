@@ -3,7 +3,7 @@ $(function () {
         if (!$('.b-call-widget').hasClass('b-call-widget__collapsed')) {
             setTimeout(function () {
                 $('.b-call-widget__content').css('display', 'none');
-            }, 300);
+            }, 500);
         } else {
             $('.b-call-widget__content').css('display', 'block');
         }

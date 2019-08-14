@@ -6,32 +6,34 @@ block content
             h1.b-page__title 180 отзывов от клиентов
 
             .b-reviews
-                .b-reviews-filter.b-reviews__filter
-                    a.b-reviews-filter__item.b-reviews-filter__item_type_all.b-reviews-filter__item_active(href='#')
-                        span.b-reviews-filter__title Все
-                        span.b-reviews-filter__count 985
-                    a.b-reviews-filter__item.b-reviews-filter__item_type_video(href='#')
-                        span.b-reviews-filter__title Видеоотзывы
-                        span.b-reviews-filter__count 422
-                    a.b-reviews-filter__item.b-reviews-filter__item_type_mail(href='#')
-                        span.b-reviews-filter__title Рекомендации
-                        span.b-reviews-filter__count 191
-                    a.b-reviews-filter__item.b-reviews-filter__item_type_social(href='#')
-                        span.b-reviews-filter__title Соцсети
-                        span.b-reviews-filter__count 128
-                    a.b-reviews-filter__item.b-reviews-filter__item_type_fl(href='#')
-                        span.b-reviews-filter__title FL
-                        span.b-reviews-filter__count 266
-                    a.b-reviews-filter__item.b-reviews-filter__item_type_forums(href='#')
-                        span.b-reviews-filter__title Форумы
-                        span.b-reviews-filter__count 422
+                div
+                    .b-reviews-filter.b-reviews__filter.swiper-container
+                        .swiper-wrapper
+                            a.b-reviews-filter__item.b-reviews-filter__item_type_all.b-reviews-filter__item_active.swiper-slide(href='#')
+                                span.b-reviews-filter__title Все
+                                span.b-reviews-filter__count 985
+                            a.b-reviews-filter__item.b-reviews-filter__item_type_video.swiper-slide(href='#')
+                                span.b-reviews-filter__title Видеоотзывы
+                                span.b-reviews-filter__count 422
+                            a.b-reviews-filter__item.b-reviews-filter__item_type_mail.swiper-slide(href='#')
+                                span.b-reviews-filter__title Рекомендации
+                                span.b-reviews-filter__count 191
+                            a.b-reviews-filter__item.b-reviews-filter__item_type_social.swiper-slide(href='#')
+                                span.b-reviews-filter__title Соцсети
+                                span.b-reviews-filter__count 128
+                            a.b-reviews-filter__item.b-reviews-filter__item_type_fl.swiper-slide(href='#')
+                                span.b-reviews-filter__title FL
+                                span.b-reviews-filter__count 266
+                            a.b-reviews-filter__item.b-reviews-filter__item_type_forums.swiper-slide(href='#')
+                                span.b-reviews-filter__title Форумы
+                                span.b-reviews-filter__count 422
 
         .b-reviews__container
             .b-reviews__list
                 .b-reviews__item.emerge.b-reviews__item_type_video(data-effect="relax", data-origin="top", data-expose="true")
                     .b-reviews__header
                         a.b-reviews__type(href='#') Видеоотзывы
-                    .text-center: a.b-reviews__title(href='#') 1ДСКиКО
+                    .text-center: a.b-reviews__title(href='client.html') 1ДСКиКО
                     .b-reviews__content
                         .b-review.b-review_video
                             a.b-review__link(href='http://www.youtube.com/watch?v=opj24KnzrWo'): img.img-responsive(src='http://placehold.it/320x180')
@@ -41,7 +43,7 @@ block content
                 .b-reviews__item.emerge.b-reviews__item_type_mail(data-effect="relax", data-origin="top", data-expose="true")
                     .b-reviews__header
                         a.b-reviews__type(href='#') Рекомендательные письма
-                    .text-center: a.b-reviews__title(href='#') Газелькин
+                    .text-center: a.b-reviews__title(href='client.html') Газелькин
                     .b-reviews__content.b-reviews__content_type_image
                         .b-review.b-review_image
                             a.b-review__link(href='#review_1', data-url="http://placehold.it/196x264"): img.img-responsive(src='http://placehold.it/196x264')
@@ -52,7 +54,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Социальные сети
                         .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_fb
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                     .b-reviews__footer
@@ -62,7 +64,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Социальные сети
                         .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_vk
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                     .b-reviews__footer
@@ -72,7 +74,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Социальные сети
                         .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_tw
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                     .b-reviews__footer
@@ -82,7 +84,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Социальные сети
                         .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_instagram
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                     .b-reviews__footer
@@ -92,7 +94,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Социальные сети
                         .b-reviews__icon: .b-reviews__social-icon.b-reviews__social-icon_ok
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Являюсь постоянным клиентом вот уже несколько лет. По моему заказу сделано уже больше двух десятков различных баннеров, шапок для сайтов, фонов, кнопок и т.д. Легко находим общий язык и видение по очередному заказу. Всегда идет на встречу по любым доработкам и изменениям. Качество на высоте. Очень доволен сотрудничеством, всем рекомендую.
                     .b-reviews__footer
@@ -101,7 +103,7 @@ block content
                 .b-reviews__item.emerge.b-reviews__item_type_fl(data-effect="relax", data-origin="top", data-expose="true")
                     .b-reviews__header
                         a.b-reviews__type(href='#') Fl.ru
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Задание было выполнено! Качество радует! Рекомендую!
                     .b-reviews__footer
@@ -111,7 +113,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Форумы
                         .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_prcy
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
                     .b-reviews__footer
@@ -121,7 +123,7 @@ block content
                     .b-reviews__header
                         a.b-reviews__type(href='#') Форумы
                         .b-reviews__icon: .b-reviews__forum-icon.b-reviews__forum-icon_cypr
-                    .text-center: a.b-reviews__title(href='#') Exante
+                    .text-center: a.b-reviews__title(href='client.html') Exante
                     .b-reviews__content.b-reviews__content_type_text
                         p Регулярно заказываем баннеры. Цены, качество, сроки - все отлично :)
                     .b-reviews__footer

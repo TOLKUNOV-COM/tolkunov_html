@@ -40,19 +40,19 @@
 
 	&:before {
 		content: '';
-		width: 62px/2;
-		height: 62px/2;
+		width: 61px/2;
+		height: 67px/2;
 		//width: 35px;
 		//height: 35px;
 		position: absolute;
-		top: 29px/2;
+		top: 29px/2 - 1px;
 		left: 29px/2;
 		opacity: 0;
 		transform: rotate(-180deg);
 		transition: all 0.4s ease-out;
 
-		background: center center no-repeat url("../../assets/img/widget-icon.png");
-		background-size: 62px/2;
+		background: center center no-repeat url("../../assets/img/widget-icon.svg");
+		background-size: 61px/2 67px/2;
 	}
 
 	&:after {
@@ -78,12 +78,53 @@
 	}
 }
 
+.b-call-widget__link {
+	z-index: 100000;
+	width: 320px;
+
+	position: fixed;
+	right: 10px;
+	bottom: 90px;
+
+	max-width: ~"calc(100% - 20px)";
+
+	text-decoration: none;
+	padding: 19px 0;
+	text-align: center;
+
+	color: #ffffff;
+	font-size: 16px;
+	font-family: 'TTNorms', Arial, sans-serif;
+	font-weight: 600;
+	letter-spacing: 2.5px;
+	border-radius: 30px;
+	background-color: #acc000;
+	text-transform: uppercase;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.3s ease-in-out 0.2s, opacity 0.3s ease-in-out 0.2s;
+	box-shadow: 0px 10px 40px -5px rgba(0, 0, 0, 0.2);
+
+	&:hover, &:active, &:focus {
+		background-color: #ffffff;
+		color: #acc000;
+		text-decoration: none;
+	}
+
+	//transition: all 0.3s ease-out;
+	transform: translate3d(0px, 0px, 0px);
+	opacity: 1;
+}
+
+.b-call-widget__collapsed .b-call-widget__link {
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	transform: translate3d(0, 20px, 0);
+	opacity: 0;
+}
+
 .b-call-widget__content {
 	z-index: 100000;
-	width: 300px;
-	//width: 375px;
+	width: 320px;
 	height: 500px;
-	max-height: ~"calc(100% - 105px)";
+	max-height: ~"calc(100% - 105px - 55px - 20px)";
 	max-width: ~"calc(100% - 20px)";
 	overflow: hidden;
 
@@ -94,7 +135,7 @@
 	box-sizing: border-box;
 
 	position: fixed;
-	bottom: 90px;
+	bottom: 90px + 20px + 55px;
 	right: 10px;
 	transition: all 0.3s ease-out;
 	transform: translate3d(0px, 0px, 0px);
@@ -102,7 +143,8 @@
 }
 
 .b-call-widget__collapsed .b-call-widget__content {
-	transform: translate3d(0, 20px, 0);
+	transition: all 0.3s ease-out 0.2s;
+	transform: translate3d(0, 20px + 55px, 0);
 	opacity: 0;
 }
 
@@ -124,7 +166,4 @@
 	top: 0;
 	left: 0;
 	border: none;
-
-	//overflow: visible;
-	//-webkit-overflow-scrolling: touch;
 }

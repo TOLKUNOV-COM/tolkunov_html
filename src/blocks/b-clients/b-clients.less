@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins";
+@import "mymixins";
 
 .b-clients {
 	background: @body-muted-bg;
@@ -19,29 +20,41 @@
 	justify-content: center;
 }
 
+.b-clients__list_faded {
+	@count: 4;
+
+	max-height: 85px + (168px + 20px) * @count;
+	overflow: hidden;
+
+	@media (min-width: @screen-md-min) {
+		max-height: 85px + (168px + 40px) * @count;
+	}
+}
+
 .b-clients__item {
 	background: #ffffff;
 	border-radius: 10px;
 	box-shadow: 0 8px 48px fade(#161f6a, 10%);
-	margin: 20px;
-	min-width: 200px;
+	margin: 10px;
+	min-width: 150px;
 	overflow: hidden;
 
-	flex-basis: ~"calc(100% - 40px)";
+	flex-basis: ~"calc(50% - 20px)";
 
-	@media (min-width: 568px) {
-		flex-basis: ~"calc(50% - 40px)";
+	@media (min-width: @screen-md-min) {
+		margin: 20px;
+		flex-basis: ~"calc(100% / 3 - 40px)";
 	}
 
 	@media (min-width: @screen-lg-min) {
-		flex-basis: ~"calc(100% / 3 - 40px)";
+		flex-basis: ~"calc(100% / 4 - 40px)";
 	}
 
 	@media (min-width: @screen-xl-min) {
 		flex-basis: 200px;
 	}
 
-	padding: 22px 0 30px;
+	padding: 22px 10px 30px;
 
 	text-align: center;
 	color: @text-color;
@@ -84,31 +97,59 @@
 
 .b-clients__title {
 	color: @block-link-color;
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 34px;
 	font-weight: bold;
 	border-bottom: 2px solid @block-link-border-color;
 	display: inline-block;
 	white-space: nowrap;
 	overflow: hidden;
-	margin: 0 10px;
+	//margin: 0 10px;
 
 	transition: all .2s;
 }
 
 .b-clients__content {
 	height: 50px;
-	margin-top: 26px;
+	margin: 26px auto 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	max-width: 150px;
 }
 
 .b-clients__image {
 	max-height: 50px !important;
-	max-width: 150px !important;
+	//max-width: 150px !important;
+	max-width: 100%;
 }
 
 .b-clients__image:not(.b-clients__image_empty) {
 	filter: grayscale(1);
+}
+
+/* Clients on splash page */
+.b-clients__container {
+	background: @body-muted-bg;
+	padding: 113px 0 50px;
+
+	margin-top: 20px;
+
+	@media (min-width: @screen-sm-min) {
+		margin-top: 0;
+	}
+}
+
+.b-clients__head {
+	.my-heading-h2();
+
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 45px;
+}
+
+.b-clients__lead {
+	.my-heading-lead();
+
+	margin: 0;
 }

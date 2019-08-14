@@ -2,53 +2,57 @@ extends ./layouts/layout.jade
 
 block content
     .b-page
-        .b-filter
-            a.b-filter__item(href='portfolio_type_1.html'): span.b-filter__title Все
-            a.b-filter__item(href='#'): span.b-filter__title По типу
-            a.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_3.html'): span.b-filter__title По темам
-            a.b-filter__item.b-filter__item_with-arrow.b-filter__item_active(href='portfolio_type_4.html'): span.b-filter__title По размерам
-            a.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_5.html'): span.b-filter__title По стилям
-            a.b-filter__item.b-filter__item_with-arrow(href='#'): span.b-filter__title По площадкам
-        .b-size-filter
-            .b-size-filter__list
-                a.b-size-filter__item.b-size-filter__item_active(href='#') 240#[span.b-size-filter__divider x]400
-                a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
-                a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
-                a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
-                a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
-                a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
-                a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
-                a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
-                a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
-                a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
-                a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
-                a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
-                a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
-                a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
-                a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
-                a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
-                a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
-                a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
-                a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
-                a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
-                a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
-                a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
-                a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
-                a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
-                a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
-                a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
-                a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
-                a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
-                a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
-                a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
-                a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
-                a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
-            a.b-size-filter__toggle.hidden(href='#')
-                span.b-size-filter__toggle-text ПОКАЗАТЬ ВСЕ
-                span.b-size-filter__toggle-text.hidden Свернуть
+        .container
+            div
+                .b-filter.swiper-container
+                    .swiper-wrapper
+                        a.swiper-slide.b-filter__item(href='portfolio_type_1.html'): span.b-filter__title Все
+                        a.swiper-slide.b-filter__item(href='#'): span.b-filter__title По типу
+                        a.swiper-slide.b-filter__item.b-filter__item_with-arrow(href='#'): span.b-filter__title По темам
+                        a.swiper-slide.b-filter__item.b-filter__item_with-arrow.b-filter__item_active(href='portfolio_type_4.html'): span.b-filter__title По размерам
+                        a.swiper-slide.b-filter__item.b-filter__item_with-arrow(href='portfolio_type_5.html'): span.b-filter__title По стилям
+                        a.swiper-slide.b-filter__item.b-filter__item_with-arrow(href='#'): span.b-filter__title По площадкам
+            .b-size-filter
+                .b-size-filter__list
+                    a.b-size-filter__item.b-size-filter__item_active(href='#') 240#[span.b-size-filter__divider x]400
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 200#[span.b-size-filter__divider x]300
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                    a.b-size-filter__item(href='#') 1000#[span.b-size-filter__divider x]1000
+                    a.b-size-filter__item(href='#') 1200#[span.b-size-filter__divider x]90
+                a.b-size-filter__toggle.hidden(href='#')
+                    span.b-size-filter__toggle-text ПОКАЗАТЬ ВСЕ
+                    span.b-size-filter__toggle-text.hidden Свернуть
 
         .b-portfolio
-            h5.b-portfolio__header Баннеры размером 240x400 пикселей
+            .container
+                h5.b-portfolio__header Баннеры размером 240x400 пикселей
 
             .b-portfolio__list
                 - for (var i=0; i<12;++i)

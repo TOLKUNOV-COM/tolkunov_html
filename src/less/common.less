@@ -2,6 +2,34 @@
 @import "mixins";
 @import "mymixins";
 
+@font-face {
+	font-family: 'TTNorms';
+	src: url('https://static.tildacdn.com/tild6536-3730-4137-a461-306465346464/TTNorms-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: light;
+}
+
+@font-face {
+	font-family: 'TTNorms';
+	src: url('https://static.tildacdn.com/tild6437-3663-4266-a136-343137333361/ttnorms-regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TTNorms';
+	src: url('https://static.tildacdn.com/tild6135-3737-4262-b036-366666303237/ttnorms-bold.woff') format('woff');
+	font-weight: 600;
+	font-style: semi-bold;
+}
+
+@font-face {
+	font-family: 'TTNorms';
+	src: url('https://static.tildacdn.com/tild6533-3437-4333-a335-616231623962/TTNorms-ExtraBold.woff') format('woff');
+	font-weight: 700;
+	font-style: bold;
+}
+
 .browserupgrade {
 	margin: 0 0 0.2em;
 	background: #ccc;
@@ -13,7 +41,7 @@
 html, body {
 	//height: 100%;
 
-	//-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 }
 
 /* Template-specific stuff
@@ -92,7 +120,7 @@ body {
 * Generate .g-pt10, .g-pt20, .g-pb10 classes
 */
 
-.padding-top-loop (@i) when (@i > 0) {
+.padding-top-loop (@i) when (@i >= 0) {
 	.g-pt@{i}0 {
 		padding-top: @i * 10px !important;
 	}
@@ -209,8 +237,8 @@ body {
 	&:active.focus,
 	&:active:focus,
 	&:active:hover {
-		background-color: #161f6a; //#007cb5;
-		border-color: #161f6a; //#007cb5;
+		background-color: #276ff5;
+		border-color: #276ff5;
 	}
 }
 

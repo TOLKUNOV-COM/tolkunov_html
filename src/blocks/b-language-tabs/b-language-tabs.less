@@ -3,7 +3,7 @@
 @import "mymixins";
 
 .b-language-tabs {
-	text-align: center;
+	//text-align: center;
 	margin-bottom: 9px;
 	margin-top: 41px;
 }
@@ -18,25 +18,33 @@
 	@media (min-width: @screen-md-min) {
 		display: inline-block;
 		border-bottom: 2px solid @link-decoration-color;
-		padding: 0 40px;
+		//padding: 0 40px;
 	}
 }
 
 .b-language-tabs__item {
 	display: inline-block;
+	margin: 0 20px;
 
 	@media (min-width: @screen-md-min) {
 		float: left;
 	}
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
 }
 
 .b-language-tabs__link {
-	.my-heading-h3();
+	.my-heading-lead();
 	line-height: 36/24;
 
 	color: @block-link-color;
 	padding: 8px 0;
-	margin: 0 20px;
 	display: block;
 	position: relative;
 

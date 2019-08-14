@@ -4,44 +4,24 @@
 
 .b-page {
 	position: relative;
-
-	&__header {
-		margin-bottom: 80px;
-		@media (min-width: 768px) {
-			margin-bottom: 100px;
-		}
-	}
 }
 
 .b-page__title {
 	margin-top: 0;
 	margin-bottom: 45px;
-	text-align: center;
 	font-weight: bold;
 	line-height: 1.275;
 
 	.my-heading-h1();
-
-	&_index {
-		text-align: left !important;
-		color: rgb(37, 37, 37);
-		font-size: 68px;
-		line-height: 75px;
-
-		@media (max-width: @screen-sm-max) {
-			font-size: 50px;
-			line-height: 55px;
-		}
-	}
 }
 
 .b-page__title_small {
+	margin-top: 0;
 	.my-heading-h2();
 }
 
 .b-page__lead {
 	margin-bottom: 55px;
-	text-align: center;
 
 	.my-heading-lead();
 
