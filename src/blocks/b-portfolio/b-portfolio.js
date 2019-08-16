@@ -186,7 +186,7 @@ var loadPortfolio = function (cb) {
         // use element for option
         //columnWidth: '.grid-sizer',
         //percentPosition: true
-        columnWidth: $(window).width() < 768 ? 160 : 224,
+        //columnWidth: $(window).width() < 670 ? 160 : 224,
         //columnWidth: 224,
         //gutter: 20,
         //fitWidth: true,

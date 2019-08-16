@@ -39,7 +39,7 @@
 		max-width: @portfolio-width-small * 4;
 	}
 
-	@portfolio-width: 224px;
+	@portfolio-width: @portfolio-width-big;
 
 	@media (min-width: @portfolio-breakpoint) {
 		max-width: @portfolio-width * 3;
@@ -281,10 +281,9 @@ html.videoautoplay .b-portfolio__video {
 }
 
 .b-portfolio__title {
-	font-weight: bold;
-
 	.my-heading-h3();
 	line-height: 24/22;
+	font-weight: bold;
 
 	word-wrap: break-word;
 	letter-spacing: 0;
