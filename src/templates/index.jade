@@ -163,8 +163,9 @@ block content
 
                 p.b-reviews__lead Возможно они расскажут о нашей работе что-то более важное и близкое вам
 
-            .b-reviews__list
+            .b-reviews__list.b-reviews__list_faded
                 .b-reviews__item.b-reviews__item_type_video
+                    .b-reviews__gutter
                     .b-reviews__header
                         a.b-reviews__type(href='#') Видеоотзывы
                     .text-center: a.b-reviews__title(href='client.html') 1ДСКиКО
@@ -275,7 +276,7 @@ block content
 
             .container-fluid.g-mb50
                 .b-clients__list.b-clients__list_faded
-                    - for (var i=0; i<4;++i)
+                    - for (var i=0; i<6;++i)
                         a.b-clients__item(href='client.html')
                             span.b-clients__title Классика
                             .b-clients__content

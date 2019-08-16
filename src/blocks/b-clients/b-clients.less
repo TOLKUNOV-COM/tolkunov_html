@@ -21,12 +21,23 @@
 }
 
 .b-clients__list_faded {
-	@count: 4;
+	@count: 10;
 
 	max-height: 85px + (168px + 20px) * @count;
 	overflow: hidden;
 
+	@media (min-width: @screen-sm-min) {
+		@count: 6;
+		max-height: 85px + (168px + 20px) * @count;
+	}
+
 	@media (min-width: @screen-md-min) {
+		@count: 5;
+		max-height: 85px + (168px + 40px) * @count;
+	}
+
+	@media (min-width: @screen-lg-min) {
+		@count: 4;
 		max-height: 85px + (168px + 40px) * @count;
 	}
 }

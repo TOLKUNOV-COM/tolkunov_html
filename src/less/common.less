@@ -412,3 +412,18 @@ body {
 html.smil #fancybox-loading div {
 	background-image: url("../../assets/img/load.svg");
 }
+
+.container, .container-fluid {
+	@media (max-width: @screen-xs-max) {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+}
+
+.swiper-wrapper {
+	@media (min-width: @screen-lg-min) {
+		display: block;
+		transform: none !important;
+	}
+}

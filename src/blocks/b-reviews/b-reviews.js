@@ -2,8 +2,10 @@ var loadReviews = function (cb) {
     function initMasonry(cb) {
         var $grid = $('.b-reviews__list').masonry({
             itemSelector: '.b-reviews__item',
-            columnWidth: 320,
-            gutter: 45,
+            columnWidth: '.b-reviews__item',
+            percentPosition: false,
+            gutter: '.b-reviews__gutter',
+            //gutter: 45,
             fitWidth: true,
             // no transitions
             transitionDuration: 0,

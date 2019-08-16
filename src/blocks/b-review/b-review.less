@@ -29,6 +29,11 @@
 	background: left top no-repeat url("../../assets/img/reviews-list-type-mail-center.png");
 	background-size: cover;
 	width: 278px;
+
+	@media (min-width: 568px) and (max-width: @screen-sm-max) {
+		width: 278px - 50px;
+	}
+
 	padding: 0 56px 0 32px;
 	margin: 35px 0 50px 32px;
 
@@ -41,6 +46,12 @@
 		background: left top no-repeat url("../../assets/img/reviews-list-type-mail-top.png");
 		background-size: 278px 35px;
 		width: 278px;
+
+		@media (min-width: 568px) and (max-width: @screen-sm-max) {
+			background-size: (278px - 50px) 35px;
+			width: 278px - 50px;
+		}
+
 		height: 35px;
 
 		content: '';
@@ -52,6 +63,12 @@
 		background: left top no-repeat url("../../assets/img/reviews-list-type-mail-bottom.png");
 		background-size: 278px 60px;
 		width: 278px;
+
+		@media (min-width: 568px) and (max-width: @screen-sm-max) {
+			background-size: (278px - 50px) 60px;
+			width: 278px - 50px;
+		}
+
 		height: 60px;
 
 		content: '';
