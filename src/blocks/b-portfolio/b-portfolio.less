@@ -18,6 +18,10 @@
 	.my-heading-h2();
 }
 
+.fancybox-inner .b-portfolio__header_small {
+	.my-heading-h2-small();
+}
+
 .b-portfolio__filter {
 }
 
@@ -70,7 +74,22 @@
 .fancybox-inner .b-portfolio__list {
 	@portfolio-width: 224px;
 
-	max-width: @portfolio-width * 4;
+	max-width: @portfolio-width * 5;
+	width: @portfolio-width * 5;
+
+	margin-left: -10px;
+	margin-right: 0;
+
+	&:after {
+		left: auto;
+		right: 110px;
+		height: auto;
+
+		width: 150px;
+		top: 0;
+
+		background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .75) 50%, rgba(255, 255, 255, 0) 100%);
+	}
 }
 
 .portfolio-width-loop(10);

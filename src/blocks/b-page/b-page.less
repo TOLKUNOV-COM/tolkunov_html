@@ -18,14 +18,20 @@
 	margin-top: 0;
 	margin-bottom: 45px;
 	font-weight: bold;
-	line-height: 1.275;
 
 	.my-heading-h1();
+
+	word-break: break-word;
+	hyphens: auto;
 }
 
 .b-page__title_small {
 	margin-top: 0;
 	.my-heading-h2();
+}
+
+.fancybox-inner .b-page__title_small {
+	.my-heading-h2-small();
 }
 
 .b-page__lead {
@@ -40,23 +46,22 @@
 
 .b-page__link {
 	.my-default-link();
-	border-bottom-width: 4px;
 
 	position: relative;
 	top: 0;
 	transition: all .2s;
 
+	color: @btn-info-bg;
+
+	border-bottom-width: 4px;
+	border-color: transparent;
+
 	&:hover, &:active, &:focus {
 		top: -5px;
 		padding-bottom: 5px;
+		color: #276ff5;
+		border-color: transparent;
 	}
-}
-
-.b-page__sub-title {
-	.my-heading-h1();
-
-	text-align: center;
-	margin-top: -7px - 22px + 10px;
 }
 
 .b-page__anchor {
