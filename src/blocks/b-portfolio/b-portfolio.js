@@ -77,7 +77,7 @@ $(function () {
             distance = $(window).width();
 
         if (effect === 'elastic') {
-            endPos[direction === 'down' || direction === 'up' ? 'top' : 'left'] = ( direction === 'up' || direction === 'left' ? '-' : '+' ) + '=' + distance + 'px';
+            endPos[direction === 'down' || direction === 'up' ? 'top' : 'left'] = (direction === 'up' || direction === 'left' ? '-' : '+') + '=' + distance + 'px';
         }
 
         previous.wrap.animate(endPos, {
@@ -181,30 +181,32 @@ $(function () {
 });
 
 var loadPortfolio = function (cb) {
-    var $grid = $('.b-portfolio__list').packery({
-        itemSelector: '.b-portfolio__item',
-        // use element for option
-        //columnWidth: '.grid-sizer',
-        //percentPosition: true
-        //columnWidth: $(window).width() < 670 ? 160 : 224,
-        //columnWidth: 224,
-        //gutter: 20,
-        //fitWidth: true,
-        // no transitions
-        // no transitions
-        stagger: 0,
-        // no transitions
-        transitionDuration: 0,
-        initLayout: false
-    });
+    $('.b-portfolio__list').each(function () {
+        var $grid = $(this).packery({
+            itemSelector: '.b-portfolio__item',
+            horizontal: $(this).hasClass('b-portfolio__list_horizontal'),
+            // use element for option
+            //columnWidth: '.grid-sizer',
+            //percentPosition: true
+            //columnWidth: $(window).width() < 670 ? 160 : 224,
+            //columnWidth: 224,
+            //gutter: 20,
+            //fitWidth: true,
+            // no transitions
+            stagger: 0,
+            // no transitions
+            transitionDuration: 0,
+            initLayout: false
+        });
 
-    // bind event
-    $grid.packery('on', 'layoutComplete', function () {
-        cb && cb();
-    });
+        // bind event
+        $grid.packery('on', 'layoutComplete', function () {
+            cb && cb();
+        });
 
-    // trigger initial layout
-    $grid.packery();
+        // trigger initial layout
+        $grid.packery();
+    });
 
     $(".b-portfolio__list img").one("load", function () {
         $(this).closest('.b-portfolio__item').addClass('b-portfolio__item_loaded');
