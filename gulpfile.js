@@ -293,16 +293,16 @@ gulp.task('default', ['build'], function () {
 /**
  * Usage:
  * gulp block -b my-block-name
- * gulp block -b my-block-name --js
+ * gulp block -b my-block-name -js
  */
 gulp.task('block', function () {
     var argv = require('minimist')(process.argv.slice(2));
 
-    var blockName = (typeof(argv.b) == 'undefined') ? argv._[1] : argv.b;
-    var needCreateJsFile = argv.js;
+    var blockName = (typeof (argv.b) == 'undefined') ? argv._[1] : argv.b;
+    var needCreateJsFile = process.argv.indexOf('-js') !== -1;
 
     if (typeof blockName == 'undefined') {
-        return console.log('get me a block name!');
+        return console.error('get me a block name!');
     }
 
     blockName = 'b-' + blockName;
@@ -317,7 +317,7 @@ gulp.task('block', function () {
             "@import \"variables.less\";\n" +
             "@import \"mixins\";\n\n" +
             '.' + blockName + ' {\n\n}';
-        fs.writeFile(lessFilename, content);
+        fs.writeFileSync(lessFilename, content);
 
         open(lessFilename, "PhpStorm.exe");
     } else {
@@ -328,11 +328,11 @@ gulp.task('block', function () {
     if (needCreateJsFile) {
         if (!fs.existsSync(jsFilePath)) {
             var content = "$(function () {\n\n});";
-            fs.writeFile(jsFilePath, content);
+            fs.writeFileSync(jsFilePath, content);
 
-            console.log('JavaScript file created!');
+            console.log('js file created!');
         } else {
-            console.log('JavaScript file already exists! File not created.');
+            console.log('js file already exists! File not created.');
         }
     }
 
