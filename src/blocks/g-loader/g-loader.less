@@ -186,7 +186,24 @@ html.smil .g-loader__button-icon {
 	.g-loader__button-text {
 		display: none;
 	}
+
 	.g-loader__button-icon {
 		display: inline-block;
 	}
+}
+
+html.smil .g-preloader {
+	background-image: url("../../assets/img/load_white.svg");
+}
+
+.g-preloader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 170px;
+	height: 170px;
+	background: center center no-repeat url("../../assets/img/load.gif");
+	background-size: 170px;
 }
