@@ -1,5 +1,6 @@
-#portfolio_2(style='width:1080px;padding:80px 40px 0;background:#fff;border-radius:15px;')
-    h1.b-page__title.b-page__title_small #[a.b-page__link(href="#") Флеш-баннер] для #[a.b-page__link(href="client.html") Exante] “Лучший брокер” 2
+#portfolio_2.fancybox-container.container.b-portfolio-item__container.b-portfolio-item__container_with_background
+    .b-portfolio-item__head
+        h1.b-page__title.b-page__title_small #[a.b-page__link(href="#") Флеш-баннер] для #[a.b-page__link(href="client.html") Exante] “Лучший брокер” 2
 
     .b-language-tabs
         ul.b-language-tabs__list(role="tablist")
@@ -61,7 +62,7 @@
                 li При выборе отдыха необязательно кликать по кнопке "Рыбалка", достаточно подержать курсор над ней некоторое время, и баннер сам осуществит переход к следующей сцене. Это сделано для людей, которые опасаются кликать на интерактивные баннеры, т.к. научены горьким опытом обмана "лже-интерактивности".
                 li Глаза человечка на баннере следят за курсором - поводите его туда-сюда по баннеру.
                 li Баннер по итогу весит всего 46 кб, что позволяет его использоваться на большинстве рекламных площадок.
-        .b-portfolio.g-pb10
+        .b-portfolio.g-pb50
             h5.b-portfolio__header.b-portfolio__header_small Похожие баннеры
 
             .b-portfolio__list.b-portfolio__list_horizontal.b-portfolio__list_faded
@@ -96,6 +97,7 @@
                         span.b-portfolio__type.b-portfolio__type_html5 HTML5
                         p.b-portfolio__date 10.02.2010
             script.
+                loadPortfolio();
                 $('.b-portfolio__item').each(function(){
                     $(this).data('hold', Math.floor(Math.random() * 450) + 50);
                 });

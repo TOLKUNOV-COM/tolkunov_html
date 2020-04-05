@@ -74,23 +74,31 @@
 .fancybox-inner .b-portfolio__list {
 	@portfolio-width: 224px;
 
-	max-width: @portfolio-width * 5;
-	width: @portfolio-width * 5;
-
 	height: (@portfolio-width * 3) + 20px;
+
+	max-width: @portfolio-width * 4;
+	width: @portfolio-width * 4 !important;
 
 	margin-left: -10px;
 	margin-right: 0;
 
-	&:after {
-		left: auto;
-		right: 110px;
-		height: auto;
+	&.b-portfolio__list_horizontal {
+		max-width: @portfolio-width * 5;
+		width: @portfolio-width * 5 !important;
+	}
 
-		width: 150px;
-		top: 0;
+	&.b-portfolio__list_faded {
 
-		background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .75) 50%, rgba(255, 255, 255, 0) 100%);
+		&:after {
+			left: auto;
+			right: 110px;
+			height: auto;
+
+			width: 150px;
+			top: 0;
+
+			background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .75) 50%, rgba(255, 255, 255, 0) 100%);
+		}
 	}
 }
 

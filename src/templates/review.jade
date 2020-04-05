@@ -1,0 +1,62 @@
+extends ./layouts/layout.jade
+
+block content
+    .b-page
+        #review_1.fancybox-container
+            .container
+                h1.b-page__title.b-page__title_small.g-mb70 Отзыв от #[a.b-page__link(href="client.html") Parure] из соцсетей
+
+            .container
+                .b-review
+                    .b-review__video
+                        iframe(src="https://www.youtube.com/embed/opj24KnzrWo", frameborder="0", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+
+                    .b-review-image
+                        .b-review-image__container
+                            img.b-review-image__img(src='https://placehold.it/519x731', alt='Review image')
+
+                    .b-review__content
+                        .b-review__text
+                            p «Заказывали баннер для форума, остались довольны) Спасибо за проделанную работу.»
+                        a.b-review__link(href='#') оригинал отзыва
+                        .b-review__date 19 апреля 2020
+
+            .b-portfolio.g-pb80
+                .container
+                    h5.b-portfolio__header.b-portfolio__header_small Выполненные работы
+
+                .b-portfolio__list.b-portfolio__list_faded
+                    - for (var i=0; i<6;++i)
+                        a.b-portfolio__item(href='portfolio_item_1_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
+                            img.b-portfolio__image(src='assets/img/tmp/portfolio1.png')
+                            .b-portfolio__content
+                                p.b-portfolio__title Самоедлинноеназваниефирмы
+                                p.b-portfolio__category Строительство
+                            span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                            p.b-portfolio__date 10.02.2010
+                        a.b-portfolio__item(href='portfolio_item_2_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
+                            img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
+                            .b-portfolio__content
+                                p.b-portfolio__title Длинное название фирмы
+                                p.b-portfolio__category Строительство
+                            span.b-portfolio__type.b-portfolio__type_gif GIF
+                            p.b-portfolio__date 10.02.2010
+                        a.b-portfolio__item(href='portfolio_item_1_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
+                            img.b-portfolio__image(src='assets/img/tmp/portfolio3.png')
+                            .b-portfolio__content
+                                p.b-portfolio__title QIVI
+                                p.b-portfolio__category Динное название категории
+                            span.b-portfolio__type.b-portfolio__type_jpg JPG
+                            span.b-portfolio__like
+                            p.b-portfolio__date 10.02.2010
+                        a.b-portfolio__item(href='portfolio_item_2_ajax.html', rel='portfolio', data-effect="relax", data-origin="bottom", data-expose="true")
+                            img.b-portfolio__image(src='assets/img/tmp/portfolio2.png')
+                            .b-portfolio__content
+                                p.b-portfolio__title QIVI
+                                p.b-portfolio__category Строительство
+                            span.b-portfolio__type.b-portfolio__type_html5 HTML5
+                            p.b-portfolio__date 10.02.2010
+                script.
+                    $('.b-portfolio__item').each(function(){
+                        $(this).data('hold', Math.floor(Math.random() * 450) + 50);
+                    });

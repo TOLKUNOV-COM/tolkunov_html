@@ -38,15 +38,6 @@ $(function () {
     $('.b-portfolio-item__scroll').scrollbar();
 });
 
-function fixFancyboxArrows() {
-    $(".fancybox-overlay").on('scroll', function () {
-        $('.fancybox-nav span').css({top: ($('.fancybox-overlay').scrollTop() + 355) + 'px'});
-    });
-    $(document).on('scroll', function () {
-        $('.fancybox-nav span').css({top: ($(document).scrollTop() + 355) + 'px'});
-    });
-}
-
 var mySwiper;
 
 $(function () {

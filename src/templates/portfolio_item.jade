@@ -2,8 +2,14 @@ extends ./layouts/layout.jade
 
 block content
     .b-page
-        .container
-            h1.b-page__title.b-page__title_small #[a.b-page__link(href="#") Флеш-баннер] для #[a.b-page__link(href="client.html") Exante] «Экономическая игра»
+        #portfolio_1.fancybox-container.container.b-portfolio-item__container.b-portfolio-item__container_with_background
+            .b-portfolio-item__head
+                div.b-portfolio-item__background
+                    video.b-portfolio-item__bg#portfolio_video(src="https://tolkunov.com/uploads/1636950178.mp4", preload="auto", muted, playsinline, loop)
+                    .b-portfolio-item__shadow
+
+                h1.b-page__title.b-page__title_small #[a.b-page__link(href="#") Флеш-баннер] для #[a.b-page__link(href="client.html") Exante] «Экономическая игра»
+
 
             .b-language-tabs
                 ul.b-language-tabs__list(role="tablist")
@@ -86,6 +92,17 @@ block content
                         li При выборе отдыха необязательно кликать по кнопке "Рыбалка", достаточно подержать курсор над ней некоторое время, и баннер сам осуществит переход к следующей сцене. Это сделано для людей, которые опасаются кликать на интерактивные баннеры, т.к. научены горьким опытом обмана "лже-интерактивности".
                         li Глаза человечка на баннере следят за курсором - поводите его туда-сюда по баннеру.
                         li Баннер по итогу весит всего 46 кб, что позволяет его использоваться на большинстве рекламных площадок.
+
+        .container
+            h5.b-portfolio__header.b-portfolio__header_small Отзыв от #[a.b-page__link(href="client.html") банка Точка]
+
+            .b-review
+                .b-review__content
+                    .b-review__text
+                        p «Заказывали баннер для форума, остались довольны) Спасибо за проделанную работу.»
+                    a.b-review__link(href='#') оригинал отзыва
+                    .b-review__date 19 апреля 2020
+
         .b-portfolio.g-pb80
             .container
                 h5.b-portfolio__header.b-portfolio__header_small Похожие баннеры
@@ -122,6 +139,7 @@ block content
                         span.b-portfolio__type.b-portfolio__type_html5 HTML5
                         p.b-portfolio__date 10.02.2010
             script.
+                loadPortfolio();
                 $('.b-portfolio__item').each(function(){
                     $(this).data('hold', Math.floor(Math.random() * 450) + 50);
                 });

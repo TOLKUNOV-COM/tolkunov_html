@@ -2,21 +2,75 @@
 @import "mixins";
 
 .b-review-image {
-	//background: left top repeat url("../../assets/img/reviews-list-type-mail-pattern.png");
-	//padding: 55px 71px 38px 90px;
-	//width: 900px;
-	//height: 1040px;
+	margin-bottom: 70px;
+}
+
+:root {
+	--frame-width: 1390;
+	--frame-height: 1853;
+
+	--frame-top-border: 193;
+	--frame-left-border: 175;
+	--frame-bottom-border: 196;
+	--frame-right-border: 176;
+
+	@media (max-width: @screen-xs-max) {
+		--container-width: ~"calc(100vw - 30px - 18px)";
+	}
+
+	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+		--container-width: 480px;
+	}
+
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+		--container-width: 640px;
+	}
+
+	@media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
+		--container-width: 960px;
+	}
+
+	@media (min-width: @screen-xl-min) {
+		--container-width: 1200px;
+	}
+
+	--pixel: 1px;
+
+	// container width - frame left - frame right
+	--real-frame-width: ~"calc(var(--container-width) * ( 1 - ((var(--frame-left-border) + var(--frame-right-border)) / var(--frame-width)) ))";
+	--real-frame-height: ~"calc(var(--real-frame-width) / var(--frame-width) * var(--frame-height))";
 }
 
 .b-review-image__container {
 	background: left top no-repeat url("../../assets/img/review-image-bg.png");
-	width: 765px;
-	height: 998px;
-	background-size: 765px 998px;
-	//width: 741px;
-	//height: 944px;
-	padding: 97px 159px 169px 88px;
-	//padding: 67px 83px 84px 66px;
+
+	width: ~"var(--real-frame-width)";
+	height: ~"var(--real-frame-height)";
+	background-size: ~"var(--real-frame-width)";
+
+	padding-left: ~"calc(var(--real-frame-width) * var(--frame-left-border) / var(--frame-width))";
+	padding-right: ~"calc(var(--real-frame-width) * var(--frame-right-border) / var(--frame-width))";
+
+	padding-top: ~"calc(var(--real-frame-height) * var(--frame-top-border) / var(--frame-height))";
+	padding-bottom: ~"calc(var(--real-frame-height) * var(--frame-bottom-border) / var(--frame-height))";
+
+	margin: 0 auto;
+	box-shadow: 0 30px 20px -20px rgba(0, 0, 0, 0.55);
+
+	@media (min-width: @screen-lg-min) {
+		width: ~"calc(var(--pixel) * var(--frame-width) / 2)";
+		height: ~"calc(var(--pixel) * var(--frame-height) / 2)";
+		padding-top: ~"calc(var(--pixel) * var(--frame-top-border) / 2)";
+		padding-right: ~"calc(var(--pixel) * var(--frame-right-border) / 2)";
+		padding-bottom: ~"calc(var(--pixel) * var(--frame-bottom-border) / 2)";
+		padding-left: ~"calc(var(--pixel) * var(--frame-left-border) / 2)";
+
+		background-size: ~"calc(var(--pixel) * var(--frame-width) / 2)";
+	}
+}
+
+.b-review-image__img {
+	max-width: 100%;
 }
 
 .b-review-image__img[data-rjs-processed=true][width="0"][height="0"] {

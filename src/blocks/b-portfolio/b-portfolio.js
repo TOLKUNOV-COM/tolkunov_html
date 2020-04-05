@@ -2,6 +2,25 @@ var portfolioBaseUrl = location.href;
 var portfolioBaseState = null;
 var needChangeState = true;
 
+const checkPortfolioBackground = function () {
+    // Find not loaded video in Portfolio item.
+    var video = $('.b-portfolio-item__container:not(.b-portfolio-item_ready) .b-portfolio-item__bg');
+
+    if (video.length) {
+        console.log('There is a video in Portfolio header. Show it when ready.');
+
+        video[0].addEventListener('canplaythrough', function () {
+            $('.b-portfolio-item__container').addClass('b-portfolio-item_ready');
+
+            $('.b-portfolio-item__background').fadeIn(300, function () {
+                video[0].play();
+            });
+        });
+    } else {
+        console.log('There is no video in Portfolio header.');
+    }
+};
+
 $(function () {
     var F = $.fancybox;
     var getScalar = function (orig, dim) {
@@ -21,7 +40,6 @@ $(function () {
 
         // Для того, чтобы не отображался горизонтальный скрол во время анимации. Нельзя задавать через css, т.к. на маленьких экранах не будет скрола, когда он нужен (ширина всплывающего окна ~1000px)
         $('.fancybox-lock .fancybox-overlay').css('overflow-x', 'hidden');
-        $('.fancybox-close').hide();
 
         var current = F.current,
             effect = current.nextEffect,
@@ -57,18 +75,15 @@ $(function () {
                 complete: function () {
                     $('.fancybox-lock .fancybox-overlay').css('overflow-x', 'auto');
                     F._afterZoomIn();
-                    $('.fancybox-close').show();
                 }
             });
         }
-    }
-
+    };
 
     $.fancybox.transitions.myOut = function () {
 
         // Для того, чтобы не отображался горизонтальный скрол во время анимации. Нельзя задавать через css, т.к. на маленьких экранах не будет скрола, когда он нужен (ширина всплывающего окна ~1000px)
         $('.fancybox-lock .fancybox-overlay').css('overflow-x', 'hidden');
-        $('.fancybox-close').hide();
 
         var previous = F.previous,
             effect = previous.prevEffect,
@@ -86,10 +101,9 @@ $(function () {
             complete: function () {
                 $('.fancybox-lock .fancybox-overlay').css('overflow-x', 'auto');
                 $(this).trigger('onReset').remove();
-                $('.fancybox-close').show();
             }
         });
-    }
+    };
 
     $('.b-portfolio__item').fancybox({
         type: 'ajax',
@@ -130,22 +144,24 @@ $(function () {
                 }
             }
             needChangeState = true;
+
+            checkPortfolioBackground();
         },
         afterShow: function () {
             if (typeof window.showIframe == "function") {
                 setTimeout(showIframe, 1);
             }
 
-            fixFancyboxArrows();
+            $('.fancybox-close').appendTo('.fancybox-overlay');
         },
         beforeClose: function () {
             var currentstate = history.state;
 
             console.log('beforeClose', currentstate, history);
 
-            if (previousTitle) {
-                document.title = previousTitle;
-                previousTitle = null;
+            if (window.previousTitle) {
+                document.title = window.previousTitle;
+                window.previousTitle = null;
             }
 
             if (currentstate && currentstate.action == 'portfolioItem' && needChangeState) {
@@ -165,17 +181,42 @@ $(function () {
         console.log('popstate', state, history);
         // back button pressed. close popup
         if (!state || state.action == 'popup') {
-            $.fancybox.close();
+            if ($.fancybox.isOpened) {
+                console.log("Fancybox opened. Let's close it.");
+                $.fancybox.close();
+            } else {
+                console.log('There is no fancybox opened. Nothing to close.');
+
+                return false;
+            }
         } else {
             // Forward button pressed, reopen popup
             if (state.action == 'portfolioItem') {
-                needChangeState = false;
+                window.needChangeState = false;
                 console.log('dont need state change');
-                $('a.b-portfolio__item[href=\"' + state.path + '\"]').trigger('click');
+
+                var link = $('a.b-portfolio__item[href=\"' + state.path + '\"]');
+
+                if (link.length) {
+                    link.trigger('click');
+                } else {
+                    console.error('!!! There is no with href "' + state.path + '". Need to navigate manually.');
+                }
             }
-            //$(state.modal).modal({
-            //    remote: window.location.href,
-            //});
+
+            // Forward button pressed, reopen popup
+            if (state.action == 'reviewItem') {
+                window.needChangeState = false;
+                console.log('dont need state change');
+
+                var link = $('a.b-reviews__item[href=\"' + state.path + '\"]');
+
+                if (link.length) {
+                    link.trigger('click');
+                } else {
+                    console.error('!!! There is no with href "' + state.path + '". Need to navigate manually.');
+                }
+            }
         }
     });
 });
@@ -217,4 +258,5 @@ var loadPortfolio = function (cb) {
 
 $(function () {
     loadPortfolio();
+    checkPortfolioBackground();
 });

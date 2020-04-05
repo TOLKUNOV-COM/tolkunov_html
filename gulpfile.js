@@ -262,6 +262,8 @@ gulp.task('watch', ['build'], function () {
         logConnections: true,
         ghostMode: false,
         reloadOnRestart: true,
+        // tunnel: "my-private-site",
+        // xip: true,
         // Don't show any notifications in the browser.
         notify: false
     }, function (err, server) {
