@@ -84,3 +84,89 @@
 		font-size: 12px;
 	}
 }
+
+.b-review__collapse {
+	transition: all .2s ease-in-out;
+	overflow: hidden;
+
+	&:not(.b-review__collapse__collapsed) + .b-review__toggle {
+		margin-top: 25px;
+
+		&:before {
+			opacity: 0;
+		}
+	}
+}
+
+.b-review__collapse__collapsed {
+	max-height: 400px !important;
+}
+
+// Toggle container
+.b-review__toggle {
+	display: block;
+	text-align: center;
+	margin-bottom: 42px;
+
+	position: relative;
+
+	@media (min-width: @screen-lg-min) {
+		margin-bottom: 10px;
+	}
+
+	&:before {
+		@gradient-height: 150px;
+
+		content: '';
+
+		position: absolute;
+		left: 0;
+		right: 0;
+
+		opacity: 1;
+
+		top: -@gradient-height;
+		height: @gradient-height;
+		background: linear-gradient(to top, @body-muted-bg 0%, fade(@body-muted-bg, 80%) 70%, fade(@body-muted-bg, 0%) 100%);
+	}
+}
+
+// Toggle button
+.b-review__button {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 16px 35px;
+	border-radius: 100px;
+	font-size: 16px;
+	line-height: 2;
+	background: #161f6a;
+	border-color: #161f6a;
+
+	&:hover, &:active, &:focus {
+		background: lighten(#161f6a, 5%) !important;
+		border-color: lighten(#161f6a, 5%) !important;
+	}
+
+	transition: all .2s;
+
+	@media (min-width: @screen-sm-min) {
+		padding: 16px 45px;
+	}
+
+	@media (min-width: @screen-md-min) {
+		padding: 18px 55px;
+		font-size: 18px;
+	}
+
+	@media (min-width: @screen-xl-min) {
+		font-size: 20px;
+	}
+
+	&.btn-info {
+		box-shadow: 0 10px 40px 10px rgba(40, 86, 246, 0.3);
+	}
+}

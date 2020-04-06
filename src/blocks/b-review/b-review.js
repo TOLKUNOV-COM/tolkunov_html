@@ -1,3 +1,40 @@
+const reviewToggler = function () {
+    const reviewTextMaxHeight = 400;
+
+    $('.b-review__collapse:not(.b-review__collapse__collapsed)').each(function () {
+        if ($(this).height() > reviewTextMaxHeight) {
+            $(this).addClass('b-review__collapse__collapsed');
+            $(this).next('.b-review__toggle').removeClass('hidden');
+        }
+    });
+
+    $('.b-review__button').on('click', function (e) {
+        e.preventDefault();
+
+        var collapser = $(this).closest('.b-review').find('.b-review__collapse');
+        var contentHeight = $(this).closest('.b-review').find('.b-review__text').height();
+
+        if (collapser.hasClass('b-review__collapse__collapsed')) {
+            collapser.css('max-height', contentHeight);
+
+            setTimeout(function () {
+                collapser.css('max-height', 'none');
+            }, 200);
+        } else {
+            collapser.css('max-height', collapser.find('.b-review__text').height());
+        }
+
+        setTimeout(function () {
+            collapser.toggleClass('b-review__collapse__collapsed');
+        }, 1);
+
+        // Toggle buttons after container slideDown.
+        setTimeout(function () {
+            collapser.next('.b-review__toggle').find('.b-review__button').toggleClass('hidden');
+        }, 200);
+    });
+};
+
 $(function () {
     $('.b-review_video .b-review__link').fancybox({
         openEffect: 'none',

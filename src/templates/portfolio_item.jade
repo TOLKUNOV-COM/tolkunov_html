@@ -49,10 +49,10 @@ block content
                                     img.b-portfolio-item__image.img-responsive(src='http://placehold.it/160x600', alt='')
                             #banner_language_ru_size_300_300.tab-pane(role="tabpanel")
                                 .b-portfolio-item__view
-                                    video.b-portfolio-item__video(preload='auto', controls, autoplay, loop, controlsList="nodownload", src="https://s1.2myshows.me:8443/12.monkeys/s01/12.Monkeys.S01E01.1080p.rus.LostFilm.TV.360p.mp4")
+                                    video.b-portfolio-item__video(preload='auto', controls, loop, controlsList="nodownload", src="https://s1.2myshows.me:8443/12.monkeys/s01/12.Monkeys.S01E01.1080p.rus.LostFilm.TV.360p.mp4")
                             #banner_language_ru_size_300_400.tab-pane(role="tabpanel")
                                 .b-portfolio-item__view
-                                    video.b-portfolio-item__video(preload='auto', controls, autoplay, loop, controlsList="nodownload", src="https://s1.2myshows.me:8443/12.monkeys/s01/12.Monkeys.S01E01.1080p.rus.LostFilm.TV.720p.mp4")
+                                    video.b-portfolio-item__video(preload='auto', controls, loop, controlsList="nodownload", src="https://s1.2myshows.me:8443/12.monkeys/s01/12.Monkeys.S01E01.1080p.rus.LostFilm.TV.720p.mp4")
                     #banner_language_en.tab-pane(role="tabpanel")
                         ul.b-size-tabs
                             li.b-size-tabs__item.active(role="presentation"): a.b-size-tabs__link(href='#banner_language_en_size_240_400', aria-controls="banner_language_en_size_240_400", role="tab", data-toggle="tab") 240#[span.b-size-tabs__divider x]400
@@ -98,8 +98,12 @@ block content
 
             .b-review
                 .b-review__content
-                    .b-review__text
-                        p «Заказывали баннер для форума, остались довольны) Спасибо за проделанную работу.»
+                    .b-review__collapse
+                        .b-review__text
+                            p Всем привет, меня зовут Вася Грешнев, я креативный директор компании Манго Страхование. Хочу рассказать о своем опыте сотрудничества, взаимодействия с Дмитрием Толкуновым. Мы молодая страховая, мы стартап, мы делаем страхование быстрым, простым и доступным для всех. В ноябре сейчас буквально запускаем тестовую плановую компанию, под которую мы разработали три концепции баннеров и вместе с Дмитрием буквально за полторы недели сделали какое-то колоссальное количество ресайзов по всей возможной сети, под программатик, под контекст. С Дмитрием понравилось безумно работать. Почему? Потому что все очень быстро, коммуникация происходит минута в минуту, ничего не ждешь, на все изменения, которых у нас миллион, и на все пересогласования, которые мы были вынуждены производить, Дима откликался очень быстро, оперативно. Поэтому сейчас, по прошествии меньше чем двух недель, мы запустили рекламную компанию, без задержек вышли и все модерации прошли без проблем и даже там было небольшое замечание по баннерам, которое было решено очень быстро, поэтому очень рекомендую работать с Димой, с его командой. По тому, как это в действительности все будет сделано в срок, все будет сделано качественно и за достаточно разумный бюджет. Вот. Манго Страхование. Дима, спасибо.
+                    .b-review__toggle.hidden
+                        a.btn.btn-info.b-review__button Показать отзыв
+                        a.btn.btn-info.b-review__button.hidden свернуть отзыв
                     a.b-review__link(href='#') оригинал отзыва
                     .b-review__date 19 апреля 2020
 
@@ -139,6 +143,7 @@ block content
                         span.b-portfolio__type.b-portfolio__type_html5 HTML5
                         p.b-portfolio__date 10.02.2010
             script.
+                reviewToggler();
                 loadPortfolio();
                 $('.b-portfolio__item').each(function(){
                     $(this).data('hold', Math.floor(Math.random() * 450) + 50);

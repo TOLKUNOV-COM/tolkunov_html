@@ -9,6 +9,7 @@ $(function () {
             $('.b-call-widget').addClass('b-call-widget_state_ready');
             $('.b-call-widget__content').css('display', 'none');
             $('.b-call-widget__overlay').css('display', 'none');
+            $('.b-call-widget__button').css('display', 'none');
         }, 1);
     });
 
@@ -24,7 +25,7 @@ $(function () {
                 $('.b-call-widget__content, .b-call-widget__overlay').css('display', 'none');
             }, 500);
         } else {
-            $('.b-call-widget__content, .b-call-widget__overlay').css('display', 'block');
+            $('.b-call-widget__content, .b-call-widget__overlay, .b-call-widget__button').css('display', 'block');
         }
 
         setTimeout(function () {
