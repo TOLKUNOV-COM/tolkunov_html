@@ -51,7 +51,7 @@
 .b-clients__item {
 	background: #ffffff;
 	border-radius: 10px;
-	box-shadow: 0 8px 48px fade(#161f6a, 10%);
+	box-shadow: 0 20px 30px fade(#161f6a, 5%);
 	margin: 5px;
 	min-width: 150px;
 
@@ -85,10 +85,10 @@
 	&:hover, &:active, &:focus {
 		text-decoration: none;
 		color: #1abc9c;
+		transform: translate(0, -8px) !important;
 
 		.b-clients__title {
-			color: @block-link-hover-color;
-			border-bottom-color: @block-link-hover-border-color;
+			//color: @block-link-hover-color;
 		}
 
 		.b-clients__image {
@@ -123,7 +123,7 @@
 	font-size: 20px;
 	line-height: 34px;
 	font-weight: bold;
-	border-bottom: 2px solid @block-link-border-color;
+	//border-bottom: 2px solid @block-link-border-color;
 	display: inline-block;
 	white-space: nowrap;
 	overflow: hidden;
