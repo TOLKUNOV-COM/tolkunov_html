@@ -1,6 +1,6 @@
 var loadOffers = function () {
     function initMasonry() {
-        $('.b-offers__list').masonry({
+        $('.b-offers__list').packery({
             itemSelector: '.b-offers__item',
             columnWidth: 320,
             gutter: 20,

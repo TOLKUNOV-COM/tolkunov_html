@@ -1,6 +1,6 @@
 $(function () {
     function initMasonry() {
-        $('.b-blog__list').masonry({
+        $('.b-blog__list').packery({
             itemSelector: '.b-blog__item',
             columnWidth: 320,
             gutter: 20,

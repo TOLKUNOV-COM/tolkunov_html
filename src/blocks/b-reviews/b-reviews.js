@@ -39,7 +39,7 @@ $(function () {
         },
         afterShow: function () {
             $('.fancybox-close').appendTo('.fancybox-overlay');
-            loadPortfolio(window.retinajs);
+            loadPortfolio();
         },
         beforeClose: function () {
             var currentstate = history.state;
@@ -64,25 +64,22 @@ $(function () {
 
 var loadReviews = function (cb) {
     function initMasonry(cb) {
-        var $grid = $('.b-reviews__list').masonry({
+        var $grid = $('.b-reviews__list').packery({
             itemSelector: '.b-reviews__item',
             columnWidth: '.b-reviews__item',
-            percentPosition: false,
             gutter: '.b-reviews__gutter',
-            //gutter: 45,
-            fitWidth: true,
             // no transitions
             transitionDuration: 0,
             initLayout: false
         });
 
         // bind event
-        $grid.masonry('on', 'layoutComplete', function () {
+        $grid.packery('on', 'layoutComplete', function () {
             cb && cb();
         });
 
         // trigger initial layout
-        $grid.masonry();
+        $grid.packery();
     }
 
     function loadSprite(src) {

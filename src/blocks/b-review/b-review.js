@@ -35,6 +35,8 @@ const reviewToggler = function () {
     });
 };
 
+window.reviewToggler = reviewToggler;
+
 $(function () {
     $('.b-review_video .b-review__link').fancybox({
         openEffect: 'none',
