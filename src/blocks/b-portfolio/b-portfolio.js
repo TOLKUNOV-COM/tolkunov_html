@@ -247,6 +247,12 @@ var loadPortfolio = function (cb) {
 
         // trigger initial layout
         $grid.packery();
+
+        if (Modernizr.videoautoplay == true) {
+            loadPortfolioListVideo();
+        } else {
+            document.dispatchEvent(new Event('portfolio_list_loaded'));
+        }
     });
 
     $(".b-portfolio__list img").one("load", function () {
@@ -255,6 +261,40 @@ var loadPortfolio = function (cb) {
         if (this.complete) $(this).trigger('load');
     });
 };
+
+var loadPortfolioListVideo = function () {
+    $('.js-portfolio-video').each(function () {
+        var src = $(this).data('src');
+
+        var $video = $('<video>')
+            .attr('src', src)
+            .attr('preload', 'auto')
+            .attr('playsinline', 'playsinline')
+            .addClass('b-portfolio__video');
+
+        $video[0].addEventListener('canplay', function () {
+            $video[0].preload = 'auto';
+            $video[0].muted = true;
+            $video[0].play();
+        });
+
+        $($video).insertAfter($(this));
+    });
+}
+
+var dcl = new Promise(function (resolve) {
+    Modernizr.on('videoautoplay', resolve);
+});
+
+var deviceready = new Promise(function (resolve) {
+    document.addEventListener("portfolio_list_loaded", resolve, false);
+})
+
+Promise.all([dcl, deviceready]).then(function () {
+    //both are ready
+    console.log('AUTOPLAY: ' + Modernizr.videoautoplay);
+    loadPortfolioListVideo();
+});
 
 $(function () {
     loadPortfolio();
