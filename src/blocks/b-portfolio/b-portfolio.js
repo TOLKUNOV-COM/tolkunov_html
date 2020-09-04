@@ -248,7 +248,7 @@ var loadPortfolio = function (cb) {
         // trigger initial layout
         $grid.packery();
 
-        if (Modernizr.videoautoplay == true) {
+        if (Modernizr.videoautoplay === true) {
             loadPortfolioListVideo();
         } else {
             document.dispatchEvent(new Event('portfolio_list_loaded'));
@@ -264,6 +264,11 @@ var loadPortfolio = function (cb) {
 
 var loadPortfolioListVideo = function () {
     $('.js-portfolio-video').each(function () {
+        // Check for already loaded
+        if ($(this).next('video').length) {
+            return false;
+        }
+
         var src = $(this).data('src');
 
         var $video = $('<video>')
@@ -275,6 +280,7 @@ var loadPortfolioListVideo = function () {
         $video[0].addEventListener('canplay', function () {
             $video[0].preload = 'auto';
             $video[0].muted = true;
+            $video[0].loop = true;
             $video[0].play();
         });
 
