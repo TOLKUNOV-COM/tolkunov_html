@@ -403,3 +403,11 @@ html.smil #fancybox-loading div {
 .scrollbar-light > .scroll-element {
 	background: @body-muted-bg;
 }
+
+.tab-content__responsive {
+	& > .tab-pane {
+		@media (min-width: @screen-lg-min) {
+			display: block;
+		}
+	}
+}

@@ -12,12 +12,15 @@ block content
 
                 .b-client__text.b-text
                     p На фармацевтическом рынке сеть аптек «Классика» существует с 1995 года. Это крупнейшая аптечная сеть на Урале, включающая более 180 аптек в 26 городах Челябинской и Свердловской областей. Аптеки находятся в Челябинске, Екатеринбурге, Тюмени и Магнитогорске. За эти 20 лет «Классика» прошла большой путь и приобрела имя, ставшее синонимом надежности и качества для людей по всему Уралу.
-            .b-language-tabs
+            .b-language-tabs.hidden-lg
                 ul.b-language-tabs__list(role="tablist")
                     li.b-language-tabs__item.active(role="presentation"): a.b-language-tabs__link(href='#portfolio', aria-controls="portfolio", role="tab", data-toggle="tab"): span.b-language-tabs__title Работы
                     li.b-language-tabs__item(role="presentation"): a.b-language-tabs__link(href='#reviews', aria-controls="reviews", role="tab", data-toggle="tab"): span.b-language-tabs__title Отзывы
 
-        .tab-content
+        .tab-content.tab-content__responsive
+            .container
+                h2.b-page__title.b-page__title_small.g-mt60.g-mb20.visible-lg Работы
+
             #portfolio.tab-pane.active(role="tabpanel")
                 .b-portfolio.g-mb100.g-mt40
                     .b-portfolio__list
@@ -58,6 +61,10 @@ block content
                                     p.b-portfolio__category Строительство
                                 span.b-portfolio__type.b-portfolio__type_story СТОРИС
                                 p.b-portfolio__date 10.02.2010
+
+            .container
+                h2.b-page__title.b-page__title_small.g-mt60.g-mb20.visible-lg Отзывы
+
             #reviews.tab-pane(role="tabpanel")
                 .b-reviews__container.b-reviews__container_background_white.g-pb90.g-mb20
                     .b-reviews__list
@@ -200,5 +207,13 @@ block content
                 $('.b-reviews__container').css('visibility', 'hidden');
                 loadReviews(function(){
                     $('.b-reviews__container').css('visibility', 'inherit');
+                });
+            });
+
+            $(window).on('resize', function () {
+                loadReviews(function () {
+                    if ($(window).width() >= 990) {
+                        $('.b-reviews__container').css('visibility', 'inherit');
+                    }
                 });
             });
