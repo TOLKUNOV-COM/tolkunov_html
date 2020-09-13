@@ -164,7 +164,7 @@ $(function () {
                 window.previousTitle = null;
             }
 
-            if (currentstate && currentstate.action == 'portfolioItem' && needChangeState) {
+            if (currentstate && currentstate.action === 'portfolioItem' && needChangeState) {
                 history.pushState(portfolioBaseState, document.title, portfolioBaseUrl);
             }
         }
@@ -180,7 +180,7 @@ $(function () {
 
         console.log('popstate', state, history);
         // back button pressed. close popup
-        if (!state || state.action == 'popup') {
+        if (!state || state.action === 'popup') {
             if ($.fancybox.isOpened) {
                 console.log("Fancybox opened. Let's close it.");
                 $.fancybox.close();
@@ -191,7 +191,7 @@ $(function () {
             }
         } else {
             // Forward button pressed, reopen popup
-            if (state.action == 'portfolioItem') {
+            if (state.action === 'portfolioItem') {
                 window.needChangeState = false;
                 console.log('dont need state change');
 
@@ -205,7 +205,7 @@ $(function () {
             }
 
             // Forward button pressed, reopen popup
-            if (state.action == 'reviewItem') {
+            if (state.action === 'reviewItem') {
                 window.needChangeState = false;
                 console.log('dont need state change');
 
@@ -286,15 +286,15 @@ var loadPortfolioListVideo = function () {
 
         $($video).insertAfter($(this));
     });
-}
+};
 
 var dcl = new Promise(function (resolve) {
     Modernizr.on('videoautoplay', resolve);
 });
 
 var deviceready = new Promise(function (resolve) {
-    document.addEventListener("portfolio_list_loaded", resolve, false);
-})
+    document.addEventListener('portfolio_list_loaded', resolve, false);
+});
 
 Promise.all([dcl, deviceready]).then(function () {
     //both are ready
