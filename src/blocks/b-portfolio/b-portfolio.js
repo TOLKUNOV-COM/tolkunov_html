@@ -248,11 +248,11 @@ var loadPortfolio = function (cb) {
         // trigger initial layout
         $grid.packery();
 
-        if (Modernizr.videoautoplay === true) {
-            loadPortfolioListVideo();
-        } else {
-            document.dispatchEvent(new Event('portfolio_list_loaded'));
-        }
+        // if (Modernizr.videoautoplay === true) {
+        loadPortfolioListVideo();
+        // } else {
+        //     document.dispatchEvent(new Event('portfolio_list_loaded'));
+        // }
     });
 
     $(".b-portfolio__list img").one("load", function () {
@@ -275,10 +275,11 @@ var loadPortfolioListVideo = function () {
             .attr('src', src)
             .attr('preload', 'auto')
             .attr('playsinline', 'playsinline')
-            .addClass('b-portfolio__video');
+            .addClass('b-portfolio__video')
+            .hide();
 
-        $video[0].addEventListener('canplay', function () {
-            $video[0].preload = 'auto';
+        $video[0].addEventListener('canplaythrough', function () {
+            $video.show();
             $video[0].muted = true;
             $video[0].loop = true;
             $video[0].play();
