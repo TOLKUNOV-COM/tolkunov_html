@@ -278,10 +278,15 @@ var loadPortfolioListVideo = function () {
             .addClass('b-portfolio__video')
             .hide();
 
+        $video[0].preload = 'auto';
+        $video[0].muted = true;
+        $video[0].loop = true;
+        $video[0].play();
+
         $video[0].addEventListener('canplaythrough', function () {
+            $video[0].pause();
+            $video[0].currentTime = 0;
             $video.show();
-            $video[0].muted = true;
-            $video[0].loop = true;
             $video[0].play();
         });
 
