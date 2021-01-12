@@ -283,12 +283,13 @@ var loadPortfolioListVideo = function () {
         $video[0].loop = true;
         $video[0].play();
 
-        $video[0].addEventListener('canplaythrough', function () {
-            $video[0].pause();
+        const onPlayed = function () {
             $video[0].currentTime = 0;
             $video.show();
-            $video[0].play();
-        });
+            $video[0].removeEventListener('canplaythrough', onPlayed);
+        };
+
+        $video[0].addEventListener('canplaythrough', onPlayed);
 
         $($video).insertAfter($(this));
     });
