@@ -1,0 +1,37 @@
+@import "variables.less";
+@import "mixins";
+
+.b-copy-button {
+    display: inline-block;
+    text-transform: uppercase;
+
+    border-bottom: 1px dashed #2F5BED;
+    cursor: pointer;
+
+    color: #2F5BED;
+
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    line-height: 20px;
+
+    position: relative;
+    //padding-left: 35px;
+
+    &:before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: -30px;
+        width: 23px;
+        height: 23px;
+
+        background: left top no-repeat url("../../assets/img/link-icon.svg");
+        background-size: 23px 23px;
+    }
+
+    &:hover, &:active, &:focus {
+        border-bottom-color: transparent;
+    }
+}
