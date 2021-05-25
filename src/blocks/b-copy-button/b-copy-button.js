@@ -6,7 +6,9 @@ $(function () {
         let $self = $(this);
 
         function copy() {
-            let input = $('<input type="text">').val(location.href);
+            let url = $self.data('url') ? $self.data('url') : location.href;
+
+            let input = $('<input type="text">').val(url);
 
             input.appendTo('body');
 
