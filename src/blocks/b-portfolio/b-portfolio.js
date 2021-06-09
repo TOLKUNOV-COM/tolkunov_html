@@ -248,11 +248,7 @@ var loadPortfolio = function (cb) {
         // trigger initial layout
         $grid.packery();
 
-        // if (Modernizr.videoautoplay === true) {
         loadPortfolioListVideo();
-        // } else {
-        //     document.dispatchEvent(new Event('portfolio_list_loaded'));
-        // }
     });
 
     $(".b-portfolio__list img").one("load", function () {
@@ -294,20 +290,6 @@ var loadPortfolioListVideo = function () {
         $($video).insertAfter($(this));
     });
 };
-
-var dcl = new Promise(function (resolve) {
-    Modernizr.on('videoautoplay', resolve);
-});
-
-var deviceready = new Promise(function (resolve) {
-    document.addEventListener('portfolio_list_loaded', resolve, false);
-});
-
-Promise.all([dcl, deviceready]).then(function () {
-    //both are ready
-    console.log('AUTOPLAY: ' + Modernizr.videoautoplay);
-    loadPortfolioListVideo();
-});
 
 $(function () {
     loadPortfolio();

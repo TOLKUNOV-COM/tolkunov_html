@@ -1,0 +1,26 @@
+extends ./layouts/layout.jade
+
+block content
+    .b-page
+        .b-cases
+            .container
+                h1.b-cases__header Кейсы
+
+            .b-cases__list
+                each i, index in (new Array(5))
+                    a.b-cases__item(href='#')
+                        .b-cases__cover
+                            .b-cases__media
+                                img.b-cases__image(src='http://placehold.it/900x400', alt='')
+
+                                if index % 2
+                                    span.js-cases-cover-video(data-src="assets/img/video_preview.mp4")
+
+                            .b-cases__bagde
+                                img.b-cases__client(src='http://placehold.it/100x50', alt='')
+
+                            .b-cases__tags
+                                span.b-cases__tag #ЯНДЕКС
+                                span.b-cases__tag #GOOGLE
+
+                        p.b-cases__title Баннеры для медийной рекламы на 5 площадках
