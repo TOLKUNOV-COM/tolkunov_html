@@ -47,6 +47,6 @@ var loadCasesListVideo = function () {
     });
 };
 
-$(function () {
+window.addEventListener('load', function () {
     loadCases();
 });

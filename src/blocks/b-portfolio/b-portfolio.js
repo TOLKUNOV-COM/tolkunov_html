@@ -291,7 +291,7 @@ var loadPortfolioListVideo = function () {
     });
 };
 
-$(function () {
+window.addEventListener('load', function () {
     loadPortfolio();
     checkPortfolioBackground();
 });
