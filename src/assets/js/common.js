@@ -57,15 +57,15 @@ $(function () {
 
 // Lazy loading
 window.lazyLoadingImages = function () {
-    var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+    let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 
-    const releaseLazyImage = function (lazyImage) {
+    let releaseLazyImage = function (lazyImage) {
         lazyImage.src = lazyImage.dataset.src;
         lazyImage.srcset = lazyImage.dataset.srcset;
         lazyImage.classList.remove("lazy");
     }
 
-    const releaseAllLazyImages = function () {
+    let releaseAllLazyImages = function () {
         console.log('release all lazy loading images');
         lazyImages.forEach(releaseLazyImage);
     }
@@ -87,7 +87,7 @@ window.lazyLoadingImages = function () {
 
         window.addEventListener('load', function () {
             setTimeout(() => {
-                const waitForVideos = function () {
+                let waitForVideos = function () {
                     return new Promise(resolve => {
                         let videos = document.getElementsByTagName('video');
                         let promises = [];

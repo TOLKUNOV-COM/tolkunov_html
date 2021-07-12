@@ -262,9 +262,9 @@ var loadPortfolio = function (cb) {
 var loadPortfolioListVideo = function () {
     $('.js-portfolio-video').each(function () {
         // Check for already loaded
-        if ($(this).next('video').length) {
-            return false;
-        }
+        // if ($(this).parent().find('video').length) {
+        //     return false;
+        // }
 
         var src = $(this).data('src');
 
@@ -289,6 +289,8 @@ var loadPortfolioListVideo = function () {
         $video[0].addEventListener('canplaythrough', onPlayed);
 
         $($video).insertAfter($(this));
+
+        $(this).remove();
     });
 };
 
