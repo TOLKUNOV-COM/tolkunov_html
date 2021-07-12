@@ -27,7 +27,7 @@ var loadClients = function (cb) {
         if (this.complete) $(this).trigger('load');
     });
 
-    lazyLoadingImages();
+    window.lazyLoadingImages();
 };
 
 $(function () {

@@ -248,8 +248,8 @@ var loadPortfolio = function (cb) {
         // trigger initial layout
         $grid.packery();
 
-        lazyLoadingImages();
         loadPortfolioListVideo();
+        window.lazyLoadingImages();
     });
 
     $(".b-portfolio__list img").one("load", function () {

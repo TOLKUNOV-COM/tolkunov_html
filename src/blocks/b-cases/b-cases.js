@@ -12,7 +12,7 @@ var loadCases = function (cb) {
     cb && cb();
 
     loadCasesListVideo();
-    lazyLoadingImages();
+    window.lazyLoadingImages();
 };
 
 var loadCasesListVideo = function () {

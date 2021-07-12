@@ -56,7 +56,7 @@ $(function () {
 });
 
 // Lazy loading
-const lazyLoadingImages = function () {
+window.lazyLoadingImages = function () {
     var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 
     const releaseLazyImage = function (lazyImage) {
@@ -112,4 +112,4 @@ const lazyLoadingImages = function () {
         releaseAllLazyImages();
     }
 }
-document.addEventListener("DOMContentLoaded", lazyLoadingImages);
+document.addEventListener("DOMContentLoaded", window.lazyLoadingImages);
