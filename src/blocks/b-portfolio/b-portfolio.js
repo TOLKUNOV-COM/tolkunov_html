@@ -248,6 +248,7 @@ var loadPortfolio = function (cb) {
         // trigger initial layout
         $grid.packery();
 
+        lazyLoadingImages();
         loadPortfolioListVideo();
     });
 

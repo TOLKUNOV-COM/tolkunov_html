@@ -20,6 +20,14 @@ var loadClients = function (cb) {
 
         cb && cb();
     });
+
+    $(".b-clients__list img").one("load", function () {
+        $(this).closest('.b-clients__item').addClass('b-clients__item_loaded');
+    }).each(function () {
+        if (this.complete) $(this).trigger('load');
+    });
+
+    lazyLoadingImages();
 };
 
 $(function () {

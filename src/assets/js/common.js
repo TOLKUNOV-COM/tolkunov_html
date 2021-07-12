@@ -1,9 +1,3 @@
-$.fn.preload = function () {
-    this.each(function () {
-        $('<img/>')[0].src = this;
-    });
-}
-
 $(function () {
     $('.js-fancybox-video').fancybox({
         openEffect: 'none',
@@ -60,3 +54,62 @@ $(function () {
         }
     }).trigger('resize');
 });
+
+// Lazy loading
+const lazyLoadingImages = function () {
+    var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+    const releaseLazyImage = function (lazyImage) {
+        lazyImage.src = lazyImage.dataset.src;
+        lazyImage.srcset = lazyImage.dataset.srcset;
+        lazyImage.classList.remove("lazy");
+    }
+
+    const releaseAllLazyImages = function () {
+        console.log('release all lazy loading images');
+        lazyImages.forEach(releaseLazyImage);
+    }
+
+    if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    releaseLazyImage(lazyImage);
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
+        });
+
+        lazyImages.forEach(function (lazyImage) {
+            lazyImageObserver.observe(lazyImage);
+        });
+
+        window.addEventListener('load', function () {
+            setTimeout(() => {
+                const waitForVideos = function () {
+                    return new Promise(resolve => {
+                        let videos = document.getElementsByTagName('video');
+                        let promises = [];
+
+                        if (videos.length === 0) {
+                            resolve();
+                        }
+
+                        for (let video of videos) {
+                            promises.push(video.canplaythrough);
+                        }
+
+                        Promise.all(promises).then(resolve);
+                    });
+                }
+
+                waitForVideos().then(releaseAllLazyImages);
+            }, 1);
+        });
+    } else {
+        // Possibly fall back to event handlers here
+        releaseAllLazyImages();
+    }
+}
+document.addEventListener("DOMContentLoaded", lazyLoadingImages);
