@@ -21,6 +21,77 @@ const checkPortfolioBackground = function () {
     }
 };
 
+const initPortfoilioFancybox = function () {
+    $('.b-portfolio__item').fancybox({
+        type: 'ajax',
+        //openEffect: 'fade',
+        //closeEffect: 'none',
+        //nextEffect: 'none',
+        //prevEffect: 'none',
+        nextMethod: 'myIn',
+        prevMethod: 'myOut',
+        padding: [0, 0, 0, 0],
+        margin: [45, 0, 100, 0],
+        fitToView: false,
+        beforeLoad: function () {
+            if ($(window).width() < 1080) {
+                var url = $(this.element).attr('href');
+
+                window.open(url, '_self');
+
+                return false;
+            }
+
+            return true;
+        },
+        beforeShow: function () {
+            var path = $.fancybox.current.href;
+
+            var state = {action: 'portfolioItem', path: path};
+            var currentState = history.state;
+
+            console.log('beforeShow', state, history);
+
+            // Change URL in browser
+            if (needChangeState) {
+                if ($($.fancybox.current.element).closest('.fancybox-inner').length) {
+                    history.replaceState(state, document.title, path);
+                } else {
+                    history.pushState(state, document.title, path);
+                }
+            }
+            needChangeState = true;
+
+            checkPortfolioBackground();
+        },
+        afterShow: function () {
+            if (typeof window.showIframe == "function") {
+                setTimeout(showIframe, 1);
+            }
+
+            $('.fancybox-close').appendTo('.fancybox-overlay');
+        },
+        beforeClose: function () {
+            var currentstate = history.state;
+
+            console.log('beforeClose', currentstate, history);
+
+            if (window.previousTitle) {
+                document.title = window.previousTitle;
+                window.previousTitle = null;
+            }
+
+            if (currentstate && currentstate.action === 'portfolioItem' && needChangeState) {
+                history.pushState(portfolioBaseState, document.title, portfolioBaseUrl);
+            }
+        }
+        //width: 1082
+        //tpl: {
+        //    image: '<div class="b-review-image"><div class="b-review-image__container"><img class="" src="{href}" alt="" /></div></div>'
+        //}
+    });
+}
+
 $(function () {
     var F = $.fancybox;
     var getScalar = function (orig, dim) {
@@ -105,74 +176,7 @@ $(function () {
         });
     };
 
-    $('.b-portfolio__item').fancybox({
-        type: 'ajax',
-        //openEffect: 'fade',
-        //closeEffect: 'none',
-        //nextEffect: 'none',
-        //prevEffect: 'none',
-        nextMethod: 'myIn',
-        prevMethod: 'myOut',
-        padding: [0, 0, 0, 0],
-        margin: [45, 0, 100, 0],
-        fitToView: false,
-        beforeLoad: function () {
-            if ($(window).width() < 1080) {
-                var url = $(this.element).attr('href');
-
-                window.open(url, '_self');
-
-                return false;
-            }
-
-            return true;
-        },
-        beforeShow: function () {
-            var path = $.fancybox.current.href;
-
-            var state = {action: 'portfolioItem', path: path};
-            var currentState = history.state;
-
-            console.log('beforeShow', state, history);
-
-            // Change URL in browser
-            if (needChangeState) {
-                if ($($.fancybox.current.element).closest('.fancybox-inner').length) {
-                    history.replaceState(state, document.title, path);
-                } else {
-                    history.pushState(state, document.title, path);
-                }
-            }
-            needChangeState = true;
-
-            checkPortfolioBackground();
-        },
-        afterShow: function () {
-            if (typeof window.showIframe == "function") {
-                setTimeout(showIframe, 1);
-            }
-
-            $('.fancybox-close').appendTo('.fancybox-overlay');
-        },
-        beforeClose: function () {
-            var currentstate = history.state;
-
-            console.log('beforeClose', currentstate, history);
-
-            if (window.previousTitle) {
-                document.title = window.previousTitle;
-                window.previousTitle = null;
-            }
-
-            if (currentstate && currentstate.action === 'portfolioItem' && needChangeState) {
-                history.pushState(portfolioBaseState, document.title, portfolioBaseUrl);
-            }
-        }
-        //width: 1082
-        //tpl: {
-        //    image: '<div class="b-review-image"><div class="b-review-image__container"><img class="" src="{href}" alt="" /></div></div>'
-        //}
-    });
+    initPortfoilioFancybox();
 
     // Listen for history state changes
     window.addEventListener('popstate', function (e) {
