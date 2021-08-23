@@ -270,14 +270,24 @@ var loadPortfolioListVideo = function () {
         //     return false;
         // }
 
-        var src = $(this).data('src');
-
         var $video = $('<video>')
-            .attr('src', src)
             .attr('preload', 'auto')
             .attr('playsinline', 'playsinline')
             .addClass('b-portfolio__video')
             .hide();
+
+        let src = $(this).data('src');
+        let sources = $(this).data('sources');
+
+        if (src) {
+            $video.attr('src', src);
+        }
+
+        if (sources) {
+            for (let source of sources) {
+                $('<source>').attr(source).appendTo($video);
+            }
+        }
 
         $video[0].preload = 'auto';
         $video[0].muted = true;

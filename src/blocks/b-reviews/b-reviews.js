@@ -95,28 +95,30 @@ var loadReviews = function (cb) {
     var loaders = [];
 
     $('.b-reviews__list img').each(function () {
-        loaders.push(loadSprite($(this).attr('src')));
+        // loaders.push(loadSprite($(this).attr('src')));
+        loadSprite($(this).attr('src')).done(function () {
+            //$(this).closest('.b-reviews__item').fadeIn();
+            $('.b-reviews__item').addClass('b-reviews__item_loaded');
+
+            initMasonry(cb);
+        });
     });
 
-    $.when.apply(null, loaders).done(function () {
+    // $.when.apply(null, loaders);
+
+    $(".b-reviews__list img").one("load", function () {
         //$(this).closest('.b-reviews__item').fadeIn();
         $('.b-reviews__item').addClass('b-reviews__item_loaded');
 
-        initMasonry(cb);
+        initMasonry();
+    }).each(function () {
+        if (this.complete) $(this).trigger('load');
     });
 
-    //$(".b-reviews__list img").one("load", function () {
-    //    //$(this).closest('.b-reviews__item').fadeIn();
-    //
-    //    initMasonry();
-    //}).each(function () {
-    //    if (this.complete) $(this).trigger('load');
-    //});
-
-    if (!$('.b-reviews__list img').length) {
+    // if (!$('.b-reviews__list img').length) {
         $('.b-reviews__item').addClass('b-reviews__item_loaded');
         initMasonry(cb);
-    }
+    // }
 };
 
 $(function () {
