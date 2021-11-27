@@ -17,12 +17,12 @@
 
 
 @font-face {
-    font-family: 'craftwork_groteskheavy';
+    font-family: 'craftwork_grotesk';
     src: url('craftworkgrotesk-heavy-webfont.eot');
     src: url('craftworkgrotesk-heavy-webfont.eot?#iefix') format('embedded-opentype'),
          url('craftworkgrotesk-heavy-webfont.woff2') format('woff2'),
          url('craftworkgrotesk-heavy-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 
 }
@@ -45,7 +45,7 @@
 
 
 @font-face {
-    font-family: 'craftwork_groteskregular';
+    font-family: 'craftwork_grotesk';
     src: url('craftworkgrotesk-regular-webfont.eot');
     src: url('craftworkgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('craftworkgrotesk-regular-webfont.woff2') format('woff2'),
