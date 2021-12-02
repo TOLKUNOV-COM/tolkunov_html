@@ -3,12 +3,12 @@
 
 
 @font-face {
-    font-family: 'craftwork_groteskbold';
+    font-family: 'craftwork_grotesk';
     src: url('craftworkgrotesk-bold-webfont.eot');
     src: url('craftworkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('craftworkgrotesk-bold-webfont.woff2') format('woff2'),
          url('craftworkgrotesk-bold-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
 
 }
@@ -22,23 +22,20 @@
     src: url('craftworkgrotesk-heavy-webfont.eot?#iefix') format('embedded-opentype'),
          url('craftworkgrotesk-heavy-webfont.woff2') format('woff2'),
          url('craftworkgrotesk-heavy-webfont.woff') format('woff');
-    font-weight: bold;
+    font-weight: 800;
     font-style: normal;
-
 }
 
 
 
-
 @font-face {
-    font-family: 'craftwork_groteskmedium';
+    font-family: 'craftwork_grotesk';
     src: url('craftworkgrotesk-medium-webfont.eot');
     src: url('craftworkgrotesk-medium-webfont.eot?#iefix') format('embedded-opentype'),
          url('craftworkgrotesk-medium-webfont.woff2') format('woff2'),
          url('craftworkgrotesk-medium-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
-
 }
 
 
@@ -50,21 +47,19 @@
     src: url('craftworkgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('craftworkgrotesk-regular-webfont.woff2') format('woff2'),
          url('craftworkgrotesk-regular-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
-
 }
 
 
 
 
 @font-face {
-    font-family: 'craftwork_grotesksemi_bold';
+    font-family: 'craftwork_grotesk';
     src: url('craftworkgrotesk-semibold-webfont.eot');
     src: url('craftworkgrotesk-semibold-webfont.eot?#iefix') format('embedded-opentype'),
          url('craftworkgrotesk-semibold-webfont.woff2') format('woff2'),
          url('craftworkgrotesk-semibold-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 600;
     font-style: normal;
-
 }
