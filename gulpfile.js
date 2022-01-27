@@ -148,7 +148,7 @@ gulp.task('less', ['clean:css:my'], function () {
 gulp.task('js', ['clean:js'], function () {
     return gulp.src(paths.scripts)
         //.pipe(sourcemaps.init())
-        .pipe(uglify())
+        // .pipe(uglify())
         .on('error', log)
         .pipe(concat('script.js')) // Собираем все JS, кроме тех которые находятся в ./assets/js/vendor/**
         //.pipe(sourcemaps.write())

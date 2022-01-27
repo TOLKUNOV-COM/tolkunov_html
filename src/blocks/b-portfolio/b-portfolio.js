@@ -31,7 +31,8 @@ const initPortfoilioFancybox = function () {
         nextMethod: 'myIn',
         prevMethod: 'myOut',
         padding: [0, 0, 0, 0],
-        margin: [45, 0, 100, 0],
+        margin: [0, 0, 0, 0],
+        // margin: [45, 0, 100, 0],
         fitToView: false,
         beforeLoad: function () {
             if ($(window).width() < 1080) {
@@ -63,13 +64,25 @@ const initPortfoilioFancybox = function () {
             needChangeState = true;
 
             checkPortfolioBackground();
+
+            // Add custom overlay
+            if (!$('.b-fancybox-overlay').length) {
+                $('<div>')
+                    .addClass('b-fancybox-overlay')
+                    .hide()
+                    .appendTo('body')
+                    .fadeIn('fast')
+                    .click(() => {
+                        $.fancybox.close();
+                    });
+            }
         },
         afterShow: function () {
             if (typeof window.showIframe == "function") {
                 setTimeout(showIframe, 1);
             }
 
-            $('.fancybox-close').appendTo('.fancybox-overlay');
+            $('.fancybox-close').appendTo('.b-fancybox-overlay');
         },
         beforeClose: function () {
             var currentstate = history.state;
@@ -84,6 +97,11 @@ const initPortfoilioFancybox = function () {
             if (currentstate && currentstate.action === 'portfolioItem' && needChangeState) {
                 history.pushState(portfolioBaseState, document.title, portfolioBaseUrl);
             }
+
+            // Remove custom overlay
+            $('.b-fancybox-overlay').fadeOut('fast', function () {
+                $(this).remove();
+            });
         }
         //width: 1082
         //tpl: {

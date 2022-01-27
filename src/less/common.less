@@ -234,16 +234,16 @@ body {
 
 .fancybox-close {
     position: fixed;
-    right: 45px;
-    top: 40px;
-    width: 48px;
-    height: 48px;
+    right: 30px;
+    top: 20px;
+    width: 24px;
+    height: 24px;
     z-index: 8041;
 
-    background: center center no-repeat url("../../assets/img/slider-close.png");
-    background-size: 38px;
-    opacity: .5;
-    transition: all .1s;
+    background: center center no-repeat url("../../assets/img/close.svg");
+    background-size: 24px;
+    opacity: .6;
+    transition: all .2s;
 
     &:hover, &:active, &:focus {
         opacity: 1;
@@ -256,7 +256,7 @@ body {
     box-shadow: none !important;
     background-color: transparent;
     //background: #fff;
-    margin-bottom: 50px;
+    //margin-bottom: 50px;
 }
 
 .fancybox-nav {
@@ -384,9 +384,9 @@ html.smil #fancybox-loading div {
 }
 
 .fancybox-inner .container {
-    width: auto !important;
-    padding-left: 0;
-    padding-right: 0;
+    //width: auto !important;
+    //padding-left: 0;
+    //padding-right: 0;
 }
 
 .fancybox-inner .g-loader .container {
@@ -394,14 +394,102 @@ html.smil #fancybox-loading div {
 }
 
 .fancybox-inner .fancybox-container {
-    width: 1080px !important;
-    padding: 80px 40px 0;
+    width: ~"calc(100vw - 18px)" !important;
+    //width: 100% !important;
+    //width: 100vw !important;
+    //width: 1080px !important;
+    padding: 80px 0 0;
+    background: #fff;
+}
+
+.fancybox-overlay {
+    top: 64px;
+    //background: transparent;
     background: #fff;
     border-radius: 15px;
+}
 
-    &_with_bg {
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
+.b-fancybox-overlay {
+    background: fade(#161f6a, 80%);
+    cursor: pointer;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transition: all ease-in-out 0.2s;
+
+    &:hover, &:active, &:focus {
+        background: fade(#161f6a, 60%);
+
+        .fancybox-close {
+            opacity: 1;
+        }
+    }
+}
+
+@fancybox-nav-width: 150px;
+@portfolio-item-gutter: 40px;
+
+.b-fancybox-nav {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: @fancybox-nav-width;
+
+    background: #000;
+
+    cursor: pointer;
+
+    &:before {
+        content: '';
+        display: block;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 102px;
+        height: 102px;
+        transform: translate(-50%, -50%);
+
+        border-radius: 50%;
+        border: 1px solid #EBEFFE;
+
+        transition: all ease-in-out 0.2s;
+    }
+
+    &:hover, &:active, &:focus {
+        &:before {
+            border: 1px solid #2856F6;
+        }
+    }
+
+    &.b-fancybox-prev {
+        left: -@fancybox-nav-width;
+        background: center center no-repeat url("../../assets/img/arrow-left.svg");
+        background-size: 53px 26px;
+    }
+
+    &.b-fancybox-next {
+        right: -@fancybox-nav-width;
+        background: center center no-repeat url("../../assets/img/arrow-right.svg");
+        background-size: 53px 26px;
+    }
+}
+
+// @TODO: tmp
+.fancybox-nav {
+    display: none;
+}
+
+.b-arrows-container {
+    padding: 0 @fancybox-nav-width + @portfolio-item-gutter;
+
+    .container {
+        max-width: 100%;
     }
 }
 
