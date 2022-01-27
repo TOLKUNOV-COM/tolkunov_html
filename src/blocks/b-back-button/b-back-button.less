@@ -17,10 +17,31 @@
 
     padding-left: 39px;
 
-    background-image: url("../../assets/img/arrow-left.svg");
-    background-size: 30px 15px;
-    background-repeat: no-repeat;
-    background-position: 0 3px;
+    position: relative;
+
+    &:before {
+        content: '';
+
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 30px;
+        height: 15px;
+
+        background-color: #2856F6;
+
+        -webkit-mask-image: url("../../assets/img/arrow-left.svg");
+        mask-image: url("../../assets/img/arrow-left.svg");
+        mask-size: 30px 15px;
+        mask-repeat: no-repeat;
+        mask-position: 0 0;
+    }
+
+
+    //background-image: url("../../assets/img/arrow-left.svg");
+    //background-size: 30px 15px;
+    //background-repeat: no-repeat;
+    //background-position: 0 3px;
 }
 
 .b-back-button:hover, .b-back-button:active, .b-back-button:focus {

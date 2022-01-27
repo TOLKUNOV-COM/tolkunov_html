@@ -228,10 +228,6 @@ body {
     box-shadow: none;
 }
 
-.fancybox-overlay {
-    background: fade(#161f6a, 70%);
-}
-
 .fancybox-close {
     position: fixed;
     right: 30px;
@@ -383,6 +379,10 @@ html.smil #fancybox-loading div {
     }
 }
 
+.fancybox-inner {
+    overflow: hidden !important;
+}
+
 .fancybox-inner .container {
     //width: auto !important;
     //padding-left: 0;
@@ -394,7 +394,8 @@ html.smil #fancybox-loading div {
 }
 
 .fancybox-inner .fancybox-container {
-    width: ~"calc(100vw - 18px)" !important;
+    width: 100vw !important;
+    //width: ~"calc(100vw - 10px)" !important;
     //width: 100% !important;
     //width: 100vw !important;
     //width: 1080px !important;
@@ -404,9 +405,45 @@ html.smil #fancybox-loading div {
 
 .fancybox-overlay {
     top: 64px;
-    //background: transparent;
-    background: #fff;
+    background: transparent;
     border-radius: 15px;
+
+    &::-webkit-scrollbar {
+        background: transparent;
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #999 !important;
+        border-radius: 5px;
+    }
+
+    overflow: hidden !important;
+
+    .fancybox-container {
+        width: 100vw !important;
+
+        .b-arrows-container {
+            //margin-left: -10px;
+        }
+    }
+}
+
+.fancybox-overlay_bg_white {
+    background: #fff;
+
+    overflow: auto !important;
+    overflow-x: hidden !important;
+
+    .fancybox-container {
+        width: 100vw !important;
+
+        //width: ~"calc(100vw - 10px)" !important;
+
+        .b-arrows-container {
+            //margin-left: 0;
+        }
+    }
 }
 
 .b-fancybox-overlay {
@@ -420,6 +457,7 @@ html.smil #fancybox-loading div {
     height: 100%;
 
     transition: all ease-in-out 0.2s;
+    z-index: 8009;
 
     &:hover, &:active, &:focus {
         background: fade(#161f6a, 60%);

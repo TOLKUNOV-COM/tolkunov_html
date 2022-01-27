@@ -24,7 +24,7 @@ const checkPortfolioBackground = function () {
 const initPortfoilioFancybox = function () {
     $('.b-portfolio__item').fancybox({
         type: 'ajax',
-        //openEffect: 'fade',
+        openMethod: 'myOpen',
         //closeEffect: 'none',
         //nextEffect: 'none',
         //prevEffect: 'none',
@@ -124,6 +124,40 @@ $(function () {
         getValue = function (value, dim) {
             return getScalar(value, dim) + 'px';
         };
+
+    $.fancybox.transitions.myOpen = function () {
+
+        var current = F.current,
+            effect = current.nextEffect,
+            startPos = current.pos,
+            endPos = {opacity: 1},
+            direction = F.direction,
+            distance = $(window).height(),
+            field;
+
+        startPos.opacity = 1;
+
+        if (effect === 'elastic') {
+            field = 'top';
+
+            startPos[field] = getValue(getScalar(startPos[field]) + distance);
+            endPos[field] = '-=' + distance + 'px';
+        }
+
+        // Workaround for http://bugs.jquery.com/ticket/12273
+        if (effect === 'none') {
+            F._afterZoomIn();
+        } else {
+            F.wrap.css(startPos).animate(endPos, {
+                duration: current.nextSpeed,
+                easing: current.nextEasing,
+                complete: function () {
+                    $('.fancybox-overlay').addClass('fancybox-overlay_bg_white');
+                    F._afterZoomIn();
+                }
+            });
+        }
+    };
 
     $.fancybox.transitions.myIn = function () {
 

@@ -243,23 +243,29 @@
 
 .b-portfolio-item__container_with_background.b-portfolio-item_ready {
     .b-portfolio-item__head {
-        margin: -80px -40px -4px;
+        margin: -80px -190px -4px;
 
-        &:after {
+        //&:after {
+        //    position: absolute;
+        //    bottom: 4px;
+        //    height: 45px;
+        //    left: 0;
+        //    right: 0;
+        //
+        //    background: @body-muted-bg;
+        //
+        //    content: '';
+        //}
+
+        .b-back-button {
             position: absolute;
-            bottom: 4px;
-            height: 45px;
-            left: 0;
-            right: 0;
-
-            background: @body-muted-bg;
-
-            content: '';
+            top: 80px;
+            left: 40px;
         }
 
         .b-page__title {
             position: absolute;
-            top: 80px;
+            top: 80px + 21px + 50px;
             left: 40px;
             right: 40px;
             color: #ffffff;
@@ -268,14 +274,27 @@
         .b-page__link {
             color: #0aeaad;
         }
+
+        .container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
-    .b-language-tabs, .b-size-tabs {
-        background: @body-muted-bg;
-        margin-left: -40px;
-        margin-right: -40px;
-
-        padding-left: 40px;
-        padding-right: 40px;
+    .b-portfolio-item__background {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        overflow: hidden;
     }
+
+    //.b-language-tabs, .b-size-tabs {
+    //    background: @body-muted-bg;
+    //    margin-left: -40px;
+    //    margin-right: -40px;
+    //
+    //    padding-left: 40px;
+    //    padding-right: 40px;
+    //}
 }
