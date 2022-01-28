@@ -56,6 +56,7 @@
 
         width: 80px;
         height: 80px;
+        transform: translate(0, 100%);
         background-size: 40px auto;
 
         background-repeat: no-repeat;
@@ -73,25 +74,45 @@
 
         cursor: pointer;
         z-index: 1000;
+
+
+        width: 102px;
+        height: 102px;
+        transform: translate(0, 100%);
+
+        border-radius: 50%;
+        border: 1px solid #EBEFFE;
+
+        transition: border ease-in-out 0.2s;
+
+        &:hover, &:active, &:focus {
+            border: 1px solid #2856F6;
+        }
     }
 }
 
 .b-portfolio-preview__prev {
     left: 10px;
     background-image: url("../../assets/img/arrow-left.svg");
+
+    background: center center no-repeat url("../../assets/img/arrow-left.svg");
+    background-size: 53px 26px;
 }
 
 .b-portfolio-preview__next {
     right: 10px;
     background-image: url("../../assets/img/arrow-right.svg");
+
+    background: center center no-repeat url("../../assets/img/arrow-right.svg");
+    background-size: 53px 26px;
 }
 
 @media (min-width: 1550px) {
     .b-portfolio-preview__prev {
-        left: -130px;
+        left: -150px;
     }
 
     .b-portfolio-preview__next {
-        right: -130px;
+        right: -150px;
     }
 }

@@ -1,6 +1,14 @@
 window.initPortfolioPreview = function () {
     const fixArrowsTop = function () {
-        let top = $('.b-portfolio-item__head:visible').height() + parseInt($('.b-portfolio-item__head:visible').css('padding-bottom')) + $('.b-size-tabs:visible').height() + parseInt($('.b-size-tabs:visible').css('padding-top')) + parseInt($('.b-size-tabs:visible').css('padding-bottom')) + parseInt($('.tab-pane.active .tab-pane.active .b-portfolio-item__view').css('padding-top')) + ($('.tab-pane.active .tab-pane.active .b-portfolio-item__view').height() / 2) - ($('.b-portfolio-preview__next').height() / 2);
+        let top =
+            $('.b-portfolio-item__head:visible').height()
+            + parseInt($('.b-portfolio-item__head:visible').css('padding-bottom'))
+            + $('.b-size-tabs:visible').height()
+            + parseInt($('.b-size-tabs:visible').css('padding-top'))
+            + parseInt($('.b-size-tabs:visible').css('padding-bottom'))
+            + parseInt($('.tab-pane.active .b-portfolio-item__view .tab-pane.active').css('padding-top'))
+            + ($('.tab-pane.active .b-portfolio-item__view .tab-pane.active').height() / 2)
+            - ($('.b-portfolio-preview__next').height() / 2);
 
         $('.b-portfolio-preview__prev').css('top', top);
         $('.b-portfolio-preview__next').css('top', top);
@@ -76,7 +84,7 @@ window.initPortfolioPreview = function () {
 
     loadPortfolioPreview(portfolioPreviewUrls[portfolioPreviewUrlIndex]);
 
-    $('.b-portfolio-preview__next').on('click', function () {
+    window.portfolioPreviewNext = function () {
         if (portfolioPreviewUrlIndex + 1 >= portfolioPreviewUrls.length) {
             return;
         }
@@ -84,9 +92,9 @@ window.initPortfolioPreview = function () {
         portfolioPreviewUrlIndex++;
 
         loadPortfolioPreview(portfolioPreviewUrls[portfolioPreviewUrlIndex]);
-    });
+    };
 
-    $('.b-portfolio-preview__prev').on('click', function () {
+    window.portfolioPreviewPrev = function () {
         if (portfolioPreviewUrlIndex <= 0) {
             return;
         }
@@ -94,5 +102,8 @@ window.initPortfolioPreview = function () {
         portfolioPreviewUrlIndex--;
 
         loadPortfolioPreview(portfolioPreviewUrls[portfolioPreviewUrlIndex]);
-    });
+    };
+
+    $('.b-portfolio-preview__next').on('click', window.portfolioPreviewNext);
+    $('.b-portfolio-preview__prev').on('click', window.portfolioPreviewPrev);
 }
