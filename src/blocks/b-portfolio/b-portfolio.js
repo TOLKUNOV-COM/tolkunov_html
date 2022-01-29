@@ -50,7 +50,11 @@ const initPortfoilioFancybox = function () {
         // margin: [45, 0, 100, 0],
         fitToView: false,
         beforeLoad: function () {
-            if ($(window).width() < 1080) {
+            function isMobileDevice() {
+                return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+            }
+
+            if ($(window).width() < 1080 || isMobileDevice()) {
                 var url = $(this.element).attr('href');
 
                 window.open(url, '_self');
