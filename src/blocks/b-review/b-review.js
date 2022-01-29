@@ -1,5 +1,5 @@
 const reviewToggler = function () {
-    const reviewTextMaxHeight = 400;
+    const reviewTextMaxHeight = 600;
 
     $('.b-review__collapse:not(.b-review__collapse__collapsed)').each(function () {
         if ($(this).height() > reviewTextMaxHeight) {

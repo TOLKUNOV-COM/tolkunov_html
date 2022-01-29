@@ -9,13 +9,19 @@ const checkPortfolioBackground = function () {
     if (video.length) {
         console.log('There is a video in Portfolio header. Show it when ready.');
 
-        video[0].addEventListener('canplaythrough', function () {
+        let startPlaying = function () {
             $('.b-portfolio-item__container').addClass('b-portfolio-item_ready');
 
             $('.b-portfolio-item__background').fadeIn(300, function () {
                 video[0].play();
             });
-        });
+        };
+
+        if (video[0].readyState === 4) {
+            startPlaying();
+        } else {
+            video[0].addEventListener('canplaythrough', startPlaying);
+        }
     } else {
         console.log('There is no video in Portfolio header.');
     }
@@ -24,10 +30,19 @@ const checkPortfolioBackground = function () {
 const initPortfoilioFancybox = function () {
     $('.b-portfolio__item').fancybox({
         type: 'ajax',
-        openMethod: 'myOpen',
+        openEasing: 'easeOutExpo',
+        closeEasing: 'easeOutExpo',
+        nextEasing: 'easeInOutQuint',
+        prevEasing: 'easeInOutQuint',
+        openSpeed: 250,
+        closeSpeed: 250,
+        nextSpeed: 200,
+        prevSpeed: 200,
         //closeEffect: 'none',
         //nextEffect: 'none',
         //prevEffect: 'none',
+        openMethod: 'myOpen',
+        closeMethod: 'myClose',
         nextMethod: 'myIn',
         prevMethod: 'myOut',
         padding: [0, 0, 0, 0],
@@ -83,6 +98,7 @@ const initPortfoilioFancybox = function () {
             }
 
             $('.fancybox-close').appendTo('.b-fancybox-overlay');
+            $('.fancybox-close:eq(1)').remove();
         },
         beforeClose: function () {
             var currentstate = history.state;
@@ -97,12 +113,7 @@ const initPortfoilioFancybox = function () {
             if (currentstate && currentstate.action === 'portfolioItem' && needChangeState) {
                 history.pushState(portfolioBaseState, document.title, portfolioBaseUrl);
             }
-
-            // Remove custom overlay
-            $('.b-fancybox-overlay').fadeOut('fast', function () {
-                $(this).remove();
-            });
-        }
+        },
         //width: 1082
         //tpl: {
         //    image: '<div class="b-review-image"><div class="b-review-image__container"><img class="" src="{href}" alt="" /></div></div>'
@@ -132,7 +143,7 @@ $(function () {
             startPos = current.pos,
             endPos = {opacity: 1},
             direction = F.direction,
-            distance = $(window).height(),
+            distance = $(window).height() * 0.8,
             field;
 
         startPos.opacity = 1;
@@ -149,11 +160,55 @@ $(function () {
             F._afterZoomIn();
         } else {
             F.wrap.css(startPos).animate(endPos, {
-                duration: current.nextSpeed,
-                easing: current.nextEasing,
+                duration: current.openSpeed,
+                easing: current.openEasing,
                 complete: function () {
                     $('.fancybox-overlay').addClass('fancybox-overlay_bg_white');
                     F._afterZoomIn();
+                }
+            });
+        }
+    };
+
+    $.fancybox.transitions.myClose = function () {
+
+        var current = F.current,
+            effect = current.nextEffect,
+            startPos = current.pos,
+            endPos = {opacity: 1},
+            direction = F.direction,
+            distance = $(window).height(),
+            field;
+
+        startPos.opacity = 1;
+
+        if (effect === 'elastic') {
+            field = 'top';
+
+            startPos[field] = getValue(getScalar(startPos[field]));
+            endPos[field] = '+=' + distance + 'px';
+        }
+
+        // Workaround for http://bugs.jquery.com/ticket/12273
+        if (effect === 'none') {
+            F._afterZoomOut();
+        } else {
+            $('.fancybox-overlay').removeClass('fancybox-overlay_bg_white');
+
+            // Remove custom overlay
+            $('.b-fancybox-overlay').fadeOut({
+                duration: 50,
+                complete: function () {
+                    $(this).remove();
+                },
+                easing: 'easeOutExpo'
+            });
+
+            F.wrap.css(startPos).animate(endPos, {
+                duration: current.closeSpeed,
+                easing: current.closeEasing,
+                complete: function () {
+                    F._afterZoomOut();
                 }
             });
         }

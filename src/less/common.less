@@ -241,6 +241,8 @@ body {
     opacity: .6;
     transition: all .2s;
 
+    margin-right: 0 !important;
+
     &:hover, &:active, &:focus {
         opacity: 1;
     }
@@ -381,6 +383,7 @@ html.smil #fancybox-loading div {
 
 .fancybox-inner {
     overflow: hidden !important;
+    height: auto !important;
 }
 
 .fancybox-inner .container {
@@ -397,12 +400,16 @@ html.smil #fancybox-loading div {
     //width: 1080px !important;
     padding: 80px 0 0;
     background: #fff;
+    border-radius: 15px 15px 0 0;
 }
 
 .fancybox-overlay {
     top: 64px;
     background: transparent;
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
+
+    height: ~"calc(100vh - 64px)";
+    overflow: hidden !important;
 
     &::-webkit-scrollbar {
         background: transparent;
@@ -427,20 +434,25 @@ html.smil #fancybox-loading div {
     }
 }
 
+.fancybox-wrap {
+    height: ~"calc(100vh - 64px)" !important;
+    overflow: scroll !important;
+    overflow-x: hidden !important;
+
+    &::-webkit-scrollbar {
+        background: transparent;
+        width: 0;
+    }
+}
+
 .fancybox-overlay_bg_white {
-    //background: #fff;
+    background: #fff;
 
     overflow: auto !important;
     overflow-x: hidden !important;
 
     .fancybox-container {
         width: 100vw !important;
-
-        //width: ~"calc(100vw - 10px)" !important;
-
-        .b-arrows-container {
-            //margin-left: 0;
-        }
     }
 }
 
@@ -521,6 +533,11 @@ html.smil #fancybox-loading div {
 
 .b-arrows-container {
     padding: 0 @fancybox-nav-width + @portfolio-item-gutter;
+
+    .b-portfolio-item__container_with_background.b-portfolio-item_ready .b-portfolio-item__head {
+        margin-left: -190px;
+        margin-right: -190px;
+    }
 
     .container {
         max-width: 100%;
