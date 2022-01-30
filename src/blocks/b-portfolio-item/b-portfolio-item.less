@@ -250,14 +250,20 @@
 
 @media (min-width: @screen-lg) {
     .b-portfolio-item__container_with_background {
+        margin-top: 80px;
+
         @media (min-width: 1200px) {
-            margin-top: -40px;
+            margin-top: 40px;
         }
+    }
+
+    .fancybox-inner .b-portfolio-item__container_with_background {
+        margin-top: 0;
     }
 
     .b-portfolio-item__container_with_background.b-portfolio-item_ready {
         .b-portfolio-item__head {
-            margin: 0 0 -4px;
+            margin: -80px 0 -4px;
 
             .b-back-button {
                 position: absolute;
