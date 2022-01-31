@@ -4,13 +4,30 @@ var reviewsBaseState = null;
 $(function () {
     $('.b-reviews__item').fancybox({
         type: 'ajax',
+        openEasing: 'easeOutExpo',
+        closeEasing: 'easeOutExpo',
+        nextEasing: 'easeInOutQuint',
+        prevEasing: 'easeInOutQuint',
+        openSpeed: 250,
+        closeSpeed: 250,
+        nextSpeed: 200,
+        prevSpeed: 200,
+        //closeEffect: 'none',
+        //nextEffect: 'none',
+        //prevEffect: 'none',
+        openMethod: 'myOpen',
+        closeMethod: 'myClose',
         nextMethod: 'myIn',
         prevMethod: 'myOut',
         padding: [0, 0, 0, 0],
-        margin: [45, 0, 100, 0],
+        margin: [0, 0, 0, 0],
         fitToView: false,
         beforeLoad: function () {
-            if ($(window).width() < 1080) {
+            function isMobileDevice() {
+                return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+            }
+
+            if ($(window).width() < 1080 || isMobileDevice()) {
                 var url = $(this.element).attr('href');
 
                 window.open(url, '_self');
@@ -36,9 +53,22 @@ $(function () {
             }
 
             window.needChangeState = true;
+
+            // Add custom overlay
+            if (!$('.b-fancybox-overlay').length) {
+                $('<div>')
+                    .addClass('b-fancybox-overlay')
+                    .hide()
+                    .appendTo('body')
+                    .fadeIn('fast')
+                    .click(() => {
+                        $.fancybox.close();
+                    });
+            }
         },
         afterShow: function () {
-            $('.fancybox-close').appendTo('.fancybox-overlay');
+            $('.fancybox-close').appendTo('.b-fancybox-overlay');
+            $('.fancybox-close:eq(1)').remove();
             loadPortfolio();
         },
         beforeClose: function () {
@@ -116,8 +146,8 @@ var loadReviews = function (cb) {
     });
 
     // if (!$('.b-reviews__list img').length) {
-        $('.b-reviews__item').addClass('b-reviews__item_loaded');
-        initMasonry(cb);
+    $('.b-reviews__item').addClass('b-reviews__item_loaded');
+    initMasonry(cb);
     // }
 };
 

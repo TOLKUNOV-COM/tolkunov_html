@@ -3,186 +3,186 @@
 @import "mymixins";
 
 .b-review {
-
+    position: relative;
 }
 
 .b-review__video {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	height: 0;
-	margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    margin-bottom: 40px;
 
-	@media (min-width: @screen-sm-min) {
-		margin-bottom: 60px;
-	}
+    @media (min-width: @screen-sm-min) {
+        margin-bottom: 60px;
+    }
 
-	@media (min-width: @screen-md-min) {
-		margin-bottom: 70px;
-	}
+    @media (min-width: @screen-md-min) {
+        margin-bottom: 70px;
+    }
 
-	iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .b-review__content {
-	background: @body-muted-bg;
-	border-radius: 10px;
-	padding: 35px 20px 30px;
-	margin-bottom: 95px;
+    background: @body-muted-bg;
+    border-radius: 10px;
+    padding: 35px 20px 30px;
+    margin-bottom: 95px;
 
-	.clearfix();
+    .clearfix();
 
-	@media (min-width: @screen-md-min) {
-		padding: 55px 50px 60px;
-	}
+    @media (min-width: @screen-md-min) {
+        padding: 55px 50px 60px;
+    }
 }
 
 .b-review__text {
-	color: @text-color;
-	font-size: 28px;
-	line-height: 1.25;
-	margin-bottom: 42px;
+    color: @text-color;
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 42px;
 
-	@media (min-width: @screen-md-min) {
-		font-size: 32px;
-	}
+    @media (min-width: @screen-md-min) {
+        font-size: 32px;
+    }
 
-	@media (min-width: @screen-xl-min) {
-		font-size: 36px;
-	}
+    @media (min-width: @screen-xl-min) {
+        font-size: 36px;
+    }
 }
 
 .b-review__link {
-	float: left;
-	.my-default-link();
-	text-transform: uppercase;
-	font-size: 11px;
-	line-height: 1.5;
-	font-weight: 800;
+    float: left;
+    .my-default-link();
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 1.5;
+    font-weight: 800;
 
-	@media (min-width: @screen-xs-min) {
-		letter-spacing: .1em;
-		font-size: 12px;
-	}
+    @media (min-width: @screen-xs-min) {
+        letter-spacing: .1em;
+        font-size: 12px;
+    }
 
-	@media (min-width: @screen-sm-min) {
-		letter-spacing: .12em;
-		font-size: 16px;
-	}
+    @media (min-width: @screen-sm-min) {
+        letter-spacing: .12em;
+        font-size: 16px;
+    }
 }
 
 .b-review__date {
-	float: right;
-	color: @text-color;
-	font-weight: 800;
-	font-size: 11px;
-	line-height: 1.5;
-	text-transform: uppercase;
+    float: right;
+    color: @text-color;
+    font-weight: 800;
+    font-size: 11px;
+    line-height: 1.5;
+    text-transform: uppercase;
 
-	@media (min-width: @screen-xs-min) {
-		letter-spacing: .1em;
-		font-size: 12px;
-	}
+    @media (min-width: @screen-xs-min) {
+        letter-spacing: .1em;
+        font-size: 12px;
+    }
 
-	@media (min-width: @screen-sm-min) {
-		letter-spacing: .12em;
-		font-size: 16px;
-	}
+    @media (min-width: @screen-sm-min) {
+        letter-spacing: .12em;
+        font-size: 16px;
+    }
 }
 
 .b-review__collapse {
-	transition: all .2s ease-in-out;
-	overflow: hidden;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
 
-	&:not(.b-review__collapse__collapsed) + .b-review__toggle {
-		margin-top: 25px;
+    &:not(.b-review__collapse__collapsed) + .b-review__toggle {
+        margin-top: 25px;
 
-		&:before {
-			opacity: 0;
-		}
-	}
+        &:before {
+            opacity: 0;
+        }
+    }
 }
 
 .b-review__collapse__collapsed {
-	max-height: 400px !important;
+    max-height: 400px !important;
 }
 
 // Toggle container
 .b-review__toggle {
-	display: block;
-	text-align: center;
-	margin-bottom: 42px;
+    display: block;
+    text-align: center;
+    margin-bottom: 42px;
 
-	position: relative;
+    position: relative;
 
-	@media (min-width: @screen-lg-min) {
-		margin-bottom: 10px;
-	}
+    @media (min-width: @screen-lg-min) {
+        margin-bottom: 10px;
+    }
 
-	&:before {
-		@gradient-height: 150px;
+    &:before {
+        @gradient-height: 150px;
 
-		content: '';
+        content: '';
 
-		position: absolute;
-		left: 0;
-		right: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
 
-		opacity: 1;
+        opacity: 1;
 
-		top: -@gradient-height;
-		height: @gradient-height;
-		background: linear-gradient(to top, @body-muted-bg 0%, fade(@body-muted-bg, 80%) 70%, fade(@body-muted-bg, 0%) 100%);
-	}
+        top: -@gradient-height;
+        height: @gradient-height;
+        background: linear-gradient(to top, @body-muted-bg 0%, fade(@body-muted-bg, 80%) 70%, fade(@body-muted-bg, 0%) 100%);
+    }
 }
 
 // Toggle button
 .b-review__button {
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
-	font-weight: 800;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	padding: 16px 35px;
-	border-radius: 100px;
-	font-size: 16px;
-	line-height: 2;
-	background: #fff;
-	border-color: #fff;
-	color: #161f6a;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 16px 35px;
+    border-radius: 100px;
+    font-size: 16px;
+    line-height: 2;
+    background: #fff;
+    border-color: #fff;
+    color: #161f6a;
 
-	&:hover, &:active, &:focus {
-		background: #2856f6 !important;
-		border-color: #2856f6 !important;
-		color: #fff;
+    &:hover, &:active, &:focus {
+        background: #2856f6 !important;
+        border-color: #2856f6 !important;
+        color: #fff;
 
-		&.btn-info {
-			box-shadow: 0 10px 40px 10px fade(#2856f6, 30%);
-		}
-	}
+        &.btn-info {
+            box-shadow: 0 10px 40px 10px fade(#2856f6, 30%);
+        }
+    }
 
-	transition: all .2s;
+    transition: all .2s;
 
-	@media (min-width: @screen-sm-min) {
-		padding: 16px 45px;
-	}
+    @media (min-width: @screen-sm-min) {
+        padding: 16px 45px;
+    }
 
-	@media (min-width: @screen-md-min) {
-		padding: 18px 55px;
-		font-size: 18px;
-	}
+    @media (min-width: @screen-md-min) {
+        padding: 18px 55px;
+        font-size: 18px;
+    }
 
-	@media (min-width: @screen-xl-min) {
-		font-size: 20px;
-	}
+    @media (min-width: @screen-xl-min) {
+        font-size: 20px;
+    }
 
-	&.btn-info {
-		box-shadow: 0 20px 40px 10px fade(#161f6a, 5%);
-	}
+    &.btn-info {
+        box-shadow: 0 20px 40px 10px fade(#161f6a, 5%);
+    }
 }
