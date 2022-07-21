@@ -12,7 +12,7 @@ const loadPortfolioCarousel = function (url) {
 
             setTimeout(() => {
                 // loadPortfolio();
-                initPortfolioFancybox();
+                // initPortfolioFancybox();
                 loadPortfolioListVideo();
                 initPortfolioCarousel();
             }, 1);
