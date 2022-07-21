@@ -185,3 +185,38 @@
 
     background-image: url("../../assets/img/arrow-square-left.svg");
 }
+
+.b-portfolio-carousel__hand {
+    position: absolute;
+    top: -50px;
+    left: 425px;
+
+    width: 264px;
+    height: 284px;
+
+    background: transparent left top no-repeat url("../../assets/img/hand.png");
+    background-size: 264px 284px;
+
+    z-index: 150;
+    pointer-events: none;
+
+    animation: sbs-anim-rec399376259-1598962678582 2s infinite linear;
+    backface-visibility: hidden;
+}
+
+@keyframes sbs-anim-rec399376259-1598962678582 {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-30px) translateY(0px) rotate(0deg) scale(1, 1);
+        animation-timing-function: ease-in-out;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
+    }
+}
