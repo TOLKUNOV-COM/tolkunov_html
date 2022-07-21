@@ -21,7 +21,7 @@ const loadPortfolioCarousel = function (url) {
 }
 
 const initPortfolioCarousel = function () {
-    let swiper = new Swiper('.swiper-container', {
+    let swiper = new Swiper('.b-portfolio-carousel .swiper-container', {
         slidesPerView: 'auto',
         // centeredSlides: true,
         // spaceBetween: 30,
