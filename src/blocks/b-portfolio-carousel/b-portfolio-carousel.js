@@ -11,8 +11,9 @@ const loadPortfolioCarousel = function (url) {
         $.get(url, {}, (content) => {
             $(this).after(content);
 
-            loadPortfolio();
+            // loadPortfolio();
             initPortfoilioFancybox();
+            loadPortfolioListVideo();
             initPortfolioCarousel();
         });
     });
