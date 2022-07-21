@@ -27,7 +27,7 @@ const checkPortfolioBackground = function () {
     }
 };
 
-const initPortfoilioFancybox = function () {
+const initPortfolioFancybox = function () {
     $('.b-portfolio__item').fancybox({
         type: 'ajax',
         openEasing: 'easeOutExpo',
@@ -287,7 +287,7 @@ $(function () {
         });
     };
 
-    initPortfoilioFancybox();
+    initPortfolioFancybox();
 
     // Listen for history state changes
     window.addEventListener('popstate', function (e) {

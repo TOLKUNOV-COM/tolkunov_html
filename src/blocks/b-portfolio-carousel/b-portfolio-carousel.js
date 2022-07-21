@@ -12,7 +12,7 @@ const loadPortfolioCarousel = function (url) {
             $(this).after(content);
 
             // loadPortfolio();
-            initPortfoilioFancybox();
+            initPortfolioFancybox();
             loadPortfolioListVideo();
             initPortfolioCarousel();
         });
