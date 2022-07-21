@@ -10,10 +10,12 @@ const loadPortfolioCarousel = function (url) {
         $.get(url, {}, (content) => {
             $(this).after(content);
 
-            // loadPortfolio();
-            initPortfolioFancybox();
-            loadPortfolioListVideo();
-            initPortfolioCarousel();
+            setTimeout(() => {
+                // loadPortfolio();
+                initPortfolioFancybox();
+                loadPortfolioListVideo();
+                initPortfolioCarousel();
+            }, 1);
         });
     });
 }
