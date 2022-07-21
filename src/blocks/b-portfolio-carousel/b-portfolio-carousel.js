@@ -3,7 +3,6 @@
  */
 
 const loadPortfolioCarousel = function (url) {
-    console.log(('embed-portfolio-carousel').length);
     $('embed-portfolio-carousel').each(function () {
         let url = '/portfolio/embed-carousel';
         console.log('URL: ' + url);

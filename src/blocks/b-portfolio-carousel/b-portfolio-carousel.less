@@ -3,18 +3,18 @@
 
 .b-portfolio-carousel {
     position: relative;
-    //height: 700px;
-    //width: 100%;
     width: auto;
     height: auto;
+    overflow: hidden;
+
+    & > .container {
+        position: relative;
+    }
 
     .swiper-container {
         position: relative;
         height: auto;
         width: auto;
-        //width: 100%;
-        //height: 700px;
-        //position: absolute;
 
         overflow: visible;
     }
@@ -172,20 +172,38 @@
             opacity: 1;
         }
     }
+
+    &:before {
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 100px;
+        height: 100px;
+
+        background: transparent no-repeat center center;
+        background-size: 50px;
+        background-image: url("../../assets/img/arrow-square-left.svg");
+        z-index: 101;
+    }
 }
 
 .b-portfolio-carousel__prev {
     left: 0;
     transform: translate(-75%, -50%);
 
-    background-image: url("../../assets/img/arrow-square-left.svg");
 }
 
 .b-portfolio-carousel__next {
     right: 0;
-    transform: translate(75%, -50%) rotate(180deg);
+    transform: translate(75%, -50%);
 
-    background-image: url("../../assets/img/arrow-square-left.svg");
+    &:before {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
 }
 
 .b-portfolio-carousel__hand {
