@@ -7,20 +7,17 @@ block content
                 h1.b-cases__header Кейсы
 
             .b-cases__list
-                each i, index in (new Array(5))
+                each i, index in (new Array(9))
                     a.b-cases__item(href='#')
-                        .b-cases__cover
-                            .b-cases__media
-                                img.b-cases__image(src='https://via.placeholder.com/900x400', alt='')
+                        .b-cases__media
+                            img.b-cases__image.b-cases__image_horizontal(src='https://via.placeholder.com/1920x1080', alt='')
+                            img.b-cases__image.b-cases__image_square(src='https://via.placeholder.com/1080x1080', alt='')
+                            img.b-cases__image.b-cases__image_vertical(src='https://via.placeholder.com/1080x1920', alt='')
 
-                                if index % 2
-                                    span.js-cases-cover-video(data-src="assets/img/video_preview.mp4")
+                            if index % 2
+                                span.js-cases-cover-video.js-cases-cover-video_horizontal(data-src="assets/img/1920x1080.mp4", data-ratio="horizontal")
+                                span.js-cases-cover-video.js-cases-cover-video_square(data-src="assets/img/1080x1080.mp4", data-ratio="square")
+                                span.js-cases-cover-video.js-cases-cover-video_vertical(data-src="assets/img/1080x1920.mp4", data-ratio="vertical")
 
-                            .b-cases__bagde
-                                img.b-cases__client(src='https://via.placeholder.com/69x24', alt='')
-
-                            .b-cases__tags
-                                span.b-cases__tag #ЯНДЕКС
-                                span.b-cases__tag #GOOGLE
-
-                        p.b-cases__title Баннеры для медийной рекламы на 5 площадках
+                        .b-cases__content
+                            .b-cases__title Баннеры для медийной рекламы и соцсетей для банка Точка

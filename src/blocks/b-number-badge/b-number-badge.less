@@ -1,0 +1,57 @@
+@import "variables.less";
+@import "mixins";
+@import "mymixins";
+
+.b-number-badge {
+    display: block;
+    margin: 20px 0 40px;
+
+    @media (min-width: @screen-xl-min) {
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+.b-number-badge__inner {
+    display: inline-block;
+    color: @headings-color;
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+    }
+
+    background: @headings-color;
+    border-radius: 62px;
+    transform: rotate(6.93deg);
+    padding: 14px 45px 12px;
+    margin: 0 10px;
+
+    font-weight: 900;
+    font-size: 105.805px;
+    line-height: 1.2;
+    /* identical to box height */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    position: relative;
+    top: 20px;
+
+    transition: all .2s ease-in-out;
+
+    &:hover, &:active, &:focus {
+        transform: scale(1.05) rotate(6.93deg);
+
+        background: @link-hover-color;
+        color: #FFFFFF;
+    }
+
+    font-size: 80px;
+    border-radius: 55px;
+
+    @media (min-width: @screen-xl-min) {
+        font-size: 105.805px;
+        border-radius: 62px;
+    }
+}
