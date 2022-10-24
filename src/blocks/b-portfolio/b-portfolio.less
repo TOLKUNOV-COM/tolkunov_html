@@ -11,12 +11,16 @@
     .my-heading-h1();
 
     margin-top: 0;
-    margin-bottom: 53px;
+    margin-bottom: 55px;
 }
 
 .b-portfolio__header_small {
     .my-heading-h2();
     text-align: center;
+
+    @media (min-width: @screen-xl-min) {
+        margin-bottom: 65px;
+    }
 }
 
 .fancybox-inner .b-portfolio__header_small {
@@ -353,4 +357,22 @@
     color: @text-color;
     background-color: #ffffff;
     box-shadow: 0 20px 30px fade(#161f6a, 5%);
+}
+
+.b-portfolio_limit {
+    overflow: hidden;
+    padding-top: 10px;
+    max-height: 1584px;
+
+    @media (min-width: @screen-md-min) {
+        max-height: 2376px;
+    }
+
+    @media (min-width: @screen-lg-min) {
+        max-height: 3168px;
+    }
+
+    @media (min-width: @screen-xl-min) {
+        max-height: 3960px;
+    }
 }
