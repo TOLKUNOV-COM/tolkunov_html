@@ -100,6 +100,7 @@
 
 .b-portfolio-carousel__media {
     width: 180px;
+    position: relative;
 
     @media (min-width: @screen-lg-min) {
         width: 240px;
@@ -329,4 +330,15 @@
         opacity: 1;
         transform: translateX(0px) translateY(0px) rotate(0deg) scale(1, 1);
     }
+}
+
+.b-portfolio-carousel__border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    pointer-events: none;
 }
