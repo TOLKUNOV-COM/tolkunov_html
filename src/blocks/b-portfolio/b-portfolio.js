@@ -67,7 +67,7 @@ const initPortfolioFancybox = function () {
         beforeShow: function () {
             var path = $.fancybox.current.href;
 
-            var state = {action: 'portfolioItem', path: path};
+            var state = { action: 'portfolioItem', path: path };
             var currentState = history.state;
 
             console.log('beforeShow', state, history);
@@ -145,7 +145,7 @@ $(function () {
         var current = F.current,
             effect = current.nextEffect,
             startPos = current.pos,
-            endPos = {opacity: 1},
+            endPos = { opacity: 1 },
             direction = F.direction,
             distance = $(window).height() * 0.8,
             field;
@@ -179,7 +179,7 @@ $(function () {
         var current = F.current,
             effect = current.nextEffect,
             startPos = current.pos,
-            endPos = {opacity: 1},
+            endPos = { opacity: 1 },
             direction = F.direction,
             distance = $(window).height(),
             field;
@@ -226,7 +226,7 @@ $(function () {
         var current = F.current,
             effect = current.nextEffect,
             startPos = current.pos,
-            endPos = {opacity: 1},
+            endPos = { opacity: 1 },
             direction = F.direction,
             distance = $(window).width(),
             field;
@@ -269,7 +269,7 @@ $(function () {
 
         var previous = F.previous,
             effect = previous.prevEffect,
-            endPos = {opacity: 1},
+            endPos = { opacity: 1 },
             direction = F.direction,
             distance = $(window).width();
 
@@ -419,7 +419,7 @@ var loadPortfolioListVideo = function () {
     });
 };
 
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
     loadPortfolio();
     checkPortfolioBackground();
 });
