@@ -61,8 +61,34 @@ var loadCasesListVideo = function () {
     });
 };
 
+/**
+ * Embed
+ */
+
+const loadEmbedCaseCompilation = function () {
+    $('embed-case-compilation').each(function () {
+        let id = $(this).data('id');
+
+        if (!id) {
+            return;
+        }
+
+        let url = '/cases-compilations/embed/' + id;
+        console.log('URL: ' + url);
+
+        $.get(url, {}, (content) => {
+            $(this).after(content);
+
+            setTimeout(() => {
+                loadCases();
+            }, 1);
+        });
+    });
+}
+
 window.addEventListener('load', function () {
     loadCases();
+    loadEmbedCaseCompilation();
 });
 
 $(window).on('resize', function () {
