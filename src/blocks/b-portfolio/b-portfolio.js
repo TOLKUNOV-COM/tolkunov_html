@@ -125,7 +125,7 @@ const initPortfolioFancybox = function () {
     });
 }
 
-$(function () {
+const initPortfolioSlider = function () {
     var F = $.fancybox;
     var getScalar = function (orig, dim) {
             var value = parseInt(orig, 10) || 0;
@@ -288,52 +288,54 @@ $(function () {
     };
 
     initPortfolioFancybox();
+};
 
-    // Listen for history state changes
-    window.addEventListener('popstate', function (e) {
-        var state = history.state;
+$(initPortfolioSlider);
 
-        console.log('popstate', state, history);
-        // back button pressed. close popup
-        if (!state || state.action === 'popup') {
-            if ($.fancybox.isOpened) {
-                console.log("Fancybox opened. Let's close it.");
-                $.fancybox.close();
-            } else {
-                console.log('There is no fancybox opened. Nothing to close.');
+// Listen for history state changes
+window.addEventListener('popstate', function (e) {
+    var state = history.state;
 
-                return false;
-            }
+    console.log('popstate', state, history);
+    // back button pressed. close popup
+    if (!state || state.action === 'popup') {
+        if ($.fancybox.isOpened) {
+            console.log("Fancybox opened. Let's close it.");
+            $.fancybox.close();
         } else {
-            // Forward button pressed, reopen popup
-            if (state.action === 'portfolioItem') {
-                window.needChangeState = false;
-                console.log('dont need state change');
+            console.log('There is no fancybox opened. Nothing to close.');
 
-                var link = $('a.b-portfolio__item[href=\"' + state.path + '\"]');
+            return false;
+        }
+    } else {
+        // Forward button pressed, reopen popup
+        if (state.action === 'portfolioItem') {
+            window.needChangeState = false;
+            console.log('dont need state change');
 
-                if (link.length) {
-                    link.trigger('click');
-                } else {
-                    console.error('!!! There is no with href "' + state.path + '". Need to navigate manually.');
-                }
-            }
+            var link = $('a.b-portfolio__item[href=\"' + state.path + '\"]');
 
-            // Forward button pressed, reopen popup
-            if (state.action === 'reviewItem') {
-                window.needChangeState = false;
-                console.log('dont need state change');
-
-                var link = $('a.b-reviews__item[href=\"' + state.path + '\"]');
-
-                if (link.length) {
-                    link.trigger('click');
-                } else {
-                    console.error('!!! There is no with href "' + state.path + '". Need to navigate manually.');
-                }
+            if (link.length) {
+                link.trigger('click');
+            } else {
+                console.error('!!! There is no with href "' + state.path + '". Need to navigate manually.');
             }
         }
-    });
+
+        // Forward button pressed, reopen popup
+        if (state.action === 'reviewItem') {
+            window.needChangeState = false;
+            console.log('dont need state change');
+
+            var link = $('a.b-reviews__item[href=\"' + state.path + '\"]');
+
+            if (link.length) {
+                link.trigger('click');
+            } else {
+                console.error('!!! There is no with href "' + state.path + '". Need to navigate manually.');
+            }
+        }
+    }
 });
 
 var loadPortfolio = function (cb) {
