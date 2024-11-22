@@ -106,9 +106,6 @@ const initPortfolioFancybox = function () {
             if ($('.fancybox-wrap').length && $('.fancybox-overlay').length) {
                 $('.fancybox-overlay').append($('.fancybox-wrap'));
             }
-
-            $('.fancybox-wrap').css('position', 'absolute');
-            $('.fancybox-wrap').css('top', '0');
         },
         afterShow: function () {
             if (typeof window.showIframe == "function") {
@@ -117,9 +114,6 @@ const initPortfolioFancybox = function () {
 
             $('.fancybox-close').appendTo('.b-fancybox-overlay');
             $('.fancybox-close:eq(1)').remove();
-
-            $('.fancybox-wrap').css('position', 'absolute');
-            $('.fancybox-wrap').css('top', '0');
         },
         beforeClose: function () {
             var currentstate = history.state;
@@ -309,7 +303,11 @@ const initPortfolioSlider = function () {
     initPortfolioFancybox();
 };
 
-$(initPortfolioSlider);
+$(function () {
+    if ($('embed-portfolio-list').length === 0) {
+        initPortfolioSlider();
+    }
+});
 
 // Listen for history state changes
 window.addEventListener('popstate', function (e) {
