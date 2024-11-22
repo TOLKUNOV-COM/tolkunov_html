@@ -117,6 +117,9 @@ const initPortfolioFancybox = function () {
 
             $('.fancybox-close').appendTo('.b-fancybox-overlay');
             $('.fancybox-close:eq(1)').remove();
+
+            $('.fancybox-wrap').css('position', 'absolute');
+            $('.fancybox-wrap').css('top', '0');
         },
         beforeClose: function () {
             var currentstate = history.state;
