@@ -49,6 +49,11 @@ const initPortfolioFancybox = function () {
         margin: [0, 0, 0, 0],
         // margin: [45, 0, 100, 0],
         fitToView: false,
+        helpers: {
+            overlay: {
+                locked: true // Заблокировать фон за оверлеем
+            }
+        },
         beforeLoad: function () {
             function isMobileDevice() {
                 return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
@@ -97,6 +102,10 @@ const initPortfolioFancybox = function () {
             }
 
             $('html').addClass('fancybox-margin').addClass('fancybox-lock');
+
+            if ($('.fancybox-wrap').length && $('.fancybox-overlay').length) {
+                $('.fancybox-overlay').append($('.fancybox-wrap'));
+            }
         },
         afterShow: function () {
             if (typeof window.showIframe == "function") {
