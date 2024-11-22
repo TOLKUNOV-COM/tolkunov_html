@@ -95,6 +95,8 @@ const initPortfolioFancybox = function () {
                         $.fancybox.close();
                     });
             }
+
+            $('html').addClass('fancybox-margin').addClass('fancybox-lock');
         },
         afterShow: function () {
             if (typeof window.showIframe == "function") {
@@ -117,6 +119,8 @@ const initPortfolioFancybox = function () {
             if (currentstate && currentstate.action === 'portfolioItem' && needChangeState) {
                 history.pushState(portfolioBaseState, document.title, portfolioBaseUrl);
             }
+
+            $('html').removeClass('fancybox-margin').removeClass('fancybox-lock');
         },
         //width: 1082
         //tpl: {
