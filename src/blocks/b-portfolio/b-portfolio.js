@@ -106,6 +106,9 @@ const initPortfolioFancybox = function () {
             if ($('.fancybox-wrap').length && $('.fancybox-overlay').length) {
                 $('.fancybox-overlay').append($('.fancybox-wrap'));
             }
+
+            $('.fancybox-wrap').css('position', 'absolute');
+            $('.fancybox-wrap').css('top', '0');
         },
         afterShow: function () {
             if (typeof window.showIframe == "function") {
