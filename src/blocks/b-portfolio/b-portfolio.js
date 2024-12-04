@@ -139,6 +139,10 @@ const initPortfolioFancybox = function () {
 }
 
 const initPortfolioSlider = function () {
+    if (window.disablePortfolioFancybox) {
+        return;
+    }
+
     var F = $.fancybox;
     var getScalar = function (orig, dim) {
             var value = parseInt(orig, 10) || 0;
