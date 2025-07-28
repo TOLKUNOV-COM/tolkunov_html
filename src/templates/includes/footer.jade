@@ -1,21 +1,3 @@
-.b-call-widget.b-call-widget__collapsed
-    .b-call-widget__overlay
-    .b-call-widget__content
-        iframe#callbackFrame(src='http://mikhail.boxone.ru:3002/widget.html')
-    .b-call-widget__button
-    a.b-call-widget__link(href='https://tolkunov.com/order') Заказать
-script.
-    /* When iframe is loaded */
-    $(function () {
-        $('#callbackFrame').ready(function () {
-            console.log('iframe loaded successfully');
-
-            setTimeout(function () {
-                $('.b-call-widget__content').css('display', 'none');
-            }, 1);
-        });
-    });
-
 .b-footer
     .container
         .row.b-footer__row
