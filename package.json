@@ -4,9 +4,8 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "del": "^1.1.1",
-    "gulp": "3.*",
-    "gulp-autoprefixer": "^2.1.0",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
     "gulp-cached": "^1.1.1",
     "gulp-changed": "^3.0.0",
     "gulp-clean-css": "~2.0.8",
@@ -24,8 +23,13 @@
     "minimist": "^1.2.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "autoprefixer": "^10.4.21",
     "browser-sync": "^2.18.12",
-    "gulp-open": "^0.3.2"
+    "gulp-open": "^0.3.2",
+    "gulp-postcss": "^10.0.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
   },
   "resolutions": {
     "graceful-fs": "^4.2.9"

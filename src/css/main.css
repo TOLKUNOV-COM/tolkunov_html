@@ -1,0 +1,50 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+/* @import "tailwindcss/preflight.css" layer(base); */
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+    --font-sans: 'Craftwork Sans', 'system-ui', 'Helvetica', 'Arial', 'sans-serif';
+    --font-serif: 'Craftwork Grotesk', serif;
+
+    --breakpoint-sm: 40rem;   /* 640px  */
+    --breakpoint-md: 48rem;   /* 768px  */
+    --breakpoint-lg: 64rem;   /* 1024px */
+    --breakpoint-xl: 80rem;   /* 1280px */
+    --breakpoint-2xl: 90rem;  /* 1440px */
+    --breakpoint-3xl: 100rem; /* 1600px */
+    --breakpoint-4xl: 120rem; /* 1920px */
+    /* Размеры контейнера (немного меньше брейкпоинтов для комфортных отступов) */
+    --container-sm: 100%;     /* 576px */
+    --container-md: 720px;    /* 720px */
+    --container-lg: 960px;    /* 960px */
+    --container-xl: 1240px;   /* 1240px */
+    --container-2xl: 1360px;  /* 1360px */
+    --container-3xl: 1520px;  /* 1600px */
+    --container-4xl: 1800px;  /* 1520px */
+}
+
+@layer utilities {
+    .container {
+        /* none as we use bootstrap containers */
+        @apply !max-w-none;
+    }
+
+    .tw-container {
+        @apply w-full max-w-none;
+
+        @apply sm:max-w-(--container-sm);
+        @apply md:max-w-(--container-md);
+        @apply lg:max-w-(--container-lg);
+        @apply xl:max-w-(--container-xl);
+        @apply 2xl:max-w-(--container-2xl);
+        @apply 3xl:max-w-(--container-3xl);
+        @apply 4xl:max-w-(--container-4xl);
+    }
+}
+
+html {
+    font-size: 16px;
+}
+
+@config "../../tailwind.config.js";
