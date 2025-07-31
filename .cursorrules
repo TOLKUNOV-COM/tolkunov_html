@@ -1,0 +1,10 @@
+# Правила разработки
+
+## CSS Импорты
+
+**pattern**: `@import.*\.css`
+**description**: При импорте CSS файлов в Tailwind CSS всегда используй относительный путь с `./` для файлов в той же директории
+**examples**: 
+  - ❌ Неправильно: `@import "cta.css" layer(components);`
+  - ✅ Правильно: `@import "./cta.css" layer(components);`
+**exceptions**: Импорты из node_modules могут использоваться без `./` 
