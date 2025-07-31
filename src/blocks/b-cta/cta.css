@@ -1,0 +1,26 @@
+.cta {
+    @apply flex items-center justify-center w-full;
+}
+
+.cta-messages {
+
+}
+
+.cta-message {
+    @apply inline-block;
+}
+
+.cta-message_default {
+    @apply bg-white rounded-20 px-4.5 py-5 outline-[1.5px] outline-white/17;
+
+    @apply text-slate-430 text-lg font-bold leading-6.5 -tracking-[0.18px];
+
+    box-shadow: 0 2.657px 10.627px 0 rgba(22, 31, 106, 0.08), 0 2.657px 10.627px 0 rgba(22, 31, 106, 0.08);
+    filter: blur(0px);
+}
+
+.cta-message_cta {
+    @apply bg-white rounded-20 p-4 space-y-3;
+
+    filter: drop-shadow(0 2.657px 10.627px rgba(22, 31, 106, 0.08)) drop-shadow(0 2.657px 10.627px rgba(22, 31, 106, 0.08));
+}

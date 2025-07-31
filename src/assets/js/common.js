@@ -113,3 +113,30 @@ window.lazyLoadingImages = function () {
     }
 }
 document.addEventListener("DOMContentLoaded", window.lazyLoadingImages);
+
+/**
+ * AUTO-GROW (only expand)
+ */
+function autoGrowOnlyExpand(el) {
+    const currentHeight = el.offsetHeight;
+
+    // временно сбрасываем высоту, чтобы получить актуальный scrollHeight
+    el.style.height = 'auto';
+    const neededHeight = el.scrollHeight + 2;
+
+    if (neededHeight > currentHeight) {
+        el.style.height = neededHeight + 'px';
+    } else {
+        // откатываем к текущей высоте, чтобы не уменьшать
+        el.style.height = currentHeight + 'px';
+    }
+}
+
+$(function () {
+    document.querySelectorAll('textarea[auto-grow]').forEach(textarea => {
+        // Устанавливаем начальную высоту
+        textarea.style.height = textarea.scrollHeight + 2 + 'px';
+
+        textarea.addEventListener('input', () => autoGrowOnlyExpand(textarea));
+    });
+});

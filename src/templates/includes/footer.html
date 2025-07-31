@@ -1,0 +1,134 @@
+<div class="m-8 rounded-4xl bg-blue-600 flex font-sans min-h-[780px] p-3">
+    <!-- Левая часть -->
+    <div class="flex-1 w-[525px] p-7 flex flex-col justify-between">
+        <div class="font-serif space-y-2">
+            <div class="text-white/60 text-2xl font-semibold">Спасибо, что долистали до конца</div>
+            <div class="text-white text-[3.5rem]/17 font-bold">Самое время обсудить проект</div>
+        </div>
+
+        <div class="flex flex-col items-start gap-3 max-w-[273px]">
+            <div class="cta-message cta-message_default">Привет!</div>
+            <div class="cta-message cta-message_default">Я Дима, фаундер<br>агентства TOLKUNOV</div>
+
+            <div class="cta-message cta-message_cta">
+                <div class="text-blue-900 text-base font-bold tracking-[0.16px]">Отвечу на все вопросы и&nbsp;посчитаю смету</div>
+
+                <a href="https://t.me/tolkunovdb" target="_blank"
+                   class="bg-blue-600 py-3 pl-4 pr-6 rounded-20 hover:bg-blue-620 active:bg-blue-680 transition-colors  inline-flex items-center gap-2 font-glina text-2xl/6 font-thin !text-white !no-underline">
+                    <span class="icon icon-telegram size-7"></span>
+                    <span>Написать</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Правая часть - форма -->
+    <div class="flex flex-col gap-2 w-[578px]">
+        <div class="bg-white rounded-28 h-[140px]"></div>
+        <form class="bg-white rounded-28 flex-1 flex flex-col p-3">
+            <div class="space-y-5 p-3">
+                <div class="form-row">
+                    <label class="form-label">Услуги</label>
+
+                    <div class="chips-group flex flex-wrap gap-3">
+                        <label class="chip">
+                            <input type="checkbox" class="hidden" name="tags[]" value="option1">
+                            <span class="chip-label">Баннеры</span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" class="hidden" name="tags[]" value="option2">
+                            <span class="chip-label">Наружка</span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" class="hidden" name="tags[]" value="option3">
+                            <span class="chip-label">2D</span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" class="hidden" name="tags[]" value="option4">
+                            <span class="chip-label">3D</span>
+                        </label>
+                        <label class="chip">
+                            <input type="checkbox" class="hidden" name="tags[]" value="option1">
+                            <span class="chip-label">Лендинги</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label class="form-label">Бюджет</label>
+
+                    <div class="chips-group flex flex-wrap gap-4">
+                        <label class="chip flex-1">
+                            <input type="radio" class="hidden" name="options" value="option1">
+                            <span class="chip-label">от 100 000 ₽</span>
+                            <span class="chip-hint">HTML5-баннер <br>с&nbsp;несколькими ресайзами</span>
+                        </label>
+                        <label class="chip flex-1">
+                            <input type="radio" class="hidden" name="options" value="option2">
+                            <span class="chip-label">от 500 000 ₽</span>
+                            <span class="chip-hint">Пак баннеров HTML5 <br>для&nbsp;онлайн и наружки</span>
+                        </label>
+                        <label class="chip flex-1">
+                            <input type="radio" class="hidden" name="options" value="option3">
+                            <span class="chip-label">от 1 млн ₽</span>
+                            <span class="chip-hint">То же, что за 500к <br>+ 3D и лендинг</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <textarea name="description" class="form-field resize-y min-h-8 max-h-27" rows="1" auto-grow placeholder="Опишите задачу: чем больше информации, тем лучше"></textarea>
+                </div>
+                <div class="form-row">
+                    <input type="text" name="name" class="form-field error" placeholder="Имя">
+                </div>
+                <div class="flex flex-row flex-nowrap gap-5">
+                    <div class="form-row flex-1">
+                        <input type="text" name="email" class="form-field" placeholder="Email">
+                    </div>
+                    <div class="form-row flex-1">
+                        <input type="text" name="telegram" class="form-field" placeholder="Телеграм">
+                    </div>
+                </div>
+
+                <label class="flex items-start gap-2 cursor-pointer select-none">
+                    <input type="checkbox" name="agree" class="visually-hidden"/>
+
+                    <span class="form-checkbox block"></span>
+
+                    <span class="text-xs leading-4.5 !font-medium">
+                        Даю согласие на обработку моих
+                        <a href="https://ya.ru" target="_blank" class="text-blue-600 underline hover:no-underline">персональных данных</a>
+                        в соответствии с
+                        <a href="https://ya.ru" target="_blank" class="text-blue-600 underline hover:no-underline">политикой конфиденциальности</a>
+                    </span>
+                </label>
+            </div>
+
+            <!-- Кнопка "Отправить" -->
+            <button type="submit"
+                    class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-blue-600 hover:bg-blue-620 active:bg-blue-680 transition-colors text-white font-glina text-2xl/6 border-none mt-auto">
+                Отправить
+            </button>
+
+            <div class="hidden">
+                <!-- Кнопка "Отправить" (состояние: загрузка) -->
+                <button type="submit"
+                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-blue-600 transition-colors text-white font-glina text-2xl/6 border-none mt-auto !cursor-progress"
+                        disabled>
+                <span role="status" class="inline-block size-6 icon icon-loading text-white animate-spin">
+                    <span class="sr-only">Загрузка…</span>
+                </span>
+                </button>
+
+                <!-- Кнопка "Отправить" (состояние: завершено) -->
+                <button type="submit"
+                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-slate-40 transition-colors text-blue-600 font-glina text-2xl/6 border-none mt-auto cursor-default"
+                        disabled>
+                    <i class="icon icon-checked size-5"></i>
+                    <span>Отправлено</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

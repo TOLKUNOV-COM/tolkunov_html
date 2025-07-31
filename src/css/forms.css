@@ -1,0 +1,76 @@
+.form-row {
+    @apply space-y-3;
+}
+
+.form-label {
+    @apply text-slate-430 text-xs/7 !font-medium tracking-[0.12px];
+}
+
+.form-field {
+    @apply block w-full;
+
+    border: none;
+    @apply pb-2.5 px-0 pt-0;
+    @apply text-blue-900 text-sm font-medium;
+    @apply placeholder:text-blue-900/50;
+    @apply transition;
+
+    @apply border-b-2 border-b-indigo-100 focus:outline-none focus:border-b-blue-600;
+
+    &.error {
+        @apply border-b-red-500;
+    }
+}
+
+.form-checkbox {
+    @apply flex-shrink-0 size-5 rounded-md transition inset-ring-[1.5px] inset-ring-indigo-100;
+    @apply cursor-pointer;
+
+    input[type="checkbox"]:focus-visible ~ & {
+        @apply outline-2 outline-blue-200 outline-offset-2;
+    }
+
+    input[type="checkbox"]:checked ~ & {
+        @apply bg-blue-600 inset-ring-blue-600;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../img/checked.svg");
+    }
+}
+
+.chips-group {
+}
+
+.chip {
+    @apply !flex flex-col gap-1;
+    @apply border border-dashed border-indigo-100 rounded-lg;
+    @apply px-3 py-2.5;
+    @apply text-blue-900 text-sm/5 !font-medium;
+    @apply transition;
+    @apply cursor-pointer;
+
+    &:hover {
+        @apply border-indigo-50 text-blue-600;
+
+        .chip-hint {
+            @apply text-blue-900;
+        }
+    }
+
+    &.active, &:has(input:checked) {
+        @apply border-solid border-blue-600 bg-blue-600 text-white;
+
+        .chip-hint {
+            @apply text-white/80;
+        }
+    }
+}
+
+.chip-label {
+}
+
+.chip-hint {
+    @apply text-[#8A8FB4] text-tiny font-semibold;
+    @apply transition;
+}

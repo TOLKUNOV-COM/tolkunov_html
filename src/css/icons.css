@@ -1,0 +1,24 @@
+.icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+}
+
+.icon-telegram {
+    mask-image: url("../img/telegram.svg");
+    background-color: currentColor;
+}
+
+.icon-checked {
+    mask-image: url("../img/checked.svg");
+    background-color: currentColor;
+}
+
+.icon-loading {
+    mask-image: url("../img/loading.svg");
+    background-color: currentColor;
+}
