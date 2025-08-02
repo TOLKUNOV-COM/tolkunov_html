@@ -28,7 +28,7 @@
         <div class="flex items-start justify-between p-4 pb-7 bg-white rounded-28 h-[140px]">
 
             <!-- Дима -->
-            <div data-active="true" class="group contact-switcher__item contact-switcher__item_dima">
+            <div data-active="true" data-target="dima" class="group contact-switcher__item contact-switcher__item_dima">
                 <div class="contact-switch">
                     <div class="contact-switch__ring_dima"></div>
                     <div class="contact-switch__img contact-switch__img_dima"></div>
@@ -44,7 +44,7 @@
             </div>
 
             <!-- Таня -->
-            <div data-active="false" class="group contact-switcher__item contact-switcher__item_tanya">
+            <div data-active="false" data-target="tanya" class="group contact-switcher__item contact-switcher__item_tanya">
                 <div class="contact-switch">
                     <div class="contact-switch__ring_tanya"></div>
                     <div class="contact-switch__img contact-switch__img_tanya"></div>
@@ -60,7 +60,7 @@
             </div>
 
             <!-- Оля -->
-            <div data-active="false" class="group contact-switcher__item contact-switcher__item_olya">
+            <div data-active="false" data-target="olya" class="group contact-switcher__item contact-switcher__item_olya">
                 <div class="contact-switch">
                     <div class="contact-switch__ring_olya"></div>
                     <div class="contact-switch__img contact-switch__img_olya"></div>
@@ -76,112 +76,241 @@
             </div>
         </div>
 
-        <!-- Contact form -->
-        <form class="bg-white rounded-28 flex-1 flex flex-col p-3" method="post">
-            <div class="space-y-5 p-3">
-                <div class="form-row">
-                    <label class="form-label">Услуги</label>
+        <!-- Contact forms -->
+        <div class="flex-1 relative">
+            <!-- Форма Димы (СЕО) -->
+            <form data-contact="dima" class="contact-form bg-white rounded-28 absolute inset-0 flex flex-col p-3 transition-opacity duration-300 opacity-100 pointer-events-auto"
+                  method="post">
+                <div class="space-y-5 p-3">
+                    <div class="form-row">
+                        <label class="form-label">Услуги</label>
 
-                    <div class="chips-group flex flex-wrap gap-3">
-                        <label class="chip">
-                            <input type="checkbox" class="hidden" name="tags[]" value="option1">
-                            <span class="chip-label">Баннеры</span>
-                        </label>
-                        <label class="chip">
-                            <input type="checkbox" class="hidden" name="tags[]" value="option2">
-                            <span class="chip-label">Наружка</span>
-                        </label>
-                        <label class="chip">
-                            <input type="checkbox" class="hidden" name="tags[]" value="option3">
-                            <span class="chip-label">2D</span>
-                        </label>
-                        <label class="chip">
-                            <input type="checkbox" class="hidden" name="tags[]" value="option4">
-                            <span class="chip-label">3D</span>
-                        </label>
-                        <label class="chip">
-                            <input type="checkbox" class="hidden" name="tags[]" value="option1">
-                            <span class="chip-label">Лендинги</span>
-                        </label>
+                        <div class="chips-group flex flex-wrap gap-3">
+                            <label class="chip">
+                                <input type="checkbox" class="hidden" name="tags[]" value="banners">
+                                <span class="chip-label">Баннеры</span>
+                            </label>
+                            <label class="chip">
+                                <input type="checkbox" class="hidden" name="tags[]" value="outdoor">
+                                <span class="chip-label">Наружка</span>
+                            </label>
+                            <label class="chip">
+                                <input type="checkbox" class="hidden" name="tags[]" value="2d">
+                                <span class="chip-label">2D</span>
+                            </label>
+                            <label class="chip">
+                                <input type="checkbox" class="hidden" name="tags[]" value="3d">
+                                <span class="chip-label">3D</span>
+                            </label>
+                            <label class="chip">
+                                <input type="checkbox" class="hidden" name="tags[]" value="landing">
+                                <span class="chip-label">Лендинги</span>
+                            </label>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-row">
-                    <label class="form-label">Бюджет</label>
+                    <div class="form-row">
+                        <label class="form-label">Бюджет</label>
 
-                    <div class="chips-group flex flex-wrap gap-4">
-                        <label class="chip flex-1">
-                            <input type="radio" class="hidden" name="options" value="option1">
-                            <span class="chip-label">от 100 000 ₽</span>
-                            <span class="chip-hint">HTML5-баннер <br>с&nbsp;несколькими ресайзами</span>
-                        </label>
-                        <label class="chip flex-1">
-                            <input type="radio" class="hidden" name="options" value="option2">
-                            <span class="chip-label">от 500 000 ₽</span>
-                            <span class="chip-hint">Пак баннеров HTML5 <br>для&nbsp;онлайн и наружки</span>
-                        </label>
-                        <label class="chip flex-1">
-                            <input type="radio" class="hidden" name="options" value="option3">
-                            <span class="chip-label">от 1 млн ₽</span>
-                            <span class="chip-hint">То же, что за 500к <br>+ 3D и лендинг</span>
-                        </label>
+                        <div class="chips-group flex flex-wrap gap-4">
+                            <label class="chip flex-1">
+                                <input type="radio" class="hidden" name="budget" value="100k">
+                                <span class="chip-label">от 100 000 ₽</span>
+                                <span class="chip-hint">HTML5-баннер <br>с&nbsp;несколькими ресайзами</span>
+                            </label>
+                            <label class="chip flex-1">
+                                <input type="radio" class="hidden" name="budget" value="500k">
+                                <span class="chip-label">от 500 000 ₽</span>
+                                <span class="chip-hint">Пак баннеров HTML5 <br>для&nbsp;онлайн и наружки</span>
+                            </label>
+                            <label class="chip flex-1">
+                                <input type="radio" class="hidden" name="budget" value="1m">
+                                <span class="chip-label">от 1 млн ₽</span>
+                                <span class="chip-hint">То же, что за 500к <br>+ 3D и лендинг</span>
+                            </label>
+                        </div>
                     </div>
+
+                    <div class="form-row">
+                        <textarea name="description" class="form-field resize-y min-h-8 max-h-27" rows="1" auto-grow
+                                  placeholder="Опишите задачу: чем больше информации, тем лучше"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="name" class="form-field" placeholder="Имя">
+                    </div>
+                    <div class="flex flex-row flex-nowrap gap-5">
+                        <div class="form-row flex-1">
+                            <input type="text" name="email" class="form-field" placeholder="Email">
+                        </div>
+                        <div class="form-row flex-1">
+                            <input type="text" name="telegram" class="form-field" placeholder="Телеграм">
+                        </div>
+                    </div>
+
+                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                        <input type="checkbox" name="agree" class="visually-hidden"/>
+
+                        <span class="form-checkbox block"></span>
+
+                        <span class="text-xs leading-4.5 !font-medium">
+                            Даю согласие на обработку моих
+                            <a href="https://tolkunov.com/view/terms.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">персональных данных</a>
+                            в соответствии с
+                            <a href="https://tolkunov.com/view/privacy.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">политикой конфиденциальности</a>
+                        </span>
+                    </label>
                 </div>
 
-                <div class="form-row">
-                    <textarea name="description" class="form-field resize-y min-h-8 max-h-27" rows="1" auto-grow
-                              placeholder="Опишите задачу: чем больше информации, тем лучше"></textarea>
+                <!-- Кнопка "Отправить" -->
+                <button type="submit"
+                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-blue-600 hover:bg-blue-620 active:bg-blue-680 transition-colors text-white font-glina text-2xl/6 border-none mt-auto">
+                    Отправить
+                </button>
+
+                <div class="hidden">
+                    <!-- Кнопка "Отправить" (состояние: загрузка) -->
+                    <button type="submit"
+                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-blue-600 transition-colors text-white font-glina text-2xl/6 border-none mt-auto !cursor-progress"
+                            disabled>
+                    <span role="status" class="inline-block size-6 icon icon-loading text-white animate-spin">
+                        <span class="sr-only">Загрузка…</span>
+                    </span>
+                    </button>
+
+                    <!-- Кнопка "Отправить" (состояние: завершено) -->
+                    <button type="submit"
+                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-slate-40 transition-colors text-blue-600 font-glina text-2xl/6 border-none mt-auto cursor-default"
+                            disabled>
+                        <i class="icon icon-checked size-5"></i>
+                        <span>Отправлено</span>
+                    </button>
                 </div>
-                <div class="form-row">
-                    <input type="text" name="name" class="form-field error" placeholder="Имя">
-                </div>
-                <div class="flex flex-row flex-nowrap gap-5">
-                    <div class="form-row flex-1">
+            </form>
+
+            <!-- Форма Тани (PR) -->
+            <form data-contact="tanya" class="contact-form bg-white rounded-28 absolute inset-0 flex flex-col p-3 transition-opacity duration-300 opacity-0 pointer-events-none"
+                  method="post">
+                <div class="space-y-5 p-3">
+                    <div class="form-row">
+                        <input type="text" name="name" class="form-field" placeholder="Имя">
+                    </div>
+                    <div class="form-row">
                         <input type="text" name="email" class="form-field" placeholder="Email">
                     </div>
-                    <div class="form-row flex-1">
+                    <div class="form-row">
                         <input type="text" name="telegram" class="form-field" placeholder="Телеграм">
                     </div>
+                    <div class="form-row">
+                        <input type="text" name="company" class="form-field" placeholder="Название компании">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="position" class="form-field" placeholder="Должность">
+                    </div>
+                    <div class="form-row">
+                        <textarea name="message" class="form-field resize-y min-h-8 max-h-32" rows="1" auto-grow
+                                  placeholder="Расскажите о вашем предложении или задайте вопрос"></textarea>
+                    </div>
+
+                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                        <input type="checkbox" name="agree" class="visually-hidden"/>
+
+                        <span class="form-checkbox block"></span>
+
+                        <span class="text-xs leading-4.5 !font-medium">
+                            Даю согласие на обработку моих
+                            <a href="https://tolkunov.com/view/terms.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">персональных данных</a>
+                            в соответствии с
+                            <a href="https://tolkunov.com/view/privacy.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">политикой конфиденциальности</a>
+                        </span>
+                    </label>
                 </div>
 
-                <label class="flex items-start gap-2 cursor-pointer select-none">
-                    <input type="checkbox" name="agree" class="visually-hidden"/>
+                <!-- Кнопка "Отправить" -->
+                <button type="submit"
+                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-purple-400 hover:bg-purple-300 active:bg-purple-500 transition-colors text-white font-glina text-2xl/6 border-none mt-auto">
+                    Отправить
+                </button>
 
-                    <span class="form-checkbox block"></span>
-
-                    <span class="text-xs leading-4.5 !font-medium">
-                        Даю согласие на обработку моих
-                        <a href="https://tolkunov.com/view/terms.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">персональных данных</a>
-                        в соответствии с
-                        <a href="https://tolkunov.com/view/privacy.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">политикой конфиденциальности</a>
+                <div class="hidden">
+                    <!-- Кнопка "Отправить" (состояние: загрузка) -->
+                    <button type="submit"
+                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-purple-400 transition-colors text-white font-glina text-2xl/6 border-none mt-auto !cursor-progress"
+                            disabled>
+                    <span role="status" class="inline-block size-6 icon icon-loading text-white animate-spin">
+                        <span class="sr-only">Загрузка…</span>
                     </span>
-                </label>
-            </div>
+                    </button>
 
-            <!-- Кнопка "Отправить" -->
-            <button type="submit"
-                    class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-blue-600 hover:bg-blue-620 active:bg-blue-680 transition-colors text-white font-glina text-2xl/6 border-none mt-auto">
-                Отправить
-            </button>
+                    <!-- Кнопка "Отправить" (состояние: завершено) -->
+                    <button type="submit"
+                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-purple-50 transition-colors text-purple-400 font-glina text-2xl/6 border-none mt-auto cursor-default"
+                            disabled>
+                        <i class="icon icon-checked size-5"></i>
+                        <span>Отправлено</span>
+                    </button>
+                </div>
+            </form>
 
-            <div class="hidden">
-                <!-- Кнопка "Отправить" (состояние: загрузка) -->
+            <!-- Форма Оли (HR) -->
+            <form data-contact="olya" class="contact-form bg-white rounded-28 absolute inset-0 flex flex-col p-3 transition-opacity duration-300 opacity-0 pointer-events-none"
+                  method="post">
+                <div class="space-y-5 p-3">
+                    <div class="form-row">
+                        <input type="text" name="name" class="form-field" placeholder="Имя">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="email" class="form-field" placeholder="Email">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="telegram" class="form-field" placeholder="Телеграм">
+                    </div>
+                    <div class="form-row">
+                        <textarea name="skills" class="form-field resize-y min-h-8 max-h-32" rows="1" auto-grow
+                                  placeholder="Несколько строк о навыках и опыте"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="portfolio" class="form-field" placeholder="Ссылка на резюме, сайт или файл с портфолио">
+                    </div>
+
+                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                        <input type="checkbox" name="agree" class="visually-hidden"/>
+
+                        <span class="form-checkbox block"></span>
+
+                        <span class="text-xs leading-4.5 !font-medium">
+                            Даю согласие на обработку моих
+                            <a href="https://tolkunov.com/view/terms.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">персональных данных</a>
+                            в соответствии с
+                            <a href="https://tolkunov.com/view/privacy.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">политикой конфиденциальности</a>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Кнопка "Отправить" -->
                 <button type="submit"
-                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-blue-600 transition-colors text-white font-glina text-2xl/6 border-none mt-auto !cursor-progress"
-                        disabled>
-                <span role="status" class="inline-block size-6 icon icon-loading text-white animate-spin">
-                    <span class="sr-only">Загрузка…</span>
-                </span>
+                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-lime-500 hover:bg-lime-400 active:bg-lime-600 transition-colors text-blue-900 font-glina text-2xl/6 border-none mt-auto">
+                    Отправить
                 </button>
 
-                <!-- Кнопка "Отправить" (состояние: завершено) -->
-                <button type="submit"
-                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-slate-40 transition-colors text-blue-600 font-glina text-2xl/6 border-none mt-auto cursor-default"
-                        disabled>
-                    <i class="icon icon-checked size-5"></i>
-                    <span>Отправлено</span>
-                </button>
-            </div>
-        </form>
+                <div class="hidden">
+                    <!-- Кнопка "Отправить" (состояние: загрузка) -->
+                    <button type="submit"
+                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-lime-500 transition-colors text-blue-900 font-glina text-2xl/6 border-none mt-auto !cursor-progress"
+                            disabled>
+                    <span role="status" class="inline-block size-6 icon icon-loading text-blue-900 animate-spin">
+                        <span class="sr-only">Загрузка…</span>
+                    </span>
+                    </button>
+
+                    <!-- Кнопка "Отправить" (состояние: завершено) -->
+                    <button type="submit"
+                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-lime-50 transition-colors text-blue-900 font-glina text-2xl/6 border-none mt-auto cursor-default"
+                            disabled>
+                        <i class="icon icon-checked size-5"></i>
+                        <span>Отправлено</span>
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

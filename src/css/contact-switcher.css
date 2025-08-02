@@ -47,7 +47,7 @@
 }
 
 .contact-switch__ring_tanya {
-    @apply absolute bottom-[7px] left-1/2 -translate-x-1/2 size-[86.974px] rotate-45 transition-all rounded-28 ring-2 ring-[#EDD2F6] group-hover:ring-purple-500 group-[[data-active=true]]:ring-purple-500;
+    @apply absolute bottom-[7px] left-1/2 -translate-x-1/2 size-[86.974px] rotate-45 transition-all rounded-28 ring-2 ring-[#EDD2F6] group-hover:ring-purple-400 group-[[data-active=true]]:ring-purple-400;
 }
 
 .contact-switch__ring_olya {
@@ -66,7 +66,7 @@
 }
 
 .contact-switch__label_tanya {
-    @apply group-hover:text-purple-500 group-[[data-active=true]]:text-white group-[[data-active=true]]:bg-purple-500;
+    @apply group-hover:text-purple-400 group-[[data-active=true]]:text-white group-[[data-active=true]]:bg-purple-400;
 }
 
 .contact-switch__label_olya {
