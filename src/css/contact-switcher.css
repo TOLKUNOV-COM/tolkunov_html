@@ -1,0 +1,98 @@
+.contact-switcher {
+
+}
+
+.contact-switcher__item {
+    @apply h-24 flex flex-nowrap items-center transition-[gap] gap-0 data-[active=true]:gap-4;
+}
+
+.contact-switch {
+    @apply size-24 relative cursor-pointer group-[[data-active=true]]:cursor-default;
+}
+
+.contact-switcher__info {
+    @apply overflow-hidden transition-all w-0 opacity-0 group-[[data-active=true]]:w-[170px] group-[[data-active=true]]:opacity-100;
+}
+
+.contact-switcher__line1 {
+    @apply text-blue-900 text-lg/6 font-bold text-nowrap;
+}
+
+.contact-switcher__line2 {
+    @apply text-slate-430 hover:text-slate-430 text-sm font-medium text-nowrap;
+}
+
+.contact-switch__img {
+    @apply w-24 h-[110px] absolute bottom-1 left-0;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+}
+
+.contact-switch__img_dima {
+    background-image: url("../img/contact-switcher/dima.png");
+}
+
+.contact-switch__img_tanya {
+    background-image: url("../img/contact-switcher/tanya.png");
+}
+
+.contact-switch__img_olya {
+    background-image: url("../img/contact-switcher/olya.png");
+}
+
+.contact-switch__ring_dima {
+    @apply absolute inset-0 transition-all rounded-28 ring-2 ring-[#D6DEFA] group-hover:ring-blue-600 group-[[data-active=true]]:ring-blue-600;
+}
+
+.contact-switch__ring_tanya {
+    @apply absolute bottom-[7px] left-1/2 -translate-x-1/2 size-[86.974px] rotate-45 transition-all rounded-28 ring-2 ring-[#EDD2F6] group-hover:ring-purple-500 group-[[data-active=true]]:ring-purple-500;
+}
+
+.contact-switch__ring_olya {
+    @apply absolute inset-0 transition-all rounded-full ring-2 ring-[#DCEFA8] group-hover:ring-lime-500 group-[[data-active=true]]:ring-lime-500;
+}
+
+.contact-switch__label {
+    @apply transition-colors absolute top-20 left-1/2 -translate-x-1/2 px-2 py-2.5;
+    @apply rounded-xl shadow-contact-switcher-label;
+    @apply text-xs font-bold leading-[9px] tracking-[0.12px] text-nowrap;
+    @apply bg-white text-blue-900;
+}
+
+.contact-switch__label_dima {
+    @apply group-hover:text-blue-600 group-[[data-active=true]]:text-white group-[[data-active=true]]:bg-blue-600;
+}
+
+.contact-switch__label_tanya {
+    @apply group-hover:text-purple-500 group-[[data-active=true]]:text-white group-[[data-active=true]]:bg-purple-500;
+}
+
+.contact-switch__label_olya {
+    @apply group-hover:text-lime-500 group-[[data-active=true]]:text-blue-900 group-[[data-active=true]]:bg-lime-500;
+}
+
+.contact-switch__connector {
+    @apply absolute -bottom-9 left-1/2 -translate-x-1/2;
+    @apply w-[30px] h-2;
+    @apply opacity-0;
+    @apply transition-opacity duration-150;
+
+    &::before, &::after {
+        @apply absolute top-0 left-0 h-full w-[20px];
+        @apply content-[''];
+
+        background-image: url("../img/contact-switcher/connector.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &::after {
+        @apply rotate-180 left-auto right-0;
+    }
+}
+
+.contact-switcher__item[data-active=true] .contact-switch__connector {
+    @apply opacity-100;
+}
