@@ -13,6 +13,11 @@
     background-color: currentColor;
 }
 
+.icon-vk {
+    mask-image: url("../img/vk.svg");
+    background-color: currentColor;
+}
+
 .icon-checked {
     mask-image: url("../img/checked.svg");
     background-color: currentColor;
@@ -20,5 +25,10 @@
 
 .icon-loading {
     mask-image: url("../img/loading.svg");
+    background-color: currentColor;
+}
+
+.icon-logo {
+    mask-image: url("../img/logo.svg");
     background-color: currentColor;
 }

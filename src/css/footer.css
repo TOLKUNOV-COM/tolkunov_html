@@ -1,0 +1,25 @@
+.footer-menu__link {
+    @apply text-blue-900 text-[17px]/3.5 font-medium p-3 pr-2.5;
+}
+
+.footer-services {
+
+}
+
+.footer-services__tags {
+    @apply flex flex-nowrap gap-2;
+
+    & > .footer-services__tag:first-child {
+        @apply rounded-l-lg border-l-1;
+    }
+
+    & > .footer-services__tag:last-child {
+        @apply rounded-r-lg border-r-1;
+    }
+}
+
+.footer-services__tag {
+    @apply text-tiny font-black leading-3 tracking-[0.4px] uppercase;
+    @apply px-2 py-1.5;
+    @apply border-t-1 border-b-1 border-slate-200;
+}

@@ -15,6 +15,7 @@
 @import "./forms.css" layer(components);
 @import "./contact-switcher.css";
 @import "./chat-message.css";
+@import "./footer.css";
 
 @theme {
     --font-sans: 'Craftwork Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -26,6 +27,8 @@
     --text-tiny: 0.625rem;
     --text-tiny--line-height: 0.875rem;
     --text-tiny--font-weight: 600;
+
+    --text-32: 2rem;
 
     --color-blue-600: #2856F6;
     --color-blue-620: #2E55DB;
@@ -45,6 +48,7 @@
     --color-red-500: #FD324A;
 
     --color-slate-40: #F4F6FA;
+    --color-slate-200: #E8E9F0;
     --color-slate-430: #8187AD;
 
     --color-indigo-50: #E2E9FF;
@@ -79,7 +83,7 @@
     }
 
     .tw-container {
-        @apply w-full max-w-none;
+        @apply w-full max-w-none mx-auto;
 
         @apply sm:max-w-(--container-sm);
         @apply md:max-w-(--container-md);
