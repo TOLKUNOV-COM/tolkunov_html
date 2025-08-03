@@ -91,6 +91,30 @@
     }
 }
 
+/* Old container from bootstrap */
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: 510px) {
+        width: 510px;
+    }
+
+    @media (min-width: 670px) {
+        width: 670px;
+    }
+
+    @media (min-width: 990px) {
+        width: 990px;
+    }
+
+    @media (min-width: 1230px) {
+        width: 1230px;
+    }
+}
+
 html {
     font-size: 16px;
 }
