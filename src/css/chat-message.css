@@ -1,0 +1,54 @@
+.chat-message {
+    @apply inline-block;
+}
+
+.chat-message_default {
+    @apply bg-white rounded-20 px-4.5 py-5 outline-[1.5px] outline-white/17;
+
+    @apply text-slate-430 text-lg font-bold leading-6.5 -tracking-[0.18px];
+
+    box-shadow: 0 2.657px 10.627px 0 rgba(22, 31, 106, 0.08), 0 2.657px 10.627px 0 rgba(22, 31, 106, 0.08);
+    filter: blur(0px);
+}
+
+.chat-message_cta {
+    @apply bg-white rounded-20 p-4 space-y-3;
+
+    filter: drop-shadow(0 2.657px 10.627px rgba(22, 31, 106, 0.08)) drop-shadow(0 2.657px 10.627px rgba(22, 31, 106, 0.08));
+
+    &::after {
+        content: '';
+
+        @apply absolute bottom-[1px] -right-[8.26px];
+        width: 21.255px;
+        height: 15.941px;
+
+        background-image: url("../img/message-arrow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.contact-block .chat-message {
+    @apply opacity-0 transform translate-x-[-150px] transition-all duration-500;
+}
+
+.contact-block[data-active="true"] .chat-message {
+    @apply opacity-100 translate-x-0;
+}
+
+.contact-block[data-active="false"] .chat-message {
+    @apply !delay-0;
+}
+
+.chat-message-1 {
+    @apply delay-500;
+}
+
+.chat-message-2 {
+    @apply delay-1000;
+}
+
+.chat-message-3 {
+    @apply delay-1500;
+}

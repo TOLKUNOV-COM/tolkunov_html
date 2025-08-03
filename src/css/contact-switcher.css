@@ -77,7 +77,8 @@
     @apply absolute -bottom-9 left-1/2 -translate-x-1/2;
     @apply w-[30px] h-2;
     @apply opacity-0;
-    @apply transition-opacity duration-150;
+    @apply transition-opacity;
+    @apply delay-0 duration-200;
 
     &::before, &::after {
         @apply absolute top-0 left-0 h-full w-[20px];
@@ -95,4 +96,5 @@
 
 .contact-switcher__item[data-active=true] .contact-switch__connector {
     @apply opacity-100;
+    @apply delay-200 duration-150;
 }

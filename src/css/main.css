@@ -13,8 +13,8 @@
 /* Components */
 @import "./icons.css" layer(components);
 @import "./forms.css" layer(components);
-@import "../blocks/b-cta/cta.css" layer(components);
-@import "./contact-switcher.css" layer(components);
+@import "./contact-switcher.css";
+@import "./chat-message.css";
 
 @theme {
     --font-sans: 'Craftwork Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';

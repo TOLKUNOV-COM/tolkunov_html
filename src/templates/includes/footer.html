@@ -1,32 +1,7 @@
-<div class="m-8 rounded-4xl bg-blue-600 flex font-sans min-h-[780px] p-3">
-    <!-- Левая часть -->
-    <div class="flex-1 w-[525px] p-7 flex flex-col justify-between">
-        <div class="font-serif space-y-2">
-            <div class="text-white/60 text-2xl font-semibold">Спасибо, что долистали до конца</div>
-            <div class="text-white text-[3.5rem]/17 font-bold">Самое время обсудить проект</div>
-        </div>
-
-        <div class="flex flex-col items-start gap-3 max-w-[273px]">
-            <div class="cta-message cta-message_default">Привет!</div>
-            <div class="cta-message cta-message_default">Я Дима, фаундер<br>агентства TOLKUNOV</div>
-
-            <div class="cta-message cta-message_cta">
-                <div class="text-blue-900 text-base font-bold tracking-[0.16px]">Отвечу на все вопросы и&nbsp;посчитаю смету</div>
-
-                <a href="https://t.me/tolkunovdb" target="_blank"
-                   class="bg-blue-600 py-3 pl-4 pr-6 rounded-20 hover:bg-blue-620 active:bg-blue-680 transition-colors  inline-flex items-center gap-2 font-glina text-2xl/6 font-thin !text-white !no-underline">
-                    <span class="icon icon-telegram size-7"></span>
-                    <span>Написать</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Правая часть - форма -->
-    <div class="flex flex-col gap-2 w-[578px]">
-        <!-- Contact switcher -->
-        <div class="flex items-start justify-between p-4 pb-7 bg-white rounded-28 h-[140px]">
-
+<div id="contacts-container" class="relative m-8 font-sans">
+    <!-- Contact switcher (абсолютное позиционирование) -->
+    <div class="absolute top-3 right-3 z-10">
+        <div class="flex items-start justify-between p-4 pb-7 bg-white rounded-28 h-[140px] w-[578px]">
             <!-- Дима -->
             <div data-active="true" data-target="dima" class="group contact-switcher__item contact-switcher__item_dima">
                 <div class="contact-switch">
@@ -75,12 +50,36 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Contact forms -->
-        <div class="flex-1 relative">
-            <!-- Форма Димы (СЕО) -->
-            <form data-contact="dima" class="contact-form bg-white rounded-28 absolute inset-0 flex flex-col p-3 transition-opacity duration-300 opacity-100 pointer-events-auto"
-                  method="post">
+    <!-- Дима блок -->
+    <div data-contact="dima" data-active="true"
+         class="contact-block rounded-4xl bg-blue-600 flex font-sans min-h-[780px] p-3 transition-opacity duration-300 opacity-100 pointer-events-auto absolute inset-0">
+        <!-- Левая часть -->
+        <div class="flex-1 p-7 flex flex-col justify-between">
+            <div class="font-serif space-y-2 w-[525px]">
+                <div class="text-white/60 text-2xl font-semibold">Спасибо, что долистали до конца</div>
+                <div class="text-white text-[3.5rem]/17 font-bold">Самое время обсудить проект</div>
+            </div>
+
+            <div class="flex flex-col items-start gap-3 max-w-[273px]">
+                <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
+                <div class="chat-message chat-message-2 chat-message_default">Я Дима, фаундер<br>агентства TOLKUNOV</div>
+                <div class="chat-message chat-message-3 chat-message_cta">
+                    <div class="text-blue-900 text-base font-bold tracking-[0.16px]">Отвечу на все вопросы и&nbsp;посчитаю смету</div>
+
+                    <a href="https://t.me/tolkunovdb" target="_blank"
+                       class="bg-blue-600 py-3 pl-4 pr-6 rounded-20 hover:bg-blue-620 active:bg-blue-680 transition-colors  inline-flex items-center gap-2 font-glina text-2xl/6 font-thin !text-white !no-underline">
+                        <span class="icon icon-telegram size-7"></span>
+                        <span>Написать</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Правая часть - форма -->
+        <div class="w-[578px] mt-[148px] relative">
+            <form class="bg-white rounded-28 flex flex-col p-3 h-full" method="post">
                 <div class="space-y-5 p-3">
                     <div class="form-row">
                         <label class="form-label">Услуги</label>
@@ -186,10 +185,37 @@
                     </button>
                 </div>
             </form>
+        </div>
+    </div>
 
-            <!-- Форма Тани (PR) -->
-            <form data-contact="tanya" class="contact-form bg-white rounded-28 absolute inset-0 flex flex-col p-3 transition-opacity duration-300 opacity-0 pointer-events-none"
-                  method="post">
+    <!-- Таня блок -->
+    <div data-contact="tanya" data-active="false"
+         class="contact-block rounded-4xl bg-purple-400 flex font-sans min-h-[780px] p-3 transition-opacity duration-300 opacity-0 pointer-events-none absolute inset-0">
+        <!-- Левая часть -->
+        <div class="flex-1 p-7 flex flex-col justify-between">
+            <div class="font-serif space-y-2 w-[525px]">
+                <div class="text-white/60 text-2xl font-semibold">Спасибо, что долистали до конца</div>
+                <div class="text-white text-[3.5rem]/17 font-bold">Как насчёт кросс-промо?</div>
+            </div>
+
+            <div class="flex flex-col items-start gap-3 max-w-[273px]">
+                <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
+                <div class="chat-message chat-message-2 chat-message_default">Я Таня, отвечаю за пиар<br>в TOLKUNOV</div>
+                <div class="chat-message chat-message-3 chat-message_cta">
+                    <div class="text-purple-900 text-base font-bold tracking-[0.16px]">Обсудим сотрудничество?</div>
+
+                    <a href="https://t.me/firsaness" target="_blank"
+                       class="bg-purple-400 py-3 pl-4 pr-6 rounded-20 hover:bg-purple-300 active:bg-purple-500 transition-colors inline-flex items-center gap-2 font-glina text-2xl/6 font-thin !text-white !no-underline">
+                        <span class="icon icon-telegram size-7"></span>
+                        <span>Написать</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Правая часть - форма -->
+        <div class="w-[578px] mt-[148px] relative">
+            <form class="bg-white rounded-28 flex flex-col p-3 h-full" method="post">
                 <div class="space-y-5 p-3">
                     <div class="form-row">
                         <input type="text" name="name" class="form-field" placeholder="Имя">
@@ -250,10 +276,37 @@
                     </button>
                 </div>
             </form>
+        </div>
+    </div>
 
-            <!-- Форма Оли (HR) -->
-            <form data-contact="olya" class="contact-form bg-white rounded-28 absolute inset-0 flex flex-col p-3 transition-opacity duration-300 opacity-0 pointer-events-none"
-                  method="post">
+    <!-- Оля блок -->
+    <div data-contact="olya" data-active="false"
+         class="contact-block rounded-4xl bg-lime-500 flex font-sans min-h-[780px] p-3 transition-opacity duration-300 opacity-0 pointer-events-none absolute inset-0">
+        <!-- Левая часть -->
+        <div class="flex-1 p-7 flex flex-col justify-between">
+            <div class="font-serif space-y-2 w-[525px]">
+                <div class="text-blue-900/60 text-2xl font-semibold">Спасибо, что долистали до конца</div>
+                <div class="text-blue-900 text-[3.5rem]/17 font-bold">В поиске крутых коллег?</div>
+            </div>
+
+            <div class="flex flex-col items-start gap-3 max-w-[273px]">
+                <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
+                <div class="chat-message chat-message-2 chat-message_default">Я Оля, отвечаю за кадры<br>в TOLKUNOV</div>
+                <div class="chat-message chat-message-3 chat-message_cta">
+                    <div class="text-blue-900 text-base font-bold tracking-[0.16px]">Хочешь работать у нас? Присылай своё резюме</div>
+
+                    <a href="https://t.me/cancolya" target="_blank"
+                       class="bg-lime-500 py-3 pl-4 pr-6 rounded-20 hover:bg-lime-400 active:bg-lime-600 transition-colors inline-flex items-center gap-2 font-glina text-2xl/6 font-thin !text-blue-900 !no-underline">
+                        <span class="icon icon-telegram size-7"></span>
+                        <span>Написать</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Правая часть - форма -->
+        <div class="w-[578px] mt-[148px] relative">
+            <form class="bg-white rounded-28 flex flex-col p-3 h-full" method="post">
                 <div class="space-y-5 p-3">
                     <div class="form-row">
                         <input type="text" name="name" class="form-field" placeholder="Имя">
