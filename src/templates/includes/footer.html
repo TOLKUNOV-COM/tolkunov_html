@@ -54,7 +54,7 @@
 
     <!-- Дима блок -->
     <div data-contact="dima" data-active="true"
-         class="contact-block rounded-4xl bg-blue-600 flex font-sans min-h-[780px] p-3 transition-opacity duration-300 opacity-100 pointer-events-auto absolute inset-0">
+         class="contact-block rounded-4xl bg-blue-600 flex font-sans min-h-[780px] p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
         <!-- Левая часть -->
         <div class="flex-1 p-7 flex flex-col justify-between">
             <div class="font-serif space-y-2 w-[525px]">
@@ -147,7 +147,7 @@
                     </div>
 
                     <label class="flex items-start gap-2 cursor-pointer select-none">
-                        <input type="checkbox" name="agree" class="visually-hidden"/>
+                        <input type="checkbox" name="agree" required class="visually-hidden"/>
 
                         <span class="form-checkbox block"></span>
 
@@ -190,7 +190,7 @@
 
     <!-- Таня блок -->
     <div data-contact="tanya" data-active="false"
-         class="contact-block rounded-4xl bg-purple-400 flex font-sans min-h-[780px] p-3 transition-opacity duration-300 opacity-0 pointer-events-none absolute inset-0">
+         class="contact-block rounded-4xl bg-purple-400 flex font-sans min-h-[780px] p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
         <!-- Левая часть -->
         <div class="flex-1 p-7 flex flex-col justify-between">
             <div class="font-serif space-y-2 w-[525px]">
@@ -238,7 +238,7 @@
                     </div>
 
                     <label class="flex items-start gap-2 cursor-pointer select-none">
-                        <input type="checkbox" name="agree" class="visually-hidden"/>
+                        <input type="checkbox" name="agree" required class="visually-hidden"/>
 
                         <span class="form-checkbox block"></span>
 
@@ -281,7 +281,7 @@
 
     <!-- Оля блок -->
     <div data-contact="olya" data-active="false"
-         class="contact-block rounded-4xl bg-lime-500 flex font-sans min-h-[780px] p-3 transition-opacity duration-300 opacity-0 pointer-events-none absolute inset-0">
+         class="contact-block rounded-4xl bg-lime-500 flex font-sans min-h-[780px] p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
         <!-- Левая часть -->
         <div class="flex-1 p-7 flex flex-col justify-between">
             <div class="font-serif space-y-2 w-[525px]">
@@ -326,7 +326,7 @@
                     </div>
 
                     <label class="flex items-start gap-2 cursor-pointer select-none">
-                        <input type="checkbox" name="agree" class="visually-hidden"/>
+                        <input type="checkbox" name="agree" required class="visually-hidden"/>
 
                         <span class="form-checkbox block"></span>
 

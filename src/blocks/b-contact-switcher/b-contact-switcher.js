@@ -15,14 +15,8 @@ $(function () {
         const targetContact = $(this).data('target');
 
         // Скрываем все блоки контактов
-        $('.contact-block')
-            .removeClass('opacity-100 pointer-events-auto')
-            .addClass('opacity-0 pointer-events-none')
-            .attr('data-active', 'false');
+        $('.contact-block').attr('data-active', 'false');
 
-            $(`[data-contact="${targetContact}"]`)
-                .removeClass('opacity-0 pointer-events-none')
-                .addClass('opacity-100 pointer-events-auto')
-                .attr('data-active', 'true');
+        $(`[data-contact="${targetContact}"]`).attr('data-active', 'true');
     });
 });

@@ -96,5 +96,5 @@
 
 .contact-switcher__item[data-active=true] .contact-switch__connector {
     @apply opacity-100;
-    @apply delay-200 duration-150;
+    @apply delay-200 duration-200;
 }

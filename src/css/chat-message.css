@@ -38,7 +38,7 @@
 }
 
 .contact-block[data-active="false"] .chat-message {
-    @apply !delay-0;
+    @apply delay-0;
 }
 
 .chat-message-1 {
