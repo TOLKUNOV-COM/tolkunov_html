@@ -375,7 +375,7 @@
             <span class="text-blue-900 font-glina text-32 tracking-[-0.64px]">Продакшн</span>
         </div>
 
-        <nav class="footer-menu__nav flex gap-6">
+        <nav class="footer-menu__nav flex items-start gap-6">
             <a href="#" class="footer-menu__link">Услуги</a>
             <a href="#" class="footer-menu__link">Работы</a>
             <a href="#" class="footer-menu__link">Отзывы</a>
@@ -392,6 +392,7 @@
     </section>
 
     <section class="footer-info grid grid-cols-[auto_1fr_auto_auto] gap-6">
+        <!-- footer services -->
         <div class="footer-services flex flex-col items-start">
             <a href="#" class="group flex items-center flex-nowrap gap-3 p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
                 <span class="text-blue-900 text-2xl font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Баннеры</span>
@@ -436,9 +437,45 @@
             </a>
         </div>
 
-        <div class="bg-gray-500"></div>
-        <div class="w-60 bg-gray-500"></div>
-        <div class="w-60 bg-gray-500"></div>
+        <!-- footer case container -->
+        <div class="footer-case-container relative rounded-3xl overflow-hidden min-w-60">
+            <!-- Начальный кейс -->
+            <div class="footer-case absolute inset-0 opacity-100 transition-opacity pointer-events-auto">
+                <img src="https://dummyimage.com/400x400" alt="#" class="absolute inset-0 w-full h-full object-cover">
+                
+                <!-- Градиентная панель -->
+                <div class="footer-case__panel absolute bottom-0 left-0 right-0 p-5 pr-16 flex items-center">
+                    <div class="footer-case__title">Баннеры для
+                        <nobr><img class="b-cases__title-img" src="https://dummyimage.com/48x48" alt="МТС Банк"> МТС Банка</nobr>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="footer-case absolute inset-0 opacity-0 transition-opacity pointer-events-none">
+                <img src="https://dummyimage.com/600x300/000/fff" alt="#" class="absolute inset-0 w-full h-full object-cover">
+                
+                <!-- Градиентная панель -->
+                <div class="footer-case__panel absolute bottom-0 left-0 right-0 p-5 pr-16 flex items-center">
+                    <div class="footer-case__title">Лендинг для
+                        <nobr><img class="b-cases__title-img" src="https://dummyimage.com/48x48" alt="Сбербанк"> Сбербанка</nobr>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кнопка обновления -->
+            <button
+                    type="button"
+                    class="footer-case__refresh group absolute bottom-5 right-5 inline-flex items-center justify-center p-1 rounded-full size-7 bg-white border-none inset-ring-[1.5px] inset-ring-slate-40 hover:backdrop-blur-sm z-10 disabled:cursor-not-allowed"
+                    data-refresh-url="http://tolkunov.local/test"
+                    aria-label="Обновить"
+            >
+                <i class="icon icon-refresh size-5 text-gray-400 transform transition-all group-hover:rotate-180 group-hover:text-blue-900"></i>
+            </button>
+        </div>
+
+        <div class="w-100 bg-gray-500"></div>
+        <div class="w-100 bg-gray-500"></div>
 
     </section>
 </footer>

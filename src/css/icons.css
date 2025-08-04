@@ -32,3 +32,8 @@
     mask-image: url("../img/logo.svg");
     background-color: currentColor;
 }
+
+.icon-refresh {
+    mask-image: url("../img/refresh.svg");
+    background-color: currentColor;
+}

@@ -6,5 +6,9 @@ module.exports = {
     "./src/blocks/**/*.{jade,js,less}",
     "./build/**/*.html"
   ],
+  safelist: [
+    'opacity-0',
+    'opacity-100',
+  ],
   plugins: [],
 };

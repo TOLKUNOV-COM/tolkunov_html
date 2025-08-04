@@ -1,0 +1,13 @@
+.footer-case__panel {
+    background: linear-gradient(0deg, rgba(16, 19, 43, 0.63) 3.68%, rgba(22, 31, 106, 0.00) 100%);
+    backdrop-filter: blur(4.6px);
+}
+
+.footer-case__title {
+    @apply text-white font-serif text-base font-bold leading-[22px];
+
+    .b-cases__title-img {
+        max-height: 22px;
+        @apply mx-[3px];
+    }
+}
