@@ -391,11 +391,11 @@
         </div>
     </section>
 
-    <section class="footer-info grid grid-cols-[auto_1fr_auto_auto] gap-6">
+    <section class="footer-info grid grid-cols-[auto_1fr_auto] gap-6">
         <!-- footer services -->
         <div class="footer-services flex flex-col items-start">
             <a href="#" class="group flex items-center flex-nowrap gap-3 p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
-                <span class="text-blue-900 text-2xl font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Баннеры</span>
+                <span class="text-blue-900 text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Баннеры</span>
 
                 <div class="footer-services__tags text-slate-400 transition-colors group-hover:text-blue-900">
                     <span class="footer-services__tag">HTML5</span>
@@ -404,7 +404,7 @@
                 </div>
             </a>
             <a href="#" class="group flex items-center flex-nowrap gap-3 p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
-                <span class="text-blue-900 text-2xl font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Наружка</span>
+                <span class="text-blue-900 text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Наружка</span>
 
                 <div class="footer-services__tags text-slate-400 transition-colors group-hover:text-blue-900">
                     <span class="footer-services__tag">OOH</span>
@@ -413,7 +413,7 @@
                 </div>
             </a>
             <a href="#" class="group flex items-center flex-nowrap gap-3 p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
-                <span class="text-blue-900 text-2xl font-semibold pb-[5px] transition-colors group-hover:text-blue-600">2D</span>
+                <span class="text-blue-900 text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">2D</span>
 
                 <div class="footer-services__tags text-slate-400 transition-colors group-hover:text-blue-900">
                     <span class="footer-services__tag">Иллюстрации</span>
@@ -421,7 +421,7 @@
                 </div>
             </a>
             <a href="#" class="group flex items-center flex-nowrap gap-3 p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
-                <span class="text-blue-900 text-2xl font-semibold pb-[5px] transition-colors group-hover:text-blue-600">3D</span>
+                <span class="text-blue-900 text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">3D</span>
 
                 <div class="footer-services__tags text-slate-400 transition-colors group-hover:text-blue-900">
                     <span class="footer-services__tag">Иллюстрации</span>
@@ -429,7 +429,7 @@
                 </div>
             </a>
             <a href="#" class="group flex items-center flex-nowrap gap-3 p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
-                <span class="text-blue-900 text-2xl font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Лендинги</span>
+                <span class="text-blue-900 text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Лендинги</span>
 
                 <div class="footer-services__tags text-slate-400 transition-colors group-hover:text-blue-900">
                     <span class="footer-services__tag">СПЕЦПРОЕКТЫ</span>
@@ -437,41 +437,57 @@
             </a>
         </div>
 
-        <!-- footer case container -->
-        <div class="footer-case-container relative rounded-3xl overflow-hidden min-w-60">
-            <!-- Начальный кейс -->
-            <div class="footer-case absolute inset-0 opacity-100 transition-opacity pointer-events-auto">
-                <img src="https://dummyimage.com/400x400" alt="#" class="absolute inset-0 w-full h-full object-cover">
-                
-                <!-- Градиентная панель -->
-                <div class="footer-case__panel absolute bottom-0 left-0 right-0 p-5 pr-16 flex items-center">
-                    <div class="footer-case__title">Баннеры для
-                        <nobr><img class="b-cases__title-img" src="https://dummyimage.com/48x48" alt="МТС Банк"> МТС Банка</nobr>
+        <div class="flex flex-nowrap gap-6">
+            <!-- footer case container -->
+            <div class="footer-case-container relative rounded-3xl overflow-hidden basis-1/2 lg:basis-[61.5%]">
+                <!-- Начальный кейс -->
+                <div class="footer-case absolute inset-0 opacity-100 transition-opacity pointer-events-auto">
+                    <img src="https://dummyimage.com/400x400" alt="#" class="absolute inset-0 w-full h-full object-cover">
+
+                    <!-- Градиентная панель -->
+                    <div class="footer-case__panel absolute bottom-0 left-0 right-0 p-5 pr-16 flex items-center">
+                        <div class="footer-case__title">Баннеры для
+                            <nobr><img class="b-cases__title-img" src="https://dummyimage.com/48x48" alt="МТС Банк"> МТС Банка</nobr>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Case 2 -->
-            <div class="footer-case absolute inset-0 opacity-0 transition-opacity pointer-events-none">
-                <img src="https://dummyimage.com/600x300/000/fff" alt="#" class="absolute inset-0 w-full h-full object-cover">
-                
-                <!-- Градиентная панель -->
-                <div class="footer-case__panel absolute bottom-0 left-0 right-0 p-5 pr-16 flex items-center">
-                    <div class="footer-case__title">Лендинг для
-                        <nobr><img class="b-cases__title-img" src="https://dummyimage.com/48x48" alt="Сбербанк"> Сбербанка</nobr>
+                <!-- Case 2 -->
+                <div class="footer-case absolute inset-0 opacity-0 transition-opacity pointer-events-none">
+                    <img src="https://dummyimage.com/600x300/000/fff" alt="#" class="absolute inset-0 w-full h-full object-cover">
+
+                    <!-- Градиентная панель -->
+                    <div class="footer-case__panel absolute bottom-0 left-0 right-0 p-5 pr-16 flex items-center">
+                        <div class="footer-case__title">Лендинг для
+                            <nobr><img class="b-cases__title-img" src="https://dummyimage.com/48x48" alt="Сбербанк"> Сбербанка</nobr>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Кнопка обновления -->
+                <button
+                        type="button"
+                        class="footer-case__refresh group absolute bottom-5 right-5 inline-flex items-center justify-center p-1 rounded-full size-7 bg-white border-none inset-ring-[1.5px] inset-ring-slate-40 hover:backdrop-blur-sm z-10 disabled:cursor-not-allowed"
+                        data-refresh-url="http://tolkunov.local/test"
+                        aria-label="Обновить"
+                >
+                    <i class="icon icon-refresh size-5 text-gray-400 transform transition-all group-hover:rotate-180 group-hover:text-blue-900"></i>
+                </button>
             </div>
 
-            <!-- Кнопка обновления -->
-            <button
-                    type="button"
-                    class="footer-case__refresh group absolute bottom-5 right-5 inline-flex items-center justify-center p-1 rounded-full size-7 bg-white border-none inset-ring-[1.5px] inset-ring-slate-40 hover:backdrop-blur-sm z-10 disabled:cursor-not-allowed"
-                    data-refresh-url="http://tolkunov.local/test"
-                    aria-label="Обновить"
-            >
-                <i class="icon icon-refresh size-5 text-gray-400 transform transition-all group-hover:rotate-180 group-hover:text-blue-900"></i>
-            </button>
+            <!-- footer review -->
+            <div class="flex flex-col p-5 rounded-2xl inset-ring-[1.5px] inset-ring-slate-40 basis-1/2 lg:basis-[38.5%]">
+                <div class="w-[109px] h-[40px] flex items-center justify-self-start">
+                    <img src="https://dummyimage.com/200x60" alt="#" class="max-w-full max-h-full object-contain"/>
+                </div>
+
+                <div class="font-serif text-lg font-bold leading-6 mt-auto mb-4">Спасибо, Дима, ещё раз, что&nbsp;вы&nbsp;есть и&nbsp;делаете такой качественный продукт</div>
+
+                <div class="flex flex-col gap-3 mr-10">
+                    <div class="text-sm font-bold tracking-[0.14px]">Константин Обухов</div>
+                    <div class="text-slate-430 text-tiny font-black leading-3 tracking-[0.4px] uppercase">Арт-директор</div>
+                </div>
+            </div>
         </div>
 
         <div class="w-100 bg-gray-500"></div>
