@@ -31,20 +31,18 @@ $(document).ready(function() {
             // Получаем все текущие кейсы
             const $oldCases = $container.find('.footer-case');
             
-            // Парсим новый HTML и добавляем необходимые классы
-            const $newCase = $(html).addClass('opacity-0 pointer-events-none').removeClass('opacity-100 pointer-events-auto');
+            // Парсим новый HTML и устанавливаем data-active
+            const $newCase = $(html).attr('data-active', 'false');
             
             // Вставляем новый кейс в контейнер (пока скрытый)
             $container.append($newCase);
 
             // Шаг 1: Скрываем старые кейсы
-            $oldCases.addClass('opacity-0 pointer-events-none')
-            .removeClass('opacity-100 pointer-events-auto');
+            $oldCases.attr('data-active', 'false');
             
             // Шаг 2: Через 150ms (половина анимации) показываем новый кейс
             setTimeout(() => {
-                $newCase.addClass('opacity-100 pointer-events-auto')
-                .removeClass('opacity-0 pointer-events-none');
+                $newCase.attr('data-active', 'true');
             }, 150);
             
             // Шаг 3: Удаляем старые кейсы через полное время анимации (300ms)

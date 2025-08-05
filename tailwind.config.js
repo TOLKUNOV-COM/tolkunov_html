@@ -9,6 +9,8 @@ module.exports = {
   safelist: [
     'opacity-0',
     'opacity-100',
+    'pointer-events-none',
+    'pointer-events-auto',
   ],
   plugins: [],
 };

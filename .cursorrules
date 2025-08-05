@@ -7,4 +7,25 @@
 **examples**: 
   - ❌ Неправильно: `@import "cta.css" layer(components);`
   - ✅ Правильно: `@import "./cta.css" layer(components);`
-**exceptions**: Импорты из node_modules могут использоваться без `./` 
+**exceptions**: Импорты из node_modules могут использоваться без `./`
+
+## Footer Case & Review AJAX Архитектура
+
+**pattern**: `footer-(case|review).*`
+**description**: Footer case и review используют одинаковую архитектуру динамической загрузки через AJAX с fade анимацией
+**structure**:
+  - Контейнер `.footer-case-container` / `.footer-review-container` с overflow-hidden
+  - Кнопка `.footer-case__refresh` / `.footer-review__refresh` с атрибутом `data-refresh-url`
+  - Элементы `.footer-case` / `.footer-review` абсолютно позиционированы с `transition-all`
+  - Состояния управляются через `data-active` атрибут с классами `data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto`
+  - Загрузка: disabled кнопка + animate-spin иконка, timeout 10 секунд
+**ajax**:
+  - Сервер возвращает готовый HTML элемента без позиционирования
+  - JavaScript автоматически устанавливает `data-active="false"`
+  - Последовательность: `data-active="false"` старые → `data-active="true"` новый → удалить старые
+**examples**:
+  - ✅ Правильно: Управление состояниями через `data-active` атрибут
+  - ✅ Правильно: Отзыв как кликабельная ссылка с hover эффектами
+  - ✅ Правильно: Кнопка обновления в углу контейнера
+  - ❌ Неправильно: Прямое управление классами opacity/pointer-events
+**exceptions**: При ошибке AJAX console.error, кнопка разблокируется 

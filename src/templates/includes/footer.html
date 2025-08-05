@@ -441,7 +441,8 @@
             <!-- footer case container -->
             <div class="footer-case-container relative rounded-3xl overflow-hidden basis-1/2 lg:basis-[61.5%]">
                 <!-- Начальный кейс -->
-                <div class="footer-case absolute inset-0 opacity-100 transition-opacity pointer-events-auto">
+                <div class="footer-case absolute inset-0 transition-all opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto"
+                     data-active="true">
                     <img src="https://dummyimage.com/400x400" alt="#" class="absolute inset-0 w-full h-full object-cover">
 
                     <!-- Градиентная панель -->
@@ -452,22 +453,10 @@
                     </div>
                 </div>
 
-                <!-- Case 2 -->
-                <div class="footer-case absolute inset-0 opacity-0 transition-opacity pointer-events-none">
-                    <img src="https://dummyimage.com/600x300/000/fff" alt="#" class="absolute inset-0 w-full h-full object-cover">
-
-                    <!-- Градиентная панель -->
-                    <div class="footer-case__panel absolute bottom-0 left-0 right-0 p-5 pr-16 flex items-center">
-                        <div class="footer-case__title">Лендинг для
-                            <nobr><img class="b-cases__title-img" src="https://dummyimage.com/48x48" alt="Сбербанк"> Сбербанка</nobr>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Кнопка обновления -->
                 <button
                         type="button"
-                        class="footer-case__refresh group absolute bottom-5 right-5 inline-flex items-center justify-center p-1 rounded-full size-7 bg-white border-none inset-ring-[1.5px] inset-ring-slate-40 hover:backdrop-blur-sm z-10 disabled:cursor-not-allowed"
+                        class="footer-case__refresh group absolute bottom-5 right-5 inline-flex items-center justify-center p-1 rounded-full size-7 bg-white border-none transition-all inset-ring-[1.5px] inset-ring-slate-40 hover:backdrop-blur-sm z-10 disabled:cursor-not-allowed"
                         data-refresh-url="http://tolkunov.local/test"
                         aria-label="Обновить"
                 >
@@ -475,18 +464,33 @@
                 </button>
             </div>
 
-            <!-- footer review -->
-            <div class="flex flex-col p-5 rounded-2xl inset-ring-[1.5px] inset-ring-slate-40 basis-1/2 lg:basis-[38.5%]">
-                <div class="w-[109px] h-[40px] flex items-center justify-self-start">
-                    <img src="https://dummyimage.com/200x60" alt="#" class="max-w-full max-h-full object-contain"/>
-                </div>
+            <!-- footer review container -->
+            <div class="footer-review-container relative rounded-2xl inset-ring-[1.5px] inset-ring-slate-40 overflow-hidden basis-1/2 lg:basis-[38.5%]">
+                <!-- Начальный отзыв -->
+                <a href="https://example.com/review-1"
+                    data-active="true"
+                   class="footer-review absolute inset-0 transition-all flex flex-col p-5 !no-underline hover:bg-slate-100 opacity-0 pointer-events-none scale-90 data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto data-[active=true]:scale-100">
+                    <div class="w-[109px] h-[40px] flex items-center">
+                        <img src="https://dummyimage.com/200x60" alt="#" class="max-w-full max-h-full object-contain"/>
+                    </div>
 
-                <div class="font-serif text-lg font-bold leading-6 mt-auto mb-4">Спасибо, Дима, ещё раз, что&nbsp;вы&nbsp;есть и&nbsp;делаете такой качественный продукт</div>
+                    <div class="text-blue-900 font-serif text-lg font-bold leading-6 mt-auto mb-4">Спасибо, Дима, ещё раз, что&nbsp;вы&nbsp;есть и&nbsp;делаете такой качественный продукт</div>
 
-                <div class="flex flex-col gap-3 mr-10">
-                    <div class="text-sm font-bold tracking-[0.14px]">Константин Обухов</div>
-                    <div class="text-slate-430 text-tiny font-black leading-3 tracking-[0.4px] uppercase">Арт-директор</div>
-                </div>
+                    <div class="flex flex-col gap-3 mr-10">
+                        <div class="text-sm font-bold tracking-[0.14px] text-blue-900">Константин Обухов</div>
+                        <div class="text-slate-430 text-tiny font-black leading-3 tracking-[0.4px] uppercase">Арт-директор</div>
+                    </div>
+                </a>
+
+                <!-- Кнопка обновления -->
+                <button
+                        type="button"
+                        class="footer-review__refresh group absolute bottom-5 right-5 inline-flex items-center justify-center p-1 rounded-full size-7 bg-white border-none transition-all inset-ring-[1.5px] inset-ring-slate-40 hover:backdrop-blur-sm z-10 disabled:cursor-not-allowed"
+                        data-refresh-url="#"
+                        aria-label="Обновить отзыв"
+                >
+                    <i class="icon icon-refresh size-5 text-gray-400 transform transition-all group-hover:rotate-180 group-hover:text-blue-900"></i>
+                </button>
             </div>
         </div>
 
