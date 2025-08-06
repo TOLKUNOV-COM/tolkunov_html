@@ -55,3 +55,24 @@
     background-repeat: repeat-x;
     background-size: 1px 26px;
 }
+
+.footer-review::after {
+    content: '';
+
+    width: 70px;
+    height: 62px;
+    position: absolute;
+    right: 20px;
+    top: -16px;
+
+    mask: center no-repeat url("../img/quote.svg");
+    mask-size: cover;
+    background-color: #F4F6FA;
+
+    @apply transition-all;
+}
+
+.footer-review:hover::after {
+    top: 20px;
+    background-color: #E8ECF3;
+}
