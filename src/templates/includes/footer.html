@@ -467,8 +467,8 @@
             <!-- footer review container -->
             <div class="footer-review-container relative rounded-2xl inset-ring-[1.5px] inset-ring-slate-40 overflow-hidden basis-1/2 lg:basis-[38.5%]">
                 <!-- Начальный отзыв -->
-                <a href="https://example.com/review-1"
-                    data-active="true"
+                <a href="#"
+                   data-active="true"
                    class="footer-review absolute inset-0 transition-all flex flex-col p-5 !no-underline hover:bg-slate-100 opacity-0 pointer-events-none scale-90 data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto data-[active=true]:scale-100">
                     <div class="w-[109px] h-[40px] flex items-center">
                         <img src="https://dummyimage.com/200x60" alt="#" class="max-w-full max-h-full object-contain"/>
@@ -486,7 +486,7 @@
                 <button
                         type="button"
                         class="footer-review__refresh group absolute bottom-5 right-5 inline-flex items-center justify-center p-1 rounded-full size-7 bg-white border-none transition-all inset-ring-[1.5px] inset-ring-slate-40 hover:backdrop-blur-sm z-10 disabled:cursor-not-allowed"
-                        data-refresh-url="#"
+                        data-refresh-url="http://tolkunov.local/test"
                         aria-label="Обновить отзыв"
                 >
                     <i class="icon icon-refresh size-5 text-gray-400 transform transition-all group-hover:rotate-180 group-hover:text-blue-900"></i>
@@ -494,8 +494,28 @@
             </div>
         </div>
 
-        <div class="w-100 bg-gray-500"></div>
-        <div class="w-100 bg-gray-500"></div>
+        <!-- verticals -->
+        <div class="flex flex-col justify-between rounded-2xl inset-ring-[1.5px] inset-ring-slate-40 p-3 w-[209px]">
+            <div class="p-2 pb-0 text-slate-430 font-serif font-bold text-[15px] leading-[25px]">А ещё мы делаем</div>
 
+            <div class="flex flex-col items-start gap-1 font-glina text-2xl leading-[57%] tracking-[-0.48px]">
+                <a href="#" class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-colors text-blue-900 hover:text-rose-500 hover:bg-slate-40">
+                    <i class="icon icon-logo size-7 transition-colors"></i>
+                    <span class="text-blue-900">Журнал</span>
+                </a>
+                <a href="#" class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-colors text-blue-900 hover:text-cyan-400 hover:bg-slate-40">
+                    <i class="icon icon-logo size-7 transition-colors"></i>
+                    <span class="text-blue-900">Академия</span>
+                </a>
+                <a href="#" class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-colors text-blue-900 hover:text-violet-600 hover:bg-slate-40">
+                    <i class="icon icon-logo size-7 transition-colors"></i>
+                    <span class="text-blue-900">Сервисы</span>
+                </a>
+                <a href="#" class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-colors text-blue-900 hover:text-lime-450 hover:bg-slate-40">
+                    <i class="icon icon-logo size-7 transition-colors"></i>
+                    <span class="text-blue-900">Маркет</span>
+                </a>
+            </div>
+        </div>
     </section>
 </footer>
