@@ -95,3 +95,18 @@
         filter: blur(35px);
     }
 }
+
+.footer-features__check_1 {
+    background-image: url("../img/footer-features/check_1.svg");
+    background-position: center bottom;
+}
+
+.footer-features__check_2 {
+    background-image: url("../img/footer-features/check_2.svg");
+    background-position: center bottom;
+}
+
+.footer-features__check_3 {
+    background-image: url("../img/footer-features/check_3.svg");
+    background-position: center bottom;
+}

@@ -36,6 +36,7 @@
     --color-blue-620: #2E55DB;
     --color-blue-680: #2146C4;
     --color-blue-900: #161F6A;
+    --color-blue-950: #161C4A;
 
     --color-purple-50: #F6EFFF;
     --color-purple-300: #C08DFE;
@@ -66,6 +67,8 @@
     --color-cyan-400: #0CF2F2;
 
     --color-gray-400: #ABB1C4;
+
+    --color-zinc-200: #DDE4FB;
 
     --radius-10: 10px;
     --radius-20: 20px;
