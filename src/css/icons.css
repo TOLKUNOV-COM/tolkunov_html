@@ -37,3 +37,8 @@
     mask-image: url("../img/refresh.svg");
     background-color: currentColor;
 }
+
+.icon-scroll-up {
+    mask-image: url("../img/scroll-up.svg");
+    background-color: currentColor;
+}

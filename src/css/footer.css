@@ -76,3 +76,22 @@
     top: 20px;
     background-color: #E8ECF3;
 }
+
+.footer__word-logo {
+    @apply aspect-[1392/278] text-slate-50;
+    @apply overflow-hidden;
+    @apply relative;
+
+    mask-image: url("../img/word_logo.svg");
+    mask-size: cover;
+    background-color: currentColor;
+
+    &::after {
+        content: '';
+
+        @apply absolute w-full h-[150px] -bottom-[90px];
+
+        background: #FFF;
+        filter: blur(35px);
+    }
+}

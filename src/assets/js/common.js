@@ -140,3 +140,14 @@ $(function () {
         textarea.addEventListener('input', () => autoGrowOnlyExpand(textarea));
     });
 });
+
+// Плавный скролл наверх
+$(function () {
+    $('.js-scroll-to-top').on('click', function(e) {
+        e.preventDefault();
+        
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500, 'swing');
+    });
+});
