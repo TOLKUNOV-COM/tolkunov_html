@@ -1,4 +1,4 @@
-<section id="contacts-container" class="relative m-8 mb-12 font-sans min-h-[780px] hidden">
+<section id="contacts-container" class="relative m-8 mb-12 mx-auto font-sans rounded-4xl overflow-hidden w-[1376px] h-[780px]">
     <!-- Contact switcher (абсолютное позиционирование) -->
     <div class="absolute top-3 right-3 z-10">
         <div class="flex items-start justify-between p-4 pb-7 bg-white rounded-28 h-[140px] w-[578px]">
@@ -54,7 +54,53 @@
 
     <!-- Дима блок -->
     <div data-contact="dima" data-active="true"
-         class="contact-block rounded-4xl bg-blue-600 flex font-sans min-h-[780px] p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+         class="contact-block lg:bg-blue-600 flex font-sans h-[780px] p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+
+        <picture class="absolute inset-0 z-0">
+            <!-- 1920px (4xl) -->
+            <source
+                    srcset="/assets/img/contact-block/dima_1920.webp, /assets/img/contact-block/dima_1920_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 120rem)"/>
+
+            <!-- 1600px (3xl) -->
+            <source
+                    srcset="/assets/img/contact-block/dima_1600.webp, /assets/img/contact-block/dima_1600_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 100rem)"/>
+
+            <!-- 1440px (2xl) -->
+            <source
+                    srcset="/assets/img/contact-block/dima_1440.webp, /assets/img/contact-block/dima_1440_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 90rem)"/>
+
+            <!-- 1280px (xl) -->
+            <source
+                    srcset="/assets/img/contact-block/dima_1280.webp, /assets/img/contact-block/dima_1280_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 80rem)"/>
+
+            <!-- 1024px (lg) -->
+            <source
+                    srcset="/assets/img/contact-block/dima_1024.webp, /assets/img/contact-block/dima_1024_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 64rem)"/>
+
+            <!-- 768px (md) -->
+            <source
+                    srcset="/assets/img/contact-block/dima_768.webp, /assets/img/contact-block/dima_768_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 48rem)"/>
+
+            <!-- fallback на случай, если picture не поддерживается (например, IE) -->
+            <img
+                    src="/assets/img/contact-block/dima_440.webp"
+                    srcset="/assets/img/contact-block/dima_440_x2.webp 2x"
+                    alt="Описание изображения"
+                    class="w-full h-full object-contain object-left"/>
+        </picture>
+
         <!-- Левая часть -->
         <div class="flex-1 p-7 flex flex-col justify-between">
             <div class="font-serif space-y-2 w-[525px]">
@@ -190,7 +236,51 @@
 
     <!-- Таня блок -->
     <div data-contact="tanya" data-active="false"
-         class="contact-block rounded-4xl bg-purple-400 flex font-sans min-h-[780px] p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+         class="contact-block rounded-4xl lg:bg-purple-400 flex font-sans h-[780px] p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+        <picture class="absolute inset-0 z-0">
+            <!-- 1920px (4xl) -->
+            <source
+                    srcset="/assets/img/contact-block/tanya_1920.webp, /assets/img/contact-block/tanya_1920_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 120rem)"/>
+
+            <!-- 1600px (3xl) -->
+            <source
+                    srcset="/assets/img/contact-block/tanya_1600.webp, /assets/img/contact-block/tanya_1600_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 100rem)"/>
+
+            <!-- 1440px (2xl) -->
+            <source
+                    srcset="/assets/img/contact-block/tanya_1440.webp, /assets/img/contact-block/tanya_1440_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 90rem)"/>
+
+            <!-- 1280px (xl) -->
+            <source
+                    srcset="/assets/img/contact-block/tanya_1280.webp, /assets/img/contact-block/tanya_1280_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 80rem)"/>
+
+            <!-- 1024px (lg) -->
+            <source
+                    srcset="/assets/img/contact-block/tanya_1024.webp, /assets/img/contact-block/tanya_1024_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 64rem)"/>
+
+            <!-- 768px (md) -->
+            <source
+                    srcset="/assets/img/contact-block/tanya_768.webp, /assets/img/contact-block/tanya_768_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 48rem)"/>
+
+            <!-- fallback на случай, если picture не поддерживается (например, IE) -->
+            <img
+                    src="/assets/img/contact-block/tanya_440.webp"
+                    srcset="/assets/img/contact-block/tanya_440_x2.webp 2x"
+                    alt="Описание изображения"
+                    class="w-full h-full object-contain object-left"/>
+        </picture>
         <!-- Левая часть -->
         <div class="flex-1 p-7 flex flex-col justify-between">
             <div class="font-serif space-y-2 w-[525px]">
@@ -281,7 +371,51 @@
 
     <!-- Оля блок -->
     <div data-contact="olya" data-active="false"
-         class="contact-block rounded-4xl bg-lime-500 flex font-sans min-h-[780px] p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+         class="contact-block rounded-4xl lg:bg-lime-500 flex font-sans h-[780px] p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+        <picture class="absolute inset-0 z-0">
+            <!-- 1920px (4xl) -->
+            <source
+                    srcset="/assets/img/contact-block/olya_1920.webp, /assets/img/contact-block/olya_1920_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 120rem)"/>
+
+            <!-- 1600px (3xl) -->
+            <source
+                    srcset="/assets/img/contact-block/olya_1600.webp, /assets/img/contact-block/olya_1600_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 100rem)"/>
+
+            <!-- 1440px (2xl) -->
+            <source
+                    srcset="/assets/img/contact-block/olya_1440.webp, /assets/img/contact-block/olya_1440_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 90rem)"/>
+
+            <!-- 1280px (xl) -->
+            <source
+                    srcset="/assets/img/contact-block/olya_1280.webp, /assets/img/contact-block/olya_1280_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 80rem)"/>
+
+            <!-- 1024px (lg) -->
+            <source
+                    srcset="/assets/img/contact-block/olya_1024.webp, /assets/img/contact-block/olya_1024_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 64rem)"/>
+
+            <!-- 768px (md) -->
+            <source
+                    srcset="/assets/img/contact-block/olya_768.webp, /assets/img/contact-block/olya_768_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 48rem)"/>
+
+            <!-- fallback на случай, если picture не поддерживается (например, IE) -->
+            <img
+                    src="/assets/img/contact-block/olya_440.webp"
+                    srcset="/assets/img/contact-block/olya_440_x2.webp 2x"
+                    alt="Описание изображения"
+                    class="w-full h-full object-contain object-left"/>
+        </picture>
         <!-- Левая часть -->
         <div class="flex-1 p-7 flex flex-col justify-between">
             <div class="font-serif space-y-2 w-[525px]">

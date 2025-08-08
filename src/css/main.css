@@ -14,6 +14,7 @@
 @import "./icons.css" layer(components);
 @import "./forms.css" layer(components);
 @import "./contact-switcher.css";
+@import "./contact-block.css";
 @import "./chat-message.css";
 @import "./footer.css";
 @import "./footer-case.css";
