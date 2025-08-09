@@ -1,2 +1,39 @@
 .contact-block {
 }
+
+.contact-block__play {
+    @apply pl-6 pr-7;
+    @apply flex items-center gap-3;
+    @apply rounded-20 bg-white;
+    @apply font-glina text-[28px] leading-7;
+    @apply !no-underline;
+    @apply relative;
+    @apply transition-all;
+
+    box-shadow: 0 2px 12px 0 rgba(22, 31, 106, 0.15);
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        left: -47px;
+        top: -40px;
+        width: 47px;
+        height: 46px;
+        transform: translate(30%, 30%);
+        @apply transition-transform;
+
+        mask-image: url("../img/play-decorate.svg");
+        background-color: #fff;
+    }
+
+    &:hover {
+        @apply scale-105;
+        @apply bg-blue-50;
+
+        &::after {
+            @apply bg-blue-50;
+            transform: translate(20%, 20%);
+        }
+    }
+}

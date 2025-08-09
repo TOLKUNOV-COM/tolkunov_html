@@ -42,3 +42,8 @@
     mask-image: url("../img/scroll-up.svg");
     background-color: currentColor;
 }
+
+.icon-play-short {
+    mask-image: url("../img/play-short.svg");
+    background-color: currentColor;
+}
