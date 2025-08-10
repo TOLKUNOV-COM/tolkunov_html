@@ -1,0 +1,104 @@
+/* Video Modal Styles */
+.video-modal {
+    @apply fixed inset-0 z-50;
+    @apply flex items-center justify-center;
+    @apply pointer-events-none opacity-0;
+    @apply transition-all duration-300 ease-out;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+}
+
+.video-modal[data-open="true"] {
+    @apply pointer-events-auto opacity-100;
+}
+
+.video-modal__backdrop {
+    @apply bg-black/80;
+    @apply cursor-pointer;
+    z-index: -1;
+}
+
+.video-modal__dialog {
+    width: min(calc(100vw - 80px), calc((100vh - 80px) * (16 / 9)));
+
+    @apply transform scale-95;
+    @apply transition-transform duration-300 ease-out;
+}
+
+.video-modal[data-open="true"] .video-modal__dialog {
+    @apply scale-100;
+}
+
+.video-modal__close {
+    @apply absolute top-6 right-6 z-10;
+    @apply size-15 p-3.5;
+
+    @apply ring-2 ring-white;
+    @apply bg-white/10;
+    box-shadow: 0 1px 4px 0 rgba(255, 255, 255, 0.25) inset;
+    backdrop-filter: blur(5.5px);
+
+    @apply text-white;
+    @apply rounded-full;
+    @apply flex items-center justify-center;
+    @apply transition-all duration-200;
+    @apply cursor-pointer;
+    @apply border-none;
+}
+
+.video-modal__close:hover {
+    @apply scale-110;
+}
+
+.video-modal__player {
+    @apply w-full;
+    @apply block;
+}
+
+/* Unique styles for each modal */
+.video-modal_dima {
+    .video-modal__backdrop {
+        background: rgba(40, 86, 246, 0.30);
+    }
+
+    .video-modal__dialog {
+        border-bottom: 5px solid #4655E5;
+        background: #4655E5;
+        box-shadow: 0 4px 91.4px 100px #2856F6;
+    }
+
+    .video-modal__body {
+        border: 3px solid #4A71F7;
+    }
+}
+
+.video-modal_tanya {
+    .video-modal__backdrop {
+        background: rgba(171, 103, 254, 0.30);
+    }
+
+    .video-modal__dialog {
+        border-bottom: 5px solid #AB67FE;
+        background: #AB67FE;
+        box-shadow: 0 4px 91.4px 100px rgba(171, 103, 254, 0.80);
+    }
+
+    .video-modal__body {
+        border: 3px solid rgba(171, 103, 254, 1);
+    }
+}
+
+.video-modal_olya {
+    .video-modal__backdrop {
+        background: rgba(168, 224, 0, 0.30);
+    }
+
+    .video-modal__dialog {
+        border-bottom: 5px solid #99A660;
+        background: #99A660;
+        box-shadow: 0 4px 91.4px 100px rgba(168, 224, 0, 0.80);
+    }
+
+    .video-modal__body {
+        border: 3px solid #A8E000;
+    }
+}

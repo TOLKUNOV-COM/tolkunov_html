@@ -23,7 +23,7 @@
         transform: translate(30%, 30%);
         @apply transition-transform;
 
-        mask-image: url("../img/play-decorate.svg");
+        mask-image: url("../img/video/play-decorate.svg");
         background-color: #fff;
     }
 

@@ -44,6 +44,11 @@
 }
 
 .icon-play-short {
-    mask-image: url("../img/play-short.svg");
+    mask-image: url("../img/video/play-short.svg");
+    background-color: currentColor;
+}
+
+.icon-close {
+    mask-image: url("../img/video/modal-close.svg");
     background-color: currentColor;
 }
