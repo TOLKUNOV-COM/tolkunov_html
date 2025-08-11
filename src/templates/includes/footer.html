@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 <div class="flex flex-1 items-end justify-center">
-                    <a href="#" class="contact-block__play h-16 rotate-8 text-blue-600 hover:text-blue-620 hover:bg-blue-50 hover:after:bg-blue-50" data-modal="video" data-target="#modal-video-dima" data-video="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4">
+                    <a href="#" class="contact-block__play h-16 rotate-8 text-blue-600 hover:text-blue-620 hover:bg-blue-50 hover:after:bg-blue-50" data-modal="video" data-target="#modal-video-dima">
                         <i class="icon icon-play-short size-7"></i>
                         <span>42 сек</span>
                     </a>
@@ -311,7 +311,7 @@
                     </div>
                 </div>
                 <div class="flex flex-1 items-end justify-center">
-                    <a href="#" class="contact-block__play h-16 rotate-8 text-purple-400 hover:text-purple-600 hover:bg-purple-50 hover:after:bg-purple-50" data-modal="video" data-target="#modal-video-tanya" data-video="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4">
+                    <a href="#" class="contact-block__play h-16 rotate-8 text-purple-400 hover:text-purple-600 hover:bg-purple-50 hover:after:bg-purple-50" data-modal="video" data-target="#modal-video-tanya">
                         <i class="icon icon-play-short size-7"></i>
                         <span>25 сек</span>
                     </a>
@@ -454,7 +454,7 @@
                     </div>
                 </div>
                 <div class="flex flex-1 items-end justify-center">
-                    <a href="#" class="contact-block__play h-16 rotate-8 text-lime-500 hover:text-lime-520 hover:bg-amber-50 hover:after:bg-amber-50" data-modal="video" data-target="#modal-video-olya" data-video="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4">
+                    <a href="#" class="contact-block__play h-16 rotate-8 text-lime-500 hover:text-lime-520 hover:bg-amber-50 hover:after:bg-amber-50" data-modal="video" data-target="#modal-video-olya">
                         <i class="icon icon-play-short size-7"></i>
                         <span>20 сек</span>
                     </a>
@@ -536,7 +536,10 @@
                 <i class="icon icon-close size-8"></i>
             </button>
             <div class="video-modal__body rounded-5xl overflow-hidden w-full h-full">
-                <video class="video-modal__player plyr-js" playsinline controls></video>
+                <video class="video-modal__player plyr-js" playsinline controls preload="none">
+                    <source src="https://tolkunov.com/uploads/contacts/dima_source_converted.webm" type="video/webm">
+                    <source src="https://tolkunov.com/uploads/contacts/dima_source_converted.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
     </div>
@@ -549,7 +552,10 @@
                 <i class="icon icon-close size-8"></i>
             </button>
             <div class="video-modal__body rounded-5xl overflow-hidden w-full h-full">
-                <video class="video-modal__player plyr-js" playsinline controls></video>
+                <video class="video-modal__player plyr-js" playsinline controls preload="none">
+                    <source src="https://tolkunov.com/uploads/contacts/tanya_source_converted.webm" type="video/webm">
+                    <source src="https://tolkunov.com/uploads/contacts/tanya_source_converted.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
     </div>
@@ -562,7 +568,10 @@
                 <i class="icon icon-close size-8"></i>
             </button>
             <div class="video-modal__body rounded-5xl overflow-hidden w-full h-full">
-                <video class="video-modal__player plyr-js" playsinline controls></video>
+                <video class="video-modal__player plyr-js" playsinline controls preload="none">
+                    <source src="https://tolkunov.com/uploads/contacts/olya_source_converted.webm" type="video/webm">
+                    <source src="https://tolkunov.com/uploads/contacts/olya_source_converted.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
     </div>

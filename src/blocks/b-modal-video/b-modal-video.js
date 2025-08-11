@@ -18,10 +18,9 @@ $(function() {
             
             var $button = $(this);
             var targetSelector = $button.data('target');
-            var videoSource = $button.data('video');
             
-            if (!targetSelector || !videoSource) {
-                console.error('Missing data-target or data-video attributes');
+            if (!targetSelector) {
+                console.error('Missing data-target attribute');
                 return;
             }
             
@@ -31,7 +30,7 @@ $(function() {
                 return;
             }
             
-            openVideoModal($modal, videoSource);
+            openVideoModal($modal);
         });
         
         // Handle close button clicks
@@ -90,7 +89,7 @@ $(function() {
     }
     
     // Open video modal
-    function openVideoModal($modal, videoSource) {
+    function openVideoModal($modal) {
         var modalId = $modal.attr('id');
         var player = plyrInstances[modalId];
         
@@ -98,15 +97,6 @@ $(function() {
             console.error('Plyr instance not found for modal: ' + modalId);
             return;
         }
-        
-        // Set video source using Plyr API
-        player.source = {
-            type: 'video',
-            sources: [{
-                src: videoSource,
-                type: getVideoType(videoSource)
-            }]
-        };
         
         // Show modal
         $modal.attr('data-open', 'true');
@@ -117,23 +107,21 @@ $(function() {
         // Focus on modal for accessibility
         $modal.focus();
         
-        // Auto-play video when ready
-        player.once('ready', function() {
-            var playPromise = player.play();
-            
-            if (playPromise !== undefined) {
-                playPromise
-                    .then(function() {
-                        console.log('Plyr autoplay started successfully for: ' + modalId);
-                    })
-                    .catch(function(error) {
-                        console.log('Plyr autoplay blocked by browser: ' + error);
-                        // Fallback: video will be available for manual play
-                    });
-            }
-        });
+        // Auto-play video (sources already preloaded in HTML)
+        var playPromise = player.play();
         
-        console.log('Video modal opened: ' + modalId + ' with source: ' + videoSource);
+        if (playPromise !== undefined) {
+            playPromise
+                .then(function() {
+                    console.log('Plyr autoplay started successfully for: ' + modalId);
+                })
+                .catch(function(error) {
+                    console.log('Plyr autoplay blocked by browser: ' + error);
+                    // Fallback: video will be available for manual play
+                });
+        }
+        
+        console.log('Video modal opened: ' + modalId);
     }
     
     // Close video modal
@@ -148,32 +136,13 @@ $(function() {
         if (player) {
             player.pause();
             player.currentTime = 0;
-            // Clear source
-            player.source = {
-                type: 'video',
-                sources: []
-            };
+            // No need to clear source - it stays preloaded
         }
         
         // Restore body scroll
         $('body').removeClass('overflow-hidden');
         
         console.log('Video modal closed: ' + modalId);
-    }
-    
-    // Helper function to determine video type from URL
-    function getVideoType(url) {
-        var extension = url.split('.').pop().toLowerCase();
-        switch (extension) {
-            case 'mp4':
-                return 'video/mp4';
-            case 'webm':
-                return 'video/webm';
-            case 'ogg':
-                return 'video/ogg';
-            default:
-                return 'video/mp4'; // fallback
-        }
     }
     
     // Initialize on DOM ready

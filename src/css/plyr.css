@@ -70,6 +70,12 @@
     }
 }
 
+[data-plyr="fullscreen"], [data-plyr="mute"] {
+    &:hover {
+        filter: drop-shadow(0 0 2px #fff);
+    }
+}
+
 .plyr__time {
     @apply cursor-default;
     min-width: 55px;
