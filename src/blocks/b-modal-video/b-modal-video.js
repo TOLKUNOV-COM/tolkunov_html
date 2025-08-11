@@ -1,16 +1,26 @@
 /**
  * Video Modal Component
  * Handles opening/closing video modals and Plyr video playback
+ * Also manages intelligent video preloading based on visibility
  */
 $(function() {
     
     // Store Plyr instances
     var plyrInstances = {};
     
+    // Intersection Observer for video preloading
+    var videoPreloadObserver;
+    
     // Initialize video modals
     function initVideoModals() {
         // Initialize Plyr for all video players
         initPlyrPlayers();
+        
+        // Initialize video preloading observer
+        initVideoPreloadObserver();
+        
+        // Initialize contact switching observer
+        initContactSwitchingObserver();
         
         // Handle play button clicks
         $(document).on('click', '[data-modal="video"]', function(e) {
@@ -143,6 +153,74 @@ $(function() {
         $('body').removeClass('overflow-hidden');
         
         console.log('Video modal closed: ' + modalId);
+    }
+    
+    // Initialize video preloading observer  
+    function initVideoPreloadObserver() {
+        if ('IntersectionObserver' in window) {
+            videoPreloadObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var $button = $(entry.target);
+                        var $contactBlock = $button.closest('[data-contact]');
+                        var dataTarget = $button.data('target');
+                        
+                        // Проверяем что кнопка в активном контакте
+                        if (dataTarget && $contactBlock.attr('data-active') === 'true') {
+                            $(dataTarget + ' video')[0].setAttribute('preload', 'metadata');
+                            console.log('Preloading video for:', dataTarget);
+                            
+                            // Отключаем наблюдение за этой кнопкой
+                            videoPreloadObserver.unobserve(entry.target);
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.5 // Запускаем только когда 50% кнопки видно
+            });
+            
+            // Наблюдаем за всеми кнопками play
+            $('.contact-block__play').each(function() {
+                videoPreloadObserver.observe(this);
+            });
+        }
+    }
+    
+    // Initialize contact switching observer
+    function initContactSwitchingObserver() {
+        if ('MutationObserver' in window) {
+            var contactObserver = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'data-active') {
+                        var target = mutation.target;
+                        if (target.getAttribute('data-active') === 'true' && target.hasAttribute('data-contact')) {
+                            // Контакт стал активным - сразу делаем preload
+                            var $playButton = $(target).find('.contact-block__play');
+                            if ($playButton.length > 0) {
+                                var dataTarget = $playButton.data('target');
+                                if (dataTarget) {
+                                    $(dataTarget + ' video')[0].setAttribute('preload', 'metadata');
+                                    console.log('Preloading video on contact switch for:', dataTarget);
+                                    
+                                    // Отключаем наблюдение за этой кнопкой в основном observer
+                                    if (videoPreloadObserver) {
+                                        videoPreloadObserver.unobserve($playButton[0]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+            
+            // Наблюдаем за всеми контакт-блоками
+            $('.contact-block[data-contact]').each(function() {
+                contactObserver.observe(this, {
+                    attributes: true,
+                    attributeFilter: ['data-active']
+                });
+            });
+        }
     }
     
     // Initialize on DOM ready
