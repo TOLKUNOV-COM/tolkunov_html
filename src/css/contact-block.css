@@ -29,10 +29,8 @@
 
     &:hover {
         @apply scale-105;
-        @apply bg-blue-50;
 
         &::after {
-            @apply bg-blue-50;
             transform: translate(20%, 20%);
         }
     }

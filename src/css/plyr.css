@@ -1,0 +1,80 @@
+/* Plyr Video Player Customization */
+
+:root {
+    --plyr-color-main: #fff;
+
+    --plyr-control-spacing: 0px;
+    --plyr-video-control-background-hover: transparent;
+    --plyr-range-thumb-height: 16px;
+    --plyr-range-track-height: 8px;
+    --plyr-control-icon-size: 28px;
+
+    --plyr-font-size-small: 18px;
+
+    --plyr-font-family: 'Glina Script', sans-serif;
+}
+
+.plyr__controls {
+    gap: 24px;
+}
+
+/* General Plyr styles for video modals */
+.plyr__controls {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 32px !important;
+}
+
+.plyr__progress input[type="range"]::-webkit-slider-thumb {
+    filter: drop-shadow(0 0 7.2px rgba(255, 255, 255, 0.50));
+}
+
+/* Спрячем дефолтный фон буфера */
+.plyr__progress__buffer {
+    background: transparent !important;
+    display: none !important;
+}
+
+/* Скрыть ползунок (thumb) по умолчанию */
+.plyr__controls__item input[type="range"]::-webkit-slider-thumb {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* При наведении на контейнер показываем thumb */
+.plyr__controls__item:hover input[type="range"]::-webkit-slider-thumb {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+[data-plyr="play"] {
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 1px 4px 0 rgba(255, 255, 255, 0.25) inset;
+    backdrop-filter: blur(5.5px);
+    position: relative;
+
+    @apply size-[60px] !w-[60px] p-4;
+
+    .icon--pressed, .icon--not-pressed {
+        @apply size-7;
+    }
+
+    .icon--not-pressed {
+        margin-left: 1px;
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.10) !important;
+        filter: drop-shadow(0 0 2px #fff);
+    }
+}
+
+.plyr__time {
+    @apply cursor-default;
+    min-width: 55px;
+}
+
+[data-plyr="mute"] {
+    margin-right: 12px;
+}

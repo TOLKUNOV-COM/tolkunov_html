@@ -43,15 +43,20 @@
     @apply transition-all duration-200;
     @apply cursor-pointer;
     @apply border-none;
-}
 
-.video-modal__close:hover {
-    @apply scale-110;
+    &:hover {
+        filter: drop-shadow(0 0 2px #fff);
+
+        .icon {
+            filter: drop-shadow(0 0 2px #fff);
+        }
+    }
 }
 
 .video-modal__player {
     @apply w-full;
     @apply block;
+    @apply aspect-video;
 }
 
 /* Unique styles for each modal */

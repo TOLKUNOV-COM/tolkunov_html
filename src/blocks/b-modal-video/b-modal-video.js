@@ -1,27 +1,33 @@
 /**
  * Video Modal Component
- * Handles opening/closing video modals and video playback
+ * Handles opening/closing video modals and Plyr video playback
  */
 $(function() {
     
+    // Store Plyr instances
+    var plyrInstances = {};
+    
     // Initialize video modals
     function initVideoModals() {
+        // Initialize Plyr for all video players
+        initPlyrPlayers();
+        
         // Handle play button clicks
         $(document).on('click', '[data-modal="video"]', function(e) {
             e.preventDefault();
             
-            const $button = $(this);
-            const targetSelector = $button.data('target');
-            const videoSource = $button.data('video');
+            var $button = $(this);
+            var targetSelector = $button.data('target');
+            var videoSource = $button.data('video');
             
             if (!targetSelector || !videoSource) {
                 console.error('Missing data-target or data-video attributes');
                 return;
             }
             
-            const $modal = $(targetSelector);
+            var $modal = $(targetSelector);
             if ($modal.length === 0) {
-                console.error('Modal not found:', targetSelector);
+                console.error('Modal not found: ' + targetSelector);
                 return;
             }
             
@@ -31,21 +37,21 @@ $(function() {
         // Handle close button clicks
         $(document).on('click', '[data-close]', function(e) {
             e.preventDefault();
-            const $modal = $(this).closest('.video-modal');
+            var $modal = $(this).closest('.video-modal');
             closeVideoModal($modal);
         });
         
         // Handle backdrop clicks
         $(document).on('click', '.video-modal__backdrop', function(e) {
             e.preventDefault();
-            const $modal = $(this).closest('.video-modal');
+            var $modal = $(this).closest('.video-modal');
             closeVideoModal($modal);
         });
         
         // Handle ESC key
         $(document).on('keydown', function(e) {
             if (e.key === 'Escape' || e.keyCode === 27) {
-                const $openModal = $('.video-modal[data-open="true"]');
+                var $openModal = $('.video-modal[data-open="true"]');
                 if ($openModal.length > 0) {
                     closeVideoModal($openModal);
                 }
@@ -53,13 +59,54 @@ $(function() {
         });
     }
     
+    // Initialize Plyr players
+    function initPlyrPlayers() {
+        $('.video-modal__player.plyr-js').each(function() {
+            var videoElement = this;
+            var modalId = $(videoElement).closest('.video-modal').attr('id');
+            
+            if (!plyrInstances[modalId]) {
+                var player = new Plyr(videoElement, {
+                    controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+                    invertTime: true,
+                    keyboard: { focused: true, global: false },
+                    tooltips: false,
+                    autoplay: false,
+                    hideControls: false,
+                    iconUrl: 'assets/vendor/plyr/dist/plyr.svg'
+                });
+                
+                plyrInstances[modalId] = player;
+                
+                player.on('ready', function() {
+                    console.log('Plyr ready for: ' + modalId);
+                });
+                
+                player.on('error', function(event) {
+                    console.error('Plyr error: ' + event.detail);
+                });
+            }
+        });
+    }
+    
     // Open video modal
     function openVideoModal($modal, videoSource) {
-        const $video = $modal.find('.video-modal__player');
-        const video = $video[0];
+        var modalId = $modal.attr('id');
+        var player = plyrInstances[modalId];
         
-        // Set video source
-        $video.attr('src', videoSource);
+        if (!player) {
+            console.error('Plyr instance not found for modal: ' + modalId);
+            return;
+        }
+        
+        // Set video source using Plyr API
+        player.source = {
+            type: 'video',
+            sources: [{
+                src: videoSource,
+                type: getVideoType(videoSource)
+            }]
+        };
         
         // Show modal
         $modal.attr('data-open', 'true');
@@ -71,43 +118,62 @@ $(function() {
         $modal.focus();
         
         // Auto-play video when ready
-        if (video) {
-            // Try to play immediately if possible
-            const playPromise = video.play();
+        player.once('ready', function() {
+            var playPromise = player.play();
             
             if (playPromise !== undefined) {
                 playPromise
-                    .then(() => {
-                        console.log('Video autoplay started successfully');
+                    .then(function() {
+                        console.log('Plyr autoplay started successfully for: ' + modalId);
                     })
-                    .catch((error) => {
-                        console.log('Video autoplay blocked by browser:', error);
+                    .catch(function(error) {
+                        console.log('Plyr autoplay blocked by browser: ' + error);
                         // Fallback: video will be available for manual play
                     });
             }
-        }
+        });
         
-        console.log('Video modal opened:', $modal.attr('id'), 'with source:', videoSource);
+        console.log('Video modal opened: ' + modalId + ' with source: ' + videoSource);
     }
     
     // Close video modal
     function closeVideoModal($modal) {
-        const $video = $modal.find('.video-modal__player');
+        var modalId = $modal.attr('id');
+        var player = plyrInstances[modalId];
         
         // Hide modal
         $modal.attr('data-open', 'false');
         
-        // Stop video and clear source
-        if ($video.length > 0) {
-            $video[0].pause();
-            $video[0].currentTime = 0;
-            $video.removeAttr('src');
+        // Stop video using Plyr API
+        if (player) {
+            player.pause();
+            player.currentTime = 0;
+            // Clear source
+            player.source = {
+                type: 'video',
+                sources: []
+            };
         }
         
         // Restore body scroll
         $('body').removeClass('overflow-hidden');
         
-        console.log('Video modal closed:', $modal.attr('id'));
+        console.log('Video modal closed: ' + modalId);
+    }
+    
+    // Helper function to determine video type from URL
+    function getVideoType(url) {
+        var extension = url.split('.').pop().toLowerCase();
+        switch (extension) {
+            case 'mp4':
+                return 'video/mp4';
+            case 'webm':
+                return 'video/webm';
+            case 'ogg':
+                return 'video/ogg';
+            default:
+                return 'video/mp4'; // fallback
+        }
     }
     
     // Initialize on DOM ready
