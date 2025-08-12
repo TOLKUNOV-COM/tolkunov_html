@@ -84,3 +84,7 @@
 [data-plyr="mute"] {
     margin-right: 12px;
 }
+
+.plyr__control svg {
+    fill: transparent;
+}
