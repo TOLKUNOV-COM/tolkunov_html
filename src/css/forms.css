@@ -3,7 +3,8 @@
 }
 
 .form-label {
-    @apply text-slate-430 text-xs/7 !font-medium tracking-[0.12px];
+    @apply text-slate-430 text-xs/3.5 !font-medium tracking-[0.12px];
+    @apply !mb-3;
 }
 
 .form-field {
@@ -11,7 +12,7 @@
 
     border: none;
     @apply pb-2.5 px-0 pt-0;
-    @apply text-blue-900 text-sm font-medium;
+    @apply text-blue-900 !text-sm !font-medium;
     @apply placeholder:text-blue-900/50;
     @apply transition;
 
@@ -45,7 +46,8 @@
 .chip {
     @apply !flex flex-col gap-1;
     @apply border border-dashed border-indigo-100 rounded-lg;
-    @apply px-3 py-2.5;
+    @apply px-3 py-2;
+    @apply !mb-0;
     @apply text-blue-900 text-sm/5 !font-medium;
     @apply transition;
     @apply cursor-pointer;
@@ -65,6 +67,10 @@
             @apply text-white/80;
         }
     }
+}
+
+.chip_big {
+    @apply py-2.5;
 }
 
 .chip-label {

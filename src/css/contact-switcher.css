@@ -3,11 +3,13 @@
 }
 
 .contact-switcher__item {
-    @apply h-24 flex flex-nowrap items-center transition-[gap] gap-0 data-[active=true]:gap-4;
+    @apply flex flex-nowrap items-center transition-[gap] gap-0 data-[active=true]:gap-4;
+    @apply h-[74px] 2xl:h-24;
 }
 
 .contact-switch {
-    @apply size-24 relative cursor-pointer group-[[data-active=true]]:cursor-default;
+    @apply relative cursor-pointer group-[[data-active=true]]:cursor-default;
+    @apply size-[74px] 2xl:size-24;
 }
 
 .contact-switcher__info {
@@ -15,7 +17,8 @@
 }
 
 .contact-switcher__line1 {
-    @apply text-blue-900 text-lg/6 font-bold text-nowrap;
+    @apply text-blue-900 font-bold text-nowrap;
+    @apply text-base/6 2xl:text-lg/6
 }
 
 .contact-switcher__line2 {
@@ -23,41 +26,105 @@
 }
 
 .contact-switch__img {
-    @apply w-24 h-[110px] absolute bottom-1 left-0;
+    @apply absolute left-0;
+    @apply bottom-0 2xl:bottom-1;
+    @apply xl:w-[74px] 2xl:w-24;
+    @apply xl:h-[90px] 2xl:h-[110px];
 
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom center;
 }
 
+/* Дефолтная (мобильная, <768px) */
 .contact-switch__img_dima {
-    background-image: url("../img/contact-switcher/dima.png");
+    background-image: url("../img/contact-switcher/dima_default.png");
 }
 
 .contact-switch__img_tanya {
-    background-image: url("../img/contact-switcher/tanya.png");
+    background-image: url("../img/contact-switcher/tanya_default.png");
 }
 
 .contact-switch__img_olya {
-    background-image: url("../img/contact-switcher/olya.png");
+    background-image: url("../img/contact-switcher/olya_default.png");
+}
+
+/* ≥768px */
+@media (min-width: 768px) {
+    .contact-switch__img_dima {
+        background-image: url("../img/contact-switcher/dima_768.png");
+    }
+
+    .contact-switch__img_tanya {
+        background-image: url("../img/contact-switcher/tanya_768.png");
+    }
+
+    .contact-switch__img_olya {
+        background-image: url("../img/contact-switcher/olya_768.png");
+    }
+}
+
+/* ≥1280px */
+@media (min-width: 1280px) {
+    .contact-switch__img_dima {
+        background-image: url("../img/contact-switcher/dima_1280.png");
+    }
+
+    .contact-switch__img_tanya {
+        background-image: url("../img/contact-switcher/tanya_1280.png");
+    }
+
+    .contact-switch__img_olya {
+        background-image: url("../img/contact-switcher/olya_1280.png");
+    }
+}
+
+/* ≥1440px */
+@media (min-width: 1440px) {
+    .contact-switch__img_dima {
+        background-image: url("../img/contact-switcher/dima_1440.png");
+    }
+
+    .contact-switch__img_tanya {
+        background-image: url("../img/contact-switcher/tanya_1440.png");
+    }
+
+    .contact-switch__img_olya {
+        background-image: url("../img/contact-switcher/olya_1440.png");
+    }
 }
 
 .contact-switch__ring_dima {
-    @apply absolute inset-0 transition-all rounded-28 ring-2 ring-[#D6DEFA] group-hover:ring-blue-600 group-[[data-active=true]]:ring-blue-600;
+    @apply absolute inset-0 transition-all ring-2 ring-[#D6DEFA] group-hover:ring-blue-600 group-[[data-active=true]]:ring-blue-600;
+    @apply rounded-2xl 2xl:rounded-28;
 }
 
 .contact-switch__ring_tanya {
-    @apply absolute bottom-[7px] left-1/2 -translate-x-1/2 size-[86.974px] rotate-45 transition-all rounded-28 ring-2 ring-[#EDD2F6] group-hover:ring-purple-400 group-[[data-active=true]]:ring-purple-400;
+    @apply absolute left-1/2 -translate-x-1/2 rotate-45 transition-all;
+    @apply rounded-2xl size-[66px] bottom-[5px];
+    @apply 2xl:rounded-28 2xl:size-[86.974px] 2xl:bottom-[7px];
+    @apply ring-2 ring-[#EDD2F6] group-hover:ring-purple-400 group-[[data-active=true]]:ring-purple-400;
 }
 
 .contact-switch__ring_olya {
-    @apply absolute inset-0 transition-all rounded-full ring-2 ring-[#DCEFA8] group-hover:ring-lime-500 group-[[data-active=true]]:ring-lime-500;
+    @apply absolute transition-all rounded-full;
+    @apply inset-0.5 2xl:inset-0;
+    @apply ring-2 ring-[#DCEFA8] group-hover:ring-lime-500 group-[[data-active=true]]:ring-lime-500;
 }
 
 .contact-switch__label {
-    @apply transition-colors absolute top-20 left-1/2 -translate-x-1/2 px-2 py-2.5;
-    @apply rounded-xl shadow-contact-switcher-label;
-    @apply text-xs font-bold leading-[9px] tracking-[0.12px] text-nowrap;
+    @apply transition-colors absolute left-1/2 -translate-x-1/2;
+
+    @apply -bottom-1.5 2xl:-bottom-2.5;
+    @apply px-1 py-1.5 2xl:px-2 2xl:py-2.5;
+    @apply rounded-md 2xl:rounded-xl;
+
+    @apply shadow-contact-switcher-label;
+    @apply font-bold text-nowrap;
+
+    @apply text-[8px] leading-[6px] tracking-[0.08px];
+    @apply 2xl:text-xs 2xl:leading-[9px] 2xl:tracking-[0.12px];
+
     @apply bg-white text-blue-900;
 }
 
@@ -74,24 +141,15 @@
 }
 
 .contact-switch__connector {
-    @apply absolute -bottom-9 left-1/2 -translate-x-1/2;
-    @apply w-[30px] h-2;
-    @apply opacity-0;
-    @apply transition-opacity;
+    @apply absolute left-1/2 -translate-x-1/2;
+    @apply -bottom-5 2xl:-bottom-9;
+    @apply w-[38px] h-2;
+    @apply opacity-0 transition-opacity;
     @apply delay-0 duration-200;
 
-    &::before, &::after {
-        @apply absolute top-0 left-0 h-full w-[20px];
-        @apply content-[''];
-
-        background-image: url("../img/contact-switcher/connector.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    &::after {
-        @apply rotate-180 left-auto right-0;
-    }
+    background-image: url("../img/contact-switcher/connector.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .contact-switcher__item[data-active=true] .contact-switch__connector {

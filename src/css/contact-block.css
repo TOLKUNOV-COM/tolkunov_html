@@ -2,10 +2,13 @@
 }
 
 .contact-block__play {
-    @apply pl-6 pr-7;
+    @apply h-15 pl-5 pr-5.5;
+    @apply 2xl:h-16 2xl:pl-6 2xl:pr-7;
     @apply flex items-center gap-3;
     @apply rounded-20 bg-white;
-    @apply font-glina text-[28px] leading-7;
+    @apply font-glina;
+    @apply text-[24px] leading-7;
+    @apply 2xl:text-[28px];
     @apply !no-underline;
     @apply relative;
     @apply transition-all;
@@ -34,4 +37,17 @@
             transform: translate(20%, 20%);
         }
     }
+}
+
+.contact-block__form {
+    @apply w-[493px] 2xl:w-[578px] mt-[106px] 2xl:mt-[148px];
+}
+
+.contact-block__line1 {
+    @apply font-semibold;
+    @apply text-xl 2xl:text-2xl;
+}
+
+.contact-block__line2 {
+    @apply text-5xl/13 2xl:text-[3.5rem]/17 3xl:text-[4rem]/17 font-bold;
 }

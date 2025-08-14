@@ -3,9 +3,12 @@
 }
 
 .chat-message_default {
-    @apply bg-white rounded-20 px-4.5 py-5 outline-[1.5px] outline-white/17;
+    @apply bg-white rounded-20 outline-[1.5px] outline-white/17;
+    @apply p-4.5 2xl:px-4.5 2xl:py-5;
 
-    @apply text-slate-430 text-lg font-bold leading-6.5 -tracking-[0.18px];
+    @apply text-slate-430 font-bold;
+    @apply text-base leading-5.5 tracking-[0.16px];
+    @apply 2xl:text-lg 2xl:leading-6.5 2xl:-tracking-[0.18px];
 
     box-shadow: 0 2.657px 10.627px 0 rgba(22, 31, 106, 0.08), 0 2.657px 10.627px 0 rgba(22, 31, 106, 0.08);
     filter: blur(0px);

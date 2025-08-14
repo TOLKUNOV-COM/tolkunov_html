@@ -1,15 +1,13 @@
-<section id="contacts-container" class="relative m-8 mb-12 mx-auto font-sans rounded-4xl overflow-hidden w-[1376px] h-[780px]">
+<section id="contacts-container" class="relative m-8 mb-12 mx-auto font-sans rounded-4xl overflow-hidden xl:w-[1164px] xl:h-[680px] 2xl:w-[1376px] 2xl:h-[780px] 3xl:w-[1540px] 3xl:h-[874px]">
     <!-- Contact switcher (абсолютное позиционирование) -->
     <div class="absolute top-3 right-3 z-10">
-        <div class="flex items-start justify-between p-4 pb-7 bg-white rounded-28 h-[140px] w-[578px]">
+        <div class="flex items-start justify-between p-3 2xl:p-4 2xl:pb-7 bg-white rounded-28 h-[98px] 2xl:h-[140px] w-[493px] 2xl:w-[578px]">
             <!-- Дима -->
             <div data-active="true" data-target="dima" class="group contact-switcher__item contact-switcher__item_dima">
                 <div class="contact-switch">
                     <div class="contact-switch__ring_dima"></div>
                     <div class="contact-switch__img contact-switch__img_dima"></div>
-                    <div class="contact-switch__label contact-switch__label_dima">
-                        Дима, СЕО
-                    </div>
+                    <div class="contact-switch__label contact-switch__label_dima">Дима, СЕО</div>
                     <div class="contact-switch__connector"></div>
                 </div>
                 <div class="contact-switcher__info">
@@ -23,9 +21,7 @@
                 <div class="contact-switch">
                     <div class="contact-switch__ring_tanya"></div>
                     <div class="contact-switch__img contact-switch__img_tanya"></div>
-                    <div class="contact-switch__label contact-switch__label_tanya">
-                        Таня, PR
-                    </div>
+                    <div class="contact-switch__label contact-switch__label_tanya">Таня, PR</div>
                     <div class="contact-switch__connector"></div>
                 </div>
                 <div class="contact-switcher__info">
@@ -39,9 +35,7 @@
                 <div class="contact-switch">
                     <div class="contact-switch__ring_olya"></div>
                     <div class="contact-switch__img contact-switch__img_olya"></div>
-                    <div class="contact-switch__label contact-switch__label_olya">
-                        Оля, HR
-                    </div>
+                    <div class="contact-switch__label contact-switch__label_olya">Оля, HR</div>
                     <div class="contact-switch__connector"></div>
                 </div>
                 <div class="contact-switcher__info">
@@ -54,7 +48,7 @@
 
     <!-- Дима блок -->
     <div data-contact="dima" data-active="true"
-         class="contact-block lg:bg-blue-600 flex font-sans h-[780px] p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+         class="contact-block lg:bg-blue-600 flex font-sans h-full p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
 
         <picture class="absolute inset-0 z-0">
             <!-- 1920px (4xl) -->
@@ -103,9 +97,9 @@
 
         <!-- Левая часть -->
         <div class="flex-1 p-7 flex flex-col justify-between z-1">
-            <div class="font-serif space-y-2 w-[525px]">
-                <div class="text-white/60 text-2xl font-semibold">Спасибо, что долистали до конца</div>
-                <div class="text-white text-[3.5rem]/17 font-bold">Самое время обсудить проект</div>
+            <div class="font-serif space-y-4 2xl:space-y-3 w-[420px] 2xl:w-[525px]">
+                <div class="contact-block__line1 text-white/60">Спасибо, что долистали до конца</div>
+                <div class="contact-block__line2 text-white">Самое время обсудить проект</div>
             </div>
 
             <div class="flex">
@@ -122,9 +116,9 @@
                         </a>
                     </div>
                 </div>
-                <div class="flex flex-1 items-end justify-center">
-                    <a href="#" class="contact-block__play h-16 rotate-8 text-blue-600 hover:text-blue-620 hover:bg-blue-50 hover:after:bg-blue-50" data-modal="video" data-target="#modal-video-dima">
-                        <i class="icon icon-play-short size-7"></i>
+                <div class="flex flex-1 items-end justify-center pb-6">
+                    <a href="#" class="contact-block__play rotate-8 text-blue-600 hover:text-blue-620 hover:bg-blue-50 hover:after:bg-blue-50" data-modal="video" data-target="#modal-video-dima">
+                        <i class="icon icon-play-short size-6 2xl:size-7"></i>
                         <span>42 сек</span>
                     </a>
                 </div>
@@ -132,7 +126,7 @@
         </div>
 
         <!-- Правая часть - форма -->
-        <div class="w-[578px] mt-[148px] relative">
+        <div class="contact-block__form relative">
             <form class="bg-white rounded-28 flex flex-col p-3 h-full" method="post">
                 <div class="space-y-5 p-3">
                     <div class="form-row">
@@ -166,17 +160,17 @@
                         <label class="form-label">Бюджет</label>
 
                         <div class="chips-group flex flex-wrap gap-4">
-                            <label class="chip flex-1">
+                            <label class="chip chip_big flex-1">
                                 <input type="radio" class="hidden" name="budget" value="100k">
                                 <span class="chip-label">от 100 000 ₽</span>
                                 <span class="chip-hint">HTML5-баннер <br>с&nbsp;несколькими ресайзами</span>
                             </label>
-                            <label class="chip flex-1">
+                            <label class="chip chip_big flex-1">
                                 <input type="radio" class="hidden" name="budget" value="500k">
                                 <span class="chip-label">от 500 000 ₽</span>
                                 <span class="chip-hint">Пак баннеров HTML5 <br>для&nbsp;онлайн и наружки</span>
                             </label>
-                            <label class="chip flex-1">
+                            <label class="chip chip_big flex-1">
                                 <input type="radio" class="hidden" name="budget" value="1m">
                                 <span class="chip-label">от 1 млн ₽</span>
                                 <span class="chip-hint">То же, что за 500к <br>+ 3D и лендинг</span>
@@ -185,7 +179,7 @@
                     </div>
 
                     <div class="form-row">
-                        <textarea name="description" class="form-field resize-y min-h-8 max-h-27" rows="1" auto-grow
+                        <textarea name="description" class="form-field resize-y min-h-8 max-h-8 2xl:max-h-27" rows="1" auto-grow
                                   placeholder="Опишите задачу: чем больше информации, тем лучше"></textarea>
                     </div>
                     <div class="form-row">
@@ -244,7 +238,7 @@
 
     <!-- Таня блок -->
     <div data-contact="tanya" data-active="false"
-         class="contact-block rounded-4xl lg:bg-purple-400 flex font-sans h-[780px] p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+         class="contact-block lg:bg-purple-400 flex font-sans h-full p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
         <picture class="absolute inset-0 z-0">
             <!-- 1920px (4xl) -->
             <source
@@ -291,9 +285,9 @@
         </picture>
         <!-- Левая часть -->
         <div class="flex-1 p-7 flex flex-col justify-between z-1">
-            <div class="font-serif space-y-2 w-[525px]">
-                <div class="text-white/60 text-2xl font-semibold">Спасибо, что долистали до конца</div>
-                <div class="text-white text-[3.5rem]/17 font-bold">Как насчёт кросс-промо?</div>
+            <div class="font-serif space-y-4 2xl:space-y-3 w-[420px] 2xl:w-[525px]">
+                <div class="contact-block__line1 text-white/60">Спасибо, что долистали до конца</div>
+                <div class="contact-block__line2 text-white">Как насчёт кросс-промо?</div>
             </div>
 
             <div class="flex">
@@ -310,9 +304,10 @@
                         </a>
                     </div>
                 </div>
-                <div class="flex flex-1 items-end justify-center">
-                    <a href="#" class="contact-block__play h-16 rotate-8 text-purple-400 hover:text-purple-600 hover:bg-purple-50 hover:after:bg-purple-50" data-modal="video" data-target="#modal-video-tanya">
-                        <i class="icon icon-play-short size-7"></i>
+                <div class="flex flex-1 items-end justify-center pb-6">
+                    <a href="#" class="contact-block__play rotate-8 text-purple-400 hover:text-purple-600 hover:bg-purple-50 hover:after:bg-purple-50" data-modal="video"
+                       data-target="#modal-video-tanya">
+                        <i class="icon icon-play-short size-6 2xl:size-7"></i>
                         <span>25 сек</span>
                     </a>
                 </div>
@@ -320,7 +315,7 @@
         </div>
 
         <!-- Правая часть - форма -->
-        <div class="w-[578px] mt-[148px] relative">
+        <div class="contact-block__form relative">
             <form class="bg-white rounded-28 flex flex-col p-3 h-full" method="post">
                 <div class="space-y-5 p-3">
                     <div class="form-row">
@@ -387,7 +382,7 @@
 
     <!-- Оля блок -->
     <div data-contact="olya" data-active="false"
-         class="contact-block rounded-4xl lg:bg-lime-500 flex font-sans h-[780px] p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+         class="contact-block lg:bg-lime-500 flex font-sans h-full p-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
         <picture class="absolute inset-0 z-0">
             <!-- 1920px (4xl) -->
             <source
@@ -434,9 +429,9 @@
         </picture>
         <!-- Левая часть -->
         <div class="flex-1 p-7 flex flex-col justify-between z-1">
-            <div class="font-serif space-y-2 w-[466px]">
-                <div class="text-blue-900/60 text-2xl font-semibold">Спасибо, что долистали до конца</div>
-                <div class="text-blue-900 text-[3.5rem]/17 font-bold">В поиске крутых коллег?</div>
+            <div class="font-serif space-y-4 2xl:space-y-3 w-[400px] 2xl:w-[466px]">
+                <div class="contact-block__line1 text-blue-900/60">Спасибо, что долистали до конца</div>
+                <div class="contact-block__line2 text-blue-900">В поиске крутых коллег?</div>
             </div>
 
             <div class="flex">
@@ -453,9 +448,10 @@
                         </a>
                     </div>
                 </div>
-                <div class="flex flex-1 items-end justify-center">
-                    <a href="#" class="contact-block__play h-16 rotate-8 text-lime-500 hover:text-lime-520 hover:bg-amber-50 hover:after:bg-amber-50" data-modal="video" data-target="#modal-video-olya">
-                        <i class="icon icon-play-short size-7"></i>
+                <div class="flex flex-1 items-end justify-center pb-6">
+                    <a href="#" class="contact-block__play rotate-8 text-lime-500 hover:text-lime-520 hover:bg-amber-50 hover:after:bg-amber-50" data-modal="video"
+                       data-target="#modal-video-olya">
+                        <i class="icon icon-play-short size-6 2xl:size-7"></i>
                         <span>20 сек</span>
                     </a>
                 </div>
@@ -463,7 +459,7 @@
         </div>
 
         <!-- Правая часть - форма -->
-        <div class="w-[578px] mt-[148px] relative">
+        <div class="contact-block__form relative">
             <form class="bg-white rounded-28 flex flex-col p-3 h-full" method="post">
                 <div class="space-y-5 p-3">
                     <div class="form-row">
@@ -577,14 +573,14 @@
     </div>
 </section>
 
-<footer class="footer py-12 font-sans w-[1408px] mx-auto">
+<footer class="footer py-12 font-sans w-[1160px] 2xl:w-[1408px] 3xl:w-[1536px] mx-auto">
     <section class="footer-menu flex items-center justify-between mb-8 px-4">
         <div class="flex items-center gap-3">
             <div class="icon icon-logo size-11 text-blue-600"></div>
             <span class="text-blue-900 font-glina text-32 tracking-[-0.64px]">Продакшн</span>
         </div>
 
-        <nav class="footer-menu__nav flex items-start gap-6">
+        <nav class="footer-menu__nav flex items-start gap-3 2xl:gap-6">
             <a href="#" class="footer-menu__link">Услуги</a>
             <a href="#" class="footer-menu__link">Работы</a>
             <a href="#" class="footer-menu__link">Отзывы</a>
@@ -594,17 +590,17 @@
             <a href="#" class="footer-menu__link">Об агентстве</a>
         </nav>
 
-        <div class="mr-4 flex gap-3.5">
+        <div class="flex gap-3.5">
             <a href="#" class="flex items-center justify-center size-11 rounded-xl ring-[1.5px] ring-slate-150 text-blue-900"><i class="icon icon-telegram size-6"></i></a>
             <a href="#" class="flex items-center justify-center size-11 rounded-xl ring-[1.5px] ring-slate-150 text-blue-900"><i class="icon icon-vk size-6"></i></a>
         </div>
     </section>
 
-    <section class="footer-info grid grid-cols-[auto_1fr_auto] gap-6">
+    <section class="footer-info grid grid-cols-[auto_1fr_auto] gap-5 2xl:gap-6 pr-2 min-h-[240px] 2xl:min-h-[280px]">
         <!-- footer services -->
         <div class="footer-services flex flex-col items-start">
-            <a href="#" class="group flex items-center flex-nowrap gap-3 p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
-                <span class="text-blue-900 text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Баннеры</span>
+            <a href="#" class="group flex items-center flex-nowrap gap-3 p-3 2xl:p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
+                <span class="text-blue-900 text-[17px] 2xl:text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Баннеры</span>
 
                 <div class="footer-services__tags text-slate-400 transition-colors group-hover:text-blue-900">
                     <span class="footer-services__tag">HTML5</span>
@@ -612,8 +608,8 @@
                     <span class="footer-services__tag">Видео</span>
                 </div>
             </a>
-            <a href="#" class="group flex items-center flex-nowrap gap-3 p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
-                <span class="text-blue-900 text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Наружка</span>
+            <a href="#" class="group flex items-center flex-nowrap gap-3 p-3 2xl:p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
+                <span class="text-blue-900 text-[17px] 2xl:text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Наружка</span>
 
                 <div class="footer-services__tags text-slate-400 transition-colors group-hover:text-blue-900">
                     <span class="footer-services__tag">OOH</span>
@@ -621,24 +617,24 @@
                     <span class="footer-services__tag">MF</span>
                 </div>
             </a>
-            <a href="#" class="group flex items-center flex-nowrap gap-3 p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
-                <span class="text-blue-900 text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">2D</span>
+            <a href="#" class="group flex items-center flex-nowrap gap-3 p-3 2xl:p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
+                <span class="text-blue-900 text-[17px] 2xl:text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">2D</span>
 
                 <div class="footer-services__tags text-slate-400 transition-colors group-hover:text-blue-900">
                     <span class="footer-services__tag">Иллюстрации</span>
                     <span class="footer-services__tag">Моушн</span>
                 </div>
             </a>
-            <a href="#" class="group flex items-center flex-nowrap gap-3 p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
-                <span class="text-blue-900 text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">3D</span>
+            <a href="#" class="group flex items-center flex-nowrap gap-3 p-3 2xl:p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
+                <span class="text-blue-900 text-[17px] 2xl:text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">3D</span>
 
                 <div class="footer-services__tags text-slate-400 transition-colors group-hover:text-blue-900">
                     <span class="footer-services__tag">Иллюстрации</span>
                     <span class="footer-services__tag">Моушн</span>
                 </div>
             </a>
-            <a href="#" class="group flex items-center flex-nowrap gap-3 p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
-                <span class="text-blue-900 text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Лендинги</span>
+            <a href="#" class="group flex items-center flex-nowrap gap-3 p-3 2xl:p-4 !no-underline rounded-xl transition-colors hover:bg-slate-40">
+                <span class="text-blue-900 text-[17px] 2xl:text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600">Лендинги</span>
 
                 <div class="footer-services__tags text-slate-400 transition-colors group-hover:text-blue-900">
                     <span class="footer-services__tag">СПЕЦПРОЕКТЫ</span>
@@ -648,7 +644,7 @@
 
         <div class="flex flex-nowrap gap-6">
             <!-- footer case container -->
-            <div class="footer-case-container relative rounded-3xl overflow-hidden basis-1/2 lg:basis-[61.5%]">
+            <div class="footer-case-container relative rounded-3xl overflow-hidden basis-338 2xl:basis-[61.5%]">
                 <!-- Начальный кейс -->
                 <a href="#"
                    data-active="true"
@@ -675,7 +671,7 @@
             </div>
 
             <!-- footer review container -->
-            <div class="footer-review-container relative rounded-2xl inset-ring-[1.5px] inset-ring-slate-40 basis-1/2 lg:basis-[38.5%]">
+            <div class="footer-review-container relative rounded-2xl inset-ring-[1.5px] inset-ring-slate-40 basis-293 2xl:basis-[38.5%] 3xl:basis-[416px]">
                 <!-- Начальный отзыв -->
                 <a href="#"
                    data-active="true"
@@ -684,7 +680,10 @@
                         <img src="https://dummyimage.com/200x60" alt="#" class="max-w-full max-h-full object-contain"/>
                     </div>
 
-                    <div class="text-blue-900 font-serif text-lg font-bold leading-6 mt-auto mb-4">Спасибо, Дима, ещё раз, что&nbsp;вы&nbsp;есть и&nbsp;делаете такой качественный продукт</div>
+                    <div class="text-blue-900 font-serif font-bold mt-auto mb-4 text-base/6.5 2xl:text-lg/6.5 3xl:text-2xl/8 line-clamp-5 3xl:line-clamp-4">Спасибо, Дима, ещё раз, что&nbsp;вы&nbsp;есть
+                        и&nbsp;делаете
+                        такой качественный продукт
+                    </div>
 
                     <div class="flex flex-col gap-3 mr-10">
                         <div class="text-sm font-bold tracking-[0.14px] text-blue-900">Константин Обухов</div>
@@ -705,10 +704,10 @@
         </div>
 
         <!-- verticals -->
-        <div class="flex flex-col justify-between rounded-2xl inset-ring-[1.5px] inset-ring-slate-40 p-3 w-[209px]">
-            <div class="p-2 pb-0 text-slate-430 font-serif font-bold text-[15px] leading-[25px]">А ещё мы делаем</div>
+        <div class="flex flex-col justify-between rounded-2xl inset-ring-[1.5px] inset-ring-slate-40 p-3 w-[173px] 2xl:w-[209px] 3xl:w-[240px]">
+            <div class="p-2 pb-0 text-slate-430 font-serif font-medium 2xl:font-bold text-sm 2xl:text-[15px] 2xl:leading-[25px]">А ещё мы делаем</div>
 
-            <div class="flex flex-col items-start gap-1 font-glina text-2xl leading-[57%] tracking-[-0.48px]">
+            <div class="flex flex-col items-start gap-1 font-glina text-xl 2xl:text-2xl leading-[57%] tracking-[-0.48px]">
                 <a href="#" class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-colors text-blue-900 hover:text-rose-500 hover:bg-slate-40">
                     <i class="icon icon-logo size-7 transition-colors"></i>
                     <span class="text-blue-900">Журнал</span>
@@ -783,7 +782,7 @@
     <div class="group relative footer-features__item footer-features__item_third">
         <span class="footer-features__label">движ</span>
 
-        <div class="flex flex-col items-center gap-4 z-10 absolute top-[calc(100%+45px)] w-[407px] -left-[66px]  text-blue-950 text-base font-bold leading-5  transition-all scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100">
+        <div class="flex flex-col items-center gap-4 z-10 absolute top-[calc(100%+45px)] w-[407px] -left-[100px] 2xl:-left-[66px]  text-blue-950 text-base font-bold leading-5  transition-all scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100">
             <div class="absolute inset-0 rounded-full bg-white blur-xl z-[-1]"></div>
             <div class="inset-ring-2 inset-ring-zinc-200 p-3 bg-white rounded-xl flex gap-3 -rotate-1">
                 <div class="size-5 relative">
@@ -806,9 +805,8 @@
         </div>
     </div>
 </section>
-
-<div class="w-[1392px] mx-auto mb-3">
-    <div class="footer__word-logo mx-8"></div>
+<div class="mx-auto mb-3 w-[1136px] 2xl:w-[1375px] 3xl:w-[1536px]">
+    <div class="footer__word-logo"></div>
 
     <div class="flex flex-nowrap items-center justify-between  text-gray-400 font-sans text-base font-medium  h-8 -mt-8 relative">
         <div class="flex items-center flex-nowrap gap-4">
