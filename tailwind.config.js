@@ -12,5 +12,17 @@ module.exports = {
     'pointer-events-none',
     'pointer-events-auto',
   ],
-  plugins: [],
+    theme: {
+        extend: {},
+    },
+    plugins: [
+        function ({ matchUtilities }) {
+            matchUtilities(
+                {
+                    zoom: (value) => ({ zoom: value }),
+                },
+                { values: {} } // Разрешаем любые значения в []
+            );
+        }
+    ],
 };

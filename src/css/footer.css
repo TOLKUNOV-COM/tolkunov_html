@@ -1,13 +1,28 @@
 .footer-menu__link {
-    @apply text-blue-900 font-medium;
-    @apply text-sm xl:text-[17px]/3.5;
+    @apply text-blue-900 font-semibold lg:font-medium;
+    @apply text-xl/8 lg:text-sm xl:text-[17px]/3.5;
 
-    @apply py-3 px-2;
+    @apply lg:py-3 lg:px-2;
     @apply xl:p-3 xl:pr-2.5;
     @apply rounded-10 transition-colors;
 
     &:hover, &:active, &:focus {
-        @apply text-blue-900 no-underline bg-slate-40;
+        @apply text-blue-900 lg:no-underline lg:bg-slate-40;
+    }
+}
+
+.footer-menu_mobile {
+    @apply relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: -21px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+
+        @apply bg-slate-150;
     }
 }
 
@@ -15,8 +30,17 @@
 
 }
 
+.footer-services__item {
+    @apply flex items-center flex-nowrap gap-3 p-0 lg:p-3 2xl:p-4 !no-underline rounded-xl transition-colors lg:hover:bg-slate-40;
+}
+
+.footer-services__label {
+    @apply text-blue-900 text-xl lg:text-[17px] 2xl:text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600;
+}
+
 .footer-services__tags {
     @apply flex flex-nowrap gap-5 mx-[9px];
+    @apply text-slate-400 transition-colors group-hover:text-blue-900;
 
     & > .footer-services__tag:first-child::before {
         content: '';

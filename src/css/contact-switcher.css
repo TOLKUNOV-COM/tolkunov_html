@@ -3,7 +3,7 @@
 }
 
 .contact-switcher__item {
-    @apply flex flex-nowrap items-center transition-[gap] gap-0 data-[active=true]:gap-4;
+    @apply flex flex-nowrap items-center transition-[gap] gap-0 data-[active=true]:gap-3 xl:data-[active=true]:gap-4;
     @apply rounded-3xl;
     @apply h-auto xl:h-[74px] 2xl:h-24;
 
@@ -11,6 +11,7 @@
 
     &[data-active="true"] {
         @apply bg-white;
+        @apply max-xl:flex-1;
     }
 
     &[data-active="false"] {
@@ -24,7 +25,7 @@
 }
 
 .contact-switcher__info {
-    @apply overflow-hidden transition-all w-0 opacity-0 group-[[data-active=true]]:w-[170px] group-[[data-active=true]]:opacity-100;
+    @apply overflow-hidden transition-all w-0 opacity-0 group-[[data-active=true]]:w-[130px] lg:group-[[data-active=true]]:w-[170px] group-[[data-active=true]]:opacity-100;
     @apply flex flex-col gap-1 2xl:gap-2;
 }
 

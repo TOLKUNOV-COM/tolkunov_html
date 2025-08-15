@@ -1,10 +1,10 @@
 .footer-features {
     @apply w-[1136px] 2xl:w-[1375px] 3xl:w-[1536px];
-    @apply mb-7 xl:mb-9 2xl:mb-10;
+    @apply mb-9 lg:mb-8 xl:mb-9 2xl:mb-10;
+    @apply mx-auto z-1;
 
-    @apply max-xl:scale-[calc(984/1136)] z-100;
-
-    @apply mx-auto;
+    @apply max-xl:zoom-[calc(984/1136)];
+    @apply max-lg:zoom-[calc(728/1136)];
 }
 
 .footer-features__label {
