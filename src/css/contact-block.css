@@ -2,12 +2,15 @@
 }
 
 .contact-block__play {
-    @apply h-15 pl-5 pr-5.5;
+    @apply h-11.5 px-4;
+    @apply xl:h-15 xl:pl-5 xl:pr-5.5;
     @apply 2xl:h-16 2xl:pl-6 2xl:pr-7;
-    @apply flex items-center gap-3;
-    @apply rounded-20 bg-white;
+    @apply flex items-center gap-2 xl:gap-3;
+    @apply bg-white;
+    @apply rounded-2xl xl:rounded-20;
     @apply font-glina;
-    @apply text-[24px] leading-7;
+    @apply text-xl;
+    @apply xl:text-[24px] xl:leading-7;
     @apply 2xl:text-[28px];
     @apply !no-underline;
     @apply relative;
@@ -16,17 +19,17 @@
     box-shadow: 0 2px 12px 0 rgba(22, 31, 106, 0.15);
 
     &::after {
-        content: "";
+        @apply content-[""];
+        @apply absolute;
+        @apply w-[33px] h-[33px];
+        @apply xl:w-[47px] xl:h-[46px];
 
-        position: absolute;
-        left: -47px;
-        top: -40px;
-        width: 47px;
-        height: 46px;
         transform: translate(30%, 30%);
         @apply transition-transform;
 
         mask-image: url("../img/video/play-decorate.svg");
+        mask-repeat: no-repeat;
+        mask-size: contain;
         background-color: #fff;
     }
 
@@ -39,15 +42,42 @@
     }
 }
 
+.contact-block__play_lt::after {
+    @apply -left-[47px/1.4] -top-[40px/1.4];
+    @apply xl:-left-[47px] xl:-top-[40px];
+}
+
+.contact-block__play_lb::after {
+    @apply -rotate-[80deg];
+
+    @apply -left-[47px/1.4] -bottom-[40px/1.4];
+    @apply xl:-left-[47px] xl:-bottom-[40px];
+}
+
+.contact-block__play_rt::after {
+    @apply rotate-[100deg];
+
+    @apply -right-[47px/1.4] -top-[40px/1.4];
+    @apply xl:-right-[47px] xl:-top-[40px];
+}
+
+.contact-block__play_rb::after {
+    @apply -rotate-180;
+
+    @apply -right-[47px/1.4] -bottom-[40px/1.4];
+    @apply xl:-right-[47px] xl:-bottom-[40px];
+}
+
 .contact-block__form {
-    @apply w-[493px] 2xl:w-[578px] mt-[106px] 2xl:mt-[148px];
+    @apply w-[488px] xl:w-[493px] 2xl:w-[578px];
+    @apply mt-[100px] xl:mt-[106px] 2xl:mt-[148px];
 }
 
 .contact-block__line1 {
     @apply font-semibold;
-    @apply text-xl 2xl:text-2xl;
+    @apply text-base xl:text-xl 2xl:text-2xl;
 }
 
 .contact-block__line2 {
-    @apply text-5xl/13 2xl:text-[3.5rem]/17 3xl:text-[4rem]/17 font-bold;
+    @apply text-[40px]/11.5 xl:text-5xl/13 2xl:text-[3.5rem]/17 3xl:text-[4rem]/17 font-bold;
 }
