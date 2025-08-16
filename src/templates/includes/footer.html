@@ -1,7 +1,7 @@
 <section id="contacts-container"
-         class="relative mx-auto mt-3 xl:mt-4 2xl:mt-8 mb-0 xl:mb-5 2xl:mb-12 font-sans rounded-4xl overflow-hidden w-[408px] h-[954px] md:w-[720px] md:h-[853px] lg:w-[1000px] lg:h-[676px] xl:w-[1164px] xl:h-[680px] 2xl:w-[1376px] 2xl:h-[780px] 3xl:w-[1540px] 3xl:h-[874px]">
+         class="relative mt-3 xl:mt-4 2xl:mt-8 mb-0 xl:mb-5 2xl:mb-12 font-sans rounded-4xl overflow-hidden max-md:mx-5 md:mx-auto w-auto md:w-[720px] lg:w-[1000px] lg:h-[676px] xl:w-[1164px] xl:h-[680px] 2xl:w-[1376px] 2xl:h-[780px] 3xl:w-[1540px] 3xl:h-[874px]">
     <!-- Contact switcher (абсолютное позиционирование) -->
-    <div class="absolute left-4 top-36 md:top-[200px] md:left-8 lg:left-auto lg:top-3 lg:right-3 z-10 mb-2 md:mb-4 lg:mb-0">
+    <div class="absolute left-4 top-36 md:top-[204px] md:left-8 lg:left-auto lg:top-3 lg:right-3 z-10 mb-2 md:mb-4 lg:mb-0">
         <div class="flex items-start justify-between max-xl:gap-3 max-md:gap-2 p-0 xl:p-3 2xl:p-4 2xl:pb-7 xl:bg-white rounded-28 h-[80px] md:h-[88px] xl:h-[98px] 2xl:h-[140px] w-auto md:w-[440px] lg:w-[488px] xl:w-[493px] 2xl:w-[578px]">
             <!-- Дима -->
             <div data-active="true" data-target="dima" class="group contact-switcher__item contact-switcher__item_dima">
@@ -49,7 +49,7 @@
 
     <!-- Дима блок -->
     <div data-contact="dima" data-active="true"
-         class="contact-block lg:bg-blue-600 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-6 max-md:pt-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+         class="contact-block lg:bg-blue-600 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-9 max-md:pt-3 max-lg:hidden max-lg:data-[active=true]:block lg:transition-opacity lg:opacity-0 lg:pointer-events-none lg:data-[active=true]:opacity-100 lg:data-[active=true]:pointer-events-auto lg:absolute lg:inset-0">
 
         <picture class="absolute inset-0 z-0">
             <!-- 1920px (4xl) -->
@@ -93,18 +93,18 @@
                     src="/assets/img/contact-block/dima_440.webp"
                     srcset="/assets/img/contact-block/dima_440_x2.webp 2x"
                     alt="Описание изображения"
-                    class="w-full h-full object-cover object-left"/>
+                    class="w-full h-full object-cover object-top lg:object-left"/>
         </picture>
 
         <!-- Левая часть -->
-        <div class="lg:flex-1 p-5 pb-0 lg:pb-4 2xl:p-7 flex flex-col justify-between z-1">
-            <div class="font-serif space-y-4 2xl:space-y-3 w-full md:w-[376px] xl:w-[420px] 2xl:w-[525px]">
+        <div class="lg:flex-1 p-3 md:p-5 pb-0 md:pb-0 lg:pb-4 2xl:p-7 flex flex-col justify-between z-1 relative">
+            <div class="font-serif space-y-4 2xl:space-y-3 max-w-[300px] md:max-w-max md:w-[376px] xl:w-[420px] 2xl:w-[525px]">
                 <div class="contact-block__line1 text-white/60">Спасибо, что долистали до конца</div>
                 <div class="contact-block__line2 text-white">Самое время обсудить проект</div>
             </div>
 
             <div class="flex max-md:hidden">
-                <div class=" flex flex-col items-start gap-3 w-[273px] max-xl:hidden">
+                <div class="flex flex-col items-start gap-3 w-[273px] max-xl:hidden">
                     <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
                     <div class="chat-message chat-message-2 chat-message_default">Я Дима, фаундер<br>агентства TOLKUNOV</div>
                     <div class="chat-message chat-message-3 chat-message_cta">
@@ -182,7 +182,7 @@
                     </div>
 
                     <div class="form-row">
-                        <textarea name="description" class="form-field resize-y min-h-8 max-h-8 2xl:max-h-27" rows="1" auto-grow placeholder="Опишите задачу"></textarea>
+                        <textarea name="description" class="form-field resize-y min-h-8 md:max-h-20 lg:max-h-8 2xl:max-h-27" rows="1" auto-grow placeholder="Опишите задачу"></textarea>
                     </div>
                     <div class="form-row">
                         <input type="text" name="name" class="form-field" placeholder="Имя">
@@ -240,7 +240,7 @@
 
     <!-- Таня блок -->
     <div data-contact="tanya" data-active="false"
-         class="contact-block lg:bg-purple-400 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-6 max-md:pt-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+         class="contact-block lg:bg-purple-400 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-9 max-md:pt-3 max-lg:hidden max-lg:data-[active=true]:block lg:transition-opacity lg:opacity-0 lg:pointer-events-none lg:data-[active=true]:opacity-100 lg:data-[active=true]:pointer-events-auto lg:absolute lg:inset-0">
         <picture class="absolute inset-0 z-0">
             <!-- 1920px (4xl) -->
             <source
@@ -283,18 +283,20 @@
                     src="/assets/img/contact-block/tanya_440.webp"
                     srcset="/assets/img/contact-block/tanya_440_x2.webp 2x"
                     alt="Описание изображения"
-                    class="w-full h-full object-cover object-left"/>
+                    class="w-full h-full object-cover object-top lg:object-left"/>
         </picture>
         <!-- Левая часть -->
-        <div class="lg:flex-1 p-5 pb-0 lg:pb-4 2xl:p-7 flex flex-col justify-between z-1">
-            <div class="font-serif space-y-4 2xl:space-y-3 w-full md:w-[300px] lg:w-[330px] xl:w-[420px] 2xl:w-[525px]">
+        <div class="lg:flex-1 p-3 md:p-5 pb-0 md:pb-0 lg:pb-4 2xl:p-7 flex flex-col justify-between z-1 relative">
+            <div class="font-serif space-y-4 2xl:space-y-3 max-w-[300px] md:max-w-max md:w-[300px] lg:w-[330px] xl:w-[420px] 2xl:w-[525px]">
                 <div class="contact-block__line1 text-white/60">Спасибо, что долистали до конца</div>
-                <div class="contact-block__line2 text-white max-md:hidden">Как насчёт кросс-промо?</div>
-                <div class="contact-block__line2 text-white md:hidden">Как насчёт коллаба&nbsp;и&nbsp;пиара?</div>
+                <div class="contact-block__line2 text-white">
+                    <span class="max-md:hidden">Как насчёт кросс-промо?</span>
+                    <span class="md:hidden">Как насчёт коллаба&nbsp;и&nbsp;пиара?</span>
+                </div>
             </div>
 
             <div class="flex max-md:hidden">
-                <div class=" flex flex-col items-start gap-3 w-[273px] max-xl:hidden">
+                <div class="flex flex-col items-start gap-3 w-[273px] max-xl:hidden">
                     <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
                     <div class="chat-message chat-message-2 chat-message_default">Я Таня, отвечаю за пиар<br>в TOLKUNOV</div>
                     <div class="chat-message chat-message-3 chat-message_cta">
@@ -339,7 +341,7 @@
                         <input type="text" name="position" class="form-field" placeholder="Должность">
                     </div>
                     <div class="form-row">
-                        <textarea name="message" class="form-field resize-y min-h-8 max-h-28 lg:max-h-32" rows="1" auto-grow placeholder="Расскажите о вашем предложении"></textarea>
+                        <textarea name="message" class="form-field resize-y min-h-8 md:max-h-30 lg:max-h-32" rows="1" auto-grow placeholder="Расскажите о вашем предложении"></textarea>
                     </div>
 
                     <label class="flex items-start gap-2 cursor-pointer select-none">
@@ -386,7 +388,7 @@
 
     <!-- Оля блок -->
     <div data-contact="olya" data-active="false"
-         class="contact-block lg:bg-lime-500 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-6 max-md:pt-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+         class="contact-block lg:bg-lime-500 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-9 max-md:pt-3 max-lg:hidden max-lg:data-[active=true]:block lg:transition-opacity lg:opacity-0 lg:pointer-events-none lg:data-[active=true]:opacity-100 lg:data-[active=true]:pointer-events-auto lg:absolute lg:inset-0">
         <picture class="absolute inset-0 z-0">
             <!-- 1920px (4xl) -->
             <source
@@ -429,17 +431,17 @@
                     src="/assets/img/contact-block/olya_440.webp"
                     srcset="/assets/img/contact-block/olya_440_x2.webp 2x"
                     alt="Описание изображения"
-                    class="w-full h-full object-cover object-left"/>
+                    class="w-full h-full object-cover object-top lg:object-left"/>
         </picture>
         <!-- Левая часть -->
-        <div class="lg:flex-1 p-5 pb-0 lg:pb-4 2xl:p-7 flex flex-col justify-between z-1">
-            <div class="font-serif space-y-4 2xl:space-y-3 w-full md:w-[300px] lg:w-[370px] xl:w-[400px] 2xl:w-[466px]">
+        <div class="lg:flex-1 p-3 md:p-5 pb-0 md:pb-0 lg:pb-4 2xl:p-7 flex flex-col justify-between z-1 relative">
+            <div class="font-serif space-y-4 2xl:space-y-3 max-w-[300px] md:max-w-max md:w-[300px] lg:w-[370px] xl:w-[400px] 2xl:w-[466px]">
                 <div class="contact-block__line1 text-blue-900/60">Спасибо, что долистали до конца</div>
                 <div class="contact-block__line2 text-blue-900">В поиске крутых коллег?</div>
             </div>
 
             <div class="flex max-md:hidden">
-                <div class=" flex flex-col items-start gap-3 w-[273px] max-xl:hidden">
+                <div class="flex flex-col items-start gap-3 w-[273px] max-xl:hidden">
                     <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
                     <div class="chat-message chat-message-2 chat-message_default">Я Оля, отвечаю за кадры<br>в TOLKUNOV</div>
                     <div class="chat-message chat-message-3 chat-message_cta">
@@ -476,7 +478,7 @@
                         <input type="text" name="telegram" class="form-field" placeholder="Телеграм">
                     </div>
                     <div class="form-row">
-                        <textarea name="skills" class="form-field resize-y min-h-8 max-h-32" rows="1" auto-grow
+                        <textarea name="skills" class="form-field resize-y min-h-8 md:max-h-30 lg:max-h-32" rows="1" auto-grow
                                   placeholder="Несколько строк о навыках и опыте"></textarea>
                     </div>
                     <div class="form-row">
