@@ -15,12 +15,8 @@
     @apply relative;
 
     &::after {
-        content: "";
-        position: absolute;
-        right: -21px;
-        top: 0;
-        bottom: 0;
-        width: 1px;
+        @apply md:content-[''];
+        @apply absolute -right-[21px] top-0 bottom-0 w-px;
 
         @apply bg-slate-150;
     }

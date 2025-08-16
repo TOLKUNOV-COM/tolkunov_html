@@ -75,14 +75,14 @@
 
 .contact-block__form {
     @apply w-full lg:w-[488px] xl:w-[493px] 2xl:w-[578px];
-    @apply mt-0 lg:mt-[100px] xl:mt-[106px] 2xl:mt-[148px];
+    @apply mt-[104px] md:mt-0 lg:mt-[100px] xl:mt-[106px] 2xl:mt-[148px];
 }
 
 .contact-block__line1 {
     @apply font-semibold;
-    @apply text-base xl:text-xl 2xl:text-2xl;
+    @apply text-base/4 xl:text-xl 2xl:text-2xl;
 }
 
 .contact-block__line2 {
-    @apply text-[32px]/10 lg:text-[40px]/11.5 xl:text-5xl/13 2xl:text-[3.5rem]/17 3xl:text-[4rem]/17 font-bold;
+    @apply text-[28px]/8 md:text-[32px]/10 lg:text-[40px]/11.5 xl:text-5xl/13 2xl:text-[3.5rem]/17 3xl:text-[4rem]/17 font-bold;
 }

@@ -1,8 +1,8 @@
 <section id="contacts-container"
-         class="relative mx-auto mt-3 xl:mt-4 2xl:mt-8 mb-0 xl:mb-5 2xl:mb-12 font-sans rounded-4xl overflow-hidden w-[720px] h-[853px] lg:w-[1000px] lg:h-[676px] xl:w-[1164px] xl:h-[680px] 2xl:w-[1376px] 2xl:h-[780px] 3xl:w-[1540px] 3xl:h-[874px]">
+         class="relative mx-auto mt-3 xl:mt-4 2xl:mt-8 mb-0 xl:mb-5 2xl:mb-12 font-sans rounded-4xl overflow-hidden w-[408px] h-[954px] md:w-[720px] md:h-[853px] lg:w-[1000px] lg:h-[676px] xl:w-[1164px] xl:h-[680px] 2xl:w-[1376px] 2xl:h-[780px] 3xl:w-[1540px] 3xl:h-[874px]">
     <!-- Contact switcher (абсолютное позиционирование) -->
-    <div class="absolute top-[200px] left-8 lg:left-auto lg:top-3 lg:right-3 z-10 mb-4 lg:mb-0">
-        <div class="flex items-start justify-between max-xl:gap-3 p-0 xl:p-3 2xl:p-4 2xl:pb-7 xl:bg-white rounded-28 h-[88px] xl:h-[98px] 2xl:h-[140px] w-[440px] lg:w-[488px] xl:w-[493px] 2xl:w-[578px]">
+    <div class="absolute left-4 top-36 md:top-[200px] md:left-8 lg:left-auto lg:top-3 lg:right-3 z-10 mb-2 md:mb-4 lg:mb-0">
+        <div class="flex items-start justify-between max-xl:gap-3 max-md:gap-2 p-0 xl:p-3 2xl:p-4 2xl:pb-7 xl:bg-white rounded-28 h-[80px] md:h-[88px] xl:h-[98px] 2xl:h-[140px] w-auto md:w-[440px] lg:w-[488px] xl:w-[493px] 2xl:w-[578px]">
             <!-- Дима -->
             <div data-active="true" data-target="dima" class="group contact-switcher__item contact-switcher__item_dima">
                 <div class="contact-switch">
@@ -49,7 +49,7 @@
 
     <!-- Дима блок -->
     <div data-contact="dima" data-active="true"
-         class="contact-block lg:bg-blue-600 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-6 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+         class="contact-block lg:bg-blue-600 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-6 max-md:pt-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
 
         <picture class="absolute inset-0 z-0">
             <!-- 1920px (4xl) -->
@@ -98,12 +98,12 @@
 
         <!-- Левая часть -->
         <div class="lg:flex-1 p-5 pb-0 lg:pb-4 2xl:p-7 flex flex-col justify-between z-1">
-            <div class="font-serif space-y-4 2xl:space-y-3 w-[376px] xl:w-[420px] 2xl:w-[525px]">
+            <div class="font-serif space-y-4 2xl:space-y-3 w-full md:w-[376px] xl:w-[420px] 2xl:w-[525px]">
                 <div class="contact-block__line1 text-white/60">Спасибо, что долистали до конца</div>
                 <div class="contact-block__line2 text-white">Самое время обсудить проект</div>
             </div>
 
-            <div class="flex">
+            <div class="flex max-md:hidden">
                 <div class=" flex flex-col items-start gap-3 w-[273px] max-xl:hidden">
                     <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
                     <div class="chat-message chat-message-2 chat-message_default">Я Дима, фаундер<br>агентства TOLKUNOV</div>
@@ -130,7 +130,7 @@
 
         <!-- Правая часть - форма -->
         <div class="contact-block__form relative max-lg:flex-1">
-            <form class="bg-white rounded-20 lg:rounded-3xl xl:rounded-20 2xl:rounded-28 flex flex-col p-3 h-full" method="post">
+            <form class="bg-white rounded-20 lg:rounded-3xl xl:rounded-20 2xl:rounded-28 flex flex-col p-2 md:p-3 h-full" method="post">
                 <div class="space-y-5 p-3">
                     <div class="form-row">
                         <label class="form-label">Услуги</label>
@@ -162,28 +162,27 @@
                     <div class="form-row">
                         <label class="form-label">Бюджет</label>
 
-                        <div class="chips-group flex flex-wrap gap-4">
+                        <div class="chips-group flex flex-col md:flex-row flex-wrap gap-3 md:gap-4">
                             <label class="chip chip_big flex-1">
                                 <input type="radio" class="hidden" name="budget" value="100k">
                                 <span class="chip-label">от 100 000 ₽</span>
-                                <span class="chip-hint">HTML5-баннер <br>с&nbsp;несколькими ресайзами</span>
+                                <span class="chip-hint">HTML5-баннер с&nbsp;несколькими&nbsp;ресайзами</span>
                             </label>
                             <label class="chip chip_big flex-1">
                                 <input type="radio" class="hidden" name="budget" value="500k">
                                 <span class="chip-label">от 500 000 ₽</span>
-                                <span class="chip-hint">Пак баннеров HTML5 <br>для&nbsp;онлайн и наружки</span>
+                                <span class="chip-hint">Пак&nbsp;баннеров&nbsp;HTML5 для&nbsp;онлайн&nbsp;и&nbsp;наружки</span>
                             </label>
                             <label class="chip chip_big flex-1">
                                 <input type="radio" class="hidden" name="budget" value="1m">
                                 <span class="chip-label">от 1 млн ₽</span>
-                                <span class="chip-hint">То же, что за 500к <br>+ 3D и лендинг</span>
+                                <span class="chip-hint">То&nbsp;же,&nbsp;что&nbsp;за&nbsp;500к +&nbsp;3D&nbsp;и&nbsp;лендинг</span>
                             </label>
                         </div>
                     </div>
 
                     <div class="form-row">
-                        <textarea name="description" class="form-field resize-y min-h-8 max-h-8 2xl:max-h-27" rows="1" auto-grow
-                                  placeholder="Опишите задачу: чем больше информации, тем лучше"></textarea>
+                        <textarea name="description" class="form-field resize-y min-h-8 max-h-8 2xl:max-h-27" rows="1" auto-grow placeholder="Опишите задачу"></textarea>
                     </div>
                     <div class="form-row">
                         <input type="text" name="name" class="form-field" placeholder="Имя">
@@ -241,7 +240,7 @@
 
     <!-- Таня блок -->
     <div data-contact="tanya" data-active="false"
-         class="contact-block lg:bg-purple-400 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-6 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+         class="contact-block lg:bg-purple-400 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-6 max-md:pt-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
         <picture class="absolute inset-0 z-0">
             <!-- 1920px (4xl) -->
             <source
@@ -288,12 +287,13 @@
         </picture>
         <!-- Левая часть -->
         <div class="lg:flex-1 p-5 pb-0 lg:pb-4 2xl:p-7 flex flex-col justify-between z-1">
-            <div class="font-serif space-y-4 2xl:space-y-3 w-[300px] lg:w-[330px] xl:w-[420px] 2xl:w-[525px]">
+            <div class="font-serif space-y-4 2xl:space-y-3 w-full md:w-[300px] lg:w-[330px] xl:w-[420px] 2xl:w-[525px]">
                 <div class="contact-block__line1 text-white/60">Спасибо, что долистали до конца</div>
-                <div class="contact-block__line2 text-white">Как насчёт кросс-промо?</div>
+                <div class="contact-block__line2 text-white max-md:hidden">Как насчёт кросс-промо?</div>
+                <div class="contact-block__line2 text-white md:hidden">Как насчёт коллаба&nbsp;и&nbsp;пиара?</div>
             </div>
 
-            <div class="flex">
+            <div class="flex max-md:hidden">
                 <div class=" flex flex-col items-start gap-3 w-[273px] max-xl:hidden">
                     <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
                     <div class="chat-message chat-message-2 chat-message_default">Я Таня, отвечаю за пиар<br>в TOLKUNOV</div>
@@ -321,7 +321,7 @@
 
         <!-- Правая часть - форма -->
         <div class="contact-block__form relative max-lg:flex-1">
-            <form class="bg-white rounded-20 lg:rounded-3xl xl:rounded-20 2xl:rounded-28 flex flex-col p-3 h-full" method="post">
+            <form class="bg-white rounded-20 lg:rounded-3xl xl:rounded-20 2xl:rounded-28 flex flex-col p-2 md:p-3 h-full" method="post">
                 <div class="space-y-5 p-3">
                     <div class="form-row">
                         <input type="text" name="name" class="form-field" placeholder="Имя">
@@ -339,8 +339,7 @@
                         <input type="text" name="position" class="form-field" placeholder="Должность">
                     </div>
                     <div class="form-row">
-                        <textarea name="message" class="form-field resize-y min-h-8 max-h-28 lg:max-h-32" rows="1" auto-grow
-                                  placeholder="Расскажите о вашем предложении или задайте вопрос"></textarea>
+                        <textarea name="message" class="form-field resize-y min-h-8 max-h-28 lg:max-h-32" rows="1" auto-grow placeholder="Расскажите о вашем предложении"></textarea>
                     </div>
 
                     <label class="flex items-start gap-2 cursor-pointer select-none">
@@ -387,7 +386,7 @@
 
     <!-- Оля блок -->
     <div data-contact="olya" data-active="false"
-         class="contact-block lg:bg-lime-500 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-6 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
+         class="contact-block lg:bg-lime-500 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-6 max-md:pt-3 transition-opacity opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto absolute inset-0">
         <picture class="absolute inset-0 z-0">
             <!-- 1920px (4xl) -->
             <source
@@ -434,12 +433,12 @@
         </picture>
         <!-- Левая часть -->
         <div class="lg:flex-1 p-5 pb-0 lg:pb-4 2xl:p-7 flex flex-col justify-between z-1">
-            <div class="font-serif space-y-4 2xl:space-y-3 w-[300px] lg:w-[370px] xl:w-[400px] 2xl:w-[466px]">
+            <div class="font-serif space-y-4 2xl:space-y-3 w-full md:w-[300px] lg:w-[370px] xl:w-[400px] 2xl:w-[466px]">
                 <div class="contact-block__line1 text-blue-900/60">Спасибо, что долистали до конца</div>
                 <div class="contact-block__line2 text-blue-900">В поиске крутых коллег?</div>
             </div>
 
-            <div class="flex">
+            <div class="flex max-md:hidden">
                 <div class=" flex flex-col items-start gap-3 w-[273px] max-xl:hidden">
                     <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
                     <div class="chat-message chat-message-2 chat-message_default">Я Оля, отвечаю за кадры<br>в TOLKUNOV</div>
@@ -465,7 +464,7 @@
 
         <!-- Правая часть - форма -->
         <div class="contact-block__form relative max-lg:flex-1">
-            <form class="bg-white rounded-20 lg:rounded-3xl xl:rounded-20 2xl:rounded-28 flex flex-col p-3 h-full" method="post">
+            <form class="bg-white rounded-20 lg:rounded-3xl xl:rounded-20 2xl:rounded-28 flex flex-col p-2 md:p-3 h-full" method="post">
                 <div class="space-y-5 p-3">
                     <div class="form-row">
                         <input type="text" name="name" class="form-field" placeholder="Имя">
@@ -578,8 +577,8 @@
     </div>
 </section>
 
-<footer class="footer py-8 2xl:py-12 font-sans w-[728px] lg:w-[984px] xl:w-[1160px] 2xl:w-[1408px] 3xl:w-[1536px] mx-auto">
-    <section class="footer-menu flex items-center justify-between mb-8 lg:px-4">
+<footer class="footer py-8 2xl:py-12 font-sans max-md:mx-5 w-auto md:w-[728px] lg:w-[984px] xl:w-[1160px] 2xl:w-[1408px] 3xl:w-[1536px] mx-auto">
+    <section class="footer-menu flex items-center justify-between mb-6 md:mb-8 lg:px-4">
         <div class="flex items-center gap-3">
             <div class="icon icon-logo size-11 text-blue-600"></div>
             <span class="text-blue-900 font-glina text-32 tracking-[-0.64px]">Продакшн</span>
@@ -601,9 +600,9 @@
         </div>
     </section>
 
-    <section class="footer-info grid grid-cols-2 lg:grid-cols-[auto_1fr] xl:grid-cols-[auto_1fr_auto] gap-y-8 gap-5 2xl:gap-6 lg:pr-2 min-h-[240px] 2xl:min-h-[280px]">
+    <section class="footer-info grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[auto_1fr] xl:grid-cols-[auto_1fr_auto] gap-y-6 md:gap-y-8 gap-5 2xl:gap-6 lg:pr-2 min-h-[240px] 2xl:min-h-[280px]">
         <!-- mobile footer menu -->
-        <nav class="footer-menu_mobile grid grid-cols-2 gap-y-5 gap-x-4 items-stretch self-start lg:hidden mr-2.5">
+        <nav class="footer-menu_mobile grid grid-cols-2 gap-y-2 md:gap-y-5 gap-x-4 items-stretch self-start lg:hidden mr-2.5">
             <a href="#" class="footer-menu__link">Услуги</a>
             <a href="#" class="footer-menu__link">Работы</a>
             <a href="#" class="footer-menu__link">Отзывы</a>
@@ -613,8 +612,10 @@
             <a href="#" class="footer-menu__link">Об агентстве</a>
         </nav>
 
+        <div class="md:hidden h-px w-full bg-slate-150"></div>
+
         <!-- footer services -->
-        <div class="footer-services flex flex-col items-start gap-5 lg:gap-0 max-lg:ml-2.5">
+        <div class="footer-services flex flex-col items-start gap-8 md:gap-5 lg:gap-0 md:max-lg:ml-2.5">
             <a href="#" class="footer-services__item group">
                 <span class="footer-services__label">Баннеры</span>
 
@@ -658,7 +659,7 @@
             </a>
         </div>
 
-        <div class="flex flex-nowrap gap-5 2xl:gap-6 max-lg:col-span-2 max-lg:h-[240px]">
+        <div class="flex flex-nowrap gap-5 2xl:gap-6 col-span-1 md:col-span-2 lg:col-span-1 max-lg:h-[240px] max-md:hidden">
             <!-- footer case container -->
             <div class="footer-case-container relative rounded-3xl overflow-hidden basis-1/2 lg:basis-381 xl:basis-338 2xl:basis-[61.5%]">
                 <!-- Начальный кейс -->
@@ -720,10 +721,10 @@
         </div>
 
         <!-- verticals -->
-        <div class="flex flex-col lg:flex-row xl:flex-col max-lg:items-start max-xl:items-center lg:justify-between gap-4 lg:gap-0 rounded-2xl inset-ring-[1.5px] inset-ring-slate-40 p-5 xl:p-3 w-auto xl:w-[173px] 2xl:w-[209px] 3xl:w-[240px] col-span-2 xl:col-span-1">
+        <div class="flex flex-col lg:flex-row xl:flex-col max-lg:items-start max-xl:items-center lg:justify-between gap-4 lg:gap-0 rounded-2xl inset-ring-[1.5px] inset-ring-slate-40 p-5 xl:p-3 w-auto xl:w-[173px] 2xl:w-[209px] 3xl:w-[240px] col-span-1 md:col-span-2 xl:col-span-1">
             <div class="xl:p-2 pb-0 text-slate-430 font-serif font-bold xl:font-medium 2xl:font-bold text-[15px] xl:text-sm 2xl:text-[15px] 2xl:leading-[25px]">А ещё мы делаем</div>
 
-            <div class="flex flex-row xl:flex-col items-start gap-4 xl:gap-1 font-glina text-2xl xl:text-xl 2xl:text-2xl leading-[57%] tracking-[-0.48px]">
+            <div class="flex flex-row flex-wrap md:flex-nowrap xl:flex-col items-start gap-4 xl:gap-1 font-glina text-2xl xl:text-xl 2xl:text-2xl leading-[57%] tracking-[-0.48px]">
                 <a href="#" class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-colors text-blue-900 hover:text-rose-500 hover:bg-slate-40">
                     <i class="icon icon-logo size-7 transition-colors"></i>
                     <span class="text-blue-900">Журнал</span>
@@ -744,7 +745,7 @@
         </div>
     </section>
 </footer>
-<section class="footer-features flex flex-nowrap justify-between relative">
+<section class="footer-features flex flex-nowrap justify-between relative max-md:hidden">
     <div class="group relative footer-features__item footer-features__item_first">
         <span class="footer-features__label">дизайн</span>
 
@@ -821,7 +822,7 @@
         </div>
     </div>
 </section>
-<div class="mx-auto mb-3 w-[728px] lg:w-[984px] xl:w-[1136px] 2xl:w-[1375px] 3xl:w-[1536px]">
+<div class="mx-5 md:mx-auto mb-3 w-auto md:w-[728px] lg:w-[984px] xl:w-[1136px] 2xl:w-[1375px] 3xl:w-[1536px]">
     <div class="footer__word-logo"></div>
 
     <div class="flex flex-nowrap items-center justify-between  text-gray-400 font-sans text-xs xl:text-base font-medium  h-5 xl:h-8 -mt-8 relative">

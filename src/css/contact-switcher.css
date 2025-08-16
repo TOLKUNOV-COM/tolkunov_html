@@ -15,13 +15,13 @@
     }
 
     &[data-active="false"] {
-        @apply max-xl:border max-xl:border-white/20 max-xl:bg-white/20 max-xl:backdrop-blur-[13px];
+        @apply max-xl:inset-ring max-xl:inset-ring-white/20 max-xl:bg-white/20 max-xl:backdrop-blur-[13px];
     }
 }
 
 .contact-switch {
     @apply relative cursor-pointer group-[[data-active=true]]:cursor-default;
-    @apply size-[64px] xl:size-[74px] 2xl:size-24;
+    @apply size-[56px] md:size-[64px] xl:size-[74px] 2xl:size-24;
 }
 
 .contact-switcher__info {
@@ -39,13 +39,14 @@
     @apply text-slate-430 hover:text-slate-430 font-medium text-nowrap;
     @apply text-xs xl:text-sm;
     @apply leading-4;
-    @apply tracking-[0.14px];
+    @apply tracking-[0.12px] xl:tracking-[0.14px];
 }
 
 .contact-switch__img {
     @apply absolute left-0;
     @apply bottom-0 2xl:bottom-1;
-    @apply w-[64px] h-[68px];
+    @apply w-[56px] h-[64px];
+    @apply md:w-[64px] md:h-[68px];
     @apply xl:w-[74px] 2xl:w-[96px];
     @apply xl:h-[82px] 2xl:h-[110px];
 
@@ -123,7 +124,8 @@
 
 .contact-switch__ring_tanya {
     @apply absolute left-1/2 -translate-x-1/2 rotate-45 transition-all;
-    @apply rounded-[19.478px] size-[56px] bottom-[4px];
+    @apply rounded-2xl size-[48px] bottom-[4px];
+    @apply md:rounded-[19.478px] md:size-[56px] md:bottom-[4px];
     @apply xl:rounded-2xl xl:size-[66px] xl:bottom-[4px];
     @apply 2xl:rounded-28 2xl:size-[86.974px] 2xl:bottom-[7px];
     @apply ring-1 ring-white/50;
