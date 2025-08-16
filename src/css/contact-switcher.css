@@ -188,3 +188,17 @@
     @apply opacity-100;
     @apply delay-200 duration-200;
 }
+
+/* CSS scroll-snap стили для contact switcher */
+@media (max-width: 767px) {
+    .contact-switcher-container {
+        /* Убираем скроллбары на мобильных */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE и Edge */
+    }
+
+    .contact-switcher-container::-webkit-scrollbar {
+        display: none; /* Chrome, Safari и Opera */
+    }
+}

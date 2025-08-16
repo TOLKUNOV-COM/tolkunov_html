@@ -1,8 +1,8 @@
 <section id="contacts-container"
          class="relative mt-3 xl:mt-4 2xl:mt-8 mb-0 xl:mb-5 2xl:mb-12 font-sans rounded-4xl overflow-hidden max-md:mx-5 md:mx-auto min-w-[340px] w-auto md:w-[720px] lg:w-[1000px] lg:h-[676px] xl:w-[1164px] xl:h-[680px] 2xl:w-[1376px] 2xl:h-[780px] 3xl:w-[1540px] 3xl:h-[874px]">
     <!-- Contact switcher (абсолютное позиционирование) -->
-    <div class="absolute left-4 top-36 md:top-[204px] md:left-8 lg:left-auto lg:top-3 lg:right-3 z-10 mb-2 md:mb-4 lg:mb-0">
-        <div class="flex items-start justify-between max-xl:gap-3 max-md:gap-2 p-0 xl:p-3 2xl:p-4 2xl:pb-7 xl:bg-white rounded-28 h-[80px] md:h-[88px] xl:h-[98px] 2xl:h-[140px] w-auto md:w-[440px] lg:w-[488px] xl:w-[493px] 2xl:w-[578px]">
+    <div class="absolute left-0 max-w-full md:max-w-none top-36 w-auto md:top-[204px] md:left-8 lg:left-auto lg:top-3 lg:right-3 z-10 mb-2 md:mb-4 lg:mb-0">
+        <div class="contact-switcher-container max-md:overflow-x-auto max-md:scroll-smooth max-md:px-4 flex items-start justify-between max-xl:gap-3 max-md:gap-2 p-0 xl:p-3 2xl:p-4 2xl:pb-7 xl:bg-white lg:rounded-28 h-[80px] md:h-[88px] xl:h-[98px] 2xl:h-[140px] w-full md:w-[440px] lg:w-[488px] xl:w-[493px] 2xl:w-[578px]">
             <!-- Дима -->
             <div data-active="true" data-target="dima" class="group contact-switcher__item contact-switcher__item_dima">
                 <div class="contact-switch">
@@ -212,14 +212,14 @@
 
                 <!-- Кнопка "Отправить" -->
                 <button type="submit"
-                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-blue-600 hover:bg-blue-620 active:bg-blue-680 transition-colors text-white font-glina text-2xl/6 border-none mt-auto">
+                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-blue-600 hover:bg-blue-620 active:bg-blue-680 transition-colors text-white font-glina text-2xl/6 border-none mt-auto">
                     Отправить
                 </button>
 
                 <div class="hidden">
                     <!-- Кнопка "Отправить" (состояние: загрузка) -->
                     <button type="submit"
-                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-blue-600 transition-colors text-white font-glina text-2xl/6 border-none mt-auto !cursor-progress"
+                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-blue-600 transition-colors text-white font-glina text-2xl/6 border-none mt-auto !cursor-progress"
                             disabled>
                     <span role="status" class="inline-block size-6 icon icon-loading text-white animate-spin">
                         <span class="sr-only">Загрузка…</span>
@@ -228,7 +228,7 @@
 
                     <!-- Кнопка "Отправить" (состояние: завершено) -->
                     <button type="submit"
-                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-slate-40 transition-colors text-blue-600 font-glina text-2xl/6 border-none mt-auto cursor-default"
+                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-slate-40 transition-colors text-blue-600 font-glina text-2xl/6 border-none mt-auto cursor-default"
                             disabled>
                         <i class="icon icon-checked size-5"></i>
                         <span>Отправлено</span>
@@ -360,14 +360,14 @@
 
                 <!-- Кнопка "Отправить" -->
                 <button type="submit"
-                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-purple-400 hover:bg-purple-300 active:bg-purple-500 transition-colors text-white font-glina text-2xl/6 border-none mt-auto">
+                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-purple-400 hover:bg-purple-300 active:bg-purple-500 transition-colors text-white font-glina text-2xl/6 border-none mt-auto">
                     Отправить
                 </button>
 
                 <div class="hidden">
                     <!-- Кнопка "Отправить" (состояние: загрузка) -->
                     <button type="submit"
-                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-purple-400 transition-colors text-white font-glina text-2xl/6 border-none mt-auto !cursor-progress"
+                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-purple-400 transition-colors text-white font-glina text-2xl/6 border-none mt-auto !cursor-progress"
                             disabled>
                     <span role="status" class="inline-block size-6 icon icon-loading text-white animate-spin">
                         <span class="sr-only">Загрузка…</span>
@@ -376,7 +376,7 @@
 
                     <!-- Кнопка "Отправить" (состояние: завершено) -->
                     <button type="submit"
-                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-sky-100 transition-colors text-purple-400 font-glina text-2xl/6 border-none mt-auto cursor-default"
+                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-sky-100 transition-colors text-purple-400 font-glina text-2xl/6 border-none mt-auto cursor-default"
                             disabled>
                         <i class="icon icon-checked size-5"></i>
                         <span>Отправлено</span>
@@ -482,7 +482,7 @@
                                   placeholder="Несколько строк о навыках и опыте"></textarea>
                     </div>
                     <div class="form-row">
-                        <input type="text" name="portfolio" class="form-field" placeholder="Ссылка на резюме, сайт или файл с портфолио">
+                        <input type="text" name="portfolio" class="form-field" placeholder="Ссылка на резюме, портфолио или сайт">
                     </div>
 
                     <label class="flex items-start gap-2 cursor-pointer select-none">
@@ -501,14 +501,14 @@
 
                 <!-- Кнопка "Отправить" -->
                 <button type="submit"
-                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-lime-500 hover:bg-lime-400 active:bg-lime-600 transition-colors text-blue-900 font-glina text-2xl/6 border-none mt-auto">
+                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-lime-500 hover:bg-lime-400 active:bg-lime-600 transition-colors text-blue-900 font-glina text-2xl/6 border-none mt-auto">
                     Отправить
                 </button>
 
                 <div class="hidden">
                     <!-- Кнопка "Отправить" (состояние: загрузка) -->
                     <button type="submit"
-                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-lime-500 transition-colors text-blue-900 font-glina text-2xl/6 border-none mt-auto !cursor-progress"
+                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-lime-500 transition-colors text-blue-900 font-glina text-2xl/6 border-none mt-auto !cursor-progress"
                             disabled>
                     <span role="status" class="inline-block size-6 icon icon-loading text-blue-900 animate-spin">
                         <span class="sr-only">Загрузка…</span>
@@ -517,7 +517,7 @@
 
                     <!-- Кнопка "Отправить" (состояние: завершено) -->
                     <button type="submit"
-                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-20 bg-lime-50 transition-colors text-blue-900 font-glina text-2xl/6 border-none mt-auto cursor-default"
+                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-lime-50 transition-colors text-blue-900 font-glina text-2xl/6 border-none mt-auto cursor-default"
                             disabled>
                         <i class="icon icon-checked size-5"></i>
                         <span>Отправлено</span>
