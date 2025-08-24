@@ -1,8 +1,8 @@
 <section id="contacts-container"
-         class="relative mt-3 xl:mt-4 2xl:mt-8 mb-0 xl:mb-5 2xl:mb-12 font-sans rounded-4xl overflow-hidden max-md:mx-5 md:mx-auto min-w-[340px] w-auto md:w-[720px] lg:w-[1000px] lg:h-[676px] xl:w-[1164px] xl:h-[680px] 2xl:w-[1376px] 2xl:h-[780px] 3xl:w-[1540px] 3xl:h-[874px]">
+         class="relative mt-3 xl:mt-4 2xl:mt-8 mb-0 xl:mb-5 2xl:mb-12 font-sans rounded-3xl md:rounded-4xl overflow-hidden max-md:mx-5 md:mx-auto min-w-[340px] w-auto md:w-[720px] lg:w-[1000px] lg:h-[676px] xl:w-[1164px] xl:h-[680px] 2xl:w-[1376px] 2xl:h-[780px] 3xl:w-[1540px] 3xl:h-[874px]">
     <!-- Contact switcher (абсолютное позиционирование) -->
-    <div class="absolute left-0 max-w-full md:max-w-none top-36 w-auto md:top-[204px] md:left-8 lg:left-auto lg:top-3 lg:right-3 z-10 mb-2 md:mb-4 lg:mb-0">
-        <div class="contact-switcher-container max-md:overflow-x-auto max-md:scroll-smooth max-md:px-4 flex items-start justify-between max-xl:gap-3 max-md:gap-2 p-0 xl:p-3 2xl:p-4 2xl:pb-7 xl:bg-white lg:rounded-28 h-[80px] md:h-[88px] xl:h-[98px] 2xl:h-[140px] w-full md:w-[440px] lg:w-[488px] xl:w-[493px] 2xl:w-[578px]">
+    <div class="absolute left-0 max-w-full md:max-w-none top-37 w-auto md:top-[204px] md:left-8 lg:left-auto lg:top-3 lg:right-3 z-10 mb-2 md:mb-4 lg:mb-0">
+        <div class="contact-switcher-container max-md:overflow-x-auto max-md:scroll-smooth max-md:px-4 flex items-start justify-between max-xl:gap-3 max-md:gap-2 p-0 xl:p-3 2xl:p-4 2xl:pb-7 xl:bg-white xl:rounded-3xl 2xl:rounded-28 3xl:rounded-3xl h-[80px] md:h-[88px] xl:h-[98px] 2xl:h-[140px] w-full md:w-[440px] lg:w-[488px] xl:w-[493px] 2xl:w-[578px]">
             <!-- Дима -->
             <div data-active="true" data-target="dima" class="group contact-switcher__item contact-switcher__item_dima">
                 <div class="contact-switch">
@@ -49,7 +49,7 @@
 
     <!-- Дима блок -->
     <div data-contact="dima" data-active="true"
-         class="contact-block lg:bg-blue-600 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-9 max-md:pt-3 max-lg:hidden max-lg:data-[active=true]:block lg:transition-opacity lg:opacity-0 lg:pointer-events-none lg:data-[active=true]:opacity-100 lg:data-[active=true]:pointer-events-auto lg:absolute lg:inset-0">
+         class="contact-block lg:bg-blue-600 flex flex-col lg:flex-row font-sans h-full p-3 max-md:p-2 max-lg:pt-9 max-md:pt-3 max-lg:hidden max-lg:data-[active=true]:block lg:transition-opacity lg:opacity-0 lg:pointer-events-none lg:data-[active=true]:opacity-100 lg:data-[active=true]:pointer-events-auto lg:absolute lg:inset-0">
 
         <picture class="absolute inset-0 z-0">
             <!-- 1920px (4xl) -->
@@ -104,11 +104,11 @@
             </div>
 
             <div class="flex max-md:hidden">
-                <div class="flex flex-col items-start gap-3 w-[273px] max-xl:hidden">
+                <div class="flex flex-col items-start gap-3 w-[256px] max-xl:hidden">
                     <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
                     <div class="chat-message chat-message-2 chat-message_default">Я Дима, фаундер<br>агентства TOLKUNOV</div>
                     <div class="chat-message chat-message-3 chat-message_cta">
-                        <div class="text-blue-900 text-base font-bold tracking-[0.16px]">Отвечу на все вопросы и&nbsp;посчитаю смету</div>
+                        <div class="text-blue-900 text-base 2xl:text-lg font-bold tracking-[0.16px] 2xl:tracking-[0.18px]">Отвечу на все вопросы и&nbsp;посчитаю смету</div>
 
                         <a href="https://t.me/tolkunovdb" target="_blank"
                            class="bg-blue-600 py-3 pl-4 pr-6 rounded-20 hover:bg-blue-620 active:bg-blue-680 transition-colors  inline-flex items-center gap-2 font-glina text-2xl/6 font-thin !text-white !no-underline">
@@ -130,8 +130,8 @@
 
         <!-- Правая часть - форма -->
         <div class="contact-block__form relative max-lg:flex-1">
-            <form class="bg-white rounded-20 lg:rounded-3xl xl:rounded-20 2xl:rounded-28 flex flex-col p-2 md:p-3 h-full" method="post">
-                <div class="space-y-5 p-3">
+            <form class="bg-white rounded-[18px] md:rounded-3xl flex flex-col p-2 lg:p-3 xl:p-2 h-full" method="post">
+                <div class="space-y-5 p-3 md:p-4 lg:p-3 xl:p-4">
                     <div class="form-row">
                         <label class="form-label">Услуги</label>
 
@@ -212,14 +212,14 @@
 
                 <!-- Кнопка "Отправить" -->
                 <button type="submit"
-                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-blue-600 hover:bg-blue-620 active:bg-blue-680 transition-colors text-white font-glina text-2xl/6 border-none mt-auto">
+                        class="button button_submit bg-blue-600 hover:bg-blue-620 active:bg-blue-680 text-white mt-auto">
                     Отправить
                 </button>
 
                 <div class="hidden">
                     <!-- Кнопка "Отправить" (состояние: загрузка) -->
                     <button type="submit"
-                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-blue-600 transition-colors text-white font-glina text-2xl/6 border-none mt-auto !cursor-progress"
+                            class="button button_submit bg-blue-600 text-white mt-auto !cursor-progress"
                             disabled>
                     <span role="status" class="inline-block size-6 icon icon-loading text-white animate-spin">
                         <span class="sr-only">Загрузка…</span>
@@ -228,7 +228,7 @@
 
                     <!-- Кнопка "Отправить" (состояние: завершено) -->
                     <button type="submit"
-                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-slate-40 transition-colors text-blue-600 font-glina text-2xl/6 border-none mt-auto cursor-default"
+                            class="button button_submit bg-slate-40 text-blue-600 mt-auto cursor-default"
                             disabled>
                         <i class="icon icon-checked size-5"></i>
                         <span>Отправлено</span>
@@ -296,11 +296,11 @@
             </div>
 
             <div class="flex max-md:hidden">
-                <div class="flex flex-col items-start gap-3 w-[273px] max-xl:hidden">
+                <div class="flex flex-col items-start gap-3 w-[292px] max-xl:hidden">
                     <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
                     <div class="chat-message chat-message-2 chat-message_default">Я Таня, отвечаю за пиар<br>в TOLKUNOV</div>
                     <div class="chat-message chat-message-3 chat-message_cta">
-                        <div class="text-purple-900 text-base font-bold tracking-[0.16px]">Обсудим сотрудничество?</div>
+                        <div class="text-purple-900 text-base 2xl:text-lg font-bold tracking-[0.16px] 2xl:tracking-[0.18px]">Обсудим сотрудничество?</div>
 
                         <a href="https://t.me/firsaness" target="_blank"
                            class="bg-purple-400 py-3 pl-4 pr-6 rounded-20 hover:bg-purple-300 active:bg-purple-500 transition-colors inline-flex items-center gap-2 font-glina text-2xl/6 font-thin !text-white !no-underline">
@@ -323,8 +323,8 @@
 
         <!-- Правая часть - форма -->
         <div class="contact-block__form relative max-lg:flex-1">
-            <form class="bg-white rounded-20 lg:rounded-3xl xl:rounded-20 2xl:rounded-28 flex flex-col p-2 md:p-3 h-full" method="post">
-                <div class="space-y-5 p-3">
+            <form class="bg-white rounded-[18px] md:rounded-3xl flex flex-col p-2 lg:p-3 xl:p-2 h-full" method="post">
+                <div class="space-y-5 p-3 md:p-4 lg:p-3 xl:p-4">
                     <div class="form-row">
                         <input type="text" name="name" class="form-field" placeholder="Имя">
                     </div>
@@ -360,14 +360,14 @@
 
                 <!-- Кнопка "Отправить" -->
                 <button type="submit"
-                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-purple-400 hover:bg-purple-300 active:bg-purple-500 transition-colors text-white font-glina text-2xl/6 border-none mt-auto">
+                        class="button button_submit bg-purple-400 hover:bg-purple-300 active:bg-purple-500 text-white mt-auto">
                     Отправить
                 </button>
 
                 <div class="hidden">
                     <!-- Кнопка "Отправить" (состояние: загрузка) -->
                     <button type="submit"
-                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-purple-400 transition-colors text-white font-glina text-2xl/6 border-none mt-auto !cursor-progress"
+                            class="button button_submit bg-purple-400 text-white mt-auto !cursor-progress"
                             disabled>
                     <span role="status" class="inline-block size-6 icon icon-loading text-white animate-spin">
                         <span class="sr-only">Загрузка…</span>
@@ -376,7 +376,7 @@
 
                     <!-- Кнопка "Отправить" (состояние: завершено) -->
                     <button type="submit"
-                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-sky-100 transition-colors text-purple-400 font-glina text-2xl/6 border-none mt-auto cursor-default"
+                            class="button button_submit bg-sky-100 text-purple-400 mt-auto cursor-default"
                             disabled>
                         <i class="icon icon-checked size-5"></i>
                         <span>Отправлено</span>
@@ -445,7 +445,7 @@
                     <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
                     <div class="chat-message chat-message-2 chat-message_default">Я Оля, отвечаю за кадры<br>в TOLKUNOV</div>
                     <div class="chat-message chat-message-3 chat-message_cta">
-                        <div class="text-blue-900 text-base font-bold tracking-[0.16px]">Хочешь работать у нас? Присылай своё резюме</div>
+                        <div class="text-blue-900 text-base 2xl:text-lg font-bold tracking-[0.16px] 2xl:tracking-[0.18px]">Хочешь работать у нас? Присылай своё резюме</div>
 
                         <a href="https://t.me/cancolya" target="_blank"
                            class="bg-lime-500 py-3 pl-4 pr-6 rounded-20 hover:bg-lime-400 active:bg-lime-600 transition-colors inline-flex items-center gap-2 font-glina text-2xl/6 font-thin !text-blue-900 !no-underline">
@@ -466,8 +466,8 @@
 
         <!-- Правая часть - форма -->
         <div class="contact-block__form relative max-lg:flex-1">
-            <form class="bg-white rounded-20 lg:rounded-3xl xl:rounded-20 2xl:rounded-28 flex flex-col p-2 md:p-3 h-full" method="post">
-                <div class="space-y-5 p-3">
+            <form class="bg-white rounded-[18px] md:rounded-3xl flex flex-col p-2 lg:p-3 xl:p-2 h-full" method="post">
+                <div class="space-y-5 p-3 md:p-4 lg:p-3 xl:p-4">
                     <div class="form-row">
                         <input type="text" name="name" class="form-field" placeholder="Имя">
                     </div>
@@ -501,14 +501,14 @@
 
                 <!-- Кнопка "Отправить" -->
                 <button type="submit"
-                        class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-lime-500 hover:bg-lime-400 active:bg-lime-600 transition-colors text-blue-900 font-glina text-2xl/6 border-none mt-auto">
+                        class="button button_submit bg-lime-500 hover:bg-lime-400 active:bg-lime-600 text-blue-900 mt-auto">
                     Отправить
                 </button>
 
                 <div class="hidden">
                     <!-- Кнопка "Отправить" (состояние: загрузка) -->
                     <button type="submit"
-                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-lime-500 transition-colors text-blue-900 font-glina text-2xl/6 border-none mt-auto !cursor-progress"
+                            class="button button_submit bg-lime-500 text-blue-900 mt-auto !cursor-progress"
                             disabled>
                     <span role="status" class="inline-block size-6 icon icon-loading text-blue-900 animate-spin">
                         <span class="sr-only">Загрузка…</span>
@@ -517,7 +517,7 @@
 
                     <!-- Кнопка "Отправить" (состояние: завершено) -->
                     <button type="submit"
-                            class="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl md:rounded-20 bg-lime-50 transition-colors text-blue-900 font-glina text-2xl/6 border-none mt-auto cursor-default"
+                            class="button button_submit bg-lime-50 text-blue-900 mt-auto cursor-default"
                             disabled>
                         <i class="icon icon-checked size-5"></i>
                         <span>Отправлено</span>
@@ -694,7 +694,7 @@
                 <!-- Начальный отзыв -->
                 <a href="#"
                    data-active="true"
-                   class="footer-review rounded-2xl absolute inset-0 transition-all flex flex-col p-5 !no-underline hover:bg-slate-50 opacity-0 pointer-events-none scale-90 data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto data-[active=true]:scale-100">
+                   class="footer-review rounded-2xl xl:rounded-3xl absolute inset-0 transition-all flex flex-col p-5 !no-underline hover:bg-slate-50 opacity-0 pointer-events-none scale-90 data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto data-[active=true]:scale-100">
                     <div class="w-[109px] h-[40px] flex items-center">
                         <img src="https://dummyimage.com/200x60" alt="#" class="max-w-full max-h-full object-contain"/>
                     </div>
@@ -723,7 +723,7 @@
         </div>
 
         <!-- verticals -->
-        <div class="flex flex-col lg:flex-row xl:flex-col max-lg:items-start max-xl:items-center lg:justify-between gap-4 lg:gap-0 rounded-2xl inset-ring-[1.5px] inset-ring-slate-40 p-5 xl:p-3 w-auto xl:w-[173px] 2xl:w-[209px] 3xl:w-[240px] col-span-1 md:col-span-2 xl:col-span-1">
+        <div class="flex flex-col lg:flex-row xl:flex-col max-lg:items-start max-xl:items-center lg:justify-between gap-4 lg:gap-0 rounded-2xl xl:rounded-3xl inset-ring-[1.5px] inset-ring-slate-40 p-5 xl:p-3 w-auto xl:w-[173px] 2xl:w-[209px] 3xl:w-[240px] col-span-1 md:col-span-2 xl:col-span-1">
             <div class="xl:p-2 pb-0 text-slate-430 font-serif font-bold xl:font-medium 2xl:font-bold text-[15px] xl:text-sm 2xl:text-[15px] 2xl:leading-[25px]">А ещё мы делаем</div>
 
             <div class="flex flex-row flex-wrap md:flex-nowrap xl:flex-col items-start gap-4 xl:gap-1 font-glina text-2xl xl:text-xl 2xl:text-2xl leading-[57%] tracking-[-0.48px]">

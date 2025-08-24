@@ -4,7 +4,7 @@
 
 .contact-switcher__item {
     @apply flex flex-nowrap items-center transition-[gap] gap-0 data-[active=true]:gap-3 xl:data-[active=true]:gap-4;
-    @apply rounded-3xl;
+    @apply rounded-[18px] md:rounded-3xl lg:rounded-20;
     @apply h-auto xl:h-[74px] 2xl:h-24;
 
     @apply max-xl:p-3;
@@ -37,9 +37,9 @@
 
 .contact-switcher__line2 {
     @apply text-slate-430 hover:text-slate-430 font-medium text-nowrap;
-    @apply text-xs xl:text-sm;
+    @apply text-xs xl:text-sm 2xl:text-base;
     @apply leading-4;
-    @apply tracking-[0.12px] xl:tracking-[0.14px];
+    @apply tracking-[0.12px] xl:tracking-[0.14px] 2xl:tracking-[0.16px];
 }
 
 .contact-switch__img {

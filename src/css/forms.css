@@ -12,15 +12,27 @@
 
     border: none;
     @apply pb-2.5 px-0 pt-0;
-    @apply text-blue-900 !text-sm !font-medium;
+    @apply text-blue-900 !text-sm 2xl:!text-base !font-medium;
     @apply placeholder:text-blue-900/50;
     @apply transition;
 
-    @apply border-b-2 border-b-indigo-100 focus:outline-none focus:border-b-blue-600;
+    @apply border-b-2 border-b-indigo-100 focus:outline-none;
 
     &.error {
         @apply border-b-red-500;
     }
+}
+
+[data-contact="dima"] .form-field {
+    @apply focus:border-b-blue-600;
+}
+
+[data-contact="tanya"] .form-field {
+    @apply focus:border-b-purple-400;
+}
+
+[data-contact="olya"] .form-field {
+    @apply focus:border-b-lime-500;
 }
 
 .form-checkbox {
@@ -48,7 +60,7 @@
     @apply border border-dashed border-indigo-100 rounded-lg;
     @apply px-3 py-2;
     @apply !mb-0;
-    @apply text-blue-900 text-sm/5 !font-medium;
+    @apply text-blue-900 text-sm/5 2xl:text-base/5 !font-medium;
     @apply transition;
     @apply cursor-pointer;
 
@@ -77,6 +89,12 @@
 }
 
 .chip-hint {
-    @apply text-[#8A8FB4] text-tiny font-semibold;
+    @apply text-[#8A8FB4] text-tiny 2xl:text-xs font-semibold;
     @apply transition;
+}
+
+.button_submit {
+    @apply flex items-center justify-center gap-2.5 px-6 py-4;
+    @apply rounded-xl md:rounded-2xl lg:rounded-20 2xl:rounded-2xl;
+    @apply transition-colors font-glina text-2xl/6 border-none;
 }
