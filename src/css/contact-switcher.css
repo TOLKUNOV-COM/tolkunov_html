@@ -43,12 +43,11 @@
 }
 
 .contact-switch__img {
-    @apply absolute left-0;
-    @apply bottom-0 2xl:bottom-1;
+    @apply absolute left-0 bottom-0;
     @apply w-[56px] h-[64px];
     @apply md:w-[64px] md:h-[68px];
-    @apply xl:w-[74px] 2xl:w-[96px];
-    @apply xl:h-[82px] 2xl:h-[110px];
+    @apply xl:w-[74px] xl:h-[82px];
+    @apply 2xl:w-[96px] 2xl:h-[110px];
 
     background-repeat: no-repeat;
     background-size: contain;
@@ -119,15 +118,15 @@
     @apply ring-1 ring-white/50;
     @apply xl:ring-2 xl:ring-[#D6DEFA];
     @apply group-hover:ring-blue-600 group-[[data-active=true]]:ring-blue-600;
-    @apply rounded-2xl 2xl:rounded-28;
+    @apply rounded-xl md:rounded-2xl;
 }
 
 .contact-switch__ring_tanya {
     @apply absolute left-1/2 -translate-x-1/2 rotate-45 transition-all;
-    @apply rounded-2xl size-[48px] bottom-[4px];
-    @apply md:rounded-[19.478px] md:size-[56px] md:bottom-[4px];
-    @apply xl:rounded-2xl xl:size-[66px] xl:bottom-[4px];
-    @apply 2xl:rounded-28 2xl:size-[86.974px] 2xl:bottom-[7px];
+    @apply rounded-10 size-[48px] bottom-[4px];
+    @apply md:rounded-2xl md:size-[52px] md:bottom-[6px];
+    @apply xl:rounded-2xl xl:size-[66px] xl:bottom-[7px];
+    @apply 2xl:rounded-2xl 2xl:size-[80px] 2xl:bottom-[8px];
     @apply ring-1 ring-white/50;
     @apply xl:ring-2 xl:ring-[#EDD2F6];
     @apply group-hover:ring-purple-400 group-[[data-active=true]]:ring-purple-400;

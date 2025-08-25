@@ -43,6 +43,33 @@
     }
 }
 
+.contact-block__play_dima {
+    @apply text-blue-600;
+    @apply !outline-none;
+
+    &:hover, &:active, &:focus {
+        @apply text-blue-620 bg-blue-50 after:bg-blue-50;
+    }
+}
+
+.contact-block__play_tanya {
+    @apply text-purple-400;
+    @apply !outline-none;
+
+    &:hover, &:active, &:focus {
+        @apply text-purple-600 bg-purple-50 after:bg-purple-50;
+    }
+}
+
+.contact-block__play_olya {
+    @apply text-lime-500;
+    @apply !outline-none;
+
+    &:hover, &:active, &:focus {
+        @apply text-lime-520 bg-amber-50 after:bg-amber-50;
+    }
+}
+
 .contact-block__play_lt::after {
     @apply -left-[47px/1.7] -top-[40px/1.7];
     @apply lg:-left-[47px/1.4] lg:-top-[40px/1.4];

@@ -66,9 +66,9 @@
     }
 
     .video-modal__dialog {
-        border-bottom: 5px solid #4655E5;
-        background: #4655E5;
-        box-shadow: 0 4px 91.4px 100px #2856F6;
+        border-bottom: 13px solid #4A71F7;
+        background: #4A71F7;
+        filter: drop-shadow(0 4px 90px #2856F6);
     }
 
     .video-modal__body {
@@ -82,9 +82,9 @@
     }
 
     .video-modal__dialog {
-        border-bottom: 5px solid #AB67FE;
-        background: #AB67FE;
-        box-shadow: 0 4px 91.4px 100px rgba(171, 103, 254, 0.80);
+        border-bottom: 13px solid rgba(171, 103, 254, 1);
+        background: rgba(171, 103, 254, 1);
+        filter: drop-shadow(0 4px 91.4px rgba(171, 103, 254, 0.80));
     }
 
     .video-modal__body {
@@ -98,9 +98,9 @@
     }
 
     .video-modal__dialog {
-        border-bottom: 5px solid #99A660;
-        background: #99A660;
-        box-shadow: 0 4px 91.4px 100px rgba(168, 224, 0, 0.80);
+        border-bottom: 13px solid #A8E000;
+        background: #A8E000;
+        filter: drop-shadow(0 4px 91.4px rgba(168, 224, 0, 0.80));
     }
 
     .video-modal__body {
