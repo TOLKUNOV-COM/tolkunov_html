@@ -91,10 +91,11 @@
 .chip-hint {
     @apply text-[#8A8FB4] text-tiny 2xl:text-xs font-semibold;
     @apply transition;
+    @apply hidden; /* tmp */
 }
 
 .button_submit {
     @apply flex items-center justify-center gap-2.5 px-6 py-4;
     @apply rounded-xl md:rounded-2xl lg:rounded-20 2xl:rounded-2xl;
-    @apply transition-colors font-glina text-2xl/6 border-none;
+    @apply transition-colors !font-glina !text-2xl/6 border-none;
 }
