@@ -4,7 +4,7 @@ $(function () {
     function setButtonState(form, state) {
         const buttons = form.find('button[type="submit"]');
 
-        buttons.each(function() {
+        buttons.each(function () {
             const button = $(this);
             const buttonState = button.data('state');
 
@@ -17,7 +17,7 @@ $(function () {
     }
 
     // Обработчик для всех форм заявок
-    $('#request-order-form, #request-pr-form, #request-hr-form').on('submit', function(e) {
+    $('#request-order-form, #request-pr-form, #request-hr-form').on('submit', function (e) {
         e.preventDefault();
 
         const form = $(this);
@@ -37,13 +37,13 @@ $(function () {
             type: 'POST',
             data: form.serialize(),
             dataType: 'json',
-            success: function(response) {
+            success: function (response) {
                 if (response.success) {
                     // Успех - показываем состояние завершено
                     setButtonState(form, 'success');
 
                     // Очищаем форму и возвращаем к исходному состоянию через некоторое время
-                    setTimeout(function() {
+                    setTimeout(function () {
                         form[0].reset();
                         setButtonState(form, 'default');
                     }, 5000);
@@ -52,7 +52,7 @@ $(function () {
                     if (response.errors) {
                         // Получаем название модели из formId
                         let modelName = '';
-                        switch(formId) {
+                        switch (formId) {
                             case 'request-order-form':
                                 modelName = 'RequestOrderForm';
                                 break;
@@ -67,24 +67,17 @@ $(function () {
                         // Показываем ошибки для каждого поля
                         let firstErrorField = null;
 
-                        $.each(response.errors, function(fieldName, messages) {
+                        $.each(response.errors, function (fieldName, messages) {
                             let fieldSelector = '';
                             let field = null;
 
-                            // Специальная обработка для полей формы заказа
-                            if (formId === 'request-order-form') {
-                                if (fieldName === 'tags') {
-                                    fieldSelector = 'input[name="tags[]"]';
-                                    field = form.find(fieldSelector).first(); // Берем первый чекбокс для подсвечивания группы
-                                } else if (fieldName === 'budget') {
-                                    fieldSelector = 'input[name="budget"]';
-                                    field = form.find(fieldSelector).first(); // Берем первую радиокнопку для подсвечивания группы
-                                } else {
-                                    fieldSelector = `input[name="${modelName}[${fieldName}]"], textarea[name="${modelName}[${fieldName}]"], select[name="${modelName}[${fieldName}]"]`;
-                                    field = form.find(fieldSelector);
-                                }
+                            // Стандартная обработка для всех форм (теперь все поля используют одинаковую конвенцию)
+                            if (fieldName === 'tags') {
+                                // Для массива tags
+                                fieldSelector = `input[name="${modelName}[${fieldName}][]"]`;
+                                field = form.find(fieldSelector).first(); // Берем первый чекбокс для подсвечивания группы
                             } else {
-                                // Стандартная обработка для остальных форм
+                                // Для обычных полей
                                 fieldSelector = `input[name="${modelName}[${fieldName}]"], textarea[name="${modelName}[${fieldName}]"], select[name="${modelName}[${fieldName}]"]`;
                                 field = form.find(fieldSelector);
                             }
@@ -114,7 +107,7 @@ $(function () {
 
                         // Устанавливаем фокус на первое поле с ошибкой
                         if (firstErrorField && firstErrorField.length > 0) {
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 firstErrorField.focus();
                             }, 100);
                         }
@@ -124,7 +117,7 @@ $(function () {
                     setButtonState(form, 'default');
                 }
             },
-            error: function() {
+            error: function () {
                 // Ошибка сети или сервера
                 alert('Произошла ошибка при отправке формы. Попробуйте еще раз.');
                 setButtonState(form, 'default');

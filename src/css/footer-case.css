@@ -1,6 +1,5 @@
 .footer-case__panel {
     @apply transition-all;
-    backdrop-filter: blur(4.6px);
 
     &::before, &::after {
         content: '';
