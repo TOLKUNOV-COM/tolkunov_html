@@ -1,5 +1,5 @@
 .form-row {
-    @apply space-y-3;
+    @apply !space-y-3;
 }
 
 .form-label {
@@ -19,7 +19,7 @@
     @apply border-b-2 border-b-indigo-100 focus:outline-none;
 
     &.error {
-        @apply border-b-red-500;
+        @apply !border-b-red-500;
     }
 }
 

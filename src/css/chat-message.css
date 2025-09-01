@@ -15,7 +15,7 @@
 }
 
 .chat-message_cta {
-    @apply bg-white rounded-20 p-4 space-y-3;
+    @apply bg-white rounded-20 p-4 !space-y-3;
 
     filter: drop-shadow(0 2.657px 10.627px rgba(22, 31, 106, 0.08)) drop-shadow(0 2.657px 10.627px rgba(22, 31, 106, 0.08));
 

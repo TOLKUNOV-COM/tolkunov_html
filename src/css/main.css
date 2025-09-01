@@ -153,6 +153,8 @@ html {
 
 .visually-hidden {
     position: absolute !important;
+    top: 20px;
+    left: 10px;
     width: 1px !important;
     height: 1px !important;
     padding: 0 !important;

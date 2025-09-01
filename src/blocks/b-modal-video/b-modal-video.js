@@ -74,6 +74,9 @@ $(function () {
             var videoElement = this;
             var modalId = $(videoElement).closest('.video-modal').attr('id');
 
+            // Берём значение, если оно есть, или дефолт для дев-среды
+            var mainAssets = (window.mainAssets || '');
+
             if (!plyrInstances[modalId]) {
                 var player = new Plyr(videoElement, {
                     controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
@@ -82,7 +85,7 @@ $(function () {
                     tooltips: false,
                     autoplay: false,
                     hideControls: false,
-                    iconUrl: 'assets/vendor/plyr/dist/plyr.svg'
+                    iconUrl: mainAssets + '/assets/vendor/plyr/dist/plyr.svg',
                 });
 
                 plyrInstances[modalId] = player;

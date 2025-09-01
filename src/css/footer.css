@@ -3,7 +3,7 @@
     @apply text-xl/8 lg:text-sm xl:text-[17px]/3.5;
 
     @apply lg:py-3 lg:px-2;
-    @apply xl:p-3 xl:pr-2.5;
+    @apply xl:p-3;
     @apply rounded-10 transition-colors;
 
     &:hover, &:active, &:focus {
