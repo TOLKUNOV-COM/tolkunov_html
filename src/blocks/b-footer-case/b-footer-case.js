@@ -21,8 +21,19 @@ $(document).ready(function() {
         
         setLoadingState(true);
         
+        // Получаем ID текущего кейса
+        const $currentCase = $container.find('.footer-case').first();
+        const currentId = $currentCase.attr('data-id');
+        
+        // Добавляем ID к URL если он найден
+        let requestUrl = url;
+        if (currentId) {
+            const separator = url.includes('?') ? '&' : '?';
+            requestUrl = url + separator + 'id=' + encodeURIComponent(currentId);
+        }
+        
         $.ajax({
-            url: url,
+            url: requestUrl,
             method: 'GET',
             dataType: 'html',
             timeout: 10000

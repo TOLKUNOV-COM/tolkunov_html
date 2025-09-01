@@ -21,8 +21,19 @@ $(document).ready(function() {
         
         setLoadingState(true);
         
+        // Получаем ID текущего отзыва
+        const $currentReview = $container.find('.footer-review').first();
+        const currentId = $currentReview.attr('data-id');
+        
+        // Добавляем ID к URL если он найден
+        let requestUrl = url;
+        if (currentId) {
+            const separator = url.includes('?') ? '&' : '?';
+            requestUrl = url + separator + 'id=' + encodeURIComponent(currentId);
+        }
+        
         $.ajax({
-            url: url,
+            url: requestUrl,
             method: 'GET',
             dataType: 'html',
             timeout: 10000
