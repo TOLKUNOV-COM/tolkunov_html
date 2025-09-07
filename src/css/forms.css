@@ -48,7 +48,8 @@
         background-size: 16px;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url("../img/checked.svg");
+        /*background-image: url("../img/checked.svg");*/
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSJub25lIj4NCiAgICA8cGF0aCBkPSJNMTMuNSA0LjVMNi41IDExLjVMMyA4IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+DQo8L3N2Zz4=);
     }
 }
 
