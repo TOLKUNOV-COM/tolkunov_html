@@ -13,12 +13,17 @@
 /* Components */
 @import "./icons.css" layer(components);
 @import "./forms.css" layer(components);
+@import "./header-main.css";
+@import "./header-extra.css";
+@import "./header-contact.css";
+@import "./header.css";
 @import "./contact-switcher.css";
 @import "./contact-block.css";
 @import "./chat-message.css";
 @import "./footer.css";
 @import "./footer-case.css";
 @import "./footer-features.css";
+@import "./services-menu.css";
 @import "./video.css";
 @import "./plyr.css";
 

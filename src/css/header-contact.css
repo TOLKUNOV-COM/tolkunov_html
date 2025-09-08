@@ -1,0 +1,14 @@
+.header-contact {
+    @apply relative;
+    @apply size-18.5 rounded-[16px] ring-2 ring-[#D6DEFA];
+}
+
+.header-contact__img {
+    @apply absolute left-0 bottom-0;
+    @apply w-[74px] h-[82px];
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    background-image: url("../img/contact-switcher/dima_1280.png");
+}

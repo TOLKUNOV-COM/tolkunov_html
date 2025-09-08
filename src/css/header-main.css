@@ -1,0 +1,76 @@
+.header__main {
+    @apply px-4 py-3;
+
+    @apply flex items-center justify-between;
+    @apply rounded-3xl bg-white;
+}
+
+.header__logo {
+    @apply text-blue-900 font-glina;
+    @apply text-[28px];
+    @apply !no-underline;
+    @apply py-0.5;
+
+    font-weight: 400;
+    letter-spacing: -0.56px;
+}
+
+.header__toggle {
+    @apply flex items-center justify-center;
+
+    @apply size-8 p-[10px];
+    @apply rounded-full;
+    @apply transition-all;
+
+    @apply bg-[#F4F6FA];
+    @apply text-[#ABB1C4];
+
+    @apply outline-none border-none;
+
+    &:hover, &:focus-visible {
+        @apply bg-[#E9EEFE];
+        @apply text-[#2856F6];
+    }
+}
+
+.header__main:hover .header__toggle {
+    @apply scale-120;
+    @apply text-[#2856F6];
+    @apply bg-[#E9EEFE];
+
+    .icon {
+        @apply size-4;
+    }
+}
+
+.header[data-open="true"] .header__toggle {
+    @apply text-[#2856F6];
+    @apply bg-[#E9EEFE];
+}
+
+.header__nav {
+}
+
+.header__link {
+    @apply px-2 py-3;
+    @apply text-blue-900 font-sans;
+    @apply font-medium;
+    @apply text-[15px] leading-3.5;
+    @apply rounded-[10px];
+    @apply !no-underline;
+    @apply transition-colors;
+
+    &:hover, &:active, &:focus {
+        @apply bg-[#F4F6FA] text-blue-900;
+    }
+}
+
+.header__link_active {
+    @apply text-[#8187AD];
+}
+
+.header__button {
+    @apply flex flex-nowrap items-center gap-1 h-12 rounded-2xl !text-white !no-underline font-glina text-xl font-normal leading-3.5  py-2 pl-5 pr-4;
+
+    @apply bg-blue-600 hover:bg-[#2e55db] active:bg-[#2146c4];
+}

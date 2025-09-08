@@ -52,3 +52,19 @@
     mask-image: url("../img/video/modal-close.svg");
     background-color: currentColor;
 }
+
+/* header icons */
+.icon-menu-toggle {
+    mask-image: url("../img/menu-toggle.svg");
+    background-color: currentColor;
+}
+
+.icon-order-button {
+    mask-image: url("../img/icons/order-button.svg");
+    background-color: currentColor;
+}
+
+.icon-telegram-full {
+    mask-image: url("../img/telegram-full.svg");
+    background-color: currentColor;
+}
