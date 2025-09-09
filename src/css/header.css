@@ -1,4 +1,7 @@
 .header {
+    @apply max-w-[1540px];
+    @apply lg:m-3 xl:m-4;
+    @apply 3xl:mx-auto;
 }
 
 .header__container {

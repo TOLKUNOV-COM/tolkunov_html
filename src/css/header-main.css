@@ -53,6 +53,7 @@
 .header__link {
     @apply px-2 py-3;
     @apply xl:px-2.5;
+    @apply 3xl:px-3;
     @apply text-blue-900 font-sans;
     @apply font-medium;
     @apply text-[15px] leading-3.5;
