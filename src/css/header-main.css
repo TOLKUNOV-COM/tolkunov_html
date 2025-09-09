@@ -7,11 +7,10 @@
 
 .header__logo {
     @apply text-blue-900 font-glina;
-    @apply text-[28px];
+    @apply text-[28px] xl:text-[32px];
     @apply !no-underline;
-    @apply py-0.5;
+    @apply py-0.5 xl:py-1.5;
 
-    font-weight: 400;
     letter-spacing: -0.56px;
 }
 
@@ -34,7 +33,7 @@
 }
 
 .header__main:hover .header__toggle {
-    @apply scale-120;
+    @apply scale-125;
     @apply text-[#2856F6];
     @apply bg-[#E9EEFE];
 
@@ -53,6 +52,7 @@
 
 .header__link {
     @apply px-2 py-3;
+    @apply xl:px-2.5;
     @apply text-blue-900 font-sans;
     @apply font-medium;
     @apply text-[15px] leading-3.5;

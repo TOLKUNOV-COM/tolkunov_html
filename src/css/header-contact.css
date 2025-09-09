@@ -1,14 +1,23 @@
 .header-contact {
     @apply relative;
-    @apply size-18.5 rounded-[16px] ring-2 ring-[#D6DEFA];
+    @apply size-[74px] rounded-[16px] ring-2 ring-[#D6DEFA];
+    @apply xl:size-[96px];
+    @apply xl:mt-[10px];
 }
 
 .header-contact__img {
     @apply absolute left-0 bottom-0;
     @apply w-[74px] h-[82px];
+    @apply xl:w-[96px] xl:h-[110px];
 
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom center;
     background-image: url("../img/contact-switcher/dima_1280.png");
+}
+
+@media (min-width: 1280px) {
+    .header-contact__img {
+        background-image: url("../img/contact-switcher/dima_1440.png");
+    }
 }

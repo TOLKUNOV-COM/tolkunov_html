@@ -1,5 +1,5 @@
 .services-menu {
-
+    @apply font-sans;
 }
 
 .services-menu__item {
@@ -7,7 +7,7 @@
 }
 
 .services-menu__label {
-    @apply text-blue-900 text-xl lg:text-[17px] 2xl:text-2xl leading-[19px] font-semibold pb-[5px] transition-colors group-hover:text-blue-600;
+    @apply text-blue-900 text-xl lg:text-[17px] 2xl:text-2xl leading-[19px] font-semibold transition-colors group-hover:text-blue-600;
 }
 
 .services-menu__tags {
@@ -48,7 +48,7 @@
 
 .services-menu__tag {
     @apply text-[9px] xl:text-tiny font-black leading-3 tracking-[0.4px] uppercase;
-    @apply px-0 py-[7px];
+    @apply px-0 py-[6px] pt-[8px];
     @apply relative;
 
     background-image: url("../img/services-menu/center.svg");

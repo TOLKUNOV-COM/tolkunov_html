@@ -1,6 +1,8 @@
 .header__extra {
     @apply px-4 pt-1 pb-4;
+    @apply xl:pl-3;
     @apply rounded-3xl bg-white;
 
     @apply grid grid-cols-[152px_1px_max-content_216px_auto] gap-x-4;
+    @apply xl:grid-cols-[174px_1px_max-content_1px_276px_auto] xl:gap-x-4;
 }
