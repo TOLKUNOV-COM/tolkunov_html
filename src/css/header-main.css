@@ -56,6 +56,7 @@
     @apply text-blue-900 font-sans;
     @apply font-medium;
     @apply text-[15px] leading-3.5;
+    @apply 2xl:text-[17px];
     @apply rounded-[10px];
     @apply !no-underline;
     @apply transition-colors;

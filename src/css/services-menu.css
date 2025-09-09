@@ -48,10 +48,25 @@
 
 .services-menu__tag {
     @apply text-[9px] xl:text-tiny font-black leading-3 tracking-[0.4px] uppercase;
-    @apply px-0 py-[6px] pt-[8px];
+    @apply px-0 py-[7px] xl:py-[6px] xl:pt-[8px];
     @apply relative;
 
     background-image: url("../img/services-menu/center.svg");
     background-repeat: repeat-x;
     background-size: 1px 26px;
+}
+
+.services-menu_small {
+    .services-menu__item {
+        @apply xl:p-3 xl:gap-2;
+    }
+
+    .services-menu__label {
+        @apply xl:text-[17px];
+    }
+
+    .services-menu__tag {
+        @apply xl:text-[9px];
+        @apply xl:py-[7px];
+    }
 }
