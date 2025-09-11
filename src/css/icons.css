@@ -68,3 +68,13 @@
     mask-image: url("../img/telegram-full.svg");
     background-color: currentColor;
 }
+
+.icon-x-mark {
+    mask-image: url("../img/x-mark.svg");
+    background-color: currentColor;
+}
+
+.icon-menu-link {
+    mask-image: url("../img/icons/menu-link.svg");
+    background-color: currentColor;
+}

@@ -12,13 +12,27 @@ $(document).ready(function() {
         let isOpening = false;
         let openingTimeout = null;
         
+        function getScrollbarWidth() {
+            // Вычисляем ширину скроллбара
+            return window.innerWidth - document.documentElement.clientWidth;
+        }
+        
         function openExtra() {
             $header.attr('data-open', 'true');
+            // Вычисляем ширину скроллбара и компенсируем её
+            const scrollbarWidth = getScrollbarWidth();
+            if (scrollbarWidth > 0) {
+                $('body').css('padding-right', scrollbarWidth + 'px');
+            }
+            // Блокируем прокрутку страницы
+            $('body').addClass('overflow-hidden');
             setOpeningState(true);
         }
         
         function closeExtra() {
             $header.attr('data-open', 'false');
+            // Разблокируем прокрутку страницы и убираем компенсацию
+            $('body').removeClass('overflow-hidden').css('padding-right', '');
             isManuallyOpened = false;
             setOpeningState(false);
         }

@@ -1,9 +1,11 @@
 .header__extra {
-    @apply px-4 pt-1 pb-4;
+    @apply p-[20px] mt-[10px];
+    @apply lg:px-4 lg:pt-1 lg:pb-4;
     @apply xl:pl-3 xl:pt-0 xl:-mt-0.5;
-    @apply rounded-3xl bg-white;
+    @apply rounded-[20px] lg:rounded-3xl bg-white;
 
-    @apply grid grid-cols-[152px_1px_max-content_216px_auto] gap-x-4;
+    @apply grid grid-cols-[1fr_1px_1fr] gap-x-8 gap-y-5;
+    @apply lg:grid-cols-[152px_1px_max-content_216px_auto] lg:gap-x-4;
     @apply xl:grid-cols-[174px_1px_max-content_1px_276px_auto];
     @apply 3xl:grid-cols-[174px_1px_332px_1px_332px_auto];
 }

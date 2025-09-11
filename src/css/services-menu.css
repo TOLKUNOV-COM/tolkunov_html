@@ -58,7 +58,7 @@
 
 .services-menu_small {
     .services-menu__item {
-        @apply xl:p-3 xl:gap-2;
+        @apply p-3 xl:gap-2;
     }
 
     .services-menu__label {

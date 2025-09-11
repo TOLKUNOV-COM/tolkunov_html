@@ -1,31 +1,31 @@
-<header class="header" data-open="false">
-    <div class="h-[72px] relative">
+<header class="header" data-open="true">
+    <div class="h-[60px] lg:h-[72px] relative">
         <div class="header__container">
             <section class="header__main">
-                <div class="flex flex-nowrap items-center gap-4">
-                    <a href="#" class="header__logo flex flex-nowrap items-center gap-3 w-[152px] xl:w-[170px]">
+                <div class="flex flex-nowrap items-center gap-4 max-lg:justify-between max-lg:flex-1">
+                    <a href="#" class="header__logo flex flex-nowrap items-center gap-3 lg:w-[152px] xl:w-[170px]">
                         <i class="icon icon-logo size-10 xl:size-11 text-blue-600"></i>
                         <span>Продакшн</span>
                     </a>
-                    <span class="w-px h-4.5 bg-[#E9EDF5]"></span>
-                    <div class="size-10 flex items-center justify-center -ml-1">
+                    <span class="w-px h-4.5 bg-[#E9EDF5] max-lg:hidden"></span>
+                    <div class="size-11 lg:size-10 flex items-center justify-center lg:-ml-1">
                         <button class="header__toggle">
-                            <i class="icon icon-menu-toggle size-3 transition-all"></i>
+                            <i class="icon icon_state_open icon-menu-toggle size-4 lg:size-3 transition-all"></i>
+                            <i class="icon icon_state_close icon-x-mark size-7 transition-all"></i>
                         </button>
                     </div>
                 </div>
-                <nav class="header__nav flex items-center gap-1">
+                <nav class="flex items-center gap-1 max-lg:hidden">
                     <a href="#" class="header__link header__link_active">Услуги</a>
-                    <a href="#" class="header__link">Работы</a>
-                    <a href="#" class="header__link">Отзывы</a>
-                    <a href="#" class="header__link">Вакансии</a>
                     <a href="#" class="header__link">Кейсы</a>
-                    <a href="#" class="header__link">Клиенты</a>
+                    <a href="#" class="header__link">Работы</a>
                     <a href="#" class="header__link">Об агентстве</a>
+                    <a href="#" class="header__link">Вакансии</a>
+                    <a href="#" class="header__link">Отзывы</a>
                 </nav>
 
-                <div class="xl:w-[234px] flex justify-end">
-                    <a href="https://tolkunov.com/order" class="header__button">
+                <div class="xl:w-[234px] flex justify-end max-lg:hidden">
+                    <a href="https://tolkunov.com/order" class="header__button_main">
                         <span>Заказать</span>
                         <i class="icon icon-order-button size-7"></i>
                     </a>
@@ -34,38 +34,68 @@
 
             <section class="header__extra">
                 <!-- header verticals -->
-                <div class="flex flex-col gap-4">
-                    <!--            <div class="xl:p-2 pb-0 text-slate-430 font-serif font-bold xl:font-medium 2xl:font-bold text-[15px] xl:text-sm 2xl:text-[15px] 2xl:leading-[25px]">А ещё мы делаем</div>-->
+                <div class="flex flex-col gap-2 max-lg:col-span-3">
+                    <div class="text-[#ABB1C4] font-sans text-sm/3.5 font-semibold">Направления</div>
 
-                    <div class="flex flex-col items-start font-glina text-2xl leading-[57%] tracking-[-0.48px]">
+                    <div class="flex flex-row lg:flex-col items-start gap-2 lg:gap-0 font-glina text-2xl leading-[57%] tracking-[-0.48px] max-lg:-ml-2">
                         <a href="https://tolkunov.com/journal-soon"
-                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-colors text-blue-900 hover:text-[#FD375B] hover:bg-[#F4F6FA]">
+                           class="group inline-flex items-center gap-1.5 lg:gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-colors text-blue-900 hover:text-[#FD375B] hover:bg-[#F4F6FA]">
                             <i class="icon icon-logo size-7 transition-colors"></i>
                             <span class="text-blue-900">Журнал</span>
                         </a>
                         <a href="https://tolkunov.com/academy"
-                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3  rounded-xl !no-underline transition-colors text-blue-900 hover:text-[#0CF2F2] hover:bg-[#F4F6FA]">
+                           class="group inline-flex items-center gap-1.5 lg:gap-2 xl:gap-1.5 p-2 xl:px-3  rounded-xl !no-underline transition-colors text-blue-900 hover:text-[#0CF2F2] hover:bg-[#F4F6FA]">
                             <i class="icon icon-logo size-7 transition-colors"></i>
                             <span class="text-blue-900">Академия</span>
                         </a>
                         <a href="https://tolkunov.com/services"
-                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3  rounded-xl !no-underline transition-colors text-blue-900 hover:text-[#6928F6] hover:bg-[#F4F6FA]">
+                           class="group inline-flex items-center gap-1.5 lg:gap-2 xl:gap-1.5 p-2 xl:px-3  rounded-xl !no-underline transition-colors text-blue-900 hover:text-[#6928F6] hover:bg-[#F4F6FA]">
                             <i class="icon icon-logo size-7 transition-colors"></i>
                             <span class="text-blue-900">Сервисы</span>
                         </a>
                         <a href="https://tolkunov.com/market"
-                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3  rounded-xl !no-underline transition-colors text-blue-900 hover:text-[#A7F628] hover:bg-[#F4F6FA]">
+                           class="group inline-flex items-center gap-1.5 lg:gap-2 xl:gap-1.5 p-2 xl:px-3  rounded-xl !no-underline transition-colors text-blue-900 hover:text-[#A7F628] hover:bg-[#F4F6FA]">
                             <i class="icon icon-logo size-7 transition-colors"></i>
                             <span class="text-blue-900">Маркет</span>
                         </a>
                     </div>
                 </div>
 
-                <div class="w-px h-full bg-[#E9EDF5]"></div>
+                <div class="w-full h-[1px] bg-[#EFF2F7] col-span-3 lg:hidden"></div>
+
+                <nav class="header__nav_mobile flex flex-col -ml-2 lg:hidden">
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Услуги</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Кейсы</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Работы</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Об агентстве</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Вакансии</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Отзывы</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                </nav>
+
+                <div class="w-px h-full bg-[#E9EDF5] max-lg:hidden"></div>
+                <div class="w-px h-full bg-[#EFF2F7] lg:hidden"></div>
 
                 <!-- footer services -->
-                <div class="services-menu services-menu_small flex flex-col items-start gap-8 md:gap-5 lg:gap-0 md:max-lg:ml-2.5 xl:-mx-2">
-                    <a href="#" class="services-menu__item group">
+                <div class="services-menu services-menu_small flex flex-col items-start gap-0 -mx-2 lg:mx-0 xl:-mx-2">
+                    <a href="#" class="services-menu__item group w-full">
                         <span class="services-menu__label">Баннеры</span>
 
                         <div class="services-menu__tags">
@@ -73,8 +103,12 @@
                             <span class="services-menu__tag">Статика</span>
                             <span class="services-menu__tag">Видео</span>
                         </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
                     </a>
-                    <a href="#" class="services-menu__item group">
+                    <a href="#" class="services-menu__item group w-full">
                         <span class="services-menu__label">Наружка</span>
 
                         <div class="services-menu__tags">
@@ -82,35 +116,51 @@
                             <span class="services-menu__tag">DOOH</span>
                             <span class="services-menu__tag">MF</span>
                         </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
                     </a>
-                    <a href="#" class="services-menu__item group">
+                    <a href="#" class="services-menu__item group w-full">
                         <span class="services-menu__label">2D</span>
 
                         <div class="services-menu__tags">
                             <span class="services-menu__tag">Иллюстрации</span>
                             <span class="services-menu__tag">Моушн</span>
                         </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
                     </a>
-                    <a href="#" class="services-menu__item group">
+                    <a href="#" class="services-menu__item group w-full">
                         <span class="services-menu__label">3D</span>
 
                         <div class="services-menu__tags">
                             <span class="services-menu__tag">Иллюстрации</span>
                             <span class="services-menu__tag">Моушн</span>
                         </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
                     </a>
-                    <a href="#" class="services-menu__item group">
+                    <a href="#" class="services-menu__item group w-full">
                         <span class="services-menu__label">Лендинги</span>
 
                         <div class="services-menu__tags">
                             <span class="services-menu__tag">СПЕЦПРОЕКТЫ</span>
+                        </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
                         </div>
                     </a>
                 </div>
 
                 <div class="w-px h-full bg-[#E9EDF5] max-xl:hidden"></div>
 
-                <div class="xl:mx-4">
+                <div class="xl:mx-4 max-lg:hidden">
                     <div class="header-contact">
                         <div class="header-contact__img"></div>
                     </div>
@@ -133,7 +183,7 @@
                 </div>
 
                 <!-- footer case container -->
-                <div class="footer-case-container relative rounded-[20px] overflow-hidden">
+                <div class="footer-case-container relative rounded-[20px] overflow-hidden max-lg:col-span-3 max-lg:h-[240px]">
                     <!-- Начальный кейс -->
                     <a href="#"
                        data-active="true"
@@ -163,6 +213,11 @@
             </section>
         </div>
     </div>
+
+    <a href="https://tolkunov.com/order" class="header__button_float w-[160px]">
+        <span>Заказать</span>
+        <i class="icon icon-order-button size-7"></i>
+    </a>
 
     <div class="header__overlay"></div>
 </header>

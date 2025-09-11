@@ -1,24 +1,26 @@
 .header__main {
-    @apply px-4 py-3;
+    @apply p-2;
+    @apply lg:px-4 lg:py-3;
 
     @apply flex items-center justify-between;
-    @apply rounded-3xl bg-white;
+    @apply rounded-[20px] lg:rounded-3xl bg-white;
 }
 
 .header__logo {
     @apply text-blue-900 font-glina;
-    @apply text-[28px] xl:text-[32px];
+    @apply text-[32px] lg:text-[28px] xl:text-[32px];
+    @apply tracking-[-0.64px] lg:tracking-[-0.56px];
     @apply !no-underline;
-    @apply py-0.5 xl:py-1.5;
-
-    letter-spacing: -0.56px;
+    @apply lg:py-0.5 xl:py-1.5;
 }
 
 .header__toggle {
     @apply flex items-center justify-center;
 
-    @apply size-8 p-[10px];
-    @apply rounded-full;
+    @apply size-11 p-2;
+    @apply lg:size-8 lg:p-[10px];
+    @apply rounded-2xl;
+    @apply lg:rounded-full;
     @apply transition-all;
 
     @apply bg-[#F4F6FA];
@@ -33,21 +35,36 @@
 }
 
 .header__main:hover .header__toggle {
-    @apply scale-125;
-    @apply text-[#2856F6];
-    @apply bg-[#E9EEFE];
+    @apply lg:scale-125;
+    @apply lg:text-[#2856F6];
+    @apply lg:bg-[#E9EEFE];
 
     .icon {
-        @apply size-4;
+        @apply lg:size-4;
     }
 }
 
 .header[data-open="true"] .header__toggle {
-    @apply text-[#2856F6];
-    @apply bg-[#E9EEFE];
+    @apply lg:text-[#2856F6];
+    @apply lg:bg-[#E9EEFE];
+
+    .icon_state_open {
+        @apply max-lg:hidden;
+    }
+
+    .icon_state_close {
+        @apply lg:hidden;
+    }
 }
 
-.header__nav {
+.header[data-open="false"] .header__toggle {
+    .icon_state_close {
+        @apply max-lg:hidden;
+    }
+
+    .icon_state_close {
+        @apply lg:hidden;
+    }
 }
 
 .header__link {
@@ -55,8 +72,8 @@
     @apply xl:px-2.5;
     @apply 3xl:px-3;
     @apply text-blue-900 font-sans;
-    @apply font-medium;
-    @apply text-[15px] leading-3.5;
+    @apply font-semibold lg:font-medium;
+    @apply text-xl lg:text-[15px] leading-[24px] lg:leading-3.5;
     @apply 2xl:text-[17px];
     @apply rounded-[10px];
     @apply !no-underline;
@@ -71,8 +88,20 @@
     @apply text-[#8187AD];
 }
 
-.header__button {
+.header__button_main {
     @apply flex flex-nowrap items-center gap-1 h-12 rounded-2xl !text-white !no-underline font-glina text-xl font-normal leading-3.5  py-2 pl-5 pr-4;
 
     @apply bg-blue-600 hover:bg-[#2e55db] active:bg-[#2146c4];
+}
+
+.header__button_float {
+    @apply fixed bottom-4 left-1/2 right-auto -translate-x-1/2 lg:!hidden z-100;
+    @apply flex flex-nowrap items-center justify-center gap-2 h-13 rounded-2xl !text-blue-600 !no-underline font-glina text-2xl font-normal leading-3.5  py-2 pl-6 pr-5.5;
+    @apply bg-white hover:bg-white active:bg-white;
+    @apply shadow-[0_0_10.7px_0_rgba(0,0,0,0.29)];
+    @apply transition-all;
+}
+
+.header[data-open="true"] .header__button_float {
+    @apply w-[calc(100vw-32px)];
 }

@@ -1,12 +1,15 @@
 .header {
     @apply max-w-[1540px];
+    @apply m-4;
     @apply lg:m-3 xl:m-4;
     @apply 3xl:mx-auto;
 }
 
 .header__container {
-    @apply relative z-10;
-    @apply rounded-3xl bg-white;
+    @apply relative z-100;
+    @apply rounded-3xl lg:bg-white;
+
+    box-shadow: 0 2px 8px 0 rgba(33, 37, 75, 0.11);
 }
 
 .header {
@@ -17,6 +20,8 @@
     .header__extra {
         @apply transition-all duration-300 ease-in-out;
         @apply max-h-0 overflow-hidden opacity-0 scale-90;
+
+        @apply max-lg:absolute max-lg:left-0 max-lg:right-0;
     }
 
     &[data-open="false"] {
@@ -37,11 +42,12 @@
 
 .header__overlay {
     @apply fixed inset-0 transition-all duration-300 pointer-events-none;
-    /*@apply bg-black/0;*/
-    @apply z-[-1];
+    @apply bg-blue-900/0;
+    @apply z-99;
 }
 
 .header[data-open="true"] .header__overlay {
     @apply pointer-events-auto;
-    /*@apply bg-black/20;*/
+    @apply max-lg:bg-blue-900/50;
+    @apply max-lg:backdrop-blur-lg;
 }
