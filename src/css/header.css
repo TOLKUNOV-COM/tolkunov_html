@@ -1,7 +1,7 @@
 .header {
     @apply max-w-[1540px];
-    @apply m-4;
-    @apply lg:m-3 xl:m-4;
+    @apply m-3 md:m-4 lg:m-3 xl:m-4;
+    @apply mb-8 md:mb-12 xl:mb-20;
     @apply 3xl:mx-auto;
 }
 

@@ -4,7 +4,7 @@
             <section class="header__main">
                 <div class="flex flex-nowrap items-center gap-4 max-lg:justify-between max-lg:flex-1">
                     <a href="#" class="header__logo flex flex-nowrap items-center gap-3 lg:w-[152px] xl:w-[170px]">
-                        <i class="icon icon-logo size-10 xl:size-11 text-blue-600"></i>
+                        <i class="icon icon-logo size-11 md:size-10 xl:size-11 text-blue-600"></i>
                         <span>Продакшн</span>
                     </a>
                     <span class="w-px h-4.5 bg-[#E9EDF5] max-lg:hidden"></span>
@@ -35,7 +35,7 @@
             <section class="header__extra">
                 <!-- header verticals -->
                 <div class="flex flex-col gap-2 max-lg:col-span-3">
-                    <div class="text-[#ABB1C4] font-sans text-sm/3.5 font-semibold">Направления</div>
+                    <div class="text-[#ABB1C4] font-sans text-sm/3.5 font-semibold lg:hidden">Направления</div>
 
                     <div class="flex flex-row lg:flex-col items-start gap-2 lg:gap-0 font-glina text-2xl leading-[57%] tracking-[-0.48px] max-lg:-ml-2">
                         <a href="https://tolkunov.com/journal-soon"
@@ -63,7 +63,7 @@
 
                 <div class="w-full h-[1px] bg-[#EFF2F7] col-span-3 lg:hidden"></div>
 
-                <nav class="header__nav_mobile flex flex-col -ml-2 lg:hidden">
+                <nav class="header__nav_mobile flex flex-col -ml-2 lg:hidden max-md:col-span-3">
                     <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
                         <span>Услуги</span>
                         <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
@@ -91,10 +91,10 @@
                 </nav>
 
                 <div class="w-px h-full bg-[#E9EDF5] max-lg:hidden"></div>
-                <div class="w-px h-full bg-[#EFF2F7] lg:hidden"></div>
+                <div class="w-px h-full bg-[#EFF2F7] lg:hidden max-md:hidden"></div>
 
                 <!-- footer services -->
-                <div class="services-menu services-menu_small flex flex-col items-start gap-0 -mx-2 lg:mx-0 xl:-mx-2">
+                <div class="services-menu services-menu_small flex flex-col items-start gap-0 -mx-2 lg:mx-0 xl:-mx-2 max-md:hidden">
                     <a href="#" class="services-menu__item group w-full">
                         <span class="services-menu__label">Баннеры</span>
 
@@ -183,7 +183,7 @@
                 </div>
 
                 <!-- footer case container -->
-                <div class="footer-case-container relative rounded-[20px] overflow-hidden max-lg:col-span-3 max-lg:h-[240px]">
+                <div class="footer-case-container relative rounded-[20px] overflow-hidden max-lg:col-span-3 max-lg:h-[240px] xl:mt-[10px] max-md:hidden">
                     <!-- Начальный кейс -->
                     <a href="#"
                        data-active="true"

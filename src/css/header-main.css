@@ -95,7 +95,7 @@
 }
 
 .header__button_float {
-    @apply fixed bottom-4 left-1/2 right-auto -translate-x-1/2 lg:!hidden z-100;
+    @apply fixed bottom-3 md:bottom-4 left-1/2 right-auto -translate-x-1/2 lg:!hidden z-100;
     @apply flex flex-nowrap items-center justify-center gap-2 h-13 rounded-2xl !text-blue-600 !no-underline font-glina text-2xl font-normal leading-3.5  py-2 pl-6 pr-5.5;
     @apply bg-white hover:bg-white active:bg-white;
     @apply shadow-[0_0_10.7px_0_rgba(0,0,0,0.29)];
@@ -103,5 +103,5 @@
 }
 
 .header[data-open="true"] .header__button_float {
-    @apply w-[calc(100vw-32px)];
+    @apply w-[calc(100vw-24px)] md:w-[calc(100vw-32px)];
 }
