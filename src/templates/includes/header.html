@@ -1,4 +1,4 @@
-<header class="header" data-open="true">
+<header class="header" data-open="false">
     <div class="h-[60px] lg:h-[72px] relative">
         <div class="header__container">
             <section class="header__main">
@@ -37,24 +37,63 @@
                 <div class="flex flex-col gap-2 max-lg:col-span-3">
                     <div class="text-[#ABB1C4] font-sans text-sm/3.5 font-semibold lg:hidden">Направления</div>
 
-                    <div class="flex flex-row lg:flex-col items-start gap-2 lg:gap-0 font-glina text-2xl leading-[57%] tracking-[-0.48px] max-lg:-ml-2">
+                    <!-- Мобильная версия со Swiper -->
+                    <div class="lg:hidden -ml-2 font-glina text-2xl leading-[57%] tracking-[-0.48px]">
+                        <div class="header-verticals-swiper">
+                            <div class="swiper-container overflow-visible">
+                                <div class="swiper-wrapper flex space-x-2">
+                                    <div class="swiper-slide w-auto flex-shrink-0">
+                                        <a href="https://tolkunov.com/journal-soon"
+                                           class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#FD375B] hover:bg-[#F4F6FA] focus:text-[#FD375B] focus:bg-[#F4F6FA] active:scale-95">
+                                            <i class="icon icon-logo size-7 transition-colors"></i>
+                                            <span class="text-blue-900">Журнал</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide w-auto flex-shrink-0">
+                                        <a href="https://tolkunov.com/academy"
+                                           class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#0CF2F2] hover:bg-[#F4F6FA] focus:text-[#0CF2F2] focus:bg-[#F4F6FA] active:scale-95">
+                                            <i class="icon icon-logo size-7 transition-colors"></i>
+                                            <span class="text-blue-900">Академия</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide w-auto flex-shrink-0">
+                                        <a href="https://tolkunov.com/services"
+                                           class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#6928F6] hover:bg-[#F4F6FA] focus:text-[#6928F6] focus:bg-[#F4F6FA] active:scale-95">
+                                            <i class="icon icon-logo size-7 transition-colors"></i>
+                                            <span class="text-blue-900">Сервисы</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide w-auto flex-shrink-0">
+                                        <a href="https://tolkunov.com/market"
+                                           class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#A7F628] hover:bg-[#F4F6FA] focus:text-[#A7F628] focus:bg-[#F4F6FA] active:scale-95">
+                                            <i class="icon icon-logo size-7 transition-colors"></i>
+                                            <span class="text-blue-900">Маркет</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Десктопная версия -->
+                    <div class="flex max-lg:hidden lg:flex-col items-start gap-0 font-glina text-2xl leading-[57%] tracking-[-0.48px]">
                         <a href="https://tolkunov.com/journal-soon"
-                           class="group inline-flex items-center gap-1.5 lg:gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-colors text-blue-900 hover:text-[#FD375B] hover:bg-[#F4F6FA]">
+                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#FD375B] hover:bg-[#F4F6FA] focus:text-[#FD375B] focus:bg-[#F4F6FA]">
                             <i class="icon icon-logo size-7 transition-colors"></i>
                             <span class="text-blue-900">Журнал</span>
                         </a>
                         <a href="https://tolkunov.com/academy"
-                           class="group inline-flex items-center gap-1.5 lg:gap-2 xl:gap-1.5 p-2 xl:px-3  rounded-xl !no-underline transition-colors text-blue-900 hover:text-[#0CF2F2] hover:bg-[#F4F6FA]">
+                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#0CF2F2] hover:bg-[#F4F6FA] focus:text-[#0CF2F2] focus:bg-[#F4F6FA]">
                             <i class="icon icon-logo size-7 transition-colors"></i>
                             <span class="text-blue-900">Академия</span>
                         </a>
                         <a href="https://tolkunov.com/services"
-                           class="group inline-flex items-center gap-1.5 lg:gap-2 xl:gap-1.5 p-2 xl:px-3  rounded-xl !no-underline transition-colors text-blue-900 hover:text-[#6928F6] hover:bg-[#F4F6FA]">
+                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#6928F6] hover:bg-[#F4F6FA] focus:text-[#6928F6] focus:bg-[#F4F6FA]">
                             <i class="icon icon-logo size-7 transition-colors"></i>
                             <span class="text-blue-900">Сервисы</span>
                         </a>
                         <a href="https://tolkunov.com/market"
-                           class="group inline-flex items-center gap-1.5 lg:gap-2 xl:gap-1.5 p-2 xl:px-3  rounded-xl !no-underline transition-colors text-blue-900 hover:text-[#A7F628] hover:bg-[#F4F6FA]">
+                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#A7F628] hover:bg-[#F4F6FA] focus:text-[#A7F628] focus:bg-[#F4F6FA]">
                             <i class="icon icon-logo size-7 transition-colors"></i>
                             <span class="text-blue-900">Маркет</span>
                         </a>
@@ -63,7 +102,7 @@
 
                 <div class="w-full h-[1px] bg-[#EFF2F7] col-span-3 lg:hidden"></div>
 
-                <nav class="header__nav_mobile flex flex-col -ml-2 lg:hidden max-md:col-span-3">
+                <nav class="header__nav_mobile flex flex-col -mx-2 lg:hidden max-md:col-span-3">
                     <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
                         <span>Услуги</span>
                         <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>

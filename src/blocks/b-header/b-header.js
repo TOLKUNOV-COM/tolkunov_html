@@ -18,6 +18,9 @@ $(document).ready(function() {
         }
         
         function openExtra() {
+            // Событие начала открытия
+            $(document).trigger('header:open:start', { $header: $header });
+            
             $header.attr('data-open', 'true');
             // Вычисляем ширину скроллбара и компенсируем её
             const scrollbarWidth = getScrollbarWidth();
@@ -27,14 +30,27 @@ $(document).ready(function() {
             // Блокируем прокрутку страницы
             $('body').addClass('overflow-hidden');
             setOpeningState(true);
+            
+            // Событие завершения открытия (после небольшой задержки для CSS анимации)
+            setTimeout(() => {
+                $(document).trigger('header:open:end', { $header: $header });
+            }, 300);
         }
         
         function closeExtra() {
+            // Событие начала закрытия
+            $(document).trigger('header:close:start', { $header: $header });
+            
             $header.attr('data-open', 'false');
             // Разблокируем прокрутку страницы и убираем компенсацию
             $('body').removeClass('overflow-hidden').css('padding-right', '');
             isManuallyOpened = false;
             setOpeningState(false);
+            
+            // Событие завершения закрытия
+            setTimeout(() => {
+                $(document).trigger('header:close:end', { $header: $header });
+            }, 300);
         }
         
         function setOpeningState(opening) {
