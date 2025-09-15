@@ -1,7 +1,7 @@
 .header__extra {
     @apply p-[20px] pb-3 mt-3;
     @apply md:p-[20px] md:mt-[10px];
-    @apply lg:px-4 lg:pl-2 lg:pt-1 lg:pb-4 lg:mt-0;
+    @apply lg:px-4 lg:pl-2 lg:pt-1.5 lg:pb-4 lg:mt-0;
     @apply xl:pl-3 xl:pt-0 xl:-mt-0.5;
     @apply rounded-[20px] lg:rounded-3xl bg-white;
 

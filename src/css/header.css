@@ -7,6 +7,8 @@
     /* Постоянная sticky позиция с top вместо margin-top */
     @apply sticky top-3 md:top-4 lg:top-3 xl:top-4;
     @apply z-100;
+
+    @apply transition-transform;
 }
 
 .header__container {
@@ -18,7 +20,7 @@
 
 .header {
     .header__main {
-        @apply transition-all;
+        @apply transition-all cursor-pointer;
     }
 
     .header__extra {
@@ -44,6 +46,10 @@
     }
 }
 
+.header[data-open="false"]:has(.header__main:hover) {
+    @apply lg:scale-[1.004];
+}
+
 .header__overlay {
     @apply fixed inset-0 transition-all duration-300 pointer-events-none;
     @apply bg-blue-900/0;
@@ -53,7 +59,7 @@
 .header[data-open="true"] .header__overlay {
     @apply pointer-events-auto;
     @apply max-lg:bg-blue-900/50;
-    @apply max-lg:backdrop-blur-lg;
+    @apply max-lg:backdrop-blur-xs;
 }
 
 /* Sticky header состояния */

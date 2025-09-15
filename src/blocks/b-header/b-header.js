@@ -6,7 +6,6 @@ $(document).ready(function() {
         const $container = $header.find('.header__container');
         
         // Локальное состояние для каждого экземпляра header
-        let hoverTimeout = null;
         let closeTimeout = null;
         let isManuallyOpened = false;
         let isOpening = false;
@@ -75,13 +74,6 @@ $(document).ready(function() {
             }
         }
         
-        function clearHoverTimeout() {
-            if (hoverTimeout) {
-                clearTimeout(hoverTimeout);
-                hoverTimeout = null;
-            }
-        }
-        
         function clearCloseTimeout() {
             if (closeTimeout) {
                 clearTimeout(closeTimeout);
@@ -91,7 +83,6 @@ $(document).ready(function() {
         
         // Обработчик клика на кнопку toggle
         $toggle.on('click', function() {
-            clearHoverTimeout();
             clearCloseTimeout();
             
             const isOpen = $header.attr('data-open') === 'true';
@@ -110,44 +101,28 @@ $(document).ready(function() {
             }
         });
         
-        // Обработчик наведения на container
-        $container.on('mouseenter', function() {
-            // Очищаем таймер закрытия если он был установлен
-            clearCloseTimeout();
+        // Обработчик клика на свободное место в header__main
+        $header.find('.header__main').on('click', function(event) {
+            const $target = $(event.target);
             
-            // Если секция уже открыта или находится в процессе opening, не делаем ничего
-            if ($header.attr('data-open') === 'true' || isOpening) {
-                return;
+            // Исключаем клики по активным элементам (упрощенная проверка)
+            if (
+                $target.closest('.header__link, .header__logo, .header__button_main, .header__button_float, .header__toggle').length
+            ) {
+                return; // Не открываем/закрываем меню при клике на активные элементы
             }
             
-            // Очищаем предыдущий таймер если есть
-            clearHoverTimeout();
+            // Очищаем таймеры
+            clearCloseTimeout();
             
-            // Устанавливаем задержку 500ms
-            hoverTimeout = setTimeout(function() {
-                // Дополнительная проверка перед открытием (на случай если состояние изменилось)
-                if (!isOpening && $header.attr('data-open') !== 'true') {
-                    openExtra();
-                }
-                hoverTimeout = null;
-            }, 500);
-        });
-        
-        // Обработчик ухода курсора из container
-        $container.on('mouseleave', function() {
-            // Очищаем таймер если курсор ушел до срабатывания
-            clearHoverTimeout();
+            const isOpen = $header.attr('data-open') === 'true';
             
-            // Автоматически закрываем только если секция не была открыта вручную
-            // Устанавливаем задержку 600ms перед закрытием
-            if (!isManuallyOpened && $header.attr('data-open') === 'true') {
-                closeTimeout = setTimeout(function() {
-                    // Дополнительная проверка что меню все еще открыто и не открыто вручную
-                    if (!isManuallyOpened && $header.attr('data-open') === 'true') {
-                        closeExtra();
-                    }
-                    closeTimeout = null;
-                }, 600);
+            // Toggle логика - открываем/закрываем при клике на свободное место
+            if (isOpen) {
+                closeExtra();
+            } else {
+                openExtra();
+                isManuallyOpened = true;
             }
         });
         

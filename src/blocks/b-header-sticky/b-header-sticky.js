@@ -90,12 +90,12 @@ $(document).ready(function() {
             if (mouseY <= mouseThreshold) {
                 // Курсор в верхних 150px - показываем шапку
                 if (isHidden) {
-                    showHeader('mouse');
+                    // showHeader('mouse'); // Временно отключено
                 }
             } else {
                 // Курсор ушел дальше 150px - скрываем только если показано от мыши
                 if (!isHidden && showReason === 'mouse') {
-                    hideHeader('mouse');
+                    // hideHeader('mouse'); // Временно отключено
                 }
             }
         }
