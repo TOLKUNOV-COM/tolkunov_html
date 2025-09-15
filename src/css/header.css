@@ -14,13 +14,13 @@
 .header__container {
     @apply relative z-100;
     @apply rounded-3xl lg:bg-white;
-
-    box-shadow: 0 2px 8px 0 rgba(33, 37, 75, 0.11);
 }
 
 .header {
     .header__main {
         @apply transition-all cursor-pointer;
+
+        @apply shadow-[0_2px_8px_0_rgba(33,37,75,0.11)];
     }
 
     .header__extra {
@@ -28,6 +28,7 @@
         @apply max-h-0 overflow-hidden opacity-0 scale-90;
 
         @apply max-lg:absolute max-lg:left-0 max-lg:right-0;
+        @apply max-lg:shadow-[0_2px_8px_0_rgba(33,37,75,0.11)];
     }
 
     &[data-open="false"] {
@@ -38,6 +39,11 @@
 
     &[data-open="true"] {
         .header__main {
+            @apply shadow-none;
+        }
+
+        .header__container {
+            @apply shadow-[0_2px_8px_0_rgba(33,37,75,0.11)];
         }
 
         .header__extra {
@@ -46,8 +52,8 @@
     }
 }
 
-.header[data-open="false"]:has(.header__main:hover) {
-    @apply lg:scale-[1.004];
+.header[data-open="false"] .header__main:hover {
+    @apply lg:scale-[1.01];
 }
 
 .header__overlay {
