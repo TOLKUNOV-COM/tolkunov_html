@@ -18,8 +18,14 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
+      - name: Install dependencies (npm)
         run: npm install
+
+      - name: Install Bower
+        run: npm install -g bower
+
+      - name: Install dependencies (bower)
+        run: bower install --allow-root
 
       - name: Build project
         run: npx gulp build
