@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Tolkunov HTML</title>
+    <meta name="description" content="">
+    <!--link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap&subset=cyrillic')-->
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="assets/vendor/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="assets/vendor/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen">
+    <!--link(rel='stylesheet', href='assets/vendor/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=2.1.5', media='screen')-->
+    <!--link(rel='stylesheet', href='assets/vendor/odometer/themes/odometer-theme-minimal.css')-->
+    <link rel="stylesheet" href="assets/vendor/jquery.scrollbar/jquery.scrollbar.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/vendor/plyr/dist/plyr.css">
+    <link rel="stylesheet" href="assets/css/common.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/packery/dist/packery.pkgd.min.js"></script>
+    <script src="assets/vendor/masonry/dist/masonry.pkgd.min.js"></script>
+    <script src="assets/vendor/slick-carousel/slick/slick.min.js"></script>
+    <script src="assets/vendor/retina.js/dist/retina.min.js"></script>
+    <script src="assets/vendor/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script src="assets/vendor/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+    <!--script(src='assets/vendor/fancybox/source/helpers/jquery.fancybox-thumbs.js')-->
+    <script src="assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="assets/vendor/swiper/dist/js/swiper.min.js"></script>
+    <script src="assets/vendor/plyr/dist/plyr.js"></script>
+    <!--script(src='assets/js/emerge.js')-->
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body><header class="header" data-open="false">
+    <div class="h-[60px] lg:h-[72px] relative">
+        <div class="header__container">
+            <section class="header__main">
+                <div class="flex flex-nowrap items-center gap-4 max-lg:justify-between max-lg:flex-1">
+                    <a href="#" class="header__logo flex flex-nowrap items-center gap-3 transition-colors lg:w-[152px] xl:w-[170px]">
+                        <i class="icon icon-logo size-11 md:size-10 xl:size-11 text-blue-600"></i>
+                        <span>Продакшн</span>
+                    </a>
+                    <span class="w-px h-4.5 bg-[#E9EDF5] max-lg:hidden"></span>
+                    <div class="size-11 lg:size-10 flex items-center justify-center lg:-ml-1">
+                        <button class="header__toggle">
+                            <i class="icon icon_state_open icon-menu-toggle size-4 lg:size-3 transition-all"></i>
+                            <i class="icon icon_state_close icon-x-mark size-7 transition-all"></i>
+                        </button>
+                    </div>
+                </div>
+                <nav class="flex items-center gap-1 max-lg:hidden">
+                    <a href="#" class="header__link header__link_active">Услуги</a>
+                    <a href="#" class="header__link">Кейсы</a>
+                    <a href="#" class="header__link">Работы</a>
+                    <a href="#" class="header__link">Об агентстве</a>
+                    <a href="#" class="header__link">Вакансии</a>
+                    <a href="#" class="header__link">Отзывы</a>
+                </nav>
+
+                <div class="xl:w-[234px] flex justify-end max-lg:hidden">
+                    <a href="https://tolkunov.com/order" class="header__button_main">
+                        <span>Заказать</span>
+                        <i class="icon icon-order-button size-7"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section class="header__extra">
+                <!-- header verticals -->
+                <div class="flex flex-col gap-2 max-lg:col-span-3">
+                    <div class="text-[#ABB1C4] font-sans text-sm/3.5 font-semibold lg:hidden">Направления</div>
+
+                    <!-- Мобильная версия со Swiper -->
+                    <div class="lg:hidden -ml-2 font-glina text-2xl leading-[57%] tracking-[-0.48px]">
+                        <div class="header-verticals-swiper">
+                            <div class="swiper-container overflow-visible">
+                                <div class="swiper-wrapper flex space-x-2">
+                                    <div class="swiper-slide w-auto flex-shrink-0">
+                                        <a href="https://tolkunov.com/journal-soon"
+                                           class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-all !text-blue-900 hover:text-[#FD375B] hover:bg-[#F4F6FA] focus:text-[#FD375B] focus:bg-[#F4F6FA] active:scale-95">
+                                            <i class="icon icon-logo size-7 transition-colors"></i>
+                                            <span class="text-blue-900">Журнал</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide w-auto flex-shrink-0">
+                                        <a href="https://tolkunov.com/academy"
+                                           class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-all !text-blue-900 hover:text-[#0CF2F2] hover:bg-[#F4F6FA] focus:text-[#0CF2F2] focus:bg-[#F4F6FA] active:scale-95">
+                                            <i class="icon icon-logo size-7 transition-colors"></i>
+                                            <span class="text-blue-900">Академия</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide w-auto flex-shrink-0">
+                                        <a href="https://tolkunov.com/services"
+                                           class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-all !text-blue-900 hover:text-[#6928F6] hover:bg-[#F4F6FA] focus:text-[#6928F6] focus:bg-[#F4F6FA] active:scale-95">
+                                            <i class="icon icon-logo size-7 transition-colors"></i>
+                                            <span class="text-blue-900">Сервисы</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide w-auto flex-shrink-0">
+                                        <a href="https://tolkunov.com/market"
+                                           class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-all !text-blue-900 hover:text-[#A7F628] hover:bg-[#F4F6FA] focus:text-[#A7F628] focus:bg-[#F4F6FA] active:scale-95">
+                                            <i class="icon icon-logo size-7 transition-colors"></i>
+                                            <span class="text-blue-900">Маркет</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Десктопная версия -->
+                    <div class="flex max-lg:hidden lg:flex-col items-start gap-0 font-glina text-2xl leading-[57%] tracking-[-0.48px]">
+                        <a href="https://tolkunov.com/journal-soon"
+                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#FD375B] hover:bg-[#F4F6FA] focus:text-[#FD375B] focus:bg-[#F4F6FA]">
+                            <i class="icon icon-logo size-7 transition-colors"></i>
+                            <span class="text-blue-900">Журнал</span>
+                        </a>
+                        <a href="https://tolkunov.com/academy"
+                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#0CF2F2] hover:bg-[#F4F6FA] focus:text-[#0CF2F2] focus:bg-[#F4F6FA]">
+                            <i class="icon icon-logo size-7 transition-colors"></i>
+                            <span class="text-blue-900">Академия</span>
+                        </a>
+                        <a href="https://tolkunov.com/services"
+                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#6928F6] hover:bg-[#F4F6FA] focus:text-[#6928F6] focus:bg-[#F4F6FA]">
+                            <i class="icon icon-logo size-7 transition-colors"></i>
+                            <span class="text-blue-900">Сервисы</span>
+                        </a>
+                        <a href="https://tolkunov.com/market"
+                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#A7F628] hover:bg-[#F4F6FA] focus:text-[#A7F628] focus:bg-[#F4F6FA]">
+                            <i class="icon icon-logo size-7 transition-colors"></i>
+                            <span class="text-blue-900">Маркет</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full h-[1px] bg-[#EFF2F7] col-span-3 lg:hidden"></div>
+
+                <nav class="header__nav_mobile flex flex-col -mx-2 lg:hidden max-md:col-span-3">
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Услуги</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Кейсы</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Работы</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Об агентстве</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Вакансии</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Отзывы</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                </nav>
+
+                <div class="w-px h-full bg-[#E9EDF5] max-lg:hidden"></div>
+                <div class="w-px h-full bg-[#EFF2F7] lg:hidden max-md:hidden"></div>
+
+                <!-- footer services -->
+                <div class="services-menu services-menu_small flex flex-col items-start gap-0 -mx-2 lg:mx-0 xl:-mx-2 max-md:hidden">
+                    <a href="#" class="services-menu__item group w-full">
+                        <span class="services-menu__label">Баннеры</span>
+
+                        <div class="services-menu__tags">
+                            <span class="services-menu__tag">HTML5</span>
+                            <span class="services-menu__tag">Статика</span>
+                            <span class="services-menu__tag">Видео</span>
+                        </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="services-menu__item group w-full">
+                        <span class="services-menu__label">Наружка</span>
+
+                        <div class="services-menu__tags">
+                            <span class="services-menu__tag">OOH</span>
+                            <span class="services-menu__tag">DOOH</span>
+                            <span class="services-menu__tag">MF</span>
+                        </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="services-menu__item group w-full">
+                        <span class="services-menu__label">2D</span>
+
+                        <div class="services-menu__tags">
+                            <span class="services-menu__tag">Иллюстрации</span>
+                            <span class="services-menu__tag">Моушн</span>
+                        </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="services-menu__item group w-full">
+                        <span class="services-menu__label">3D</span>
+
+                        <div class="services-menu__tags">
+                            <span class="services-menu__tag">Иллюстрации</span>
+                            <span class="services-menu__tag">Моушн</span>
+                        </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="services-menu__item group w-full">
+                        <span class="services-menu__label">Лендинги</span>
+
+                        <div class="services-menu__tags">
+                            <span class="services-menu__tag">СПЕЦПРОЕКТЫ</span>
+                        </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="w-px h-full bg-[#E9EDF5] max-xl:hidden"></div>
+
+                <div class="xl:mx-4 max-lg:hidden">
+                    <div class="header-contact">
+                        <div class="header-contact__img"></div>
+                    </div>
+
+                    <div class="mt-4 xl:mt-2 flex flex-col gap-2 font-sans font-medium">
+                        <div class="flex flex-col gap-1 p-3 rounded-2xl bg-[#F4F6FA]">
+                            <span class="text-blue-600 text-[13px]/4">Дмитрий Толкунов</span>
+                            <span class="text-blue-900 text-xs/4 xl:text-[13px]/4">Привет! Я фаундер агентства</span>
+                        </div>
+
+                        <div class="flex flex-col items-start gap-3 px-3 py-2.5 rounded-2xl bg-[#F4F6FA]">
+                            <span class="text-blue-900 text-xs/4 xl:text-[13px]/4">Отвечу на вопросы, составлю смету, поставлю задачи команде, проконтролирую качество</span>
+                            <a href="https://t.me/tolkunovdb" target="_blank" class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-white text-blue-900 font-glina text-lg/3.5 !no-underline">
+                                <i class="icon icon-telegram-full size-3"></i>
+                                <span class="">Написать</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- footer case container -->
+                <div class="footer-case-container relative rounded-[20px] overflow-hidden max-lg:col-span-3 max-lg:h-[240px] xl:mt-[10px] max-md:hidden">
+                    <!-- Начальный кейс -->
+                    <a href="#"
+                       data-active="true"
+                       class="footer-case absolute inset-0 transition-all opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto">
+                        <img src="https://dummyimage.com/400x400" alt="#" class="absolute inset-0 w-full h-full object-cover">
+
+                        <!-- Градиентная панель -->
+                        <div class="footer-case__panel absolute bottom-0 left-0 right-0 p-5 flex items-center">
+                            <div class="footer-case__title">Баннеры для
+                                <nobr><img class="b-cases__title-img" src="https://dummyimage.com/48x48" alt="МТС Банк"> МТС Банка</nobr>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Кнопка обновления -->
+                    <button
+                            type="button"
+                            class="footer-case__refresh group absolute top-4 left-4 inline-flex items-center justify-center p-1 rounded-full size-7 bg-white border-none transition-all inset-ring-[1.5px] inset-ring-slate-40 hover:backdrop-blur-sm z-10"
+                            data-refresh-url="http://tolkunov.local/test"
+                            aria-label="Обновить"
+                    >
+                        <i class="icon icon-refresh size-5 text-gray-400 transform transition-all group-hover:rotate-180 group-hover:text-blue-900"></i>
+                    </button>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+
+    <a href="https://tolkunov.com/order" class="header__button_float w-[160px]">
+        <span>Заказать</span>
+        <i class="icon icon-order-button size-7"></i>
+    </a>
+
+    <div class="header__overlay"></div>
+</header>
+
+    <div class="b-page">
+      <div class="container">
+        <div class="b-order-done">
+          <p class="b-order-done__title">Готово, ваша заявка отправлена!</p>
+          <p class="b-order-done__text">Мы внимательно изучим её, а затем свяжемся с вами.</p>
+        </div>
+      </div>
+    </div><section id="contacts-container"
+         class="relative mt-3 xl:mt-4 2xl:mt-8 mb-0 xl:mb-5 2xl:mb-12 font-sans rounded-3xl md:rounded-4xl overflow-hidden max-md:mx-5 md:mx-auto min-w-[340px] w-auto md:w-[720px] lg:w-[1000px] lg:h-[676px] xl:w-[1164px] xl:h-[680px] 2xl:w-[1376px] 2xl:h-[780px] 3xl:w-[1540px] 3xl:h-[874px]">
+    <!-- Contact switcher (абсолютное позиционирование) -->
+    <div class="absolute left-0 max-w-full md:max-w-none top-37 w-auto md:top-[204px] md:left-8 lg:left-auto lg:top-3 lg:right-3 z-10 mb-2 md:mb-4 lg:mb-0">
+        <div class="contact-switcher-container max-md:overflow-x-auto max-md:scroll-smooth max-md:px-4 flex items-start justify-between max-xl:gap-3 max-md:gap-2 p-0 xl:p-3 2xl:p-4 2xl:pb-7 xl:bg-white xl:rounded-3xl 2xl:rounded-28 3xl:rounded-3xl h-[80px] md:h-[88px] xl:h-[98px] 2xl:h-[140px] w-full md:w-[440px] lg:w-[488px] xl:w-[493px] 2xl:w-[578px]">
+            <!-- Дима -->
+            <div data-active="true" data-target="dima" class="group contact-switcher__item contact-switcher__item_dima">
+                <div class="contact-switch">
+                    <div class="contact-switch__ring_dima"></div>
+                    <div class="contact-switch__img contact-switch__img_dima"></div>
+                    <div class="contact-switch__label contact-switch__label_dima">Дима, СЕО</div>
+                    <div class="contact-switch__connector"></div>
+                </div>
+                <div class="contact-switcher__info">
+                    <div class="contact-switcher__line1">Наведём движ?</div>
+                    <a href="mailto:hello@tolkunov.com" class="contact-switcher__line2">hello@tolkunov.com</a>
+                </div>
+            </div>
+
+            <!-- Таня -->
+            <div data-active="false" data-target="tanya" class="group contact-switcher__item contact-switcher__item_tanya">
+                <div class="contact-switch">
+                    <div class="contact-switch__ring_tanya"></div>
+                    <div class="contact-switch__img contact-switch__img_tanya"></div>
+                    <div class="contact-switch__label contact-switch__label_tanya">Таня, PR</div>
+                    <div class="contact-switch__connector"></div>
+                </div>
+                <div class="contact-switcher__info">
+                    <div class="contact-switcher__line1">Посотрудничаем?</div>
+                    <a href="mailto:pr@tolkunov.com" class="contact-switcher__line2">pr@tolkunov.com</a>
+                </div>
+            </div>
+
+            <!-- Оля -->
+            <div data-active="false" data-target="olya" class="group contact-switcher__item contact-switcher__item_olya">
+                <div class="contact-switch">
+                    <div class="contact-switch__ring_olya"></div>
+                    <div class="contact-switch__img contact-switch__img_olya"></div>
+                    <div class="contact-switch__label contact-switch__label_olya">Оля, HR</div>
+                    <div class="contact-switch__connector"></div>
+                </div>
+                <div class="contact-switcher__info">
+                    <div class="contact-switcher__line1">Нужна работа?</div>
+                    <a href="mailto:hr@tolkunov.com" class="contact-switcher__line2">hr@tolkunov.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Дима блок -->
+    <div data-contact="dima" data-active="true"
+         class="contact-block lg:bg-blue-600 flex flex-col lg:flex-row font-sans h-full p-3 max-md:p-2 max-lg:pt-9 max-md:pt-3 max-lg:hidden max-lg:data-[active=true]:block lg:transition-opacity lg:opacity-0 lg:pointer-events-none lg:data-[active=true]:opacity-100 lg:data-[active=true]:pointer-events-auto lg:absolute lg:inset-0">
+
+        <picture class="absolute inset-0 z-0">
+            <!-- 1920px (4xl) -->
+            <source
+                    srcset="assets/img/contact-block/dima_1920.webp, assets/img/contact-block/dima_1920_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 120rem)"/>
+
+            <!-- 1600px (3xl) -->
+            <source
+                    srcset="assets/img/contact-block/dima_1600.webp, assets/img/contact-block/dima_1600_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 100rem)"/>
+
+            <!-- 1440px (2xl) -->
+            <source
+                    srcset="assets/img/contact-block/dima_1440.webp, assets/img/contact-block/dima_1440_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 90rem)"/>
+
+            <!-- 1280px (xl) -->
+            <source
+                    srcset="assets/img/contact-block/dima_1280.webp, assets/img/contact-block/dima_1280_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 80rem)"/>
+
+            <!-- 1024px (lg) -->
+            <source
+                    srcset="assets/img/contact-block/dima_1024.webp, assets/img/contact-block/dima_1024_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 64rem)"/>
+
+            <!-- 768px (md) -->
+            <source
+                    srcset="assets/img/contact-block/dima_768.webp, assets/img/contact-block/dima_768_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 48rem)"/>
+
+            <!-- fallback на случай, если picture не поддерживается (например, IE) -->
+            <img
+                    src="assets/img/contact-block/dima_440.webp"
+                    srcset="assets/img/contact-block/dima_440_x2.webp 2x"
+                    alt="Описание изображения"
+                    class="w-full h-full object-cover object-top lg:object-left"/>
+        </picture>
+
+        <!-- Левая часть -->
+        <div class="lg:flex-1 p-3 md:p-5 pb-0 md:pb-0 lg:pb-4 2xl:p-7 flex flex-col justify-between z-1 relative">
+            <div class="font-serif !space-y-4 2xl:!space-y-3 max-w-[300px] md:max-w-max md:w-[376px] xl:w-[420px] 2xl:w-[525px]">
+                <div class="contact-block__line1 text-white/60">Спасибо, что долистали до конца</div>
+                <div class="contact-block__line2 text-white">Самое время обсудить проект</div>
+            </div>
+
+            <div class="flex max-md:hidden">
+                <div class="flex flex-col items-start gap-3 w-[256px] max-xl:hidden">
+                    <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
+                    <div class="chat-message chat-message-2 chat-message_default">Я Дима, фаундер<br>агентства TOLKUNOV</div>
+                    <div class="chat-message chat-message-3 chat-message_cta">
+                        <div class="text-blue-900 text-base 2xl:text-lg font-bold tracking-[0.16px] 2xl:tracking-[0.18px]">Отвечу на все вопросы и&nbsp;посчитаю смету</div>
+
+                        <a href="https://t.me/tolkunovdb" target="_blank"
+                           class="bg-blue-600 py-3 pl-4 pr-6 rounded-20 hover:bg-blue-620 active:bg-blue-680 transition-colors  inline-flex items-center gap-2 font-glina text-2xl/6 font-thin !text-white !no-underline">
+                            <span class="icon icon-telegram size-7"></span>
+                            <span>Написать</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-1 items-end justify-end lg:justify-center pb-4.5 lg:pb-6 max-lg:mt-[76px]">
+                    <a href="#"
+                       class="contact-block__play contact-block__play_dima contact-block__play_lb xl:contact-block__play_lt rotate-2 xl:rotate-8"
+                       data-modal="video" data-target="#modal-video-dima">
+                        <i class="icon icon-play-short size-5 xl:size-6 2xl:size-7"></i>
+                        <span>40 сек</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Правая часть - форма -->
+        <div class="contact-block__form relative max-lg:flex-1">
+            <form class="bg-white rounded-[18px] md:rounded-3xl flex flex-col p-2 lg:p-3 xl:p-2 h-full" method="post">
+                <div class="!space-y-5 p-3 md:p-4 lg:p-3 xl:p-4">
+                    <div class="form-row">
+                        <label class="form-label">Услуги</label>
+
+                        <div class="chips-group flex flex-wrap gap-3">
+                            <label class="chip">
+                                <input type="checkbox" class="hidden" name="tags[]" value="banners">
+                                <span class="chip-label">Баннеры</span>
+                            </label>
+                            <label class="chip">
+                                <input type="checkbox" class="hidden" name="tags[]" value="outdoor">
+                                <span class="chip-label">Наружка</span>
+                            </label>
+                            <label class="chip">
+                                <input type="checkbox" class="hidden" name="tags[]" value="2d">
+                                <span class="chip-label">2D</span>
+                            </label>
+                            <label class="chip">
+                                <input type="checkbox" class="hidden" name="tags[]" value="3d">
+                                <span class="chip-label">3D</span>
+                            </label>
+                            <label class="chip">
+                                <input type="checkbox" class="hidden" name="tags[]" value="landing">
+                                <span class="chip-label">Лендинги</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label class="form-label">Бюджет</label>
+
+                        <div class="chips-group flex flex-col md:flex-row flex-wrap gap-3 md:gap-4">
+                            <label class="chip chip_big">
+                                <input type="radio" class="hidden" name="budget" value="100k">
+                                <span class="chip-label">от 100 000 ₽</span>
+                                <span class="chip-hint">HTML5-баннер с&nbsp;несколькими&nbsp;ресайзами</span>
+                            </label>
+                            <label class="chip chip_big">
+                                <input type="radio" class="hidden" name="budget" value="500k">
+                                <span class="chip-label">от 500 000 ₽</span>
+                                <span class="chip-hint">Пак&nbsp;баннеров&nbsp;HTML5 для&nbsp;онлайн&nbsp;и&nbsp;наружки</span>
+                            </label>
+                            <label class="chip chip_big">
+                                <input type="radio" class="hidden" name="budget" value="1m">
+                                <span class="chip-label">от 1 млн ₽</span>
+                                <span class="chip-hint">То&nbsp;же,&nbsp;что&nbsp;за&nbsp;500к +&nbsp;3D&nbsp;и&nbsp;лендинг</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <textarea name="description" class="form-field resize-y min-h-8 md:max-h-20 lg:max-h-8 2xl:max-h-27 3xl:max-h-50" rows="1" auto-grow placeholder="Опишите задачу"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="name" class="form-field" placeholder="Имя">
+                    </div>
+                    <div class="flex flex-row flex-nowrap gap-5">
+                        <div class="form-row flex-1">
+                            <input type="text" name="email" class="form-field" placeholder="Email">
+                        </div>
+                        <div class="form-row flex-1">
+                            <input type="text" name="telegram" class="form-field" placeholder="Телеграм">
+                        </div>
+                    </div>
+
+                    <label class="flex items-start gap-2 cursor-pointer select-none relative">
+                        <input type="checkbox" name="agree" required class="visually-hidden"/>
+
+                        <span class="form-checkbox block"></span>
+
+                        <span class="text-xs leading-4.5 !font-medium">
+                            Даю согласие на обработку моих
+                            <a href="https://tolkunov.com/view/terms.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">персональных данных</a>
+                            в соответствии с
+                            <a href="https://tolkunov.com/view/privacy.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">политикой конфиденциальности</a>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Кнопка "Отправить" -->
+                <button type="submit"
+                        class="button button_submit bg-blue-600 hover:bg-blue-620 active:bg-blue-680 text-white mt-auto">
+                    Отправить
+                </button>
+
+                <div class="hidden">
+                    <!-- Кнопка "Отправить" (состояние: загрузка) -->
+                    <button type="submit"
+                            class="button button_submit bg-blue-600 text-white mt-auto !cursor-progress"
+                            disabled>
+                    <span role="status" class="inline-block size-6 icon icon-loading text-white animate-spin">
+                        <span class="sr-only">Загрузка…</span>
+                    </span>
+                    </button>
+
+                    <!-- Кнопка "Отправить" (состояние: завершено) -->
+                    <button type="submit"
+                            class="button button_submit bg-slate-40 text-blue-600 mt-auto cursor-default"
+                            disabled>
+                        <i class="icon icon-checked size-5"></i>
+                        <span>Отправлено</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Таня блок -->
+    <div data-contact="tanya" data-active="false"
+         class="contact-block lg:bg-purple-400 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-9 max-md:pt-3 max-lg:hidden max-lg:data-[active=true]:block lg:transition-opacity lg:opacity-0 lg:pointer-events-none lg:data-[active=true]:opacity-100 lg:data-[active=true]:pointer-events-auto lg:absolute lg:inset-0">
+        <picture class="absolute inset-0 z-0">
+            <!-- 1920px (4xl) -->
+            <source
+                    srcset="assets/img/contact-block/tanya_1920.webp, assets/img/contact-block/tanya_1920_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 120rem)"/>
+
+            <!-- 1600px (3xl) -->
+            <source
+                    srcset="assets/img/contact-block/tanya_1600.webp, assets/img/contact-block/tanya_1600_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 100rem)"/>
+
+            <!-- 1440px (2xl) -->
+            <source
+                    srcset="assets/img/contact-block/tanya_1440.webp, assets/img/contact-block/tanya_1440_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 90rem)"/>
+
+            <!-- 1280px (xl) -->
+            <source
+                    srcset="assets/img/contact-block/tanya_1280.webp, assets/img/contact-block/tanya_1280_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 80rem)"/>
+
+            <!-- 1024px (lg) -->
+            <source
+                    srcset="assets/img/contact-block/tanya_1024.webp, assets/img/contact-block/tanya_1024_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 64rem)"/>
+
+            <!-- 768px (md) -->
+            <source
+                    srcset="assets/img/contact-block/tanya_768.webp, assets/img/contact-block/tanya_768_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 48rem)"/>
+
+            <!-- fallback на случай, если picture не поддерживается (например, IE) -->
+            <img
+                    src="assets/img/contact-block/tanya_440.webp"
+                    srcset="assets/img/contact-block/tanya_440_x2.webp 2x"
+                    alt="Описание изображения"
+                    class="w-full h-full object-cover object-top lg:object-left"/>
+        </picture>
+        <!-- Левая часть -->
+        <div class="lg:flex-1 p-3 md:p-5 pb-0 md:pb-0 lg:pb-4 2xl:p-7 flex flex-col justify-between z-1 relative">
+            <div class="font-serif !space-y-4 2xl:!space-y-3 max-w-[300px] md:max-w-max md:w-[300px] lg:w-[330px] xl:w-[420px] 2xl:w-[525px]">
+                <div class="contact-block__line1 text-white/60">Спасибо, что долистали до конца</div>
+                <div class="contact-block__line2 text-white">
+                    <span class="max-md:hidden">Как насчёт кросс-промо?</span>
+                    <span class="md:hidden">Как насчёт коллаба&nbsp;и&nbsp;пиара?</span>
+                </div>
+            </div>
+
+            <div class="flex max-md:hidden">
+                <div class="flex flex-col items-start gap-3 w-[292px] max-xl:hidden">
+                    <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
+                    <div class="chat-message chat-message-2 chat-message_default">Я Таня, отвечаю за пиар<br>в TOLKUNOV</div>
+                    <div class="chat-message chat-message-3 chat-message_cta">
+                        <div class="text-purple-900 text-base 2xl:text-lg font-bold tracking-[0.16px] 2xl:tracking-[0.18px]">Обсудим сотрудничество?</div>
+
+                        <a href="https://t.me/firsaness" target="_blank"
+                           class="bg-purple-400 py-3 pl-4 pr-6 rounded-20 hover:bg-purple-300 active:bg-purple-500 transition-colors inline-flex items-center gap-2 font-glina text-2xl/6 font-thin !text-white !no-underline">
+                            <span class="icon icon-telegram size-7"></span>
+                            <span>Написать</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-1 items-end justify-end lg:justify-center pb-4.5 lg:pb-6 max-lg:mt-[76px]">
+                    <a href="#"
+                       class="contact-block__play contact-block__play_tanya contact-block__play_rt xl:contact-block__play_lt -rotate-3 xl:-rotate-8"
+                       data-modal="video"
+                       data-target="#modal-video-tanya">
+                        <i class="icon icon-play-short size-5 xl:size-6 2xl:size-7"></i>
+                        <span>25 сек</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Правая часть - форма -->
+        <div class="contact-block__form relative max-lg:flex-1">
+            <form class="bg-white rounded-[18px] md:rounded-3xl flex flex-col p-2 lg:p-3 xl:p-2 h-full" method="post">
+                <div class="!space-y-5 p-3 md:p-4 lg:p-3 xl:p-4">
+                    <div class="form-row">
+                        <input type="text" name="name" class="form-field" placeholder="Имя">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="email" class="form-field" placeholder="Email">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="telegram" class="form-field" placeholder="Телеграм">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="company" class="form-field" placeholder="Название компании">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="position" class="form-field" placeholder="Должность">
+                    </div>
+                    <div class="form-row">
+                        <textarea name="message" class="form-field resize-y min-h-8 md:max-h-30 lg:max-h-32 3xl:max-h-50" rows="1" auto-grow placeholder="Расскажите о вашем предложении"></textarea>
+                    </div>
+
+                    <label class="flex items-start gap-2 cursor-pointer select-none relative">
+                        <input type="checkbox" name="agree" required class="visually-hidden"/>
+
+                        <span class="form-checkbox block"></span>
+
+                        <span class="text-xs leading-4.5 !font-medium">
+                            Даю согласие на обработку моих
+                            <a href="https://tolkunov.com/view/terms.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">персональных данных</a>
+                            в соответствии с
+                            <a href="https://tolkunov.com/view/privacy.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">политикой конфиденциальности</a>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Кнопка "Отправить" -->
+                <button type="submit"
+                        class="button button_submit bg-purple-400 hover:bg-purple-300 active:bg-purple-500 text-white mt-auto">
+                    Отправить
+                </button>
+
+                <div class="hidden">
+                    <!-- Кнопка "Отправить" (состояние: загрузка) -->
+                    <button type="submit"
+                            class="button button_submit bg-purple-400 text-white mt-auto !cursor-progress"
+                            disabled>
+                    <span role="status" class="inline-block size-6 icon icon-loading text-white animate-spin">
+                        <span class="sr-only">Загрузка…</span>
+                    </span>
+                    </button>
+
+                    <!-- Кнопка "Отправить" (состояние: завершено) -->
+                    <button type="submit"
+                            class="button button_submit bg-sky-100 text-purple-400 mt-auto cursor-default"
+                            disabled>
+                        <i class="icon icon-checked size-5"></i>
+                        <span>Отправлено</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Оля блок -->
+    <div data-contact="olya" data-active="false"
+         class="contact-block lg:bg-lime-500 flex flex-col lg:flex-row font-sans h-full p-3 max-lg:pt-9 max-md:pt-3 max-lg:hidden max-lg:data-[active=true]:block lg:transition-opacity lg:opacity-0 lg:pointer-events-none lg:data-[active=true]:opacity-100 lg:data-[active=true]:pointer-events-auto lg:absolute lg:inset-0">
+        <picture class="absolute inset-0 z-0">
+            <!-- 1920px (4xl) -->
+            <source
+                    srcset="assets/img/contact-block/olya_1920.webp, assets/img/contact-block/olya_1920_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 120rem)"/>
+
+            <!-- 1600px (3xl) -->
+            <source
+                    srcset="assets/img/contact-block/olya_1600.webp, assets/img/contact-block/olya_1600_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 100rem)"/>
+
+            <!-- 1440px (2xl) -->
+            <source
+                    srcset="assets/img/contact-block/olya_1440.webp, assets/img/contact-block/olya_1440_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 90rem)"/>
+
+            <!-- 1280px (xl) -->
+            <source
+                    srcset="assets/img/contact-block/olya_1280.webp, assets/img/contact-block/olya_1280_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 80rem)"/>
+
+            <!-- 1024px (lg) -->
+            <source
+                    srcset="assets/img/contact-block/olya_1024.webp, assets/img/contact-block/olya_1024_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 64rem)"/>
+
+            <!-- 768px (md) -->
+            <source
+                    srcset="assets/img/contact-block/olya_768.webp, assets/img/contact-block/olya_768_x2.webp 2x"
+                    type="image/webp"
+                    media="(min-width: 48rem)"/>
+
+            <!-- fallback на случай, если picture не поддерживается (например, IE) -->
+            <img
+                    src="assets/img/contact-block/olya_440.webp"
+                    srcset="assets/img/contact-block/olya_440_x2.webp 2x"
+                    alt="Описание изображения"
+                    class="w-full h-full object-cover object-top lg:object-left"/>
+        </picture>
+        <!-- Левая часть -->
+        <div class="lg:flex-1 p-3 md:p-5 pb-0 md:pb-0 lg:pb-4 2xl:p-7 flex flex-col justify-between z-1 relative">
+            <div class="font-serif !space-y-4 2xl:!space-y-3 max-w-[300px] md:max-w-max md:w-[300px] lg:w-[370px] xl:w-[400px] 2xl:w-[466px]">
+                <div class="contact-block__line1 text-blue-900/60">Спасибо, что долистали до конца</div>
+                <div class="contact-block__line2 text-blue-900">В поиске крутых коллег?</div>
+            </div>
+
+            <div class="flex max-md:hidden">
+                <div class="flex flex-col items-start gap-3 w-[273px] max-xl:hidden">
+                    <div class="chat-message chat-message-1 chat-message_default">Привет!</div>
+                    <div class="chat-message chat-message-2 chat-message_default">Я Оля, отвечаю за кадры<br>в TOLKUNOV</div>
+                    <div class="chat-message chat-message-3 chat-message_cta">
+                        <div class="text-blue-900 text-base 2xl:text-lg font-bold tracking-[0.16px] 2xl:tracking-[0.18px]">Хочешь работать у нас? Присылай своё резюме</div>
+
+                        <a href="https://t.me/cancolya" target="_blank"
+                           class="bg-lime-500 py-3 pl-4 pr-6 rounded-20 hover:bg-lime-400 active:bg-lime-600 transition-colors inline-flex items-center gap-2 font-glina text-2xl/6 font-thin !text-blue-900 !no-underline">
+                            <span class="icon icon-telegram size-7"></span>
+                            <span>Написать</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-1 items-end justify-end lg:justify-center pb-4.5 lg:pb-6 max-lg:mt-[76px]">
+                    <a href="#" class="contact-block__play contact-block__play_olya contact-block__play_rb -rotate-3 xl:rotate-8" data-modal="video"
+                       data-target="#modal-video-olya">
+                        <i class="icon icon-play-short size-5 xl:size-6 2xl:size-7"></i>
+                        <span>20 сек</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Правая часть - форма -->
+        <div class="contact-block__form relative max-lg:flex-1">
+            <form class="bg-white rounded-[18px] md:rounded-3xl flex flex-col p-2 lg:p-3 xl:p-2 h-full" method="post">
+                <div class="!space-y-5 p-3 md:p-4 lg:p-3 xl:p-4">
+                    <div class="form-row">
+                        <input type="text" name="name" class="form-field" placeholder="Имя">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="email" class="form-field" placeholder="Email">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="telegram" class="form-field" placeholder="Телеграм">
+                    </div>
+                    <div class="form-row">
+                        <textarea name="skills" class="form-field resize-y min-h-8 md:max-h-30 lg:max-h-32 3xl:max-h-50" rows="1" auto-grow
+                                  placeholder="Несколько строк о навыках и опыте"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="portfolio" class="form-field" placeholder="Ссылка на резюме, портфолио или сайт">
+                    </div>
+
+                    <label class="flex items-start gap-2 cursor-pointer select-none relative">
+                        <input type="checkbox" name="agree" required class="visually-hidden"/>
+
+                        <span class="form-checkbox block"></span>
+
+                        <span class="text-xs leading-4.5 !font-medium">
+                            Даю согласие на обработку моих
+                            <a href="https://tolkunov.com/view/terms.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">персональных данных</a>
+                            в соответствии с
+                            <a href="https://tolkunov.com/view/privacy.pdf" target="_blank" class="text-blue-600 underline hover:no-underline">политикой конфиденциальности</a>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Кнопка "Отправить" -->
+                <button type="submit"
+                        class="button button_submit bg-lime-500 hover:bg-lime-400 active:bg-lime-600 text-blue-900 mt-auto">
+                    Отправить
+                </button>
+
+                <div class="hidden">
+                    <!-- Кнопка "Отправить" (состояние: загрузка) -->
+                    <button type="submit"
+                            class="button button_submit bg-lime-500 text-blue-900 mt-auto !cursor-progress"
+                            disabled>
+                    <span role="status" class="inline-block size-6 icon icon-loading text-blue-900 animate-spin">
+                        <span class="sr-only">Загрузка…</span>
+                    </span>
+                    </button>
+
+                    <!-- Кнопка "Отправить" (состояние: завершено) -->
+                    <button type="submit"
+                            class="button button_submit bg-lime-50 text-blue-900 mt-auto cursor-default"
+                            disabled>
+                        <i class="icon icon-checked size-5"></i>
+                        <span>Отправлено</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Video modals (overlay containers placed right after contacts) -->
+<section aria-hidden="true">
+    <!-- Dima video modal -->
+    <div id="modal-video-dima" data-open="false" class="video-modal video-modal_dima">
+        <div class="video-modal__backdrop absolute inset-0"></div>
+        <div class="video-modal__dialog relative rounded-5xl overflow-hidden">
+            <button type="button" class="video-modal__close" data-close aria-label="Закрыть">
+                <i class="icon icon-close size-8"></i>
+            </button>
+            <div class="video-modal__body rounded-5xl overflow-hidden w-full aspect-video">
+                <video class="video-modal__player plyr-js" playsinline controls preload="none">
+                    <source src="https://tolkunov.com/uploads/contacts/dima_source_converted.webm" type="video/webm">
+                    <source src="https://tolkunov.com/uploads/contacts/dima_source_converted.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tanya video modal -->
+    <div id="modal-video-tanya" data-open="false" class="video-modal video-modal_tanya">
+        <div class="video-modal__backdrop absolute inset-0"></div>
+        <div class="video-modal__dialog relative rounded-5xl overflow-hidden">
+            <button type="button" class="video-modal__close" data-close aria-label="Закрыть">
+                <i class="icon icon-close size-8"></i>
+            </button>
+            <div class="video-modal__body rounded-5xl overflow-hidden w-full aspect-video">
+                <video class="video-modal__player plyr-js" playsinline controls preload="none">
+                    <source src="https://tolkunov.com/uploads/contacts/tanya_source_converted.webm" type="video/webm">
+                    <source src="https://tolkunov.com/uploads/contacts/tanya_source_converted.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Olya video modal -->
+    <div id="modal-video-olya" data-open="false" class="video-modal video-modal_olya">
+        <div class="video-modal__backdrop absolute inset-0"></div>
+        <div class="video-modal__dialog relative rounded-5xl overflow-hidden">
+            <button type="button" class="video-modal__close" data-close aria-label="Закрыть">
+                <i class="icon icon-close size-8"></i>
+            </button>
+            <div class="video-modal__body rounded-5xl overflow-hidden w-full aspect-video">
+                <video class="video-modal__player plyr-js" playsinline controls preload="none">
+                    <source src="https://tolkunov.com/uploads/contacts/olya_source_converted.webm" type="video/webm">
+                    <source src="https://tolkunov.com/uploads/contacts/olya_source_converted.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer py-8 2xl:py-12 font-sans max-md:mx-5 w-auto md:w-[728px] lg:w-[984px] xl:w-[1160px] 2xl:w-[1408px] 3xl:w-[1536px] mx-auto">
+    <section class="footer-menu flex items-center justify-between mb-6 md:mb-8 lg:px-4">
+        <div class="flex items-center gap-3">
+            <div class="icon icon-logo size-11 text-blue-600"></div>
+            <span class="text-blue-900 font-glina text-32 tracking-[-0.64px]">Продакшн</span>
+        </div>
+
+        <nav class="footer-menu__nav flex items-start gap-1 xl:gap-3 2xl:gap-6 max-lg:hidden">
+            <a href="#" class="footer-menu__link">Услуги</a>
+            <a href="#" class="footer-menu__link">Работы</a>
+            <a href="#" class="footer-menu__link">Отзывы</a>
+            <a href="#" class="footer-menu__link">Вакансии</a>
+            <a href="#" class="footer-menu__link">Кейсы</a>
+            <a href="#" class="footer-menu__link">Клиенты</a>
+            <a href="#" class="footer-menu__link">Об агентстве</a>
+        </nav>
+
+        <div class="flex gap-3.5">
+            <a href="https://t.me/tolkunov_com" target="_blank" class="flex items-center justify-center size-9 xl:size-11 rounded-xl ring-[1.5px] ring-slate-150 text-blue-900">
+                <i class="icon icon-telegram size-5 xl:size-6"></i>
+            </a>
+            <a href="https://vk.com/tolkunov_com" target="_blank" class="flex items-center justify-center size-9 xl:size-11 rounded-xl ring-[1.5px] ring-slate-150 text-blue-900">
+                <i class="icon icon-vk size-5 xl:size-6"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="footer-info grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[auto_1fr] xl:grid-cols-[auto_1fr_auto] gap-y-6 md:gap-y-8 gap-5 2xl:gap-6 lg:pr-2 min-h-[240px] 2xl:min-h-[280px]">
+        <!-- mobile footer menu -->
+        <nav class="footer-menu_mobile grid grid-cols-2 gap-y-2 md:gap-y-5 gap-x-4 items-stretch self-start lg:hidden mr-2.5">
+            <a href="#" class="footer-menu__link">Услуги</a>
+            <a href="#" class="footer-menu__link">Работы</a>
+            <a href="#" class="footer-menu__link">Отзывы</a>
+            <a href="#" class="footer-menu__link">Вакансии</a>
+            <a href="#" class="footer-menu__link">Кейсы</a>
+            <a href="#" class="footer-menu__link">Клиенты</a>
+            <a href="#" class="footer-menu__link">Об агентстве</a>
+        </nav>
+
+        <div class="md:hidden h-px w-full bg-slate-150"></div>
+
+        <!-- footer services -->
+        <div class="services-menu flex flex-col items-start gap-8 md:gap-5 lg:gap-0 md:max-lg:ml-2.5">
+            <a href="#" class="services-menu__item group">
+                <span class="services-menu__label">Баннеры</span>
+
+                <div class="services-menu__tags">
+                    <span class="services-menu__tag">HTML5</span>
+                    <span class="services-menu__tag">Статика</span>
+                    <span class="services-menu__tag">Видео</span>
+                </div>
+            </a>
+            <a href="#" class="services-menu__item group">
+                <span class="services-menu__label">Наружка</span>
+
+                <div class="services-menu__tags">
+                    <span class="services-menu__tag">OOH</span>
+                    <span class="services-menu__tag">DOOH</span>
+                    <span class="services-menu__tag">MF</span>
+                </div>
+            </a>
+            <a href="#" class="services-menu__item group">
+                <span class="services-menu__label">2D</span>
+
+                <div class="services-menu__tags">
+                    <span class="services-menu__tag">Иллюстрации</span>
+                    <span class="services-menu__tag">Моушн</span>
+                </div>
+            </a>
+            <a href="#" class="services-menu__item group">
+                <span class="services-menu__label">3D</span>
+
+                <div class="services-menu__tags">
+                    <span class="services-menu__tag">Иллюстрации</span>
+                    <span class="services-menu__tag">Моушн</span>
+                </div>
+            </a>
+            <a href="#" class="services-menu__item group">
+                <span class="services-menu__label">Лендинги</span>
+
+                <div class="services-menu__tags">
+                    <span class="services-menu__tag">СПЕЦПРОЕКТЫ</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="flex flex-nowrap gap-5 2xl:gap-6 col-span-1 md:col-span-2 lg:col-span-1 max-lg:h-[240px] max-md:hidden">
+            <!-- footer case container -->
+            <div class="footer-case-container relative rounded-2xl xl:rounded-3xl overflow-hidden basis-1/2 lg:basis-381 xl:basis-338 2xl:basis-[61.5%]">
+                <!-- Начальный кейс -->
+                <a href="#"
+                   data-active="true"
+                   class="footer-case absolute inset-0 transition-all opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto">
+                    <img src="https://dummyimage.com/400x400" alt="#" class="absolute inset-0 w-full h-full object-cover">
+
+                    <!-- Градиентная панель -->
+                    <div class="footer-case__panel absolute bottom-0 left-0 right-0 p-5 pr-16 flex items-center">
+                        <div class="footer-case__title">Баннеры для
+                            <nobr><img class="b-cases__title-img" src="https://dummyimage.com/48x48" alt="МТС Банк"> МТС Банка</nobr>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Кнопка обновления -->
+                <button
+                        type="button"
+                        class="footer-case__refresh group absolute bottom-5 right-5 inline-flex items-center justify-center p-1 rounded-full size-7 bg-white border-none transition-all inset-ring-[1.5px] inset-ring-slate-40 hover:backdrop-blur-sm z-10"
+                        data-refresh-url="http://tolkunov.local/test"
+                        aria-label="Обновить"
+                >
+                    <i class="icon icon-refresh size-5 text-gray-400 transform transition-all group-hover:rotate-180 group-hover:text-blue-900"></i>
+                </button>
+            </div>
+
+            <!-- footer review container -->
+            <div class="footer-review-container relative rounded-2xl xl:rounded-3xl inset-ring-[1.5px] inset-ring-slate-40 basis-1/2 lg:basis-281 xl:basis-293 2xl:basis-[38.5%] 3xl:basis-[416px]">
+                <!-- Начальный отзыв -->
+                <a href="#"
+                   data-active="true"
+                   class="footer-review rounded-2xl xl:rounded-3xl absolute inset-0 transition-all flex flex-col p-5 !no-underline hover:bg-slate-50 opacity-0 pointer-events-none scale-90 data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto data-[active=true]:scale-100">
+                    <div class="w-[109px] h-[40px] flex items-center">
+                        <img src="https://dummyimage.com/200x60" alt="#" class="max-w-full max-h-full object-contain"/>
+                    </div>
+
+                    <div class="text-blue-900 font-serif font-bold mt-auto mb-4 text-base/6.5 2xl:text-lg/6.5 3xl:text-2xl/8 line-clamp-5 3xl:line-clamp-4">Спасибо, Дима, ещё раз, что&nbsp;вы&nbsp;есть
+                        и&nbsp;делаете
+                        такой качественный продукт
+                    </div>
+
+                    <div class="flex flex-col gap-3 mr-10">
+                        <div class="text-sm font-bold tracking-[0.14px] text-blue-900">Константин Обухов</div>
+                        <div class="text-slate-430 text-tiny font-black leading-3 tracking-[0.4px] uppercase">Арт-директор</div>
+                    </div>
+                </a>
+
+                <!-- Кнопка обновления -->
+                <button
+                        type="button"
+                        class="footer-review__refresh group absolute bottom-5 right-5 inline-flex items-center justify-center p-1 rounded-full size-7 bg-white border-none transition-all inset-ring-[1.5px] inset-ring-slate-40 hover:backdrop-blur-sm z-10"
+                        data-refresh-url="http://tolkunov.local/test"
+                        aria-label="Обновить отзыв"
+                >
+                    <i class="icon icon-refresh size-5 text-gray-400 transform transition-all group-hover:rotate-180 group-hover:text-blue-900"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- verticals -->
+        <div class="flex flex-col lg:flex-row xl:flex-col max-lg:items-start max-xl:items-center lg:justify-between gap-4 lg:gap-0 rounded-2xl xl:rounded-3xl inset-ring-[1.5px] inset-ring-slate-40 p-5 xl:p-3 w-auto xl:w-[173px] 2xl:w-[209px] 3xl:w-[240px] col-span-1 md:col-span-2 xl:col-span-1">
+            <div class="xl:p-2 pb-0 text-slate-430 font-serif font-bold xl:font-medium 2xl:font-bold text-[15px] xl:text-sm 2xl:text-[15px] 2xl:leading-[25px]">А ещё мы делаем</div>
+
+            <div class="flex flex-row flex-wrap md:flex-nowrap xl:flex-col items-start gap-4 xl:gap-1 font-glina text-2xl xl:text-xl 2xl:text-2xl leading-[57%] tracking-[-0.48px]">
+                <a href="#" class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-colors text-blue-900 hover:text-rose-500 hover:bg-slate-40">
+                    <i class="icon icon-logo size-7 transition-colors"></i>
+                    <span class="text-blue-900">Журнал</span>
+                </a>
+                <a href="#" class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-colors text-blue-900 hover:text-cyan-400 hover:bg-slate-40">
+                    <i class="icon icon-logo size-7 transition-colors"></i>
+                    <span class="text-blue-900">Академия</span>
+                </a>
+                <a href="#" class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-colors text-blue-900 hover:text-violet-600 hover:bg-slate-40">
+                    <i class="icon icon-logo size-7 transition-colors"></i>
+                    <span class="text-blue-900">Сервисы</span>
+                </a>
+                <a href="#" class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-colors text-blue-900 hover:text-lime-450 hover:bg-slate-40">
+                    <i class="icon icon-logo size-7 transition-colors"></i>
+                    <span class="text-blue-900">Маркет</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</footer>
+<section class="footer-features flex flex-nowrap justify-between relative max-md:hidden">
+    <div class="group relative footer-features__item footer-features__item_first">
+        <span class="footer-features__label">дизайн</span>
+
+        <div class="flex flex-col items-center gap-4 z-10 absolute top-[calc(100%+20px)] w-full  text-blue-950 text-base font-bold leading-5  transition-all scale-90 opacity-0 max-lg:pointer-events-none lg:group-hover:scale-100 lg:group-hover:opacity-100">
+            <div class="absolute inset-0 rounded-full bg-white blur-xl z-[-1]"></div>
+            <div class="inset-ring-2 inset-ring-zinc-200 p-3 bg-white rounded-xl flex gap-3">
+                <div class="size-5 relative">
+                    <i class="icon footer-features__check_1 absolute left-0 bottom-0 w-full h-8"></i>
+                </div>
+                <span>Двигаем пиксели</span>
+            </div>
+            <div class="inset-ring-2 inset-ring-zinc-200 p-3 bg-white rounded-xl flex gap-3">
+                <div class="size-5 relative">
+                    <i class="icon footer-features__check_1 absolute left-0 bottom-0 w-full h-8"></i>
+                </div>
+                <span>Собираем кейвижуалы</span>
+            </div>
+            <div class="inset-ring-2 inset-ring-zinc-200 p-3 bg-white rounded-xl flex gap-3">
+                <div class="size-5 relative">
+                    <i class="icon footer-features__check_1 absolute left-0 bottom-0 w-full h-8"></i>
+                </div>
+                <span>Наводим красоту</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative footer-features__item footer-features__item_second">
+        <span class="footer-features__label">реклама</span>
+
+        <div class="flex flex-col items-center gap-4 z-10 absolute top-[calc(100%+40px)] w-full  text-blue-950 text-base font-bold leading-5  transition-all scale-90 opacity-0 lg:group-hover:scale-100 max-lg:pointer-events-none lg:group-hover:opacity-100">
+            <div class="absolute inset-0 rounded-full bg-white blur-xl z-[-1]"></div>
+            <div class="inset-ring-2 inset-ring-zinc-200 p-3 bg-white rounded-xl flex gap-3">
+                <div class="size-5 relative">
+                    <i class="icon footer-features__check_2 absolute left-0 bottom-0 w-full h-8"></i>
+                </div>
+                <span>Проходим модерацию на всех площадках</span>
+            </div>
+            <div class="inset-ring-2 inset-ring-zinc-200 p-3 bg-white rounded-xl flex gap-3">
+                <div class="size-5 relative">
+                    <i class="icon footer-features__check_2 absolute left-0 bottom-0 w-full h-8"></i>
+                </div>
+                <span>Впихиваем невпихуемое в 320x50 px и в 150 Кб</span>
+            </div>
+            <div class="inset-ring-2 inset-ring-zinc-200 p-3 bg-white rounded-xl flex gap-3">
+                <div class="size-5 relative">
+                    <i class="icon footer-features__check_2 absolute left-0 bottom-0 w-full h-8"></i>
+                </div>
+                <span>Укрощаем лигалы, отступы и переменные</span>
+            </div>
+        </div>
+    </div>
+    <div class="group relative footer-features__item footer-features__item_third">
+        <span class="footer-features__label">движ</span>
+
+        <div class="flex flex-col items-center gap-4 z-10 absolute top-[calc(100%+45px)] w-[407px] -left-[100px] 2xl:-left-[66px]  text-blue-950 text-base font-bold leading-5  transition-all scale-90 opacity-0 max-lg:pointer-events-none lg:group-hover:scale-100 lg:group-hover:opacity-100">
+            <div class="absolute inset-0 rounded-full bg-white blur-xl z-[-1]"></div>
+            <div class="inset-ring-2 inset-ring-zinc-200 p-3 bg-white rounded-xl flex gap-3 -rotate-1">
+                <div class="size-5 relative">
+                    <i class="icon footer-features__check_3 absolute left-0 bottom-0 w-full h-8"></i>
+                </div>
+                <span>Анимируем и делаем моушн</span>
+            </div>
+            <div class="inset-ring-2 inset-ring-zinc-200 p-3 bg-white rounded-xl flex gap-3 -rotate-1">
+                <div class="size-5 relative">
+                    <i class="icon footer-features__check_3 absolute left-0 bottom-0 w-full h-8"></i>
+                </div>
+                <span>Ресайзим под все площадки</span>
+            </div>
+            <div class="inset-ring-2 inset-ring-zinc-200 p-3 bg-white rounded-xl flex gap-3">
+                <div class="size-5 relative">
+                    <i class="icon footer-features__check_3 absolute left-0 bottom-0 w-full h-8"></i>
+                </div>
+                <span>Принимаем, отвечаем и правим быстро</span>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="mx-5 md:mx-auto mb-3 w-auto md:w-[728px] lg:w-[984px] xl:w-[1136px] 2xl:w-[1375px] 3xl:w-[1536px]">
+    <div class="footer__word-logo"></div>
+
+    <div class="flex flex-nowrap items-center justify-between  text-gray-400 font-sans text-xs xl:text-base font-medium  h-5 xl:h-8 -mt-8 relative">
+        <div class="flex items-center flex-nowrap gap-4">
+            <span>© TOLKUNOV 2010-2025</span>
+            <div class="w-[2px] h-5 xl:h-8 bg-slate-100"></div>
+            <a href="https://tolkunov.com/documents" class="text-gray-400 no-underline hover:text-gray-400">Документы</a>
+        </div>
+
+        <div class="flex items-center gap-1 cursor-pointer js-scroll-to-top">
+            <span>Лифт наверх</span>
+            <i class="icon icon-scroll-up size-4"></i>
+        </div>
+    </div>
+</div>
+
+  </body>
+</html>

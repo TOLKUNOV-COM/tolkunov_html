@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Tolkunov HTML</title>
+    <meta name="description" content="">
+    <!--link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap&subset=cyrillic')-->
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="assets/vendor/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="assets/vendor/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen">
+    <!--link(rel='stylesheet', href='assets/vendor/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=2.1.5', media='screen')-->
+    <!--link(rel='stylesheet', href='assets/vendor/odometer/themes/odometer-theme-minimal.css')-->
+    <link rel="stylesheet" href="assets/vendor/jquery.scrollbar/jquery.scrollbar.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/vendor/plyr/dist/plyr.css">
+    <link rel="stylesheet" href="assets/css/common.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/packery/dist/packery.pkgd.min.js"></script>
+    <script src="assets/vendor/masonry/dist/masonry.pkgd.min.js"></script>
+    <script src="assets/vendor/slick-carousel/slick/slick.min.js"></script>
+    <script src="assets/vendor/retina.js/dist/retina.min.js"></script>
+    <script src="assets/vendor/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script src="assets/vendor/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+    <!--script(src='assets/vendor/fancybox/source/helpers/jquery.fancybox-thumbs.js')-->
+    <script src="assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="assets/vendor/swiper/dist/js/swiper.min.js"></script>
+    <script src="assets/vendor/plyr/dist/plyr.js"></script>
+    <!--script(src='assets/js/emerge.js')-->
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body style="background: #2856F6;height:200svh"><header class="header" data-open="false">
+    <div class="h-[60px] lg:h-[72px] relative">
+        <div class="header__container">
+            <section class="header__main">
+                <div class="flex flex-nowrap items-center gap-4 max-lg:justify-between max-lg:flex-1">
+                    <a href="#" class="header__logo flex flex-nowrap items-center gap-3 transition-colors lg:w-[152px] xl:w-[170px]">
+                        <i class="icon icon-logo size-11 md:size-10 xl:size-11 text-blue-600"></i>
+                        <span>Продакшн</span>
+                    </a>
+                    <span class="w-px h-4.5 bg-[#E9EDF5] max-lg:hidden"></span>
+                    <div class="size-11 lg:size-10 flex items-center justify-center lg:-ml-1">
+                        <button class="header__toggle">
+                            <i class="icon icon_state_open icon-menu-toggle size-4 lg:size-3 transition-all"></i>
+                            <i class="icon icon_state_close icon-x-mark size-7 transition-all"></i>
+                        </button>
+                    </div>
+                </div>
+                <nav class="flex items-center gap-1 max-lg:hidden">
+                    <a href="#" class="header__link header__link_active">Услуги</a>
+                    <a href="#" class="header__link">Кейсы</a>
+                    <a href="#" class="header__link">Работы</a>
+                    <a href="#" class="header__link">Об агентстве</a>
+                    <a href="#" class="header__link">Вакансии</a>
+                    <a href="#" class="header__link">Отзывы</a>
+                </nav>
+
+                <div class="xl:w-[234px] flex justify-end max-lg:hidden">
+                    <a href="https://tolkunov.com/order" class="header__button_main">
+                        <span>Заказать</span>
+                        <i class="icon icon-order-button size-7"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section class="header__extra">
+                <!-- header verticals -->
+                <div class="flex flex-col gap-2 max-lg:col-span-3">
+                    <div class="text-[#ABB1C4] font-sans text-sm/3.5 font-semibold lg:hidden">Направления</div>
+
+                    <!-- Мобильная версия со Swiper -->
+                    <div class="lg:hidden -ml-2 font-glina text-2xl leading-[57%] tracking-[-0.48px]">
+                        <div class="header-verticals-swiper">
+                            <div class="swiper-container overflow-visible">
+                                <div class="swiper-wrapper flex space-x-2">
+                                    <div class="swiper-slide w-auto flex-shrink-0">
+                                        <a href="https://tolkunov.com/journal-soon"
+                                           class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-all !text-blue-900 hover:text-[#FD375B] hover:bg-[#F4F6FA] focus:text-[#FD375B] focus:bg-[#F4F6FA] active:scale-95">
+                                            <i class="icon icon-logo size-7 transition-colors"></i>
+                                            <span class="text-blue-900">Журнал</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide w-auto flex-shrink-0">
+                                        <a href="https://tolkunov.com/academy"
+                                           class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-all !text-blue-900 hover:text-[#0CF2F2] hover:bg-[#F4F6FA] focus:text-[#0CF2F2] focus:bg-[#F4F6FA] active:scale-95">
+                                            <i class="icon icon-logo size-7 transition-colors"></i>
+                                            <span class="text-blue-900">Академия</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide w-auto flex-shrink-0">
+                                        <a href="https://tolkunov.com/services"
+                                           class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-all !text-blue-900 hover:text-[#6928F6] hover:bg-[#F4F6FA] focus:text-[#6928F6] focus:bg-[#F4F6FA] active:scale-95">
+                                            <i class="icon icon-logo size-7 transition-colors"></i>
+                                            <span class="text-blue-900">Сервисы</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide w-auto flex-shrink-0">
+                                        <a href="https://tolkunov.com/market"
+                                           class="group inline-flex items-center gap-1.5 p-2 rounded-xl !no-underline transition-all !text-blue-900 hover:text-[#A7F628] hover:bg-[#F4F6FA] focus:text-[#A7F628] focus:bg-[#F4F6FA] active:scale-95">
+                                            <i class="icon icon-logo size-7 transition-colors"></i>
+                                            <span class="text-blue-900">Маркет</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Десктопная версия -->
+                    <div class="flex max-lg:hidden lg:flex-col items-start gap-0 font-glina text-2xl leading-[57%] tracking-[-0.48px]">
+                        <a href="https://tolkunov.com/journal-soon"
+                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#FD375B] hover:bg-[#F4F6FA] focus:text-[#FD375B] focus:bg-[#F4F6FA]">
+                            <i class="icon icon-logo size-7 transition-colors"></i>
+                            <span class="text-blue-900">Журнал</span>
+                        </a>
+                        <a href="https://tolkunov.com/academy"
+                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#0CF2F2] hover:bg-[#F4F6FA] focus:text-[#0CF2F2] focus:bg-[#F4F6FA]">
+                            <i class="icon icon-logo size-7 transition-colors"></i>
+                            <span class="text-blue-900">Академия</span>
+                        </a>
+                        <a href="https://tolkunov.com/services"
+                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#6928F6] hover:bg-[#F4F6FA] focus:text-[#6928F6] focus:bg-[#F4F6FA]">
+                            <i class="icon icon-logo size-7 transition-colors"></i>
+                            <span class="text-blue-900">Сервисы</span>
+                        </a>
+                        <a href="https://tolkunov.com/market"
+                           class="group inline-flex items-center gap-2 xl:gap-1.5 p-2 xl:px-3 rounded-xl !no-underline transition-all text-blue-900 hover:text-[#A7F628] hover:bg-[#F4F6FA] focus:text-[#A7F628] focus:bg-[#F4F6FA]">
+                            <i class="icon icon-logo size-7 transition-colors"></i>
+                            <span class="text-blue-900">Маркет</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full h-[1px] bg-[#EFF2F7] col-span-3 lg:hidden"></div>
+
+                <nav class="header__nav_mobile flex flex-col -mx-2 lg:hidden max-md:col-span-3">
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Услуги</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Кейсы</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Работы</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Об агентстве</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Вакансии</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                    <a href="#" class="header__link flex flex-nowrap items-center justify-between gap-1">
+                        <span>Отзывы</span>
+                        <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                    </a>
+                </nav>
+
+                <div class="w-px h-full bg-[#E9EDF5] max-lg:hidden"></div>
+                <div class="w-px h-full bg-[#EFF2F7] lg:hidden max-md:hidden"></div>
+
+                <!-- footer services -->
+                <div class="services-menu services-menu_small flex flex-col items-start gap-0 -mx-2 lg:mx-0 xl:-mx-2 max-md:hidden">
+                    <a href="#" class="services-menu__item group w-full">
+                        <span class="services-menu__label">Баннеры</span>
+
+                        <div class="services-menu__tags">
+                            <span class="services-menu__tag">HTML5</span>
+                            <span class="services-menu__tag">Статика</span>
+                            <span class="services-menu__tag">Видео</span>
+                        </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="services-menu__item group w-full">
+                        <span class="services-menu__label">Наружка</span>
+
+                        <div class="services-menu__tags">
+                            <span class="services-menu__tag">OOH</span>
+                            <span class="services-menu__tag">DOOH</span>
+                            <span class="services-menu__tag">MF</span>
+                        </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="services-menu__item group w-full">
+                        <span class="services-menu__label">2D</span>
+
+                        <div class="services-menu__tags">
+                            <span class="services-menu__tag">Иллюстрации</span>
+                            <span class="services-menu__tag">Моушн</span>
+                        </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="services-menu__item group w-full">
+                        <span class="services-menu__label">3D</span>
+
+                        <div class="services-menu__tags">
+                            <span class="services-menu__tag">Иллюстрации</span>
+                            <span class="services-menu__tag">Моушн</span>
+                        </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="services-menu__item group w-full">
+                        <span class="services-menu__label">Лендинги</span>
+
+                        <div class="services-menu__tags">
+                            <span class="services-menu__tag">СПЕЦПРОЕКТЫ</span>
+                        </div>
+
+                        <div class="flex-1 flex justify-end lg:hidden">
+                            <i class="icon icon-menu-link w-6 h-3 text-[#ABB1C4]"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="w-px h-full bg-[#E9EDF5] max-xl:hidden"></div>
+
+                <div class="xl:mx-4 max-lg:hidden">
+                    <div class="header-contact">
+                        <div class="header-contact__img"></div>
+                    </div>
+
+                    <div class="mt-4 xl:mt-2 flex flex-col gap-2 font-sans font-medium">
+                        <div class="flex flex-col gap-1 p-3 rounded-2xl bg-[#F4F6FA]">
+                            <span class="text-blue-600 text-[13px]/4">Дмитрий Толкунов</span>
+                            <span class="text-blue-900 text-xs/4 xl:text-[13px]/4">Привет! Я фаундер агентства</span>
+                        </div>
+
+                        <div class="flex flex-col items-start gap-3 px-3 py-2.5 rounded-2xl bg-[#F4F6FA]">
+                            <span class="text-blue-900 text-xs/4 xl:text-[13px]/4">Отвечу на вопросы, составлю смету, поставлю задачи команде, проконтролирую качество</span>
+                            <a href="https://t.me/tolkunovdb" target="_blank" class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-white text-blue-900 font-glina text-lg/3.5 !no-underline">
+                                <i class="icon icon-telegram-full size-3"></i>
+                                <span class="">Написать</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- footer case container -->
+                <div class="footer-case-container relative rounded-[20px] overflow-hidden max-lg:col-span-3 max-lg:h-[240px] xl:mt-[10px] max-md:hidden">
+                    <!-- Начальный кейс -->
+                    <a href="#"
+                       data-active="true"
+                       class="footer-case absolute inset-0 transition-all opacity-0 pointer-events-none data-[active=true]:opacity-100 data-[active=true]:pointer-events-auto">
+                        <img src="https://dummyimage.com/400x400" alt="#" class="absolute inset-0 w-full h-full object-cover">
+
+                        <!-- Градиентная панель -->
+                        <div class="footer-case__panel absolute bottom-0 left-0 right-0 p-5 flex items-center">
+                            <div class="footer-case__title">Баннеры для
+                                <nobr><img class="b-cases__title-img" src="https://dummyimage.com/48x48" alt="МТС Банк"> МТС Банка</nobr>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Кнопка обновления -->
+                    <button
+                            type="button"
+                            class="footer-case__refresh group absolute top-4 left-4 inline-flex items-center justify-center p-1 rounded-full size-7 bg-white border-none transition-all inset-ring-[1.5px] inset-ring-slate-40 hover:backdrop-blur-sm z-10"
+                            data-refresh-url="http://tolkunov.local/test"
+                            aria-label="Обновить"
+                    >
+                        <i class="icon icon-refresh size-5 text-gray-400 transform transition-all group-hover:rotate-180 group-hover:text-blue-900"></i>
+                    </button>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+
+    <a href="https://tolkunov.com/order" class="header__button_float w-[160px]">
+        <span>Заказать</span>
+        <i class="icon icon-order-button size-7"></i>
+    </a>
+
+    <div class="header__overlay"></div>
+</header>
+
+  </body>
+</html>
