@@ -90,3 +90,24 @@
   - ❌ Неправильно: Прямое управление CSS классами `show/hide`
   - ❌ Неправильно: Глобальные таймеры или состояние
 **exceptions**: Когда требуется более сложная анимация с несколькими состояниями
+
+## Система событий форм заявок
+
+**pattern**: `b-contact-form.*`
+**description**: Формы заявок должны выбрасывать кастомные события для интеграции с другими компонентами
+**structure**:
+  - События выбрасываются на сам элемент формы через `form.trigger()`
+  - Все события содержат объект с данными, включающий `formId` и дополнительную информацию
+  - События выбрасываются в ключевые моменты жизненного цикла формы
+**events**:
+  - `form:submit` - при начале отправки формы (после preventDefault, до AJAX)
+  - `form:success` - при успешной отправке (после получения response.success)
+  - `form:reset` - при сбросе формы (после form.reset())
+  - `form:validation-error` - при ошибках валидации (с объектом errors)
+  - `form:network-error` - при ошибках сети/сервера (с xhr, status, error)
+**examples**:
+  - ✅ Правильно: `form.trigger('form:submit', { formId: formId });`
+  - ✅ Правильно: `form.trigger('form:success', { formId: formId, response: response });`
+  - ✅ Правильно: `form.trigger('form:validation-error', { formId: formId, errors: response.errors });`
+  - ❌ Неправильно: События без передачи данных или на другие элементы
+**exceptions**: Когда форма не требует интеграции с другими компонентами

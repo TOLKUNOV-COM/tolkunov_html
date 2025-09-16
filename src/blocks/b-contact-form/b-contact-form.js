@@ -29,6 +29,9 @@ $(function () {
         // Показываем состояние загрузки
         setButtonState(form, 'loading');
 
+        // Выбрасываем событие начала отправки формы
+        form.trigger('form:submit', { formId: formId });
+
         // Получаем URL действия из формы
         const actionUrl = form.attr('action');
 
@@ -42,14 +45,26 @@ $(function () {
                     // Успех - показываем состояние завершено
                     setButtonState(form, 'success');
 
+                    // Выбрасываем событие успешной отправки формы
+                    form.trigger('form:success', { formId: formId, response: response });
+
                     // Очищаем форму и возвращаем к исходному состоянию через некоторое время
                     setTimeout(function () {
                         form[0].reset();
                         setButtonState(form, 'default');
+                        
+                        // Выбрасываем событие сброса формы
+                        form.trigger('form:reset', { formId: formId });
                     }, 5000);
                 } else {
                     // Ошибки валидации
                     if (response.errors) {
+                        // Проверяем наличие ошибки reCAPTCHA и показываем через alert
+                        if (response.errors.recaptchaToken) {
+                            const recaptchaError = response.errors.recaptchaToken[0] || 'Проверка безопасности не пройдена';
+                            alert(recaptchaError);
+                        }
+
                         // Получаем название модели из formId
                         let modelName = '';
                         switch (formId) {
@@ -113,13 +128,20 @@ $(function () {
                         }
                     }
 
+                    // Выбрасываем событие ошибки валидации
+                    form.trigger('form:validation-error', { formId: formId, errors: response.errors });
+
                     // Возвращаем кнопку в исходное состояние
                     setButtonState(form, 'default');
                 }
             },
-            error: function () {
+            error: function (xhr, status, error) {
                 // Ошибка сети или сервера
                 alert('Произошла ошибка при отправке формы. Попробуйте еще раз.');
+                
+                // Выбрасываем событие ошибки сети
+                form.trigger('form:network-error', { formId: formId, xhr: xhr, status: status, error: error });
+                
                 setButtonState(form, 'default');
             }
         });
