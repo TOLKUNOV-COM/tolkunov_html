@@ -11,6 +11,12 @@
     @apply transition-transform;
 }
 
+.header_flat {
+    /* Исключаем header из потока документа через отрицательный margin-bottom */
+    /* Компенсируем: высоту header + top отступ */
+    @apply -mb-[72px] md:-mb-[76px] lg:-mb-[84px] xl:-mb-[96px];
+}
+
 .header__container {
     @apply relative z-100;
     @apply rounded-3xl lg:bg-white;
