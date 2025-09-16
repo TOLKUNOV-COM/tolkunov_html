@@ -349,6 +349,29 @@ $(function () {
     loadClients();
 });
 
+$(function () {
+    $('.contact-switcher__item').on('click', function () {
+        // Проверяем, не активен ли уже этот таб
+        if ($(this).attr('data-active') === 'true') {
+            return; // Выходим, если таб уже активен
+        }
+
+        // Снимаем активность со всех переключателей
+        $('.contact-switcher__item').attr('data-active', 'false');
+
+        // Активируем выбранный переключатель
+        $(this).attr('data-active', 'true');
+
+        // Получаем целевой контакт
+        const targetContact = $(this).data('target');
+
+        // Скрываем все блоки контактов
+        $('.contact-block').attr('data-active', 'false');
+
+        $(`[data-contact="${targetContact}"]`).attr('data-active', 'true');
+    });
+});
+
 // AJAX формы заявок
 $(function () {
     // Функция для управления состоянием кнопок
@@ -496,29 +519,6 @@ $(function () {
                 setButtonState(form, 'default');
             }
         });
-    });
-});
-
-$(function () {
-    $('.contact-switcher__item').on('click', function () {
-        // Проверяем, не активен ли уже этот таб
-        if ($(this).attr('data-active') === 'true') {
-            return; // Выходим, если таб уже активен
-        }
-
-        // Снимаем активность со всех переключателей
-        $('.contact-switcher__item').attr('data-active', 'false');
-
-        // Активируем выбранный переключатель
-        $(this).attr('data-active', 'true');
-
-        // Получаем целевой контакт
-        const targetContact = $(this).data('target');
-
-        // Скрываем все блоки контактов
-        $('.contact-block').attr('data-active', 'false');
-
-        $(`[data-contact="${targetContact}"]`).attr('data-active', 'true');
     });
 });
 
@@ -940,6 +940,76 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+    // Инициализируем каждый header verticals swiper отдельно
+    $('.header-verticals-swiper').each(function() {
+        const $container = $(this);
+        let headerVerticalsSwiper = null;
+        let isInitialized = false; // флаг однократной инициализации
+        
+        function initHeaderVerticalsSwiper() {
+            if ($(window).width() < 1024 && (!headerVerticalsSwiper || headerVerticalsSwiper.destroyed)) {
+                headerVerticalsSwiper = new Swiper($container.find('.swiper-container')[0], {
+                    slidesPerView: 'auto',
+                    freeMode: {
+                        enabled: true,
+                        momentum: true,
+                        momentumRatio: 0.6,
+                        momentumBounce: false,
+                        sticky: false
+                    },
+                    spaceBetween: 0,
+                    grabCursor: true,
+                    resistanceRatio: 0.85,
+                    // Отключаем все навигационные элементы для чистого free mode
+                    navigation: false,
+                    pagination: false,
+                    scrollbar: false,
+                    // Настройки для оптимизации производительности
+                    watchSlidesProgress: true,
+                    watchSlidesVisibility: true,
+                    // Настройки для корректной работы touch-событий
+                    allowTouchMove: true,
+                    preventClicks: false,
+                    preventClicksPropagation: false,
+                    simulateTouch: true,
+                    touchStartPreventDefault: false,
+                    touchMoveStopPropagation: true,
+                    // Настройки для активных состояний на touch устройствах
+                    touchEventsTarget: 'wrapper'
+                });
+                
+                isInitialized = true;
+            }
+        }
+        
+        function destroyHeaderVerticalsSwiper() {
+            if (headerVerticalsSwiper && !headerVerticalsSwiper.destroyed) {
+                headerVerticalsSwiper.destroy(true, true);
+                headerVerticalsSwiper = null;
+            }
+        }
+        
+        // Слушаем глобальное событие первого открытия header для инициализации
+        $(document).on('header:open:end', function() {
+            if (!isInitialized && $(window).width() < 1024) {
+                initHeaderVerticalsSwiper();
+            }
+        });
+        
+        // Обработка изменения размера окна (только после первой инициализации)
+        $(window).on('resize', function() {
+            if (isInitialized) {
+                if ($(window).width() < 1024) {
+                    initHeaderVerticalsSwiper();
+                } else {
+                    destroyHeaderVerticalsSwiper();
+                }
+            }
+        });
+    });
+});
+
+$(document).ready(function() {
     // Инициализируем каждый header отдельно для sticky логики
     $('.header').each(function() {
         const $header = $(this);
@@ -1102,76 +1172,6 @@ $(document).ready(function() {
         
         // Начальная проверка при загрузке
         handleScroll();
-    });
-});
-
-$(document).ready(function() {
-    // Инициализируем каждый header verticals swiper отдельно
-    $('.header-verticals-swiper').each(function() {
-        const $container = $(this);
-        let headerVerticalsSwiper = null;
-        let isInitialized = false; // флаг однократной инициализации
-        
-        function initHeaderVerticalsSwiper() {
-            if ($(window).width() < 1024 && (!headerVerticalsSwiper || headerVerticalsSwiper.destroyed)) {
-                headerVerticalsSwiper = new Swiper($container.find('.swiper-container')[0], {
-                    slidesPerView: 'auto',
-                    freeMode: {
-                        enabled: true,
-                        momentum: true,
-                        momentumRatio: 0.6,
-                        momentumBounce: false,
-                        sticky: false
-                    },
-                    spaceBetween: 0,
-                    grabCursor: true,
-                    resistanceRatio: 0.85,
-                    // Отключаем все навигационные элементы для чистого free mode
-                    navigation: false,
-                    pagination: false,
-                    scrollbar: false,
-                    // Настройки для оптимизации производительности
-                    watchSlidesProgress: true,
-                    watchSlidesVisibility: true,
-                    // Настройки для корректной работы touch-событий
-                    allowTouchMove: true,
-                    preventClicks: false,
-                    preventClicksPropagation: false,
-                    simulateTouch: true,
-                    touchStartPreventDefault: false,
-                    touchMoveStopPropagation: true,
-                    // Настройки для активных состояний на touch устройствах
-                    touchEventsTarget: 'wrapper'
-                });
-                
-                isInitialized = true;
-            }
-        }
-        
-        function destroyHeaderVerticalsSwiper() {
-            if (headerVerticalsSwiper && !headerVerticalsSwiper.destroyed) {
-                headerVerticalsSwiper.destroy(true, true);
-                headerVerticalsSwiper = null;
-            }
-        }
-        
-        // Слушаем глобальное событие первого открытия header для инициализации
-        $(document).on('header:open:end', function() {
-            if (!isInitialized && $(window).width() < 1024) {
-                initHeaderVerticalsSwiper();
-            }
-        });
-        
-        // Обработка изменения размера окна (только после первой инициализации)
-        $(window).on('resize', function() {
-            if (isInitialized) {
-                if ($(window).width() < 1024) {
-                    initHeaderVerticalsSwiper();
-                } else {
-                    destroyHeaderVerticalsSwiper();
-                }
-            }
-        });
     });
 });
 

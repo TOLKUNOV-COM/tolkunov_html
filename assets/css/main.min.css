@@ -1820,6 +1820,11 @@
     height: calc(var(--spacing) * 8);
   }
 }
+.xl\:h-\[80px\] {
+  @media (width >= 80rem) {
+    height: 80px;
+  }
+}
 .xl\:h-\[98px\] {
   @media (width >= 80rem) {
     height: 98px;
@@ -2860,6 +2865,18 @@
   transition-property: transform, translate, scale, rotate;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
   transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+.header_flat {
+  margin-bottom: calc(72px * -1);
+  @media (width >= 48rem) {
+    margin-bottom: calc(76px * -1);
+  }
+  @media (width >= 64rem) {
+    margin-bottom: calc(84px * -1);
+  }
+  @media (width >= 80rem) {
+    margin-bottom: calc(96px * -1);
+  }
 }
 .header__container {
   position: relative;
