@@ -35,7 +35,7 @@ var paths = {
     fonts: ['src/assets/fonts/**/*.*'],
     less: ['src/less/bootstrap/variables.less', 'src/less/*.less', 'src/blocks/*', 'src/blocks/**/*.less'],
     bootstrap: 'build/assets/vendor/bootstrap',
-    templates: ['src/templates/*.jade', 'src/templates/**/*.jade']
+    templates: ['src/templates/*.{jade,html}', 'src/templates/**/*.{jade,html}']
 };
 
 // Browser definitions for autoprefixer
@@ -97,12 +97,16 @@ function cleanFonts() {
     return del(['build/assets/fonts/**/*.*']);
 }
 
+function cleanVendor() {
+    return del(['build/assets/vendor/plyr']);
+}
+
 function cleanTemplates() {
     return del(['build/*.html']);
 }
 
 const cleanCss = gulp.parallel(cleanCssBootstrap, cleanCssMy);
-const clean = gulp.parallel(cleanCss, cleanJs, cleanImg, cleanFonts, cleanTemplates);
+const clean = gulp.parallel(cleanCss, cleanJs, cleanImg, cleanFonts, cleanVendor, cleanTemplates);
 
 /**
  *
@@ -197,6 +201,12 @@ function fonts() {
         .pipe(gulp.dest('./build/assets/fonts'));
 }
 
+function vendor() {
+    return gulp.src(['src/assets/vendor/**/*'])
+        .pipe(changed('./build/assets/vendor'))
+        .pipe(gulp.dest('./build/assets/vendor'));
+}
+
 /**
  * Compile jade files into HTML
  */
@@ -260,11 +270,16 @@ function templatesFull() {
 
 /**
  * Important!!
- * Separate task for the reaction to `.jade` files
+ * Separate tasks for watch mode (without clean)
+ * 
+ * В watch режиме не используем clean для избежания конфликтов между 
+ * tailwindMain и lessTask - они могут одновременно писать в build/assets/css
+ * Clean остается только для полной сборки (build)
  */
 const jadeWatch = gulp.series(templates, reloadCb);
 const jadeVarsWatch = gulp.series(templatesFull, reloadCb);
 const jsWatch = gulp.series(js, reloadCb);
+const lessWatch = gulp.series(lessTask, reloadCb);
 
 // watch files for changes and reload
 function watch() {
@@ -293,13 +308,15 @@ function watch() {
     });
 
     gulp.watch(paths.templates, {cwd: '.'}, jadeWatch);
+    gulp.watch(['src/templates/includes/*.html'], {cwd: '.'}, jadeWatch);
     gulp.watch(['./template_locals.yml'], {cwd: '.'}, jadeVarsWatch);
     //gulp.watch(['*.html']).on('change', reload);
     gulp.watch(['src/less/bootstrap/*.less', 'src/less/bootstrap/*', 'src/less/bootstrap/**/*.less'], {cwd: '.'}, gulp.series(cleanCssBootstrap, bootstrap)).on('error', log);
-    gulp.watch(['src/css/**/*.css'], {cwd: '.'}, tailwindMain).on('error', log);
-    gulp.watch(paths.less, {cwd: '.'}, gulp.series(cleanCssMy, lessTask)).on('error', log);
+    gulp.watch(['src/css/**/*.css', 'src/templates/**/*.{jade,html}', 'src/blocks/**/*.css'], {cwd: '.'}, tailwindMain).on('error', log);
+    gulp.watch(paths.less, {cwd: '.'}, lessWatch).on('error', log);
     gulp.watch(paths.scripts, {cwd: '.'}, jsWatch).on('error', log);
     gulp.watch(paths.images, {cwd: '.'}, gulp.series(img, reload));
+    gulp.watch(['src/assets/vendor/**/*'], {cwd: '.'}, gulp.series(vendor, reload));
 }
 
 const build = gulp.series(
@@ -311,6 +328,7 @@ const build = gulp.series(
         gulp.series(cleanJs, js),
         img,
         fonts,
+        vendor,
         templates
     )
 );
@@ -443,6 +461,7 @@ gulp.task('templates-full', templatesFull);
 gulp.task('jade-watch', jadeWatch);
 gulp.task('jade-vars-watch', jadeVarsWatch);
 gulp.task('js-watch', jsWatch);
+gulp.task('less-watch', lessWatch);
 
 gulp.task('watch', gulp.series(build, watch));
 gulp.task('build', build);
