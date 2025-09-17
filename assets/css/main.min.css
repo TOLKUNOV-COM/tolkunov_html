@@ -2828,6 +2828,28 @@
     background-image: url("../img/contact-switcher/dima_1440.png");
   }
 }
+:root {
+  --header-height: 112px;
+  --header-margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  :root {
+    --header-height: 132px;
+    --header-margin-bottom: 56px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --header-height: 140px;
+    --header-margin-bottom: 56px;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --header-height: 176px;
+    --header-margin-bottom: 80px;
+  }
+}
 .header {
   max-width: 1540px;
   margin: calc(var(--spacing) * 3);
@@ -2840,9 +2862,9 @@
   @media (width >= 80rem) {
     margin: calc(var(--spacing) * 4);
   }
-  margin-bottom: calc(var(--spacing) * 8);
+  margin-bottom: calc(var(--spacing) * 10);
   @media (width >= 48rem) {
-    margin-bottom: calc(var(--spacing) * 12);
+    margin-bottom: calc(var(--spacing) * 14);
   }
   @media (width >= 80rem) {
     margin-bottom: calc(var(--spacing) * 20);
@@ -2877,6 +2899,9 @@
   @media (width >= 80rem) {
     margin-bottom: calc(96px * -1);
   }
+}
+.header_without_margin {
+  margin-top: calc(var(--header-height) * -1);
 }
 .header__container {
   position: relative;
@@ -4542,6 +4567,9 @@ html {
   clip: rect(0 0 0 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+.grecaptcha-badge {
+  display: none !important;
 }
 @property --tw-scale-x {
   syntax: "*";
