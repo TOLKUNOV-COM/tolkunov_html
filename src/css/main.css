@@ -170,4 +170,8 @@ html {
     border: 0 !important;
 }
 
+.grecaptcha-badge {
+    display: none !important;
+}
+
 @config "../../tailwind.config.js";

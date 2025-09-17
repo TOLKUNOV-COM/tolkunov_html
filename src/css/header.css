@@ -1,7 +1,35 @@
+:root {
+    /* Переменная полной высоты header (высота + top + margin-bottom) */
+    --header-height: 112px; /* 60px + 12px + 40px */
+    /* Переменная нижнего отступа header */
+    --header-margin-bottom: 40px; /* mb-10 */
+}
+
+@media (min-width: 768px) {
+    :root {
+        --header-height: 132px; /* 60px + 16px + 56px */
+        --header-margin-bottom: 56px; /* md:mb-14 */
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --header-height: 140px; /* 72px + 12px + 40px */
+        --header-margin-bottom: 56px; /* mb-10 (сброс на lg) */
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --header-height: 176px; /* 80px + 16px + 80px */
+        --header-margin-bottom: 80px; /* xl:mb-20 */
+    }
+}
+
 .header {
     @apply max-w-[1540px];
     @apply m-3 md:m-4 lg:m-3 xl:m-4;
-    @apply mb-8 md:mb-12 xl:mb-20;
+    @apply mb-10 md:mb-14 xl:mb-20;
     @apply 3xl:mx-auto;
 
     /* Постоянная sticky позиция с top вместо margin-top */
@@ -15,6 +43,10 @@
     /* Исключаем header из потока документа через отрицательный margin-bottom */
     /* Компенсируем: высоту header + top отступ */
     @apply -mb-[72px] md:-mb-[76px] lg:-mb-[84px] xl:-mb-[96px];
+}
+
+.header_without_margin {
+    margin-top: calc(var(--header-height) * -1);
 }
 
 .header__container {
