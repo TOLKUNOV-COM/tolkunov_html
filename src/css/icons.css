@@ -33,6 +33,14 @@
     background-color: currentColor;
 }
 
+.icon-logo-academy {
+    background-image: url("../img/logo-academy.svg");
+}
+
+.icon-logo-market {
+    background-image: url("../img/logo-market.svg");
+}
+
 .icon-refresh {
     mask-image: url("../img/refresh.svg");
     background-color: currentColor;
