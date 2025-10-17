@@ -63,7 +63,7 @@
 
 /* header icons */
 .icon-menu-toggle {
-    mask-image: url("../img/menu-toggle.svg");
+    mask-image: url("../img/icons/menu-toggle.svg");
     background-color: currentColor;
 }
 
@@ -73,12 +73,12 @@
 }
 
 .icon-telegram-full {
-    mask-image: url("../img/telegram-full.svg");
+    mask-image: url("../img/icons/telegram-full.svg");
     background-color: currentColor;
 }
 
 .icon-x-mark {
-    mask-image: url("../img/x-mark.svg");
+    mask-image: url("../img/icons/x-mark.svg");
     background-color: currentColor;
 }
 

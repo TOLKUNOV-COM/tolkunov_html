@@ -12,6 +12,8 @@
     @apply tracking-[-0.64px] lg:tracking-[-0.56px];
     @apply !no-underline;
     @apply lg:py-0.5 xl:py-1.5;
+
+    @apply hover:text-blue-900;
 }
 
 .header__toggle {
@@ -89,7 +91,9 @@
 }
 
 .header__button_main {
-    @apply flex flex-nowrap items-center gap-1 h-12 rounded-2xl !text-white !no-underline font-glina text-xl font-normal leading-3.5  py-2 pl-5 pr-4;
+    @apply flex flex-nowrap items-center gap-1 h-12 rounded-2xl !text-white !no-underline;
+    @apply font-glina text-2xl font-normal leading-3.5;
+    @apply py-2 pl-5 pr-4;
 
     @apply bg-blue-600 hover:bg-[#2e55db] active:bg-[#2146c4];
 }
