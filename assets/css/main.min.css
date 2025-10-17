@@ -2294,8 +2294,8 @@
     background-color: currentColor;
   }
   .icon-menu-toggle {
-    -webkit-mask-image: url("../img/menu-toggle.svg");
-            mask-image: url("../img/menu-toggle.svg");
+    -webkit-mask-image: url("../img/icons/menu-toggle.svg");
+            mask-image: url("../img/icons/menu-toggle.svg");
     background-color: currentColor;
   }
   .icon-order-button {
@@ -2304,13 +2304,13 @@
     background-color: currentColor;
   }
   .icon-telegram-full {
-    -webkit-mask-image: url("../img/telegram-full.svg");
-            mask-image: url("../img/telegram-full.svg");
+    -webkit-mask-image: url("../img/icons/telegram-full.svg");
+            mask-image: url("../img/icons/telegram-full.svg");
     background-color: currentColor;
   }
   .icon-x-mark {
-    -webkit-mask-image: url("../img/x-mark.svg");
-            mask-image: url("../img/x-mark.svg");
+    -webkit-mask-image: url("../img/icons/x-mark.svg");
+            mask-image: url("../img/icons/x-mark.svg");
     background-color: currentColor;
   }
   .icon-menu-link {
@@ -2554,6 +2554,11 @@
   @media (width >= 80rem) {
     padding-block: calc(var(--spacing) * 1.5);
   }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-blue-900);
+    }
+  }
 }
 .header__toggle {
   display: flex;
@@ -2688,18 +2693,18 @@
   align-items: center;
   gap: calc(var(--spacing) * 1);
   border-radius: var(--radius-2xl);
-  padding-block: calc(var(--spacing) * 2);
-  padding-right: calc(var(--spacing) * 4);
-  padding-left: calc(var(--spacing) * 5);
+  color: var(--color-white) !important;
+  text-decoration-line: none !important;
   font-family: var(--font-glina);
-  font-size: var(--text-xl);
-  line-height: var(--tw-leading, var(--text-xl--line-height));
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
   --tw-leading: calc(var(--spacing) * 3.5);
   line-height: calc(var(--spacing) * 3.5);
   --tw-font-weight: var(--font-weight-normal);
   font-weight: var(--font-weight-normal);
-  color: var(--color-white) !important;
-  text-decoration-line: none !important;
+  padding-block: calc(var(--spacing) * 2);
+  padding-right: calc(var(--spacing) * 4);
+  padding-left: calc(var(--spacing) * 5);
   background-color: var(--color-blue-600);
   &:hover {
     @media (hover: hover) {
