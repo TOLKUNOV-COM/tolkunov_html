@@ -70,7 +70,7 @@ $(function () {
 
     // Initialize Plyr players
     function initPlyrPlayers() {
-        $('.video-modal__player.plyr-js').each(function () {
+        $('.video-modal__player').each(function () {
             var videoElement = this;
             var modalId = $(videoElement).closest('.video-modal').attr('id');
 
@@ -79,7 +79,7 @@ $(function () {
 
             if (!plyrInstances[modalId]) {
                 var player = new Plyr(videoElement, {
-                    controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+                    controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
                     invertTime: true,
                     keyboard: { focused: true, global: false },
                     tooltips: false,

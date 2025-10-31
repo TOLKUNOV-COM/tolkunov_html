@@ -1,0 +1,5 @@
+.player {
+    .plyr {
+        @apply rounded-3xl lg:rounded-4xl;
+    }
+}

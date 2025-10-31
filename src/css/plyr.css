@@ -9,23 +9,21 @@
     --plyr-range-track-height: 8px;
     --plyr-control-icon-size: 28px;
 
-    --plyr-font-size-small: 18px;
+    --plyr-font-size-small: 24px;
 
     --plyr-font-family: 'Glina Script', sans-serif;
 }
 
 .plyr__controls {
-    gap: 24px;
-}
-
-/* General Plyr styles for video modals */
-.plyr__controls {
+    @apply gap-3 lg:gap-4 xl:gap-6;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-    padding: 32px !important;
+
+    @apply !p-4 lg:!p-6 xl:!p-8;
 }
 
 .plyr__progress input[type="range"]::-webkit-slider-thumb {
     filter: drop-shadow(0 0 7.2px rgba(255, 255, 255, 0.50));
+    cursor: pointer;
 }
 
 /* Спрячем дефолтный фон буфера */
@@ -52,22 +50,32 @@
     background: rgba(255, 255, 255, 0.10);
     box-shadow: 0 1px 4px 0 rgba(255, 255, 255, 0.25) inset;
     backdrop-filter: blur(5.5px);
-    position: relative;
-
-    @apply size-[60px] !w-[60px] p-4;
-
-    .icon--pressed, .icon--not-pressed {
-        @apply size-7;
-    }
-
-    .icon--not-pressed {
-        margin-left: 1px;
-    }
 
     &:hover {
         background: rgba(255, 255, 255, 0.10) !important;
         filter: drop-shadow(0 0 2px #fff);
     }
+}
+
+.plyr__controls__item[data-plyr="play"] {
+    position: relative;
+
+    @apply !p-2 lg:!p-3 xl:!p-4;
+    @apply size-[32px] !w-[32px];
+    @apply lg:size-[48px] lg:!w-[48px];
+    @apply xl:size-[60px] xl:!w-[60px] p-4;
+
+    .icon--pressed, .icon--not-pressed {
+        @apply size-4 lg:size-6 xl:size-7;
+    }
+
+    .icon--not-pressed {
+        margin-left: 1px;
+    }
+}
+
+.plyr__control--overlaid[data-plyr="play"] {
+    @apply p-4;
 }
 
 [data-plyr="fullscreen"], [data-plyr="mute"] {
@@ -78,11 +86,21 @@
 
 .plyr__time {
     @apply cursor-default;
-    min-width: 55px;
+    min-width: 75px;
+
+    @apply text-[18px] lg:text-[20px] xl:text-2xl;
 }
 
 [data-plyr="mute"] {
-    margin-right: 12px;
+    @apply lg:mr-3;
+}
+
+[data-plyr="volume"] {
+    @apply max-lg:!hidden;
+}
+
+[data-plyr="fullscreen"] svg {
+    @apply max-lg:size-6;
 }
 
 .plyr__control svg {
