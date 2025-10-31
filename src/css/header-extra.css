@@ -9,4 +9,6 @@
     @apply lg:grid-cols-[152px_1px_max-content_216px_auto] lg:gap-x-4;
     @apply xl:grid-cols-[174px_1px_max-content_1px_276px_auto];
     @apply 3xl:grid-cols-[174px_1px_332px_1px_332px_auto];
+
+    will-change: opacity, transform, scale;
 }
