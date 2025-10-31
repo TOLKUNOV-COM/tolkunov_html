@@ -2829,6 +2829,7 @@
   @media (width >= 100rem) {
     grid-template-columns: 174px 1px 332px 1px 332px auto;
   }
+  will-change: opacity, transform, scale;
 }
 .header-contact {
   position: relative;
