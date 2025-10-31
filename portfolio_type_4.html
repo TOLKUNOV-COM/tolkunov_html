@@ -1155,6 +1155,22 @@
             </div>
         </div>
     </div>
+
+    <!-- Showreel modal -->
+    <div id="modal-video-showreel" data-open="false" class="video-modal">
+        <div class="video-modal__backdrop absolute inset-0"></div>
+        <div class="video-modal__dialog relative rounded-5xl overflow-hidden">
+            <button type="button" class="video-modal__close" data-close aria-label="Закрыть">
+                <i class="icon icon-close size-8"></i>
+            </button>
+            <div class="video-modal__body rounded-5xl overflow-hidden w-full aspect-video">
+                <video class="video-modal__player" playsinline controls preload="none">
+                    <source src="https://tolkunov.com/uploads/showreel_converted.webm" type="video/webm">
+                    <source src="https://tolkunov.com/uploads/showreel.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
 </section>
 
 <footer class="footer py-8 2xl:py-12 font-sans max-md:mx-5 w-auto md:w-[728px] lg:w-[984px] xl:w-[1160px] 2xl:w-[1408px] 3xl:w-[1536px] mx-auto">
