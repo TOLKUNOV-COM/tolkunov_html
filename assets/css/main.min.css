@@ -3069,6 +3069,9 @@
   transform: translateY(-50px);
   pointer-events: none;
 }
+.header:has(.header_hidden) {
+  pointer-events: none;
+}
 @media (prefers-reduced-motion: no-preference) {
   .header__container.header_sticky {
     transition-property: all;
