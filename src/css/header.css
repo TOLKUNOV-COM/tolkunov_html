@@ -122,6 +122,10 @@
     @apply pointer-events-none;
 }
 
+.header:has(.header_hidden) {
+    @apply pointer-events-none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .header__container.header_sticky {
         @apply transition-all duration-200 ease-out;
